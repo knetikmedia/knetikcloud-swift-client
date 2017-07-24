@@ -32,13 +32,13 @@ public class ContentCommentsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "summary" : "aeiou",
   "context" : "aeiou",
-  "context_id" : 9,
-  "created_date" : 4,
+  "context_id" : 0,
+  "created_date" : 6,
   "id" : 1,
-  "updated_date" : 2,
+  "updated_date" : 5,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 0,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
@@ -120,13 +120,13 @@ public class ContentCommentsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "summary" : "aeiou",
   "context" : "aeiou",
-  "context_id" : 5,
-  "created_date" : 8,
-  "id" : 0,
-  "updated_date" : 6,
+  "context_id" : 0,
+  "created_date" : 6,
+  "id" : 1,
+  "updated_date" : 5,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 8,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
@@ -173,10 +173,10 @@ public class ContentCommentsAPI: APIBase {
      Returns a page of comments
      - GET /comments
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 2,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 6,
+  "size" : 9,
+  "total_elements" : 3,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -184,18 +184,18 @@ public class ContentCommentsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 0,
-  "number_of_elements" : 1,
+  "total_pages" : 2,
+  "number_of_elements" : 7,
   "content" : [ {
     "summary" : "aeiou",
     "context" : "aeiou",
     "context_id" : 0,
-    "created_date" : 2,
-    "id" : 8,
-    "updated_date" : 7,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 5,
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 1,
+      "id" : 5,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
@@ -254,7 +254,7 @@ public class ContentCommentsAPI: APIBase {
   "owner_id" : 1,
   "owner_username" : "aeiou",
   "context" : "aeiou",
-  "context_id" : 8,
+  "context_id" : 0,
   "id" : 6,
   "content" : "aeiou"
 }}]

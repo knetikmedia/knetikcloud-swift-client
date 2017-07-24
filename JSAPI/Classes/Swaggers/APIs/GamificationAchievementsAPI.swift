@@ -41,8 +41,8 @@ public class GamificationAchievementsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "created_date" : 2,
-  "required_progress" : 7,
+  "created_date" : 0,
+  "required_progress" : 6,
   "trigger_event_name" : "aeiou",
   "updated_date" : 1,
   "tags" : [ "aeiou" ]
@@ -86,9 +86,9 @@ public class GamificationAchievementsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 5,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 8,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -241,8 +241,8 @@ public class GamificationAchievementsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "created_date" : 9,
-  "required_progress" : 4,
+  "created_date" : 0,
+  "required_progress" : 6,
   "trigger_event_name" : "aeiou",
   "updated_date" : 1,
   "tags" : [ "aeiou" ]
@@ -289,9 +289,9 @@ public class GamificationAchievementsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 7,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 4,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -354,10 +354,10 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 0,
+  "number" : 1,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 5,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -365,13 +365,13 @@ public class GamificationAchievementsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
-  "number_of_elements" : 7,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "name" : "aeiou",
-    "created_date" : 3,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 7,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -444,6 +444,7 @@ public class GamificationAchievementsAPI: APIBase {
   "category" : "achievement",
   "parameters" : [ {
     "name" : "aeiou",
+    "optional" : false,
     "type" : "aeiou"
   } ],
   "tags" : [ "aeiou" ],
@@ -493,10 +494,10 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 0,
+  "number" : 5,
   "last" : true,
-  "size" : 0,
-  "total_elements" : 6,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -504,8 +505,8 @@ public class GamificationAchievementsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 6,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "rule_id" : "aeiou",
     "template" : "aeiou",
@@ -517,10 +518,10 @@ public class GamificationAchievementsAPI: APIBase {
         "type" : "aeiou"
       }
     },
-    "created_date" : 8,
-    "required_progress" : 0,
+    "created_date" : 0,
+    "required_progress" : 6,
     "trigger_event_name" : "aeiou",
-    "updated_date" : 0,
+    "updated_date" : 1,
     "tags" : [ "aeiou" ]
   } ],
   "first" : true
@@ -590,10 +591,10 @@ public class GamificationAchievementsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "created_date" : 1,
-  "required_progress" : 1,
+  "created_date" : 0,
+  "required_progress" : 6,
   "trigger_event_name" : "aeiou",
-  "updated_date" : 6,
+  "updated_date" : 1,
   "tags" : [ "aeiou" ]
 } ]}]
      
@@ -642,13 +643,13 @@ public class GamificationAchievementsAPI: APIBase {
   "achievements" : [ {
     "achievement_name" : "aeiou",
     "achieved" : false,
-    "earned_date" : 1,
-    "created_date" : 3,
-    "updated_date" : 2
+    "earned_date" : 6,
+    "created_date" : 0,
+    "updated_date" : 1
   } ],
   "group_name" : "aeiou",
-  "user_id" : 1,
-  "progress" : 0,
+  "user_id" : 5,
+  "progress" : 5,
   "id" : "aeiou"
 }}]
      
@@ -700,10 +701,10 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 4,
+  "number" : 2,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 6,
+  "size" : 9,
+  "total_elements" : 3,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -711,19 +712,19 @@ public class GamificationAchievementsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 0,
-  "number_of_elements" : 5,
+  "total_pages" : 2,
+  "number_of_elements" : 7,
   "content" : [ {
     "achievements" : [ {
       "achievement_name" : "aeiou",
       "achieved" : false,
-      "earned_date" : 5,
-      "created_date" : 2,
+      "earned_date" : 6,
+      "created_date" : 0,
       "updated_date" : 1
     } ],
     "group_name" : "aeiou",
-    "user_id" : 7,
-    "progress" : 2,
+    "user_id" : 5,
+    "progress" : 5,
     "id" : "aeiou"
   } ],
   "first" : true
@@ -786,10 +787,10 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 2,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 0,
+  "size" : 9,
+  "total_elements" : 3,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -797,19 +798,19 @@ public class GamificationAchievementsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 5,
-  "number_of_elements" : 5,
+  "total_pages" : 2,
+  "number_of_elements" : 7,
   "content" : [ {
     "achievements" : [ {
       "achievement_name" : "aeiou",
       "achieved" : false,
-      "earned_date" : 0,
-      "created_date" : 9,
-      "updated_date" : 3
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
     } ],
     "group_name" : "aeiou",
-    "user_id" : 3,
-    "progress" : 3,
+    "user_id" : 5,
+    "progress" : 5,
     "id" : "aeiou"
   } ],
   "first" : true
@@ -871,10 +872,10 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 2,
   "last" : true,
-  "size" : 0,
-  "total_elements" : 9,
+  "size" : 9,
+  "total_elements" : 3,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -882,19 +883,19 @@ public class GamificationAchievementsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 1,
+  "total_pages" : 2,
   "number_of_elements" : 7,
   "content" : [ {
     "achievements" : [ {
       "achievement_name" : "aeiou",
       "achieved" : false,
       "earned_date" : 6,
-      "created_date" : 9,
-      "updated_date" : 4
+      "created_date" : 0,
+      "updated_date" : 1
     } ],
     "group_name" : "aeiou",
-    "user_id" : 8,
-    "progress" : 3,
+    "user_id" : 5,
+    "progress" : 5,
     "id" : "aeiou"
   } ],
   "first" : true
@@ -955,13 +956,13 @@ public class GamificationAchievementsAPI: APIBase {
   "achievements" : [ {
     "achievement_name" : "aeiou",
     "achieved" : false,
-    "earned_date" : 8,
-    "created_date" : 9,
-    "updated_date" : 7
+    "earned_date" : 6,
+    "created_date" : 0,
+    "updated_date" : 1
   } ],
   "group_name" : "aeiou",
   "user_id" : 5,
-  "progress" : 1,
+  "progress" : 5,
   "id" : "aeiou"
 }}]
      
@@ -1011,13 +1012,13 @@ public class GamificationAchievementsAPI: APIBase {
   "achievements" : [ {
     "achievement_name" : "aeiou",
     "achieved" : false,
-    "earned_date" : 0,
-    "created_date" : 4,
-    "updated_date" : 0
+    "earned_date" : 6,
+    "created_date" : 0,
+    "updated_date" : 1
   } ],
   "group_name" : "aeiou",
-  "user_id" : 6,
-  "progress" : 1,
+  "user_id" : 5,
+  "progress" : 5,
   "id" : "aeiou"
 }}]
      
@@ -1074,9 +1075,9 @@ public class GamificationAchievementsAPI: APIBase {
     }
   },
   "created_date" : 0,
-  "required_progress" : 5,
+  "required_progress" : 6,
   "trigger_event_name" : "aeiou",
-  "updated_date" : 2,
+  "updated_date" : 1,
   "tags" : [ "aeiou" ]
 }}]
      
@@ -1120,7 +1121,7 @@ public class GamificationAchievementsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 3,
+  "created_date" : 0,
   "id" : "aeiou",
   "updated_date" : 6,
   "properties" : [ {

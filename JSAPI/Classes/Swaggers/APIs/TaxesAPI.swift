@@ -31,7 +31,7 @@ public class TaxesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
-  "rate" : 5.999771750884719,
+  "rate" : 0.8008281904610115,
   "name" : "aeiou",
   "country_iso3" : "aeiou"
 }}]
@@ -74,7 +74,7 @@ public class TaxesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
-  "rate" : 5.300649086722977,
+  "rate" : 0.8008281904610115,
   "federally_exempt" : false,
   "name" : "aeiou",
   "state_code" : "aeiou",
@@ -200,7 +200,7 @@ public class TaxesAPI: APIBase {
      - GET /tax/countries/{country_code_iso3}
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
-  "rate" : 3.3255000172779514,
+  "rate" : 0.8008281904610115,
   "name" : "aeiou",
   "country_iso3" : "aeiou"
 }}]
@@ -245,10 +245,10 @@ public class TaxesAPI: APIBase {
      - GET /tax/countries
      - Get a list of taxes
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 6,
   "last" : true,
   "size" : 5,
-  "total_elements" : 8,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -256,11 +256,11 @@ public class TaxesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 6,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
     "tax_shipping" : false,
-    "rate" : 8.834548183142934,
+    "rate" : 0.8008281904610115,
     "name" : "aeiou",
     "country_iso3" : "aeiou"
   } ],
@@ -311,7 +311,7 @@ public class TaxesAPI: APIBase {
      - GET /tax/countries/{country_code_iso3}/states/{stateCode}
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
-  "rate" : 5.49898242740227,
+  "rate" : 0.8008281904610115,
   "federally_exempt" : false,
   "name" : "aeiou",
   "state_code" : "aeiou",
@@ -360,10 +360,10 @@ public class TaxesAPI: APIBase {
      - GET /tax/states
      - Get a list of taxes
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 6,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 7,
+  "size" : 5,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -371,11 +371,11 @@ public class TaxesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 2,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
     "tax_shipping" : false,
-    "rate" : 0.8888492221079725,
+    "rate" : 0.8008281904610115,
     "federally_exempt" : false,
     "name" : "aeiou",
     "state_code" : "aeiou",
@@ -430,10 +430,10 @@ public class TaxesAPI: APIBase {
      - GET /tax/countries/{country_code_iso3}/states
      - Get a list of taxes
      - examples: [{contentType=application/json, example={
-  "number" : 0,
+  "number" : 6,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 2,
+  "size" : 5,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -441,11 +441,11 @@ public class TaxesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 5,
-  "number_of_elements" : 4,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
     "tax_shipping" : false,
-    "rate" : 8.549089250365062,
+    "rate" : 0.8008281904610115,
     "federally_exempt" : false,
     "name" : "aeiou",
     "state_code" : "aeiou",
@@ -503,7 +503,7 @@ public class TaxesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
-  "rate" : 6.265605883694291,
+  "rate" : 0.8008281904610115,
   "name" : "aeiou",
   "country_iso3" : "aeiou"
 }}]
@@ -549,7 +549,7 @@ public class TaxesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
-  "rate" : 1.8935301614361177,
+  "rate" : 0.8008281904610115,
   "federally_exempt" : false,
   "name" : "aeiou",
   "state_code" : "aeiou",

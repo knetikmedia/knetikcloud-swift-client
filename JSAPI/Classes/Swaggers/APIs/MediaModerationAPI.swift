@@ -33,11 +33,11 @@ public class MediaModerationAPI: APIBase {
   "reason" : "aeiou",
   "context" : "aeiou",
   "context_id" : "aeiou",
-  "created_date" : 8,
-  "id" : 9,
-  "updated_date" : 8,
+  "created_date" : 0,
+  "id" : 6,
+  "updated_date" : 5,
   "resolution" : "banned",
-  "resolved" : 4
+  "resolved" : 1
 }}]
      
      - parameter id: (path) The flag report id 
@@ -84,10 +84,10 @@ public class MediaModerationAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 5,
   "last" : true,
-  "size" : 5,
-  "total_elements" : 7,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -96,16 +96,16 @@ public class MediaModerationAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 3,
-  "number_of_elements" : 0,
+  "number_of_elements" : 2,
   "content" : [ {
     "reason" : "aeiou",
     "context" : "aeiou",
     "context_id" : "aeiou",
     "created_date" : 0,
-    "id" : 7,
-    "updated_date" : 2,
+    "id" : 6,
+    "updated_date" : 5,
     "resolution" : "banned",
-    "resolved" : 8
+    "resolved" : 1
   } ],
   "first" : true
 }}]

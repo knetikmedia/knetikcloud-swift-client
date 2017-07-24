@@ -121,6 +121,7 @@ class Decoders {
                 "yyyy-MM-dd'T'HH:mm:ss.SSS"
             ].map { (format: String) -> NSDateFormatter in
                 let formatter = NSDateFormatter()
+                formatter.locale = NSLocale(localeIdentifier:"en_US_POSIX")
                 formatter.dateFormat = format
                 return formatter
             }
@@ -140,46 +141,6 @@ class Decoders {
                 }
                 fatalError("formatter failed to parse \(source)")
             } 
-
-            // Decoder for [AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings]
-            Decoders.addDecoder(clazz: [AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings].self) { (source: AnyObject) -> [AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings] in
-                return Decoders.decode(clazz: [AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings].self, source: source)
-            }
-            // Decoder for AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings
-            Decoders.addDecoder(clazz: AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.self) { (source: AnyObject) -> AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings()
-                instance.activityId = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["activity_id"])
-                instance.challengeActivityId = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["challenge_activity_id"])
-                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
-                instance.entitlement = Decoders.decodeOptional(clazz: ActivityEntitlementResource.self, source: sourceDictionary["entitlement"])
-                instance.eventId = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["event_id"])
-                instance.id = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["id"])
-                instance.rewardStatus = AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.RewardStatus(rawValue: (sourceDictionary["reward_status"] as? String) ?? "") 
-                instance.settings = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["settings"])
-                instance.simulated = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["simulated"])
-                instance.startDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["start_date"])
-                instance.status = AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.Status(rawValue: (sourceDictionary["status"] as? String) ?? "") 
-                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
-                instance.users = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["users"])
-                return instance
-            }
-
-
-            // Decoder for [ARequestToResetAUsersPasswordByUsingAKnownUserProperty]
-            Decoders.addDecoder(clazz: [ARequestToResetAUsersPasswordByUsingAKnownUserProperty].self) { (source: AnyObject) -> [ARequestToResetAUsersPasswordByUsingAKnownUserProperty] in
-                return Decoders.decode(clazz: [ARequestToResetAUsersPasswordByUsingAKnownUserProperty].self, source: source)
-            }
-            // Decoder for ARequestToResetAUsersPasswordByUsingAKnownUserProperty
-            Decoders.addDecoder(clazz: ARequestToResetAUsersPasswordByUsingAKnownUserProperty.self) { (source: AnyObject) -> ARequestToResetAUsersPasswordByUsingAKnownUserProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = ARequestToResetAUsersPasswordByUsingAKnownUserProperty()
-                instance.email = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["email"])
-                instance.mobileNumber = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["mobile_number"])
-                instance.username = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["username"])
-                return instance
-            }
-
 
             // Decoder for [AchievementDefinitionResource]
             Decoders.addDecoder(clazz: [AchievementDefinitionResource].self) { (source: AnyObject) -> [AchievementDefinitionResource] in
@@ -282,6 +243,31 @@ class Decoders {
             }
 
 
+            // Decoder for [ActivityOccurrenceResource]
+            Decoders.addDecoder(clazz: [ActivityOccurrenceResource].self) { (source: AnyObject) -> [ActivityOccurrenceResource] in
+                return Decoders.decode(clazz: [ActivityOccurrenceResource].self, source: source)
+            }
+            // Decoder for ActivityOccurrenceResource
+            Decoders.addDecoder(clazz: ActivityOccurrenceResource.self) { (source: AnyObject) -> ActivityOccurrenceResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = ActivityOccurrenceResource()
+                instance.activityId = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["activity_id"])
+                instance.challengeActivityId = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["challenge_activity_id"])
+                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.entitlement = Decoders.decodeOptional(clazz: ActivityEntitlementResource.self, source: sourceDictionary["entitlement"])
+                instance.eventId = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["event_id"])
+                instance.id = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["id"])
+                instance.rewardStatus = ActivityOccurrenceResource.RewardStatus(rawValue: (sourceDictionary["reward_status"] as? String) ?? "") 
+                instance.settings = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["settings"])
+                instance.simulated = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["simulated"])
+                instance.startDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["start_date"])
+                instance.status = ActivityOccurrenceResource.Status(rawValue: (sourceDictionary["status"] as? String) ?? "") 
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                instance.users = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["users"])
+                return instance
+            }
+
+
             // Decoder for [ActivityOccurrenceResults]
             Decoders.addDecoder(clazz: [ActivityOccurrenceResults].self) { (source: AnyObject) -> [ActivityOccurrenceResults] in
                 return Decoders.decode(clazz: [ActivityOccurrenceResults].self, source: source)
@@ -291,6 +277,46 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = ActivityOccurrenceResults()
                 instance.users = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["users"])
+                return instance
+            }
+
+
+            // Decoder for [ActivityOccurrenceResultsResource]
+            Decoders.addDecoder(clazz: [ActivityOccurrenceResultsResource].self) { (source: AnyObject) -> [ActivityOccurrenceResultsResource] in
+                return Decoders.decode(clazz: [ActivityOccurrenceResultsResource].self, source: source)
+            }
+            // Decoder for ActivityOccurrenceResultsResource
+            Decoders.addDecoder(clazz: ActivityOccurrenceResultsResource.self) { (source: AnyObject) -> ActivityOccurrenceResultsResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = ActivityOccurrenceResultsResource()
+                instance.users = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["users"])
+                return instance
+            }
+
+
+            // Decoder for [ActivityResource]
+            Decoders.addDecoder(clazz: [ActivityResource].self) { (source: AnyObject) -> [ActivityResource] in
+                return Decoders.decode(clazz: [ActivityResource].self, source: source)
+            }
+            // Decoder for ActivityResource
+            Decoders.addDecoder(clazz: ActivityResource.self) { (source: AnyObject) -> ActivityResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = ActivityResource()
+                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
+                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.entitlements = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["entitlements"])
+                instance.id = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["id"])
+                instance.launch = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["launch"])
+                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.rewardSet = Decoders.decodeOptional(clazz: RewardSetResource.self, source: sourceDictionary["reward_set"])
+                instance.settings = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["settings"])
+                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
+                instance.template = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["template"])
+                instance.templateId = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template_id"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
                 return instance
             }
 
@@ -458,74 +484,20 @@ class Decoders {
             }
 
 
-            // Decoder for [AudioGroupProperty]
-            Decoders.addDecoder(clazz: [AudioGroupProperty].self) { (source: AnyObject) -> [AudioGroupProperty] in
-                return Decoders.decode(clazz: [AudioGroupProperty].self, source: source)
+            // Decoder for [AvailableSettingResource]
+            Decoders.addDecoder(clazz: [AvailableSettingResource].self) { (source: AnyObject) -> [AvailableSettingResource] in
+                return Decoders.decode(clazz: [AvailableSettingResource].self, source: source)
             }
-            // Decoder for AudioGroupProperty
-            Decoders.addDecoder(clazz: AudioGroupProperty.self) { (source: AnyObject) -> AudioGroupProperty in
+            // Decoder for AvailableSettingResource
+            Decoders.addDecoder(clazz: AvailableSettingResource.self) { (source: AnyObject) -> AvailableSettingResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = AudioGroupProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.files = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["files"])
-                return instance
-            }
-
-
-            // Decoder for [AudioGroupPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [AudioGroupPropertyDefinitionResource].self) { (source: AnyObject) -> [AudioGroupPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [AudioGroupPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for AudioGroupPropertyDefinitionResource
-            Decoders.addDecoder(clazz: AudioGroupPropertyDefinitionResource.self) { (source: AnyObject) -> AudioGroupPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = AudioGroupPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
-                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
-                instance.minCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_count"])
-                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
-                instance.minLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_length"])
-                return instance
-            }
-
-
-            // Decoder for [AudioProperty]
-            Decoders.addDecoder(clazz: [AudioProperty].self) { (source: AnyObject) -> [AudioProperty] in
-                return Decoders.decode(clazz: [AudioProperty].self, source: source)
-            }
-            // Decoder for AudioProperty
-            Decoders.addDecoder(clazz: AudioProperty.self) { (source: AnyObject) -> AudioProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = AudioProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.crc = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["crc"])
+                let instance = AvailableSettingResource()
+                instance.advancedOption = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["advanced_option"])
+                instance.defaultValue = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["default_value"])
                 instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
-                return instance
-            }
-
-
-            // Decoder for [AudioPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [AudioPropertyDefinitionResource].self) { (source: AnyObject) -> [AudioPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [AudioPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for AudioPropertyDefinitionResource
-            Decoders.addDecoder(clazz: AudioPropertyDefinitionResource.self) { (source: AnyObject) -> AudioPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = AudioPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.key = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["key"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
-                instance.minLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_length"])
+                instance.options = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["options"])
                 return instance
             }
 
@@ -676,36 +648,6 @@ class Decoders {
             }
 
 
-            // Decoder for [BooleanProperty]
-            Decoders.addDecoder(clazz: [BooleanProperty].self) { (source: AnyObject) -> [BooleanProperty] in
-                return Decoders.decode(clazz: [BooleanProperty].self, source: source)
-            }
-            // Decoder for BooleanProperty
-            Decoders.addDecoder(clazz: BooleanProperty.self) { (source: AnyObject) -> BooleanProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = BooleanProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.value = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["value"])
-                return instance
-            }
-
-
-            // Decoder for [BooleanPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [BooleanPropertyDefinitionResource].self) { (source: AnyObject) -> [BooleanPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [BooleanPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for BooleanPropertyDefinitionResource
-            Decoders.addDecoder(clazz: BooleanPropertyDefinitionResource.self) { (source: AnyObject) -> BooleanPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = BooleanPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                return instance
-            }
-
-
             // Decoder for [BooleanResource]
             Decoders.addDecoder(clazz: [BooleanResource].self) { (source: AnyObject) -> [BooleanResource] in
                 return Decoders.decode(clazz: [BooleanResource].self, source: source)
@@ -851,6 +793,7 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = BreTriggerParameterDefinition()
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._optional = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["optional"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 return instance
             }
@@ -896,41 +839,6 @@ class Decoders {
             }
 
 
-            // Decoder for [BundleItem]
-            Decoders.addDecoder(clazz: [BundleItem].self) { (source: AnyObject) -> [BundleItem] in
-                return Decoders.decode(clazz: [BundleItem].self, source: source)
-            }
-            // Decoder for BundleItem
-            Decoders.addDecoder(clazz: BundleItem.self) { (source: AnyObject) -> BundleItem in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = BundleItem()
-                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
-                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
-                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
-                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
-                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
-                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
-                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
-                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
-                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
-                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
-                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
-                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
-                instance.geoPolicyType = BundleItem.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
-                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
-                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
-                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
-                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
-                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
-                instance.bundledSkus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["bundled_skus"])
-                return instance
-            }
-
-
             // Decoder for [BundledSku]
             Decoders.addDecoder(clazz: [BundledSku].self) { (source: AnyObject) -> [BundledSku] in
                 return Decoders.decode(clazz: [BundledSku].self, source: source)
@@ -942,27 +850,6 @@ class Decoders {
                 instance.priceOverride = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["price_override"])
                 instance.quantity = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["quantity"])
                 instance.sku = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["sku"])
-                return instance
-            }
-
-
-            // Decoder for [CacheClearEvent]
-            Decoders.addDecoder(clazz: [CacheClearEvent].self) { (source: AnyObject) -> [CacheClearEvent] in
-                return Decoders.decode(clazz: [CacheClearEvent].self, source: source)
-            }
-            // Decoder for CacheClearEvent
-            Decoders.addDecoder(clazz: CacheClearEvent.self) { (source: AnyObject) -> CacheClearEvent in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = CacheClearEvent()
-                instance.client = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["client"])
-                instance.customer = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["customer"])
-                instance.doNotBroadcast = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["do_not_broadcast"])
-                instance.section = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["section"])
-                instance.source = Decoders.decodeOptional(clazz: AnyObject.self, source: sourceDictionary["source"])
-                instance.specifics = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["specifics"])
-                instance.synchronous = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["synchronous"])
-                instance.timestamp = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["timestamp"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 return instance
             }
 
@@ -1407,21 +1294,6 @@ class Decoders {
             }
 
 
-            // Decoder for [Consumable]
-            Decoders.addDecoder(clazz: [Consumable].self) { (source: AnyObject) -> [Consumable] in
-                return Decoders.decode(clazz: [Consumable].self, source: source)
-            }
-            // Decoder for Consumable
-            Decoders.addDecoder(clazz: Consumable.self) { (source: AnyObject) -> Consumable in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = Consumable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.maxUse = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_use"])
-                return instance
-            }
-
-
             // Decoder for [ContributionResource]
             Decoders.addDecoder(clazz: [ContributionResource].self) { (source: AnyObject) -> [ContributionResource] in
                 return Decoders.decode(clazz: [ContributionResource].self, source: source)
@@ -1511,50 +1383,6 @@ class Decoders {
             }
 
 
-            // Decoder for [CouponItem]
-            Decoders.addDecoder(clazz: [CouponItem].self) { (source: AnyObject) -> [CouponItem] in
-                return Decoders.decode(clazz: [CouponItem].self, source: source)
-            }
-            // Decoder for CouponItem
-            Decoders.addDecoder(clazz: CouponItem.self) { (source: AnyObject) -> CouponItem in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = CouponItem()
-                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
-                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
-                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
-                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
-                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
-                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
-                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
-                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
-                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
-                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
-                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
-                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
-                instance.geoPolicyType = CouponItem.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
-                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
-                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
-                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
-                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
-                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
-                instance.couponTypeHint = CouponItem.CouponTypeHint(rawValue: (sourceDictionary["coupon_type_hint"] as? String) ?? "") 
-                instance.discountMax = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["discount_max"])
-                instance.discountMinCartValue = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["discount_min_cart_value"])
-                instance.discountType = CouponItem.DiscountType(rawValue: (sourceDictionary["discount_type"] as? String) ?? "") 
-                instance.discountValue = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["discount_value"])
-                instance.exclusive = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["exclusive"])
-                instance.itemId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["item_id"])
-                instance.maxQuantity = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_quantity"])
-                instance.selfExclusive = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["self_exclusive"])
-                instance.validForTags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["valid_for_tags"])
-                return instance
-            }
-
-
             // Decoder for [CreateBillingAgreementRequest]
             Decoders.addDecoder(clazz: [CreateBillingAgreementRequest].self) { (source: AnyObject) -> [CreateBillingAgreementRequest] in
                 return Decoders.decode(clazz: [CreateBillingAgreementRequest].self, source: source)
@@ -1615,6 +1443,7 @@ class Decoders {
                 let instance = CustomerConfig()
                 instance.aliases = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["aliases"])
                 instance.database = Decoders.decodeOptional(clazz: DatabaseConfig.self, source: sourceDictionary["database"])
+                instance.io = Decoders.decodeOptional(clazz: IOConfig.self, source: sourceDictionary["io"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
                 instance.s3Config = Decoders.decodeOptional(clazz: S3Config.self, source: sourceDictionary["s3_config"])
                 return instance
@@ -1646,38 +1475,6 @@ class Decoders {
                 instance.args = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["args"])
                 instance.op = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["op"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                return instance
-            }
-
-
-            // Decoder for [DateProperty]
-            Decoders.addDecoder(clazz: [DateProperty].self) { (source: AnyObject) -> [DateProperty] in
-                return Decoders.decode(clazz: [DateProperty].self, source: source)
-            }
-            // Decoder for DateProperty
-            Decoders.addDecoder(clazz: DateProperty.self) { (source: AnyObject) -> DateProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = DateProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.value = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["value"])
-                return instance
-            }
-
-
-            // Decoder for [DatePropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [DatePropertyDefinitionResource].self) { (source: AnyObject) -> [DatePropertyDefinitionResource] in
-                return Decoders.decode(clazz: [DatePropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for DatePropertyDefinitionResource
-            Decoders.addDecoder(clazz: DatePropertyDefinitionResource.self) { (source: AnyObject) -> DatePropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = DatePropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.max = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max"])
-                instance.min = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["min"])
                 return instance
             }
 
@@ -1794,38 +1591,6 @@ class Decoders {
             }
 
 
-            // Decoder for [DoubleProperty]
-            Decoders.addDecoder(clazz: [DoubleProperty].self) { (source: AnyObject) -> [DoubleProperty] in
-                return Decoders.decode(clazz: [DoubleProperty].self, source: source)
-            }
-            // Decoder for DoubleProperty
-            Decoders.addDecoder(clazz: DoubleProperty.self) { (source: AnyObject) -> DoubleProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = DoubleProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.value = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["value"])
-                return instance
-            }
-
-
-            // Decoder for [DoublePropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [DoublePropertyDefinitionResource].self) { (source: AnyObject) -> [DoublePropertyDefinitionResource] in
-                return Decoders.decode(clazz: [DoublePropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for DoublePropertyDefinitionResource
-            Decoders.addDecoder(clazz: DoublePropertyDefinitionResource.self) { (source: AnyObject) -> DoublePropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = DoublePropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.max = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["max"])
-                instance.min = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["min"])
-                return instance
-            }
-
-
             // Decoder for [EntitlementGrantRequest]
             Decoders.addDecoder(clazz: [EntitlementGrantRequest].self) { (source: AnyObject) -> [EntitlementGrantRequest] in
                 return Decoders.decode(clazz: [EntitlementGrantRequest].self, source: source)
@@ -1835,32 +1600,6 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = EntitlementGrantRequest()
                 instance.entitlementId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["entitlement_id"])
-                return instance
-            }
-
-
-            // Decoder for [EntitlementItem]
-            Decoders.addDecoder(clazz: [EntitlementItem].self) { (source: AnyObject) -> [EntitlementItem] in
-                return Decoders.decode(clazz: [EntitlementItem].self, source: source)
-            }
-            // Decoder for EntitlementItem
-            Decoders.addDecoder(clazz: EntitlementItem.self) { (source: AnyObject) -> EntitlementItem in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = EntitlementItem()
-                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
-                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
-                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
-                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
-                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
-                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
-                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
-                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
-                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
-                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
                 return instance
             }
 
@@ -1891,22 +1630,6 @@ class Decoders {
                 instance.eventName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["event_name"])
                 instance.parameters = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["parameters"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                return instance
-            }
-
-
-            // Decoder for [Expirable]
-            Decoders.addDecoder(clazz: [Expirable].self) { (source: AnyObject) -> [Expirable] in
-                return Decoders.decode(clazz: [Expirable].self, source: source)
-            }
-            // Decoder for Expirable
-            Decoders.addDecoder(clazz: Expirable.self) { (source: AnyObject) -> Expirable in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = Expirable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.timeLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["time_length"])
-                instance.unitOfTime = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unit_of_time"])
                 return instance
             }
 
@@ -1945,75 +1668,6 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = FacebookToken()
                 instance.accessToken = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["access_token"])
-                return instance
-            }
-
-
-            // Decoder for [FileGroupProperty]
-            Decoders.addDecoder(clazz: [FileGroupProperty].self) { (source: AnyObject) -> [FileGroupProperty] in
-                return Decoders.decode(clazz: [FileGroupProperty].self, source: source)
-            }
-            // Decoder for FileGroupProperty
-            Decoders.addDecoder(clazz: FileGroupProperty.self) { (source: AnyObject) -> FileGroupProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = FileGroupProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.files = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["files"])
-                return instance
-            }
-
-
-            // Decoder for [FileGroupPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [FileGroupPropertyDefinitionResource].self) { (source: AnyObject) -> [FileGroupPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [FileGroupPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for FileGroupPropertyDefinitionResource
-            Decoders.addDecoder(clazz: FileGroupPropertyDefinitionResource.self) { (source: AnyObject) -> FileGroupPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = FileGroupPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
-                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
-                instance.minCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_count"])
-                return instance
-            }
-
-
-            // Decoder for [FileProperty]
-            Decoders.addDecoder(clazz: [FileProperty].self) { (source: AnyObject) -> [FileProperty] in
-                return Decoders.decode(clazz: [FileProperty].self, source: source)
-            }
-            // Decoder for FileProperty
-            Decoders.addDecoder(clazz: FileProperty.self) { (source: AnyObject) -> FileProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = FileProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.crc = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["crc"])
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
-                return instance
-            }
-
-
-            // Decoder for [FilePropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [FilePropertyDefinitionResource].self) { (source: AnyObject) -> [FilePropertyDefinitionResource] in
-                return Decoders.decode(clazz: [FilePropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for FilePropertyDefinitionResource
-            Decoders.addDecoder(clazz: FilePropertyDefinitionResource.self) { (source: AnyObject) -> FilePropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = FilePropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
                 return instance
             }
 
@@ -2089,37 +1743,6 @@ class Decoders {
             }
 
 
-            // Decoder for [FormattedTextProperty]
-            Decoders.addDecoder(clazz: [FormattedTextProperty].self) { (source: AnyObject) -> [FormattedTextProperty] in
-                return Decoders.decode(clazz: [FormattedTextProperty].self, source: source)
-            }
-            // Decoder for FormattedTextProperty
-            Decoders.addDecoder(clazz: FormattedTextProperty.self) { (source: AnyObject) -> FormattedTextProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = FormattedTextProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.value = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["value"])
-                return instance
-            }
-
-
-            // Decoder for [FormattedTextPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [FormattedTextPropertyDefinitionResource].self) { (source: AnyObject) -> [FormattedTextPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [FormattedTextPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for FormattedTextPropertyDefinitionResource
-            Decoders.addDecoder(clazz: FormattedTextPropertyDefinitionResource.self) { (source: AnyObject) -> FormattedTextPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = FormattedTextPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
-                return instance
-            }
-
-
             // Decoder for [ForwardLog]
             Decoders.addDecoder(clazz: [ForwardLog].self) { (source: AnyObject) -> [ForwardLog] in
                 return Decoders.decode(clazz: [ForwardLog].self, source: source)
@@ -2137,21 +1760,6 @@ class Decoders {
                 instance.retryCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["retry_count"])
                 instance.startDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["start_date"])
                 instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
-                return instance
-            }
-
-
-            // Decoder for [Fulfillable]
-            Decoders.addDecoder(clazz: [Fulfillable].self) { (source: AnyObject) -> [Fulfillable] in
-                return Decoders.decode(clazz: [Fulfillable].self, source: source)
-            }
-            // Decoder for Fulfillable
-            Decoders.addDecoder(clazz: Fulfillable.self) { (source: AnyObject) -> Fulfillable in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = Fulfillable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.typeName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_name"])
                 return instance
             }
 
@@ -2282,94 +1890,18 @@ class Decoders {
             }
 
 
-            // Decoder for [GuestPlayable]
-            Decoders.addDecoder(clazz: [GuestPlayable].self) { (source: AnyObject) -> [GuestPlayable] in
-                return Decoders.decode(clazz: [GuestPlayable].self, source: source)
+            // Decoder for [IOConfig]
+            Decoders.addDecoder(clazz: [IOConfig].self) { (source: AnyObject) -> [IOConfig] in
+                return Decoders.decode(clazz: [IOConfig].self, source: source)
             }
-            // Decoder for GuestPlayable
-            Decoders.addDecoder(clazz: GuestPlayable.self) { (source: AnyObject) -> GuestPlayable in
+            // Decoder for IOConfig
+            Decoders.addDecoder(clazz: IOConfig.self) { (source: AnyObject) -> IOConfig in
                 let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = GuestPlayable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.allowed = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["allowed"])
-                instance.leaderboard = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["leaderboard"])
-                return instance
-            }
-
-
-            // Decoder for [ImageGroupProperty]
-            Decoders.addDecoder(clazz: [ImageGroupProperty].self) { (source: AnyObject) -> [ImageGroupProperty] in
-                return Decoders.decode(clazz: [ImageGroupProperty].self, source: source)
-            }
-            // Decoder for ImageGroupProperty
-            Decoders.addDecoder(clazz: ImageGroupProperty.self) { (source: AnyObject) -> ImageGroupProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = ImageGroupProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.files = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["files"])
-                return instance
-            }
-
-
-            // Decoder for [ImageGroupPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [ImageGroupPropertyDefinitionResource].self) { (source: AnyObject) -> [ImageGroupPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [ImageGroupPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for ImageGroupPropertyDefinitionResource
-            Decoders.addDecoder(clazz: ImageGroupPropertyDefinitionResource.self) { (source: AnyObject) -> ImageGroupPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = ImageGroupPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
-                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
-                instance.minCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_count"])
-                instance.maxHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_height"])
-                instance.maxWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_width"])
-                instance.minHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_height"])
-                instance.minWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_width"])
-                return instance
-            }
-
-
-            // Decoder for [ImageProperty]
-            Decoders.addDecoder(clazz: [ImageProperty].self) { (source: AnyObject) -> [ImageProperty] in
-                return Decoders.decode(clazz: [ImageProperty].self, source: source)
-            }
-            // Decoder for ImageProperty
-            Decoders.addDecoder(clazz: ImageProperty.self) { (source: AnyObject) -> ImageProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = ImageProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.crc = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["crc"])
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
-                return instance
-            }
-
-
-            // Decoder for [ImagePropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [ImagePropertyDefinitionResource].self) { (source: AnyObject) -> [ImagePropertyDefinitionResource] in
-                return Decoders.decode(clazz: [ImagePropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for ImagePropertyDefinitionResource
-            Decoders.addDecoder(clazz: ImagePropertyDefinitionResource.self) { (source: AnyObject) -> ImagePropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = ImagePropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.maxHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_height"])
-                instance.maxWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_width"])
-                instance.minHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_height"])
-                instance.minWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_width"])
+                let instance = IOConfig()
+                instance.customer = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["customer"])
+                instance.enabled = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["enabled"])
+                instance.environment = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["environment"])
+                instance.product = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["product"])
                 return instance
             }
 
@@ -2425,38 +1957,6 @@ class Decoders {
             }
 
 
-            // Decoder for [IntegerProperty]
-            Decoders.addDecoder(clazz: [IntegerProperty].self) { (source: AnyObject) -> [IntegerProperty] in
-                return Decoders.decode(clazz: [IntegerProperty].self, source: source)
-            }
-            // Decoder for IntegerProperty
-            Decoders.addDecoder(clazz: IntegerProperty.self) { (source: AnyObject) -> IntegerProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = IntegerProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.value = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["value"])
-                return instance
-            }
-
-
-            // Decoder for [IntegerPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [IntegerPropertyDefinitionResource].self) { (source: AnyObject) -> [IntegerPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [IntegerPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for IntegerPropertyDefinitionResource
-            Decoders.addDecoder(clazz: IntegerPropertyDefinitionResource.self) { (source: AnyObject) -> IntegerPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = IntegerPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.max = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max"])
-                instance.min = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min"])
-                return instance
-            }
-
-
             // Decoder for [InventorySubscriptionResource]
             Decoders.addDecoder(clazz: [InventorySubscriptionResource].self) { (source: AnyObject) -> [InventorySubscriptionResource] in
                 return Decoders.decode(clazz: [InventorySubscriptionResource].self, source: source)
@@ -2473,6 +1973,8 @@ class Decoders {
                 instance.inventoryStatus = InventorySubscriptionResource.InventoryStatus(rawValue: (sourceDictionary["inventory_status"] as? String) ?? "") 
                 instance.itemId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["item_id"])
                 instance.paymentMethod = Decoders.decodeOptional(clazz: PaymentMethodResource.self, source: sourceDictionary["payment_method"])
+                instance.priceOverride = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["price_override"])
+                instance.priceOverrideReason = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["price_override_reason"])
                 instance.recurringPrice = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["recurring_price"])
                 instance.sku = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["sku"])
                 instance.startDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["start_date"])
@@ -2503,7 +2005,6 @@ class Decoders {
             Decoders.addDecoder(clazz: InvoiceItemResource.self) { (source: AnyObject) -> InvoiceItemResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = InvoiceItemResource()
-                instance.affiliateId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["affiliate_id"])
                 instance.bundleSku = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["bundle_sku"])
                 instance.currentFulfillmentStatus = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["current_fulfillment_status"])
                 instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
@@ -2690,6 +2191,7 @@ class Decoders {
                 let instance = LeaderboardEntryResource()
                 instance.rank = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["rank"])
                 instance.score = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["score"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
                 instance.user = Decoders.decodeOptional(clazz: SimpleUserResource.self, source: sourceDictionary["user"])
                 return instance
             }
@@ -2724,21 +2226,6 @@ class Decoders {
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
                 instance.tiers = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tiers"])
                 instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
-                return instance
-            }
-
-
-            // Decoder for [LimitedGettable]
-            Decoders.addDecoder(clazz: [LimitedGettable].self) { (source: AnyObject) -> [LimitedGettable] in
-                return Decoders.decode(clazz: [LimitedGettable].self, source: source)
-            }
-            // Decoder for LimitedGettable
-            Decoders.addDecoder(clazz: LimitedGettable.self) { (source: AnyObject) -> LimitedGettable in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = LimitedGettable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.group = Decoders.decodeOptional(clazz: LimitedGettableGroup.self, source: sourceDictionary["group"])
                 return instance
             }
 
@@ -2781,38 +2268,6 @@ class Decoders {
                 instance.country = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["country"])
                 instance.ip = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["ip"])
                 instance.time = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["time"])
-                return instance
-            }
-
-
-            // Decoder for [LongProperty]
-            Decoders.addDecoder(clazz: [LongProperty].self) { (source: AnyObject) -> [LongProperty] in
-                return Decoders.decode(clazz: [LongProperty].self, source: source)
-            }
-            // Decoder for LongProperty
-            Decoders.addDecoder(clazz: LongProperty.self) { (source: AnyObject) -> LongProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = LongProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.value = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["value"])
-                return instance
-            }
-
-
-            // Decoder for [LongPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [LongPropertyDefinitionResource].self) { (source: AnyObject) -> [LongPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [LongPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for LongPropertyDefinitionResource
-            Decoders.addDecoder(clazz: LongPropertyDefinitionResource.self) { (source: AnyObject) -> LongPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = LongPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.max = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max"])
-                instance.min = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["min"])
                 return instance
             }
 
@@ -2932,28 +2387,6 @@ class Decoders {
                 instance.active = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["active"])
                 instance.id = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["id"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                return instance
-            }
-
-
-            // Decoder for [NewCustomerEvent]
-            Decoders.addDecoder(clazz: [NewCustomerEvent].self) { (source: AnyObject) -> [NewCustomerEvent] in
-                return Decoders.decode(clazz: [NewCustomerEvent].self, source: source)
-            }
-            // Decoder for NewCustomerEvent
-            Decoders.addDecoder(clazz: NewCustomerEvent.self) { (source: AnyObject) -> NewCustomerEvent in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = NewCustomerEvent()
-                instance.client = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["client"])
-                instance.customer = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["customer"])
-                instance.doNotBroadcast = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["do_not_broadcast"])
-                instance.section = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["section"])
-                instance.source = Decoders.decodeOptional(clazz: AnyObject.self, source: sourceDictionary["source"])
-                instance.specifics = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["specifics"])
-                instance.synchronous = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["synchronous"])
-                instance.timestamp = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["timestamp"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.customerConfig = Decoders.decodeOptional(clazz: CustomerConfig.self, source: sourceDictionary["customer_config"])
                 return instance
             }
 
@@ -4620,6 +4053,21 @@ class Decoders {
             }
 
 
+            // Decoder for [PasswordResetRequest]
+            Decoders.addDecoder(clazz: [PasswordResetRequest].self) { (source: AnyObject) -> [PasswordResetRequest] in
+                return Decoders.decode(clazz: [PasswordResetRequest].self, source: source)
+            }
+            // Decoder for PasswordResetRequest
+            Decoders.addDecoder(clazz: PasswordResetRequest.self) { (source: AnyObject) -> PasswordResetRequest in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = PasswordResetRequest()
+                instance.email = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["email"])
+                instance.mobileNumber = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["mobile_number"])
+                instance.username = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["username"])
+                return instance
+            }
+
+
             // Decoder for [PayBySavedMethodRequest]
             Decoders.addDecoder(clazz: [PayBySavedMethodRequest].self) { (source: AnyObject) -> [PayBySavedMethodRequest] in
                 return Decoders.decode(clazz: [PayBySavedMethodRequest].self, source: source)
@@ -4667,11 +4115,9 @@ class Decoders {
                 instance.expirationYear = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["expiration_year"])
                 instance.id = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["id"])
                 instance.last4 = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["last4"])
-                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
                 instance.paymentMethodType = Decoders.decodeOptional(clazz: PaymentMethodTypeResource.self, source: sourceDictionary["payment_method_type"])
                 instance.paymentType = PaymentMethodResource.PaymentType(rawValue: (sourceDictionary["payment_type"] as? String) ?? "") 
-                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
                 instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
                 instance.token = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["token"])
                 instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
@@ -4770,21 +4216,6 @@ class Decoders {
             }
 
 
-            // Decoder for [PreReqEntitlement]
-            Decoders.addDecoder(clazz: [PreReqEntitlement].self) { (source: AnyObject) -> [PreReqEntitlement] in
-                return Decoders.decode(clazz: [PreReqEntitlement].self, source: source)
-            }
-            // Decoder for PreReqEntitlement
-            Decoders.addDecoder(clazz: PreReqEntitlement.self) { (source: AnyObject) -> PreReqEntitlement in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = PreReqEntitlement()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.itemIds = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["item_ids"])
-                return instance
-            }
-
-
             // Decoder for [PredicateOperation]
             Decoders.addDecoder(clazz: [PredicateOperation].self) { (source: AnyObject) -> [PredicateOperation] in
                 return Decoders.decode(clazz: [PredicateOperation].self, source: source)
@@ -4810,22 +4241,6 @@ class Decoders {
                 instance.args = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["args"])
                 instance.op = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["op"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                return instance
-            }
-
-
-            // Decoder for [PriceOverridable]
-            Decoders.addDecoder(clazz: [PriceOverridable].self) { (source: AnyObject) -> [PriceOverridable] in
-                return Decoders.decode(clazz: [PriceOverridable].self, source: source)
-            }
-            // Decoder for PriceOverridable
-            Decoders.addDecoder(clazz: PriceOverridable.self) { (source: AnyObject) -> PriceOverridable in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = PriceOverridable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.maxPrice = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_price"])
-                instance.minPrice = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_price"])
                 return instance
             }
 
@@ -4994,6 +4409,7 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = RefundRequest()
                 instance.amount = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["amount"])
+                instance.bundleSku = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["bundle_sku"])
                 instance.notes = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["notes"])
                 instance.sku = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["sku"])
                 return instance
@@ -5011,33 +4427,6 @@ class Decoders {
                 instance.amount = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["amount"])
                 instance.refundTransactionId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["refund_transaction_id"])
                 instance.transactionId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["transaction_id"])
-                return instance
-            }
-
-
-            // Decoder for [RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc]
-            Decoders.addDecoder(clazz: [RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc].self) { (source: AnyObject) -> [RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc] in
-                return Decoders.decode(clazz: [RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc].self, source: source)
-            }
-            // Decoder for RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
-            Decoders.addDecoder(clazz: RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.self) { (source: AnyObject) -> RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc()
-                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
-                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
-                instance.entitlements = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["entitlements"])
-                instance.id = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["id"])
-                instance.launch = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["launch"])
-                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance.rewardSet = Decoders.decodeOptional(clazz: RewardSetResource.self, source: sourceDictionary["reward_set"])
-                instance.settings = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["settings"])
-                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
-                instance.template = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["template"])
-                instance.templateId = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template_id"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
-                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
                 return instance
             }
 
@@ -5297,43 +4686,6 @@ class Decoders {
             }
 
 
-            // Decoder for [ShippingItem]
-            Decoders.addDecoder(clazz: [ShippingItem].self) { (source: AnyObject) -> [ShippingItem] in
-                return Decoders.decode(clazz: [ShippingItem].self, source: source)
-            }
-            // Decoder for ShippingItem
-            Decoders.addDecoder(clazz: ShippingItem.self) { (source: AnyObject) -> ShippingItem in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = ShippingItem()
-                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
-                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
-                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
-                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
-                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
-                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
-                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
-                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
-                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
-                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
-                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
-                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
-                instance.geoPolicyType = ShippingItem.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
-                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
-                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
-                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
-                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
-                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
-                instance.countries = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["countries"])
-                instance.maxTierTotal = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_tier_total"])
-                instance.taxable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["taxable"])
-                return instance
-            }
-
-
             // Decoder for [SimpleReferenceResourceint]
             Decoders.addDecoder(clazz: [SimpleReferenceResourceint].self) { (source: AnyObject) -> [SimpleReferenceResourceint] in
                 return Decoders.decode(clazz: [SimpleReferenceResourceint].self, source: source)
@@ -5461,22 +4813,6 @@ class Decoders {
             }
 
 
-            // Decoder for [Spendable]
-            Decoders.addDecoder(clazz: [Spendable].self) { (source: AnyObject) -> [Spendable] in
-                return Decoders.decode(clazz: [Spendable].self, source: source)
-            }
-            // Decoder for Spendable
-            Decoders.addDecoder(clazz: Spendable.self) { (source: AnyObject) -> Spendable in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = Spendable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.currencyCode = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["currency_code"])
-                instance.value = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["value"])
-                return instance
-            }
-
-
             // Decoder for [SqlDatabaseConfig]
             Decoders.addDecoder(clazz: [SqlDatabaseConfig].self) { (source: AnyObject) -> [SqlDatabaseConfig] in
                 return Decoders.decode(clazz: [SqlDatabaseConfig].self, source: source)
@@ -5525,40 +4861,6 @@ class Decoders {
                 instance.rate = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["rate"])
                 instance.stateCode = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["state_code"])
                 instance.taxShipping = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["tax_shipping"])
-                return instance
-            }
-
-
-            // Decoder for [StoreItem]
-            Decoders.addDecoder(clazz: [StoreItem].self) { (source: AnyObject) -> [StoreItem] in
-                return Decoders.decode(clazz: [StoreItem].self, source: source)
-            }
-            // Decoder for StoreItem
-            Decoders.addDecoder(clazz: StoreItem.self) { (source: AnyObject) -> StoreItem in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = StoreItem()
-                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
-                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
-                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
-                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
-                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
-                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
-                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
-                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
-                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
-                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
-                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
-                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
-                instance.geoPolicyType = StoreItem.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
-                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
-                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
-                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
-                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
-                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
                 return instance
             }
 
@@ -5621,43 +4923,6 @@ class Decoders {
                 let instance = StripePaymentRequest()
                 instance.invoiceId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["invoice_id"])
                 instance.token = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["token"])
-                return instance
-            }
-
-
-            // Decoder for [Subscription]
-            Decoders.addDecoder(clazz: [Subscription].self) { (source: AnyObject) -> [Subscription] in
-                return Decoders.decode(clazz: [Subscription].self, source: source)
-            }
-            // Decoder for Subscription
-            Decoders.addDecoder(clazz: Subscription.self) { (source: AnyObject) -> Subscription in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = Subscription()
-                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
-                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
-                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
-                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
-                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
-                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
-                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
-                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
-                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
-                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
-                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
-                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
-                instance.geoPolicyType = Subscription.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
-                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
-                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
-                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
-                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
-                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
-                instance.availability = Subscription.Availability(rawValue: (sourceDictionary["availability"] as? String) ?? "") 
-                instance.consolidationDayOfMonth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["consolidation_day_of_month"])
-                instance.subscriptionPlans = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["subscription_plans"])
                 return instance
             }
 
@@ -5745,6 +5010,20 @@ class Decoders {
                 instance.recurringFee = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["recurring_fee"])
                 instance.recurringSku = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["recurring_sku"])
                 instance.startDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["start_date"])
+                return instance
+            }
+
+
+            // Decoder for [SubscriptionPriceOverrideRequest]
+            Decoders.addDecoder(clazz: [SubscriptionPriceOverrideRequest].self) { (source: AnyObject) -> [SubscriptionPriceOverrideRequest] in
+                return Decoders.decode(clazz: [SubscriptionPriceOverrideRequest].self, source: source)
+            }
+            // Decoder for SubscriptionPriceOverrideRequest
+            Decoders.addDecoder(clazz: SubscriptionPriceOverrideRequest.self) { (source: AnyObject) -> SubscriptionPriceOverrideRequest in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = SubscriptionPriceOverrideRequest()
+                instance.newPrice = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["new_price"])
+                instance.reason = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["reason"])
                 return instance
             }
 
@@ -5849,55 +5128,6 @@ class Decoders {
             }
 
 
-            // Decoder for [TextProperty]
-            Decoders.addDecoder(clazz: [TextProperty].self) { (source: AnyObject) -> [TextProperty] in
-                return Decoders.decode(clazz: [TextProperty].self, source: source)
-            }
-            // Decoder for TextProperty
-            Decoders.addDecoder(clazz: TextProperty.self) { (source: AnyObject) -> TextProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = TextProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.value = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["value"])
-                return instance
-            }
-
-
-            // Decoder for [TextPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [TextPropertyDefinitionResource].self) { (source: AnyObject) -> [TextPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [TextPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for TextPropertyDefinitionResource
-            Decoders.addDecoder(clazz: TextPropertyDefinitionResource.self) { (source: AnyObject) -> TextPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = TextPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
-                return instance
-            }
-
-
-            // Decoder for [TheDefinitionOfAnActivityParametersExDifficultyLevel]
-            Decoders.addDecoder(clazz: [TheDefinitionOfAnActivityParametersExDifficultyLevel].self) { (source: AnyObject) -> [TheDefinitionOfAnActivityParametersExDifficultyLevel] in
-                return Decoders.decode(clazz: [TheDefinitionOfAnActivityParametersExDifficultyLevel].self, source: source)
-            }
-            // Decoder for TheDefinitionOfAnActivityParametersExDifficultyLevel
-            Decoders.addDecoder(clazz: TheDefinitionOfAnActivityParametersExDifficultyLevel.self) { (source: AnyObject) -> TheDefinitionOfAnActivityParametersExDifficultyLevel in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = TheDefinitionOfAnActivityParametersExDifficultyLevel()
-                instance.advancedOption = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["advanced_option"])
-                instance.defaultValue = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["default_value"])
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.key = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["key"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance.options = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["options"])
-                return instance
-            }
-
-
             // Decoder for [TierResource]
             Decoders.addDecoder(clazz: [TierResource].self) { (source: AnyObject) -> [TierResource] in
                 return Decoders.decode(clazz: [TierResource].self, source: source)
@@ -5914,41 +5144,6 @@ class Decoders {
             }
 
 
-            // Decoder for [TimePeriodGettable]
-            Decoders.addDecoder(clazz: [TimePeriodGettable].self) { (source: AnyObject) -> [TimePeriodGettable] in
-                return Decoders.decode(clazz: [TimePeriodGettable].self, source: source)
-            }
-            // Decoder for TimePeriodGettable
-            Decoders.addDecoder(clazz: TimePeriodGettable.self) { (source: AnyObject) -> TimePeriodGettable in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = TimePeriodGettable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.getLimit = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["get_limit"])
-                instance.groupName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["group_name"])
-                instance.timeLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["time_length"])
-                instance.unitOfTime = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unit_of_time"])
-                return instance
-            }
-
-
-            // Decoder for [TimePeriodUsable]
-            Decoders.addDecoder(clazz: [TimePeriodUsable].self) { (source: AnyObject) -> [TimePeriodUsable] in
-                return Decoders.decode(clazz: [TimePeriodUsable].self, source: source)
-            }
-            // Decoder for TimePeriodUsable
-            Decoders.addDecoder(clazz: TimePeriodUsable.self) { (source: AnyObject) -> TimePeriodUsable in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = TimePeriodUsable()
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
-                instance.maxUse = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_use"])
-                instance.timeLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["time_length"])
-                instance.unitOfTime = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unit_of_time"])
-                return instance
-            }
-
-
             // Decoder for [TokenDetailsResource]
             Decoders.addDecoder(clazz: [TokenDetailsResource].self) { (source: AnyObject) -> [TokenDetailsResource] in
                 return Decoders.decode(clazz: [TokenDetailsResource].self, source: source)
@@ -5957,6 +5152,7 @@ class Decoders {
             Decoders.addDecoder(clazz: TokenDetailsResource.self) { (source: AnyObject) -> TokenDetailsResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = TokenDetailsResource()
+                instance.clientId = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["client_id"])
                 instance.roles = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["roles"])
                 instance.userId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["user_id"])
                 return instance
@@ -6072,6 +5268,26 @@ class Decoders {
             }
 
 
+            // Decoder for [UserActivityResults]
+            Decoders.addDecoder(clazz: [UserActivityResults].self) { (source: AnyObject) -> [UserActivityResults] in
+                return Decoders.decode(clazz: [UserActivityResults].self, source: source)
+            }
+            // Decoder for UserActivityResults
+            Decoders.addDecoder(clazz: UserActivityResults.self) { (source: AnyObject) -> UserActivityResults in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = UserActivityResults()
+                instance.currencyRewards = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["currency_rewards"])
+                instance.itemRewards = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["item_rewards"])
+                instance.rank = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["rank"])
+                instance.score = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["score"])
+                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
+                instance.ties = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["ties"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                instance.user = Decoders.decodeOptional(clazz: SimpleUserResource.self, source: sourceDictionary["user"])
+                return instance
+            }
+
+
             // Decoder for [UserActivityResultsResource]
             Decoders.addDecoder(clazz: [UserActivityResultsResource].self) { (source: AnyObject) -> [UserActivityResultsResource] in
                 return Decoders.decode(clazz: [UserActivityResultsResource].self, source: source)
@@ -6080,13 +5296,9 @@ class Decoders {
             Decoders.addDecoder(clazz: UserActivityResultsResource.self) { (source: AnyObject) -> UserActivityResultsResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = UserActivityResultsResource()
-                instance.currencyRewards = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["currency_rewards"])
-                instance.itemRewards = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["item_rewards"])
-                instance.rank = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["rank"])
                 instance.score = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["score"])
                 instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
-                instance.ties = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["ties"])
-                instance.user = Decoders.decodeOptional(clazz: SimpleUserResource.self, source: sourceDictionary["user"])
+                instance.userId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["user_id"])
                 return instance
             }
 
@@ -6104,6 +5316,7 @@ class Decoders {
                 instance.email = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["email"])
                 instance.fullname = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["fullname"])
                 instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
+                instance.lastActivity = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["last_activity"])
                 instance.lastUpdated = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["last_updated"])
                 instance.memberSince = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["member_since"])
                 instance.username = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["username"])
@@ -6248,6 +5461,7 @@ class Decoders {
                 instance.gender = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["gender"])
                 instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
                 instance.languageCode = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["language_code"])
+                instance.lastActivity = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["last_activity"])
                 instance.lastName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["last_name"])
                 instance.lastUpdated = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["last_updated"])
                 instance.memberSince = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["member_since"])
@@ -6346,86 +5560,6 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = Version()
                 instance.version = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["version"])
-                return instance
-            }
-
-
-            // Decoder for [VideoGroupProperty]
-            Decoders.addDecoder(clazz: [VideoGroupProperty].self) { (source: AnyObject) -> [VideoGroupProperty] in
-                return Decoders.decode(clazz: [VideoGroupProperty].self, source: source)
-            }
-            // Decoder for VideoGroupProperty
-            Decoders.addDecoder(clazz: VideoGroupProperty.self) { (source: AnyObject) -> VideoGroupProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = VideoGroupProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.files = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["files"])
-                return instance
-            }
-
-
-            // Decoder for [VideoGroupPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [VideoGroupPropertyDefinitionResource].self) { (source: AnyObject) -> [VideoGroupPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [VideoGroupPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for VideoGroupPropertyDefinitionResource
-            Decoders.addDecoder(clazz: VideoGroupPropertyDefinitionResource.self) { (source: AnyObject) -> VideoGroupPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = VideoGroupPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
-                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
-                instance.minCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_count"])
-                instance.maxHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_height"])
-                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
-                instance.maxWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_width"])
-                instance.minHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_height"])
-                instance.minLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_length"])
-                instance.minWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_width"])
-                return instance
-            }
-
-
-            // Decoder for [VideoProperty]
-            Decoders.addDecoder(clazz: [VideoProperty].self) { (source: AnyObject) -> [VideoProperty] in
-                return Decoders.decode(clazz: [VideoProperty].self, source: source)
-            }
-            // Decoder for VideoProperty
-            Decoders.addDecoder(clazz: VideoProperty.self) { (source: AnyObject) -> VideoProperty in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = VideoProperty()
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.crc = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["crc"])
-                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
-                return instance
-            }
-
-
-            // Decoder for [VideoPropertyDefinitionResource]
-            Decoders.addDecoder(clazz: [VideoPropertyDefinitionResource].self) { (source: AnyObject) -> [VideoPropertyDefinitionResource] in
-                return Decoders.decode(clazz: [VideoPropertyDefinitionResource].self, source: source)
-            }
-            // Decoder for VideoPropertyDefinitionResource
-            Decoders.addDecoder(clazz: VideoPropertyDefinitionResource.self) { (source: AnyObject) -> VideoPropertyDefinitionResource in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = VideoPropertyDefinitionResource()
-                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
-                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
-                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
-                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
-                instance.maxHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_height"])
-                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
-                instance.maxWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_width"])
-                instance.minHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_height"])
-                instance.minLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_length"])
-                instance.minWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_width"])
                 return instance
             }
 
@@ -6554,6 +5688,962 @@ class Decoders {
                 let instance = XsollaPaymentRequest()
                 instance.invoiceId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["invoice_id"])
                 instance.returnUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["return_url"])
+                return instance
+            }
+
+
+            // Decoder for [AudioPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [AudioPropertyDefinitionResource].self) { (source: AnyObject) -> [AudioPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [AudioPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for AudioPropertyDefinitionResource
+            Decoders.addDecoder(clazz: AudioPropertyDefinitionResource.self) { (source: AnyObject) -> AudioPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = AudioPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
+                instance.minLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_length"])
+                return instance
+            }
+
+
+            // Decoder for [BooleanProperty]
+            Decoders.addDecoder(clazz: [BooleanProperty].self) { (source: AnyObject) -> [BooleanProperty] in
+                return Decoders.decode(clazz: [BooleanProperty].self, source: source)
+            }
+            // Decoder for BooleanProperty
+            Decoders.addDecoder(clazz: BooleanProperty.self) { (source: AnyObject) -> BooleanProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = BooleanProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.value = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [BooleanPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [BooleanPropertyDefinitionResource].self) { (source: AnyObject) -> [BooleanPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [BooleanPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for BooleanPropertyDefinitionResource
+            Decoders.addDecoder(clazz: BooleanPropertyDefinitionResource.self) { (source: AnyObject) -> BooleanPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = BooleanPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                return instance
+            }
+
+
+            // Decoder for [CacheClearEvent]
+            Decoders.addDecoder(clazz: [CacheClearEvent].self) { (source: AnyObject) -> [CacheClearEvent] in
+                return Decoders.decode(clazz: [CacheClearEvent].self, source: source)
+            }
+            // Decoder for CacheClearEvent
+            Decoders.addDecoder(clazz: CacheClearEvent.self) { (source: AnyObject) -> CacheClearEvent in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = CacheClearEvent()
+                instance.client = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["client"])
+                instance.customer = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["customer"])
+                instance.doNotBroadcast = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["do_not_broadcast"])
+                instance.section = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["section"])
+                instance.source = Decoders.decodeOptional(clazz: AnyObject.self, source: sourceDictionary["source"])
+                instance.specifics = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["specifics"])
+                instance.synchronous = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["synchronous"])
+                instance.timestamp = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["timestamp"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.customerSetup = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["customer_setup"])
+                instance.customerTeardown = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["customer_teardown"])
+                return instance
+            }
+
+
+            // Decoder for [Consumable]
+            Decoders.addDecoder(clazz: [Consumable].self) { (source: AnyObject) -> [Consumable] in
+                return Decoders.decode(clazz: [Consumable].self, source: source)
+            }
+            // Decoder for Consumable
+            Decoders.addDecoder(clazz: Consumable.self) { (source: AnyObject) -> Consumable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = Consumable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.maxUse = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_use"])
+                return instance
+            }
+
+
+            // Decoder for [DateProperty]
+            Decoders.addDecoder(clazz: [DateProperty].self) { (source: AnyObject) -> [DateProperty] in
+                return Decoders.decode(clazz: [DateProperty].self, source: source)
+            }
+            // Decoder for DateProperty
+            Decoders.addDecoder(clazz: DateProperty.self) { (source: AnyObject) -> DateProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = DateProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.value = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [DatePropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [DatePropertyDefinitionResource].self) { (source: AnyObject) -> [DatePropertyDefinitionResource] in
+                return Decoders.decode(clazz: [DatePropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for DatePropertyDefinitionResource
+            Decoders.addDecoder(clazz: DatePropertyDefinitionResource.self) { (source: AnyObject) -> DatePropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = DatePropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.max = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max"])
+                instance.min = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["min"])
+                return instance
+            }
+
+
+            // Decoder for [DoubleProperty]
+            Decoders.addDecoder(clazz: [DoubleProperty].self) { (source: AnyObject) -> [DoubleProperty] in
+                return Decoders.decode(clazz: [DoubleProperty].self, source: source)
+            }
+            // Decoder for DoubleProperty
+            Decoders.addDecoder(clazz: DoubleProperty.self) { (source: AnyObject) -> DoubleProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = DoubleProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.value = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [DoublePropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [DoublePropertyDefinitionResource].self) { (source: AnyObject) -> [DoublePropertyDefinitionResource] in
+                return Decoders.decode(clazz: [DoublePropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for DoublePropertyDefinitionResource
+            Decoders.addDecoder(clazz: DoublePropertyDefinitionResource.self) { (source: AnyObject) -> DoublePropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = DoublePropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.max = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["max"])
+                instance.min = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["min"])
+                return instance
+            }
+
+
+            // Decoder for [EntitlementItem]
+            Decoders.addDecoder(clazz: [EntitlementItem].self) { (source: AnyObject) -> [EntitlementItem] in
+                return Decoders.decode(clazz: [EntitlementItem].self, source: source)
+            }
+            // Decoder for EntitlementItem
+            Decoders.addDecoder(clazz: EntitlementItem.self) { (source: AnyObject) -> EntitlementItem in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = EntitlementItem()
+                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
+                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
+                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
+                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
+                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
+                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
+                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
+                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                return instance
+            }
+
+
+            // Decoder for [Expirable]
+            Decoders.addDecoder(clazz: [Expirable].self) { (source: AnyObject) -> [Expirable] in
+                return Decoders.decode(clazz: [Expirable].self, source: source)
+            }
+            // Decoder for Expirable
+            Decoders.addDecoder(clazz: Expirable.self) { (source: AnyObject) -> Expirable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = Expirable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.timeLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["time_length"])
+                instance.unitOfTime = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unit_of_time"])
+                return instance
+            }
+
+
+            // Decoder for [FileGroupProperty]
+            Decoders.addDecoder(clazz: [FileGroupProperty].self) { (source: AnyObject) -> [FileGroupProperty] in
+                return Decoders.decode(clazz: [FileGroupProperty].self, source: source)
+            }
+            // Decoder for FileGroupProperty
+            Decoders.addDecoder(clazz: FileGroupProperty.self) { (source: AnyObject) -> FileGroupProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = FileGroupProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.files = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["files"])
+                return instance
+            }
+
+
+            // Decoder for [FileGroupPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [FileGroupPropertyDefinitionResource].self) { (source: AnyObject) -> [FileGroupPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [FileGroupPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for FileGroupPropertyDefinitionResource
+            Decoders.addDecoder(clazz: FileGroupPropertyDefinitionResource.self) { (source: AnyObject) -> FileGroupPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = FileGroupPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
+                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
+                instance.minCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_count"])
+                return instance
+            }
+
+
+            // Decoder for [FileProperty]
+            Decoders.addDecoder(clazz: [FileProperty].self) { (source: AnyObject) -> [FileProperty] in
+                return Decoders.decode(clazz: [FileProperty].self, source: source)
+            }
+            // Decoder for FileProperty
+            Decoders.addDecoder(clazz: FileProperty.self) { (source: AnyObject) -> FileProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = FileProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.crc = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["crc"])
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
+                return instance
+            }
+
+
+            // Decoder for [FilePropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [FilePropertyDefinitionResource].self) { (source: AnyObject) -> [FilePropertyDefinitionResource] in
+                return Decoders.decode(clazz: [FilePropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for FilePropertyDefinitionResource
+            Decoders.addDecoder(clazz: FilePropertyDefinitionResource.self) { (source: AnyObject) -> FilePropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = FilePropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
+                return instance
+            }
+
+
+            // Decoder for [FormattedTextProperty]
+            Decoders.addDecoder(clazz: [FormattedTextProperty].self) { (source: AnyObject) -> [FormattedTextProperty] in
+                return Decoders.decode(clazz: [FormattedTextProperty].self, source: source)
+            }
+            // Decoder for FormattedTextProperty
+            Decoders.addDecoder(clazz: FormattedTextProperty.self) { (source: AnyObject) -> FormattedTextProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = FormattedTextProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.value = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [FormattedTextPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [FormattedTextPropertyDefinitionResource].self) { (source: AnyObject) -> [FormattedTextPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [FormattedTextPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for FormattedTextPropertyDefinitionResource
+            Decoders.addDecoder(clazz: FormattedTextPropertyDefinitionResource.self) { (source: AnyObject) -> FormattedTextPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = FormattedTextPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
+                return instance
+            }
+
+
+            // Decoder for [Fulfillable]
+            Decoders.addDecoder(clazz: [Fulfillable].self) { (source: AnyObject) -> [Fulfillable] in
+                return Decoders.decode(clazz: [Fulfillable].self, source: source)
+            }
+            // Decoder for Fulfillable
+            Decoders.addDecoder(clazz: Fulfillable.self) { (source: AnyObject) -> Fulfillable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = Fulfillable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.typeName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_name"])
+                return instance
+            }
+
+
+            // Decoder for [GuestPlayable]
+            Decoders.addDecoder(clazz: [GuestPlayable].self) { (source: AnyObject) -> [GuestPlayable] in
+                return Decoders.decode(clazz: [GuestPlayable].self, source: source)
+            }
+            // Decoder for GuestPlayable
+            Decoders.addDecoder(clazz: GuestPlayable.self) { (source: AnyObject) -> GuestPlayable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = GuestPlayable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.allowed = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["allowed"])
+                instance.leaderboard = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["leaderboard"])
+                return instance
+            }
+
+
+            // Decoder for [ImagePropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [ImagePropertyDefinitionResource].self) { (source: AnyObject) -> [ImagePropertyDefinitionResource] in
+                return Decoders.decode(clazz: [ImagePropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for ImagePropertyDefinitionResource
+            Decoders.addDecoder(clazz: ImagePropertyDefinitionResource.self) { (source: AnyObject) -> ImagePropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = ImagePropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.maxHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_height"])
+                instance.maxWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_width"])
+                instance.minHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_height"])
+                instance.minWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_width"])
+                return instance
+            }
+
+
+            // Decoder for [IntegerProperty]
+            Decoders.addDecoder(clazz: [IntegerProperty].self) { (source: AnyObject) -> [IntegerProperty] in
+                return Decoders.decode(clazz: [IntegerProperty].self, source: source)
+            }
+            // Decoder for IntegerProperty
+            Decoders.addDecoder(clazz: IntegerProperty.self) { (source: AnyObject) -> IntegerProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = IntegerProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.value = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [IntegerPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [IntegerPropertyDefinitionResource].self) { (source: AnyObject) -> [IntegerPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [IntegerPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for IntegerPropertyDefinitionResource
+            Decoders.addDecoder(clazz: IntegerPropertyDefinitionResource.self) { (source: AnyObject) -> IntegerPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = IntegerPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.max = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max"])
+                instance.min = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min"])
+                return instance
+            }
+
+
+            // Decoder for [LimitedGettable]
+            Decoders.addDecoder(clazz: [LimitedGettable].self) { (source: AnyObject) -> [LimitedGettable] in
+                return Decoders.decode(clazz: [LimitedGettable].self, source: source)
+            }
+            // Decoder for LimitedGettable
+            Decoders.addDecoder(clazz: LimitedGettable.self) { (source: AnyObject) -> LimitedGettable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = LimitedGettable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.group = Decoders.decodeOptional(clazz: LimitedGettableGroup.self, source: sourceDictionary["group"])
+                return instance
+            }
+
+
+            // Decoder for [LongProperty]
+            Decoders.addDecoder(clazz: [LongProperty].self) { (source: AnyObject) -> [LongProperty] in
+                return Decoders.decode(clazz: [LongProperty].self, source: source)
+            }
+            // Decoder for LongProperty
+            Decoders.addDecoder(clazz: LongProperty.self) { (source: AnyObject) -> LongProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = LongProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.value = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [LongPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [LongPropertyDefinitionResource].self) { (source: AnyObject) -> [LongPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [LongPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for LongPropertyDefinitionResource
+            Decoders.addDecoder(clazz: LongPropertyDefinitionResource.self) { (source: AnyObject) -> LongPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = LongPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.max = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max"])
+                instance.min = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["min"])
+                return instance
+            }
+
+
+            // Decoder for [NewCustomerEvent]
+            Decoders.addDecoder(clazz: [NewCustomerEvent].self) { (source: AnyObject) -> [NewCustomerEvent] in
+                return Decoders.decode(clazz: [NewCustomerEvent].self, source: source)
+            }
+            // Decoder for NewCustomerEvent
+            Decoders.addDecoder(clazz: NewCustomerEvent.self) { (source: AnyObject) -> NewCustomerEvent in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = NewCustomerEvent()
+                instance.client = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["client"])
+                instance.customer = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["customer"])
+                instance.doNotBroadcast = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["do_not_broadcast"])
+                instance.section = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["section"])
+                instance.source = Decoders.decodeOptional(clazz: AnyObject.self, source: sourceDictionary["source"])
+                instance.specifics = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["specifics"])
+                instance.synchronous = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["synchronous"])
+                instance.timestamp = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["timestamp"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.customerConfig = Decoders.decodeOptional(clazz: CustomerConfig.self, source: sourceDictionary["customer_config"])
+                return instance
+            }
+
+
+            // Decoder for [PreReqEntitlement]
+            Decoders.addDecoder(clazz: [PreReqEntitlement].self) { (source: AnyObject) -> [PreReqEntitlement] in
+                return Decoders.decode(clazz: [PreReqEntitlement].self, source: source)
+            }
+            // Decoder for PreReqEntitlement
+            Decoders.addDecoder(clazz: PreReqEntitlement.self) { (source: AnyObject) -> PreReqEntitlement in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = PreReqEntitlement()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.itemIds = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["item_ids"])
+                return instance
+            }
+
+
+            // Decoder for [PriceOverridable]
+            Decoders.addDecoder(clazz: [PriceOverridable].self) { (source: AnyObject) -> [PriceOverridable] in
+                return Decoders.decode(clazz: [PriceOverridable].self, source: source)
+            }
+            // Decoder for PriceOverridable
+            Decoders.addDecoder(clazz: PriceOverridable.self) { (source: AnyObject) -> PriceOverridable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = PriceOverridable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.maxPrice = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_price"])
+                instance.minPrice = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_price"])
+                return instance
+            }
+
+
+            // Decoder for [RemoveCustomerEvent]
+            Decoders.addDecoder(clazz: [RemoveCustomerEvent].self) { (source: AnyObject) -> [RemoveCustomerEvent] in
+                return Decoders.decode(clazz: [RemoveCustomerEvent].self, source: source)
+            }
+            // Decoder for RemoveCustomerEvent
+            Decoders.addDecoder(clazz: RemoveCustomerEvent.self) { (source: AnyObject) -> RemoveCustomerEvent in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = RemoveCustomerEvent()
+                instance.client = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["client"])
+                instance.customer = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["customer"])
+                instance.doNotBroadcast = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["do_not_broadcast"])
+                instance.section = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["section"])
+                instance.source = Decoders.decodeOptional(clazz: AnyObject.self, source: sourceDictionary["source"])
+                instance.specifics = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["specifics"])
+                instance.synchronous = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["synchronous"])
+                instance.timestamp = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["timestamp"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.customerConfig = Decoders.decodeOptional(clazz: CustomerConfig.self, source: sourceDictionary["customer_config"])
+                return instance
+            }
+
+
+            // Decoder for [Spendable]
+            Decoders.addDecoder(clazz: [Spendable].self) { (source: AnyObject) -> [Spendable] in
+                return Decoders.decode(clazz: [Spendable].self, source: source)
+            }
+            // Decoder for Spendable
+            Decoders.addDecoder(clazz: Spendable.self) { (source: AnyObject) -> Spendable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = Spendable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.currencyCode = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["currency_code"])
+                instance.value = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [StoreItem]
+            Decoders.addDecoder(clazz: [StoreItem].self) { (source: AnyObject) -> [StoreItem] in
+                return Decoders.decode(clazz: [StoreItem].self, source: source)
+            }
+            // Decoder for StoreItem
+            Decoders.addDecoder(clazz: StoreItem.self) { (source: AnyObject) -> StoreItem in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = StoreItem()
+                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
+                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
+                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
+                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
+                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
+                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
+                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
+                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
+                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
+                instance.geoPolicyType = StoreItem.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
+                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
+                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
+                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
+                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
+                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
+                return instance
+            }
+
+
+            // Decoder for [TextProperty]
+            Decoders.addDecoder(clazz: [TextProperty].self) { (source: AnyObject) -> [TextProperty] in
+                return Decoders.decode(clazz: [TextProperty].self, source: source)
+            }
+            // Decoder for TextProperty
+            Decoders.addDecoder(clazz: TextProperty.self) { (source: AnyObject) -> TextProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = TextProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.value = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [TextPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [TextPropertyDefinitionResource].self) { (source: AnyObject) -> [TextPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [TextPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for TextPropertyDefinitionResource
+            Decoders.addDecoder(clazz: TextPropertyDefinitionResource.self) { (source: AnyObject) -> TextPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = TextPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
+                return instance
+            }
+
+
+            // Decoder for [TimePeriodGettable]
+            Decoders.addDecoder(clazz: [TimePeriodGettable].self) { (source: AnyObject) -> [TimePeriodGettable] in
+                return Decoders.decode(clazz: [TimePeriodGettable].self, source: source)
+            }
+            // Decoder for TimePeriodGettable
+            Decoders.addDecoder(clazz: TimePeriodGettable.self) { (source: AnyObject) -> TimePeriodGettable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = TimePeriodGettable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.getLimit = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["get_limit"])
+                instance.groupName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["group_name"])
+                instance.timeLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["time_length"])
+                instance.unitOfTime = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unit_of_time"])
+                return instance
+            }
+
+
+            // Decoder for [TimePeriodUsable]
+            Decoders.addDecoder(clazz: [TimePeriodUsable].self) { (source: AnyObject) -> [TimePeriodUsable] in
+                return Decoders.decode(clazz: [TimePeriodUsable].self, source: source)
+            }
+            // Decoder for TimePeriodUsable
+            Decoders.addDecoder(clazz: TimePeriodUsable.self) { (source: AnyObject) -> TimePeriodUsable in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = TimePeriodUsable()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.maxUse = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_use"])
+                instance.timeLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["time_length"])
+                instance.unitOfTime = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unit_of_time"])
+                return instance
+            }
+
+
+            // Decoder for [VideoPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [VideoPropertyDefinitionResource].self) { (source: AnyObject) -> [VideoPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [VideoPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for VideoPropertyDefinitionResource
+            Decoders.addDecoder(clazz: VideoPropertyDefinitionResource.self) { (source: AnyObject) -> VideoPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = VideoPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.maxHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_height"])
+                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
+                instance.maxWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_width"])
+                instance.minHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_height"])
+                instance.minLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_length"])
+                instance.minWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_width"])
+                return instance
+            }
+
+
+            // Decoder for [AudioGroupProperty]
+            Decoders.addDecoder(clazz: [AudioGroupProperty].self) { (source: AnyObject) -> [AudioGroupProperty] in
+                return Decoders.decode(clazz: [AudioGroupProperty].self, source: source)
+            }
+            // Decoder for AudioGroupProperty
+            Decoders.addDecoder(clazz: AudioGroupProperty.self) { (source: AnyObject) -> AudioGroupProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = AudioGroupProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.files = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["files"])
+                return instance
+            }
+
+
+            // Decoder for [AudioGroupPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [AudioGroupPropertyDefinitionResource].self) { (source: AnyObject) -> [AudioGroupPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [AudioGroupPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for AudioGroupPropertyDefinitionResource
+            Decoders.addDecoder(clazz: AudioGroupPropertyDefinitionResource.self) { (source: AnyObject) -> AudioGroupPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = AudioGroupPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
+                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
+                instance.minCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_count"])
+                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
+                instance.minLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_length"])
+                return instance
+            }
+
+
+            // Decoder for [AudioProperty]
+            Decoders.addDecoder(clazz: [AudioProperty].self) { (source: AnyObject) -> [AudioProperty] in
+                return Decoders.decode(clazz: [AudioProperty].self, source: source)
+            }
+            // Decoder for AudioProperty
+            Decoders.addDecoder(clazz: AudioProperty.self) { (source: AnyObject) -> AudioProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = AudioProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.crc = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["crc"])
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
+                return instance
+            }
+
+
+            // Decoder for [BundleItem]
+            Decoders.addDecoder(clazz: [BundleItem].self) { (source: AnyObject) -> [BundleItem] in
+                return Decoders.decode(clazz: [BundleItem].self, source: source)
+            }
+            // Decoder for BundleItem
+            Decoders.addDecoder(clazz: BundleItem.self) { (source: AnyObject) -> BundleItem in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = BundleItem()
+                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
+                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
+                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
+                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
+                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
+                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
+                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
+                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
+                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
+                instance.geoPolicyType = BundleItem.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
+                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
+                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
+                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
+                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
+                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
+                instance.bundledSkus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["bundled_skus"])
+                return instance
+            }
+
+
+            // Decoder for [CouponItem]
+            Decoders.addDecoder(clazz: [CouponItem].self) { (source: AnyObject) -> [CouponItem] in
+                return Decoders.decode(clazz: [CouponItem].self, source: source)
+            }
+            // Decoder for CouponItem
+            Decoders.addDecoder(clazz: CouponItem.self) { (source: AnyObject) -> CouponItem in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = CouponItem()
+                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
+                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
+                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
+                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
+                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
+                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
+                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
+                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
+                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
+                instance.geoPolicyType = CouponItem.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
+                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
+                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
+                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
+                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
+                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
+                instance.couponTypeHint = CouponItem.CouponTypeHint(rawValue: (sourceDictionary["coupon_type_hint"] as? String) ?? "") 
+                instance.discountMax = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["discount_max"])
+                instance.discountMinCartValue = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["discount_min_cart_value"])
+                instance.discountType = CouponItem.DiscountType(rawValue: (sourceDictionary["discount_type"] as? String) ?? "") 
+                instance.discountValue = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["discount_value"])
+                instance.exclusive = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["exclusive"])
+                instance.itemId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["item_id"])
+                instance.maxQuantity = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_quantity"])
+                instance.selfExclusive = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["self_exclusive"])
+                instance.validForTags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["valid_for_tags"])
+                return instance
+            }
+
+
+            // Decoder for [ImageGroupProperty]
+            Decoders.addDecoder(clazz: [ImageGroupProperty].self) { (source: AnyObject) -> [ImageGroupProperty] in
+                return Decoders.decode(clazz: [ImageGroupProperty].self, source: source)
+            }
+            // Decoder for ImageGroupProperty
+            Decoders.addDecoder(clazz: ImageGroupProperty.self) { (source: AnyObject) -> ImageGroupProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = ImageGroupProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.files = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["files"])
+                return instance
+            }
+
+
+            // Decoder for [ImageGroupPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [ImageGroupPropertyDefinitionResource].self) { (source: AnyObject) -> [ImageGroupPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [ImageGroupPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for ImageGroupPropertyDefinitionResource
+            Decoders.addDecoder(clazz: ImageGroupPropertyDefinitionResource.self) { (source: AnyObject) -> ImageGroupPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = ImageGroupPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
+                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
+                instance.minCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_count"])
+                instance.maxHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_height"])
+                instance.maxWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_width"])
+                instance.minHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_height"])
+                instance.minWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_width"])
+                return instance
+            }
+
+
+            // Decoder for [ImageProperty]
+            Decoders.addDecoder(clazz: [ImageProperty].self) { (source: AnyObject) -> [ImageProperty] in
+                return Decoders.decode(clazz: [ImageProperty].self, source: source)
+            }
+            // Decoder for ImageProperty
+            Decoders.addDecoder(clazz: ImageProperty.self) { (source: AnyObject) -> ImageProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = ImageProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.crc = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["crc"])
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
+                return instance
+            }
+
+
+            // Decoder for [ShippingItem]
+            Decoders.addDecoder(clazz: [ShippingItem].self) { (source: AnyObject) -> [ShippingItem] in
+                return Decoders.decode(clazz: [ShippingItem].self, source: source)
+            }
+            // Decoder for ShippingItem
+            Decoders.addDecoder(clazz: ShippingItem.self) { (source: AnyObject) -> ShippingItem in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = ShippingItem()
+                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
+                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
+                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
+                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
+                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
+                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
+                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
+                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
+                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
+                instance.geoPolicyType = ShippingItem.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
+                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
+                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
+                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
+                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
+                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
+                instance.countries = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["countries"])
+                instance.maxTierTotal = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_tier_total"])
+                instance.taxable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["taxable"])
+                return instance
+            }
+
+
+            // Decoder for [Subscription]
+            Decoders.addDecoder(clazz: [Subscription].self) { (source: AnyObject) -> [Subscription] in
+                return Decoders.decode(clazz: [Subscription].self, source: source)
+            }
+            // Decoder for Subscription
+            Decoders.addDecoder(clazz: Subscription.self) { (source: AnyObject) -> Subscription in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = Subscription()
+                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
+                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
+                instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
+                instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
+                instance.longDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["long_description"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
+                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
+                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
+                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
+                instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
+                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
+                instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                instance.displayable = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["displayable"])
+                instance.geoCountryList = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["geo_country_list"])
+                instance.geoPolicyType = Subscription.GeoPolicyType(rawValue: (sourceDictionary["geo_policy_type"] as? String) ?? "") 
+                instance.shippingTier = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["shipping_tier"])
+                instance.skus = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["skus"])
+                instance.storeEnd = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_end"])
+                instance.storeStart = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["store_start"])
+                instance.vendorId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["vendor_id"])
+                instance.availability = Subscription.Availability(rawValue: (sourceDictionary["availability"] as? String) ?? "") 
+                instance.consolidationDayOfMonth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["consolidation_day_of_month"])
+                instance.subscriptionPlans = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["subscription_plans"])
+                return instance
+            }
+
+
+            // Decoder for [VideoGroupProperty]
+            Decoders.addDecoder(clazz: [VideoGroupProperty].self) { (source: AnyObject) -> [VideoGroupProperty] in
+                return Decoders.decode(clazz: [VideoGroupProperty].self, source: source)
+            }
+            // Decoder for VideoGroupProperty
+            Decoders.addDecoder(clazz: VideoGroupProperty.self) { (source: AnyObject) -> VideoGroupProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = VideoGroupProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.files = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["files"])
+                return instance
+            }
+
+
+            // Decoder for [VideoGroupPropertyDefinitionResource]
+            Decoders.addDecoder(clazz: [VideoGroupPropertyDefinitionResource].self) { (source: AnyObject) -> [VideoGroupPropertyDefinitionResource] in
+                return Decoders.decode(clazz: [VideoGroupPropertyDefinitionResource].self, source: source)
+            }
+            // Decoder for VideoGroupPropertyDefinitionResource
+            Decoders.addDecoder(clazz: VideoGroupPropertyDefinitionResource.self) { (source: AnyObject) -> VideoGroupPropertyDefinitionResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = VideoGroupPropertyDefinitionResource()
+                instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
+                instance.maxFileSize = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max_file_size"])
+                instance.minCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_count"])
+                instance.maxHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_height"])
+                instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
+                instance.maxWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_width"])
+                instance.minHeight = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_height"])
+                instance.minLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_length"])
+                instance.minWidth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["min_width"])
+                return instance
+            }
+
+
+            // Decoder for [VideoProperty]
+            Decoders.addDecoder(clazz: [VideoProperty].self) { (source: AnyObject) -> [VideoProperty] in
+                return Decoders.decode(clazz: [VideoProperty].self, source: source)
+            }
+            // Decoder for VideoProperty
+            Decoders.addDecoder(clazz: VideoProperty.self) { (source: AnyObject) -> VideoProperty in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = VideoProperty()
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.crc = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["crc"])
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
+                instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
+                instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
                 return instance
             }
         }

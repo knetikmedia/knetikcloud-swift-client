@@ -34,10 +34,10 @@ public class AmazonWebServicesS3API: APIBase {
      - examples: [{contentType=application/json, example={
   "filename" : "aeiou",
   "object_key" : "aeiou",
-  "user_id" : 0,
+  "user_id" : 1,
   "action" : "aeiou",
-  "created_date" : 1,
-  "id" : 5,
+  "created_date" : 0,
+  "id" : 6,
   "url" : "aeiou"
 }}]
      

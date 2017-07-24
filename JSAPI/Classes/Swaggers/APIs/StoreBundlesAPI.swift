@@ -80,9 +80,9 @@ public class StoreBundlesAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 8,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 4,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -268,9 +268,9 @@ public class StoreBundlesAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 1,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 0,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -330,10 +330,10 @@ public class StoreBundlesAPI: APIBase {
      List and search bundle templates
      - GET /store/bundles/templates
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 1,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 9,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -341,8 +341,8 @@ public class StoreBundlesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 0,
-  "number_of_elements" : 7,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "behaviors" : [ {
       "behavior" : {
@@ -353,9 +353,9 @@ public class StoreBundlesAPI: APIBase {
       "required" : false
     } ],
     "name" : "aeiou",
-    "created_date" : 5,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 0,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -475,9 +475,9 @@ public class StoreBundlesAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 5,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 3,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

@@ -9,7 +9,6 @@ import Foundation
 
 
 public class InvoiceItemResource: JSONEncodable {
-    public var affiliateId: Int32?
     public var bundleSku: String?
     public var currentFulfillmentStatus: String?
     public var id: Int32?
@@ -32,7 +31,6 @@ public class InvoiceItemResource: JSONEncodable {
     // MARK: JSONEncodable
     func encodeToJSON() -> AnyObject {
         var nillableDictionary = [String:AnyObject?]()
-        nillableDictionary["affiliate_id"] = self.affiliateId?.encodeToJSON()
         nillableDictionary["bundle_sku"] = self.bundleSku
         nillableDictionary["current_fulfillment_status"] = self.currentFulfillmentStatus
         nillableDictionary["id"] = self.id?.encodeToJSON()

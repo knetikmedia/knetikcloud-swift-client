@@ -43,6 +43,8 @@ public class UserResource: JSONEncodable {
     public var id: Int32?
     /** The ISO3 code for the user&#39;s currency (private) */
     public var languageCode: String?
+    /** The date the user last interacted with the API (private) */
+    public var lastActivity: Int64?
     /** The user&#39;s last name (private) */
     public var lastName: String?
     /** The date the user&#39;s info was last updated as a unix timestamp */
@@ -90,6 +92,7 @@ public class UserResource: JSONEncodable {
         nillableDictionary["gender"] = self.gender
         nillableDictionary["id"] = self.id?.encodeToJSON()
         nillableDictionary["language_code"] = self.languageCode
+        nillableDictionary["last_activity"] = self.lastActivity?.encodeToJSON()
         nillableDictionary["last_name"] = self.lastName
         nillableDictionary["last_updated"] = self.lastUpdated?.encodeToJSON()
         nillableDictionary["member_since"] = self.memberSince?.encodeToJSON()

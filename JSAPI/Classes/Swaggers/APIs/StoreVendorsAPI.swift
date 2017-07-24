@@ -37,7 +37,7 @@ public class StoreVendorsAPI: APIBase {
   "description" : "aeiou",
   "primary_contact_name" : "aeiou",
   "primary_contact_phone" : "aeiou",
-  "update_date" : 6,
+  "update_date" : 1,
   "url" : "aeiou",
   "support_email" : "aeiou",
   "name" : "aeiou",
@@ -47,8 +47,8 @@ public class StoreVendorsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "id" : 3,
-  "create_date" : 7,
+  "id" : 6,
+  "create_date" : 0,
   "manual_approval" : false
 }}]
      
@@ -98,9 +98,9 @@ public class StoreVendorsAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 1,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 9,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -245,7 +245,7 @@ public class StoreVendorsAPI: APIBase {
   "description" : "aeiou",
   "primary_contact_name" : "aeiou",
   "primary_contact_phone" : "aeiou",
-  "update_date" : 5,
+  "update_date" : 1,
   "url" : "aeiou",
   "support_email" : "aeiou",
   "name" : "aeiou",
@@ -255,8 +255,8 @@ public class StoreVendorsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "id" : 8,
-  "create_date" : 9,
+  "id" : 6,
+  "create_date" : 0,
   "manual_approval" : false
 }}]
      
@@ -310,9 +310,9 @@ public class StoreVendorsAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 6,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 1,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -375,10 +375,10 @@ public class StoreVendorsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 1,
   "last" : true,
-  "size" : 6,
-  "total_elements" : 5,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -386,8 +386,8 @@ public class StoreVendorsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 3,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "behaviors" : [ {
       "behavior" : {
@@ -398,9 +398,9 @@ public class StoreVendorsAPI: APIBase {
       "required" : false
     } ],
     "name" : "aeiou",
-    "created_date" : 8,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 9,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -468,9 +468,9 @@ public class StoreVendorsAPI: APIBase {
      List and search vendors
      - GET /vendors
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 5,
   "last" : true,
-  "size" : 0,
+  "size" : 2,
   "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
@@ -479,8 +479,8 @@ public class StoreVendorsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 2,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "template" : "aeiou",
     "primary_contact_email" : "aeiou",
@@ -489,7 +489,7 @@ public class StoreVendorsAPI: APIBase {
     "description" : "aeiou",
     "primary_contact_name" : "aeiou",
     "primary_contact_phone" : "aeiou",
-    "update_date" : 3,
+    "update_date" : 1,
     "url" : "aeiou",
     "support_email" : "aeiou",
     "name" : "aeiou",
@@ -499,8 +499,8 @@ public class StoreVendorsAPI: APIBase {
         "type" : "aeiou"
       }
     },
-    "id" : 5,
-    "create_date" : 1,
+    "id" : 6,
+    "create_date" : 0,
     "manual_approval" : false
   } ],
   "first" : true
@@ -561,7 +561,7 @@ public class StoreVendorsAPI: APIBase {
   "description" : "aeiou",
   "primary_contact_name" : "aeiou",
   "primary_contact_phone" : "aeiou",
-  "update_date" : 6,
+  "update_date" : 1,
   "url" : "aeiou",
   "support_email" : "aeiou",
   "name" : "aeiou",
@@ -571,8 +571,8 @@ public class StoreVendorsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "id" : 0,
-  "create_date" : 3,
+  "id" : 6,
+  "create_date" : 0,
   "manual_approval" : false
 }}]
      
@@ -624,9 +624,9 @@ public class StoreVendorsAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 6,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 5,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

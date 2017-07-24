@@ -79,9 +79,9 @@ public class CategoriesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 8,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 8,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -224,10 +224,10 @@ public class CategoriesAPI: APIBase {
      List and search categories with optional filters
      - GET /categories
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 0,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 8,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -235,8 +235,8 @@ public class CategoriesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 1,
-  "number_of_elements" : 8,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
     "template" : "aeiou",
     "name" : "aeiou",
@@ -349,9 +349,9 @@ public class CategoriesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 8,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 4,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -414,10 +414,10 @@ public class CategoriesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 1,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 3,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -425,13 +425,13 @@ public class CategoriesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 5,
-  "number_of_elements" : 2,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "name" : "aeiou",
-    "created_date" : 7,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 8,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -497,10 +497,10 @@ public class CategoriesAPI: APIBase {
      List all trivia tags in the system
      - GET /tags
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 0,
   "last" : true,
   "size" : 1,
-  "total_elements" : 4,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -508,8 +508,8 @@ public class CategoriesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 3,
-  "number_of_elements" : 7,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ "aeiou" ],
   "first" : true
 }}]
@@ -609,9 +609,9 @@ public class CategoriesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 3,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 9,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

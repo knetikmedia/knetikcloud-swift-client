@@ -34,10 +34,10 @@ public class UtilSecurityAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 0,
+  "number" : 6,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 0,
+  "size" : 5,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -45,12 +45,12 @@ public class UtilSecurityAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 8,
-  "number_of_elements" : 0,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
     "country" : "aeiou",
     "ip" : "aeiou",
-    "time" : 6
+    "time" : 0
   } ],
   "first" : true
 }}]
@@ -101,8 +101,9 @@ public class UtilSecurityAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "user_id" : 5,
-  "roles" : [ "aeiou" ]
+  "user_id" : 0,
+  "roles" : [ "aeiou" ],
+  "client_id" : "aeiou"
 }}]
 
      - returns: RequestBuilder<TokenDetailsResource> 

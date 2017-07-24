@@ -37,11 +37,11 @@ public class PaymentsTransactionsAPI: APIBase {
   "currency_code" : "aeiou",
   "is_refunded" : false,
   "response" : "aeiou",
-  "invoice_id" : 9,
+  "invoice_id" : 1,
   "details" : "aeiou",
-  "id" : 3,
-  "create_date" : 7,
-  "value" : 2.7189929266748503,
+  "id" : 6,
+  "create_date" : 0,
+  "value" : 5.962133916683182,
   "successful" : false
 }}]
      
@@ -88,10 +88,10 @@ public class PaymentsTransactionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 4,
+  "number" : 5,
   "last" : true,
-  "size" : 5,
-  "total_elements" : 5,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -99,8 +99,8 @@ public class PaymentsTransactionsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 6,
+  "total_pages" : 3,
+  "number_of_elements" : 2,
   "content" : [ {
     "transaction_id" : "aeiou",
     "type_hint" : "aeiou",
@@ -109,11 +109,11 @@ public class PaymentsTransactionsAPI: APIBase {
     "currency_code" : "aeiou",
     "is_refunded" : false,
     "response" : "aeiou",
-    "invoice_id" : 0,
+    "invoice_id" : 1,
     "details" : "aeiou",
-    "id" : 8,
-    "create_date" : 4,
-    "value" : 2.5967756507268946,
+    "id" : 6,
+    "create_date" : 0,
+    "value" : 5.962133916683182,
     "successful" : false
   } ],
   "first" : true
@@ -168,9 +168,9 @@ public class PaymentsTransactionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "transaction_id" : 9,
-  "amount" : 7.316182575593041,
-  "refund_transaction_id" : 0
+  "transaction_id" : 1,
+  "amount" : 0.8008281904610115,
+  "refund_transaction_id" : 6
 }}]
      
      - parameter id: (path) The id of the transaction to refund 

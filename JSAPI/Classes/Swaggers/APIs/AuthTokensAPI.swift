@@ -127,10 +127,10 @@ public class AuthTokensAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 0,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 4,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -139,7 +139,7 @@ public class AuthTokensAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
-  "number_of_elements" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
     "client_id" : "aeiou",
     "token" : "aeiou",

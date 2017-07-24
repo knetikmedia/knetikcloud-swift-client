@@ -40,7 +40,7 @@ public class UsersAddressesAPI: APIBase {
   "country_code" : "aeiou",
   "default" : true,
   "name" : "aeiou",
-  "id" : 1,
+  "id" : 0,
   "postal_code" : "aeiou",
   "state_code" : "aeiou",
   "first_name" : "aeiou"
@@ -137,7 +137,7 @@ public class UsersAddressesAPI: APIBase {
   "country_code" : "aeiou",
   "default" : true,
   "name" : "aeiou",
-  "id" : 9,
+  "id" : 0,
   "postal_code" : "aeiou",
   "state_code" : "aeiou",
   "first_name" : "aeiou"
@@ -188,10 +188,10 @@ public class UsersAddressesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 1,
+  "number" : 6,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 8,
+  "size" : 5,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -200,7 +200,7 @@ public class UsersAddressesAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
-  "number_of_elements" : 6,
+  "number_of_elements" : 1,
   "content" : [ {
     "address2" : "aeiou",
     "city" : "aeiou",
@@ -211,7 +211,7 @@ public class UsersAddressesAPI: APIBase {
     "country_code" : "aeiou",
     "default" : true,
     "name" : "aeiou",
-    "id" : 6,
+    "id" : 0,
     "postal_code" : "aeiou",
     "state_code" : "aeiou",
     "first_name" : "aeiou"
@@ -277,7 +277,7 @@ public class UsersAddressesAPI: APIBase {
   "country_code" : "aeiou",
   "default" : true,
   "name" : "aeiou",
-  "id" : 5,
+  "id" : 0,
   "postal_code" : "aeiou",
   "state_code" : "aeiou",
   "first_name" : "aeiou"

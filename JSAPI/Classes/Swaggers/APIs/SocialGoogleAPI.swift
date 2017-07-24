@@ -11,34 +11,34 @@ import Alamofire
 
 public class SocialGoogleAPI: APIBase {
     /**
-     Link facebook account
+     Link google account
      
-     - parameter facebookToken: (body) The token from facebook (optional)
+     - parameter googleToken: (body) The token from google (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func linkAccounts1(facebookToken facebookToken: GoogleToken? = nil, completion: ((error: ErrorType?) -> Void)) {
-        linkAccounts1WithRequestBuilder(facebookToken: facebookToken).execute { (response, error) -> Void in
+    public class func linkAccounts1(googleToken googleToken: GoogleToken? = nil, completion: ((error: ErrorType?) -> Void)) {
+        linkAccounts1WithRequestBuilder(googleToken: googleToken).execute { (response, error) -> Void in
             completion(error: error);
         }
     }
 
 
     /**
-     Link facebook account
+     Link google account
      - POST /social/google/users
-     - Links the current user account to a facebook account, using the acccess token from facebook. Can also be used to update the access token after it has expired.
+     - Links the current user account to a google account, using the acccess token from google. Can also be used to update the access token after it has expired.
      - OAuth:
        - type: oauth2
        - name: OAuth2
      
-     - parameter facebookToken: (body) The token from facebook (optional)
+     - parameter googleToken: (body) The token from google (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    public class func linkAccounts1WithRequestBuilder(facebookToken facebookToken: GoogleToken? = nil) -> RequestBuilder<Void> {
+    public class func linkAccounts1WithRequestBuilder(googleToken googleToken: GoogleToken? = nil) -> RequestBuilder<Void> {
         let path = "/social/google/users"
         let URLString = JSAPIAPI.basePath + path
-        let parameters = facebookToken?.encodeToJSON() as? [String:AnyObject]
+        let parameters = googleToken?.encodeToJSON() as? [String:AnyObject]
  
         let convertedParameters = APIHelper.convertBoolToString(parameters)
  

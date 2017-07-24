@@ -33,11 +33,11 @@ public class DispositionsAPI: APIBase {
   "context" : "aeiou",
   "name" : "aeiou",
   "context_id" : "aeiou",
-  "created_date" : 5,
-  "id" : 4,
+  "created_date" : 0,
+  "id" : 6,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 9,
+    "id" : 1,
     "display_name" : "aeiou",
     "username" : "aeiou"
   }
@@ -119,11 +119,11 @@ public class DispositionsAPI: APIBase {
   "context" : "aeiou",
   "name" : "aeiou",
   "context_id" : "aeiou",
-  "created_date" : 4,
-  "id" : 8,
+  "created_date" : 0,
+  "id" : 6,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 8,
+    "id" : 1,
     "display_name" : "aeiou",
     "username" : "aeiou"
   }
@@ -167,7 +167,7 @@ public class DispositionsAPI: APIBase {
      Returns a list of disposition counts
      - GET /dispositions/count
      - examples: [{contentType=application/json, example=[ {
-  "count" : 3,
+  "count" : 0,
   "name" : "aeiou"
 } ]}]
      
@@ -215,10 +215,10 @@ public class DispositionsAPI: APIBase {
      Returns a page of dispositions
      - GET /dispositions
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 5,
   "last" : true,
-  "size" : 6,
-  "total_elements" : 0,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -226,17 +226,17 @@ public class DispositionsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 6,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "context" : "aeiou",
     "name" : "aeiou",
     "context_id" : "aeiou",
-    "created_date" : 7,
-    "id" : 8,
+    "created_date" : 0,
+    "id" : 6,
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 3,
+      "id" : 1,
       "display_name" : "aeiou",
       "username" : "aeiou"
     }

@@ -27,7 +27,7 @@ public class PaymentsGoogleAPI: APIBase {
      Mark an invoice paid with Google
      - POST /payment/provider/google/payments
      - Mark an invoice paid with Google. Verifies signature from Google and treats the developerPayload field inside the json payload as the id of the invoice to pay. Returns the transaction ID if successful.
-     - examples: [{contentType=application/json, example=9}]
+     - examples: [{contentType=application/json, example=0}]
      
      - parameter request: (body) The request for paying an invoice through a Google in-app payment (optional)
 

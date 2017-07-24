@@ -31,10 +31,10 @@ public class ReportingSubscriptionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 1,
   "last" : true,
   "size" : 5,
-  "total_elements" : 3,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -42,14 +42,14 @@ public class ReportingSubscriptionsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 9,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "last_known_failures" : [ "aeiou" ],
     "created" : 0,
     "id" : "aeiou",
     "statistics" : {
-      "key" : 0
+      "key" : 6
     }
   } ],
   "first" : true

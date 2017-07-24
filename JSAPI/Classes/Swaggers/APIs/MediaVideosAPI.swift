@@ -70,24 +70,24 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "authored" : 4,
+  "authored" : 6,
   "short_description" : "aeiou",
   "extension" : "aeiou",
   "privacy" : "private",
   "uploader" : "",
   "banned" : false,
   "embed" : "aeiou",
-  "id" : 9,
-  "views" : 3,
+  "id" : 2,
+  "views" : 1,
   "height" : 3,
   "thumbnail" : "aeiou",
   "comments" : [ {
     "summary" : "aeiou",
     "context" : "aeiou",
-    "context_id" : 6,
-    "created_date" : 3,
-    "id" : 4,
-    "updated_date" : 9,
+    "context_id" : 1,
+    "created_date" : 5,
+    "id" : 5,
+    "updated_date" : 2,
     "user" : {
       "avatar_url" : "aeiou",
       "id" : 7,
@@ -98,26 +98,26 @@ public class MediaVideosAPI: APIBase {
   } ],
   "author" : {
     "name" : "aeiou",
-    "id" : 1
+    "id" : 0
   },
-  "length" : 3,
+  "length" : 4,
   "active" : false,
   "long_description" : "aeiou",
   "published" : false,
-  "priority" : 6,
+  "priority" : 7,
   "tags" : [ "aeiou" ],
-  "size" : 0,
+  "size" : 1,
   "mime_type" : "aeiou",
   "name" : "aeiou",
-  "width" : 4,
+  "width" : 6,
   "location" : "aeiou",
   "contributors" : [ {
     "role" : "aeiou",
     "artist" : "",
     "media" : ""
   } ],
-  "created_date" : 0,
-  "updated_date" : 0,
+  "created_date" : 9,
+  "updated_date" : 1,
   "category" : {
     "name" : "aeiou",
     "id" : "aeiou"
@@ -163,13 +163,13 @@ public class MediaVideosAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "summary" : "aeiou",
   "context" : "aeiou",
-  "context_id" : 4,
-  "created_date" : 4,
-  "id" : 0,
-  "updated_date" : 8,
+  "context_id" : 0,
+  "created_date" : 6,
+  "id" : 1,
+  "updated_date" : 5,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 2,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
@@ -257,12 +257,12 @@ public class MediaVideosAPI: APIBase {
   "reason" : "aeiou",
   "context" : "aeiou",
   "context_id" : "aeiou",
-  "created_date" : 8,
-  "id" : 1,
-  "updated_date" : 9,
+  "created_date" : 0,
+  "id" : 6,
+  "updated_date" : 1,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 9,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   }
@@ -310,9 +310,9 @@ public class MediaVideosAPI: APIBase {
   "relationship_details" : "aeiou",
   "from" : {
     "name" : "aeiou",
-    "id" : 7
+    "id" : 0
   },
-  "id" : 5,
+  "id" : 6,
   "to" : ""
 }}]
      
@@ -358,11 +358,11 @@ public class MediaVideosAPI: APIBase {
   "context" : "aeiou",
   "name" : "aeiou",
   "context_id" : "aeiou",
-  "created_date" : 7,
-  "id" : 5,
+  "created_date" : 0,
+  "id" : 6,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 5,
+    "id" : 1,
     "display_name" : "aeiou",
     "username" : "aeiou"
   }
@@ -615,10 +615,10 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 0,
+  "number" : 7,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 6,
+  "size" : 4,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -626,30 +626,30 @@ public class MediaVideosAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 4,
+  "total_pages" : 9,
+  "number_of_elements" : 1,
   "content" : [ {
-    "authored" : 9,
+    "authored" : 6,
     "short_description" : "aeiou",
     "extension" : "aeiou",
     "privacy" : "private",
     "uploader" : "",
     "banned" : false,
     "embed" : "aeiou",
-    "id" : 6,
-    "views" : 3,
-    "height" : 1,
+    "id" : 2,
+    "views" : 1,
+    "height" : 3,
     "thumbnail" : "aeiou",
     "comments" : [ {
       "summary" : "aeiou",
       "context" : "aeiou",
-      "context_id" : 8,
-      "created_date" : 4,
-      "id" : 3,
-      "updated_date" : 4,
+      "context_id" : 1,
+      "created_date" : 5,
+      "id" : 5,
+      "updated_date" : 2,
       "user" : {
         "avatar_url" : "aeiou",
-        "id" : 0,
+        "id" : 7,
         "display_name" : "aeiou",
         "username" : "aeiou"
       },
@@ -657,18 +657,18 @@ public class MediaVideosAPI: APIBase {
     } ],
     "author" : {
       "name" : "aeiou",
-      "id" : 9
+      "id" : 0
     },
-    "length" : 3,
+    "length" : 4,
     "active" : false,
     "long_description" : "aeiou",
     "published" : false,
-    "priority" : 1,
+    "priority" : 7,
     "tags" : [ "aeiou" ],
-    "size" : 6,
+    "size" : 1,
     "mime_type" : "aeiou",
     "name" : "aeiou",
-    "width" : 0,
+    "width" : 6,
     "location" : "aeiou",
     "contributors" : [ {
       "role" : "aeiou",
@@ -676,7 +676,7 @@ public class MediaVideosAPI: APIBase {
       "media" : ""
     } ],
     "created_date" : 9,
-    "updated_date" : 0,
+    "updated_date" : 1,
     "category" : {
       "name" : "aeiou",
       "id" : "aeiou"
@@ -732,27 +732,27 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "authored" : 0,
+  "authored" : 6,
   "short_description" : "aeiou",
   "extension" : "aeiou",
   "privacy" : "private",
   "uploader" : "",
   "banned" : false,
   "embed" : "aeiou",
-  "id" : 8,
-  "views" : 6,
-  "height" : 5,
+  "id" : 2,
+  "views" : 1,
+  "height" : 3,
   "thumbnail" : "aeiou",
   "comments" : [ {
     "summary" : "aeiou",
     "context" : "aeiou",
-    "context_id" : 8,
-    "created_date" : 3,
-    "id" : 1,
-    "updated_date" : 8,
+    "context_id" : 1,
+    "created_date" : 5,
+    "id" : 5,
+    "updated_date" : 2,
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 3,
+      "id" : 7,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
@@ -760,26 +760,26 @@ public class MediaVideosAPI: APIBase {
   } ],
   "author" : {
     "name" : "aeiou",
-    "id" : 1
+    "id" : 0
   },
   "length" : 4,
   "active" : false,
   "long_description" : "aeiou",
   "published" : false,
-  "priority" : 8,
+  "priority" : 7,
   "tags" : [ "aeiou" ],
-  "size" : 5,
+  "size" : 1,
   "mime_type" : "aeiou",
   "name" : "aeiou",
-  "width" : 7,
+  "width" : 6,
   "location" : "aeiou",
   "contributors" : [ {
     "role" : "aeiou",
     "artist" : "",
     "media" : ""
   } ],
-  "created_date" : 8,
-  "updated_date" : 9,
+  "created_date" : 9,
+  "updated_date" : 1,
   "category" : {
     "name" : "aeiou",
     "id" : "aeiou"
@@ -825,10 +825,10 @@ public class MediaVideosAPI: APIBase {
      Returns a page of comments for a video
      - GET /media/videos/{videoId}/comments
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 2,
   "last" : true,
   "size" : 9,
-  "total_elements" : 6,
+  "total_elements" : 3,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -836,18 +836,18 @@ public class MediaVideosAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 1,
-  "number_of_elements" : 5,
+  "total_pages" : 2,
+  "number_of_elements" : 7,
   "content" : [ {
     "summary" : "aeiou",
     "context" : "aeiou",
-    "context_id" : 4,
-    "created_date" : 2,
-    "id" : 8,
-    "updated_date" : 7,
+    "context_id" : 0,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 5,
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 6,
+      "id" : 5,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
@@ -902,8 +902,8 @@ public class MediaVideosAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 9,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -911,17 +911,17 @@ public class MediaVideosAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 8,
-  "number_of_elements" : 6,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "context" : "aeiou",
     "name" : "aeiou",
     "context_id" : "aeiou",
-    "created_date" : 2,
-    "id" : 4,
+    "created_date" : 0,
+    "id" : 6,
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 8,
+      "id" : 1,
       "display_name" : "aeiou",
       "username" : "aeiou"
     }
@@ -973,10 +973,10 @@ public class MediaVideosAPI: APIBase {
      Returns a page of video relationships
      - GET /media/videos/{videoId}/related
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 1,
   "last" : true,
-  "size" : 3,
-  "total_elements" : 6,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -984,15 +984,15 @@ public class MediaVideosAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 3,
+  "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "relationship_details" : "aeiou",
     "from" : {
       "name" : "aeiou",
-      "id" : 1
+      "id" : 0
     },
-    "id" : 9,
+    "id" : 6,
     "to" : ""
   } ],
   "first" : true
@@ -1043,7 +1043,7 @@ public class MediaVideosAPI: APIBase {
      - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to author:ASC)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func getVideos(excludeFlagged excludeFlagged: Bool? = nil, filterVideosByUploader: Object? = nil, filterCategory: String? = nil, filterTagset: String? = nil, filterVideosByName: String? = nil, filterVideosByContributor: Object? = nil, filterVideosByAuthor: Object? = nil, filterHasAuthor: Bool? = nil, filterHasUploader: Bool? = nil, filterRelatedTo: String? = nil, filterFriends: Bool? = nil, filterDisposition: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceVideoResource?, error: ErrorType?) -> Void)) {
+    public class func getVideos(excludeFlagged excludeFlagged: Bool? = nil, filterVideosByUploader: Int32? = nil, filterCategory: String? = nil, filterTagset: String? = nil, filterVideosByName: String? = nil, filterVideosByContributor: Int32? = nil, filterVideosByAuthor: Int32? = nil, filterHasAuthor: Bool? = nil, filterHasUploader: Bool? = nil, filterRelatedTo: String? = nil, filterFriends: Bool? = nil, filterDisposition: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceVideoResource?, error: ErrorType?) -> Void)) {
         getVideosWithRequestBuilder(excludeFlagged: excludeFlagged, filterVideosByUploader: filterVideosByUploader, filterCategory: filterCategory, filterTagset: filterTagset, filterVideosByName: filterVideosByName, filterVideosByContributor: filterVideosByContributor, filterVideosByAuthor: filterVideosByAuthor, filterHasAuthor: filterHasAuthor, filterHasUploader: filterHasUploader, filterRelatedTo: filterRelatedTo, filterFriends: filterFriends, filterDisposition: filterDisposition, size: size, page: page, order: order).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
@@ -1054,9 +1054,9 @@ public class MediaVideosAPI: APIBase {
      Search videos using the documented filters
      - GET /media/videos
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 7,
   "last" : true,
-  "size" : 2,
+  "size" : 4,
   "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
@@ -1065,30 +1065,30 @@ public class MediaVideosAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 5,
+  "total_pages" : 9,
+  "number_of_elements" : 1,
   "content" : [ {
-    "authored" : 2,
+    "authored" : 6,
     "short_description" : "aeiou",
     "extension" : "aeiou",
     "privacy" : "private",
     "uploader" : "",
     "banned" : false,
     "embed" : "aeiou",
-    "id" : 0,
-    "views" : 4,
+    "id" : 2,
+    "views" : 1,
     "height" : 3,
     "thumbnail" : "aeiou",
     "comments" : [ {
       "summary" : "aeiou",
       "context" : "aeiou",
-      "context_id" : 2,
-      "created_date" : 0,
+      "context_id" : 1,
+      "created_date" : 5,
       "id" : 5,
-      "updated_date" : 5,
+      "updated_date" : 2,
       "user" : {
         "avatar_url" : "aeiou",
-        "id" : 0,
+        "id" : 7,
         "display_name" : "aeiou",
         "username" : "aeiou"
       },
@@ -1096,26 +1096,26 @@ public class MediaVideosAPI: APIBase {
     } ],
     "author" : {
       "name" : "aeiou",
-      "id" : 3
+      "id" : 0
     },
-    "length" : 6,
+    "length" : 4,
     "active" : false,
     "long_description" : "aeiou",
     "published" : false,
-    "priority" : 8,
+    "priority" : 7,
     "tags" : [ "aeiou" ],
-    "size" : 2,
+    "size" : 1,
     "mime_type" : "aeiou",
     "name" : "aeiou",
-    "width" : 4,
+    "width" : 6,
     "location" : "aeiou",
     "contributors" : [ {
       "role" : "aeiou",
       "artist" : "",
       "media" : ""
     } ],
-    "created_date" : 5,
-    "updated_date" : 7,
+    "created_date" : 9,
+    "updated_date" : 1,
     "category" : {
       "name" : "aeiou",
       "id" : "aeiou"
@@ -1142,18 +1142,18 @@ public class MediaVideosAPI: APIBase {
 
      - returns: RequestBuilder<PageResourceVideoResource> 
      */
-    public class func getVideosWithRequestBuilder(excludeFlagged excludeFlagged: Bool? = nil, filterVideosByUploader: Object? = nil, filterCategory: String? = nil, filterTagset: String? = nil, filterVideosByName: String? = nil, filterVideosByContributor: Object? = nil, filterVideosByAuthor: Object? = nil, filterHasAuthor: Bool? = nil, filterHasUploader: Bool? = nil, filterRelatedTo: String? = nil, filterFriends: Bool? = nil, filterDisposition: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceVideoResource> {
+    public class func getVideosWithRequestBuilder(excludeFlagged excludeFlagged: Bool? = nil, filterVideosByUploader: Int32? = nil, filterCategory: String? = nil, filterTagset: String? = nil, filterVideosByName: String? = nil, filterVideosByContributor: Int32? = nil, filterVideosByAuthor: Int32? = nil, filterHasAuthor: Bool? = nil, filterHasUploader: Bool? = nil, filterRelatedTo: String? = nil, filterFriends: Bool? = nil, filterDisposition: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceVideoResource> {
         let path = "/media/videos"
         let URLString = JSAPIAPI.basePath + path
 
         let nillableParameters: [String:AnyObject?] = [
             "exclude_flagged": excludeFlagged,
-            "filter_videos_by_uploader": filterVideosByUploader,
+            "filter_videos_by_uploader": filterVideosByUploader?.encodeToJSON(),
             "filter_category": filterCategory,
             "filter_tagset": filterTagset,
             "filter_videos_by_name": filterVideosByName,
-            "filter_videos_by_contributor": filterVideosByContributor,
-            "filter_videos_by_author": filterVideosByAuthor,
+            "filter_videos_by_contributor": filterVideosByContributor?.encodeToJSON(),
+            "filter_videos_by_author": filterVideosByAuthor?.encodeToJSON(),
             "filter_has_author": filterHasAuthor,
             "filter_has_uploader": filterHasUploader,
             "filter_related_to": filterRelatedTo,

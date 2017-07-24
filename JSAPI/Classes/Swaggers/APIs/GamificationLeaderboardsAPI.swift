@@ -33,16 +33,17 @@ public class GamificationLeaderboardsAPI: APIBase {
      - The context type identifies the type of entity (i.e., 'activity') being tracked on the leaderboard. The context ID is the unique ID of the actual entity tracked by the leaderboard. Sorting is based on the fields of LeaderboardEntryResource rather than the returned LeaderboardResource.
      - examples: [{contentType=application/json, example={
   "entries" : [ {
-    "score" : 3,
-    "rank" : 5,
+    "score" : 6,
+    "rank" : 0,
+    "updated_date" : 1,
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 3,
+      "id" : 5,
       "display_name" : "aeiou",
       "username" : "aeiou"
     }
   } ],
-  "id" : 4,
+  "id" : 5,
   "strategy" : "aeiou"
 }}]
      
@@ -98,11 +99,12 @@ public class GamificationLeaderboardsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "score" : 3,
-  "rank" : 2,
+  "score" : 6,
+  "rank" : 0,
+  "updated_date" : 1,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 7,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   }

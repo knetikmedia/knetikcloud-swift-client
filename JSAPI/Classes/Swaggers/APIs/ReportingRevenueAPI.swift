@@ -33,10 +33,10 @@ public class ReportingRevenueAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "sales_average" : 1.76419879366162,
-  "sale_count" : 8,
-  "sales_total" : 1.0729166540520796,
-  "customer_count" : 7
+  "sales_average" : 1.4658129805029452,
+  "sale_count" : 6,
+  "sales_total" : 5.962133916683182,
+  "customer_count" : 0
 }}]
      
      - parameter currencyCode: (path) The code for a currency to get sales data for 
@@ -87,10 +87,10 @@ public class ReportingRevenueAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "sales_average" : 2.720145534304902,
+  "sales_average" : 1.4658129805029452,
   "sale_count" : 6,
-  "sales_total" : 1.771546626003665,
-  "customer_count" : 6
+  "sales_total" : 5.962133916683182,
+  "customer_count" : 0
 }}]
      
      - parameter currencyCode: (path) The code for a currency to get refund data for 
@@ -143,10 +143,10 @@ public class ReportingRevenueAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 1,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 0,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -155,11 +155,11 @@ public class ReportingRevenueAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
-  "number_of_elements" : 0,
+  "number_of_elements" : 5,
   "content" : [ {
-    "volume" : 1,
+    "volume" : 6,
     "country" : "aeiou",
-    "revenue" : 4.302051610550278
+    "revenue" : 0.8008281904610115
   } ],
   "first" : true
 }}]
@@ -218,10 +218,10 @@ public class ReportingRevenueAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 5,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 3,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -229,12 +229,12 @@ public class ReportingRevenueAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 1,
-  "number_of_elements" : 9,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "volume" : 1,
-    "revenue" : 5.909098260498668,
-    "item_id" : 4,
+    "revenue" : 6.027456183070403,
+    "item_id" : 0,
     "item_name" : "aeiou"
   } ],
   "first" : true
@@ -292,10 +292,10 @@ public class ReportingRevenueAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "sales_average" : 2.2707058142438754,
-  "sale_count" : 7,
-  "sales_total" : 6.442047547732627,
-  "customer_count" : 3
+  "sales_average" : 1.4658129805029452,
+  "sale_count" : 6,
+  "sales_total" : 5.962133916683182,
+  "customer_count" : 0
 }}]
      
      - parameter currencyCode: (path) The code for a currency to get sales data for 

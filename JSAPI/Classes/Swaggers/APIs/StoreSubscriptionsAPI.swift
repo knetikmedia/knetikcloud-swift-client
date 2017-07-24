@@ -34,54 +34,54 @@ public class StoreSubscriptionsAPI: APIBase {
   "template" : "aeiou",
   "short_description" : "aeiou",
   "geo_country_list" : [ "aeiou" ],
-  "store_end" : 3,
+  "store_end" : 7,
   "unique_key" : "aeiou",
   "availability" : "all",
   "long_description" : "aeiou",
-  "sort" : 2,
+  "sort" : 6,
   "tags" : [ "aeiou" ],
   "consolidation_day_of_month" : 0,
   "plans" : [ {
-    "end_date" : 6,
-    "initial_fee" : 6.949197383852937,
-    "late_payment_fee" : 8.740075647622294,
-    "billing_cycle_length" : 8,
+    "end_date" : 5,
+    "initial_fee" : 9.301444243932576,
+    "late_payment_fee" : 3.616076749251911,
+    "billing_cycle_length" : 5,
     "reactivation_sku" : "aeiou",
     "currency_code" : "aeiou",
-    "recurring_fee" : 1.27302899632314,
-    "min_cycles" : 2,
+    "recurring_fee" : 1.0246457001441578,
+    "min_cycles" : 7,
     "recurring_sku" : "aeiou",
-    "max_bill_attempts" : 1,
+    "max_bill_attempts" : 2,
     "additional_properties" : {
       "key" : ""
     },
     "id" : "aeiou",
     "locked" : false,
-    "start_date" : 0,
+    "start_date" : 1,
     "initial_sku" : "aeiou",
     "published" : false,
-    "grace_period" : 9,
+    "grace_period" : 7,
     "consolidated" : false,
     "first_billing_cycle_unit" : "millisecond",
     "late_payment_sku" : "aeiou",
-    "first_billing_cycle_length" : 7,
+    "first_billing_cycle_length" : 2,
     "migrate_to_plan" : "aeiou",
     "name" : "aeiou",
     "billing_cycle_unit" : "millisecond",
-    "reactivation_fee" : 2.7698118902547497,
-    "max_cycles" : 8
+    "reactivation_fee" : 1.2315135367772556,
+    "max_cycles" : 4
   } ],
-  "store_start" : 8,
-  "vendor_id" : 6,
+  "store_start" : 1,
+  "vendor_id" : 5,
   "name" : "aeiou",
   "additional_properties" : {
     "key" : {
       "type" : "aeiou"
     }
   },
-  "created_date" : 4,
-  "id" : 9,
-  "updated_date" : 9,
+  "created_date" : 6,
+  "id" : 1,
+  "updated_date" : 4,
   "category" : "aeiou"
 }}]
      
@@ -125,9 +125,9 @@ public class StoreSubscriptionsAPI: APIBase {
   "name" : "aeiou",
   "plan_template" : {
     "name" : "aeiou",
-    "created_date" : 2,
+    "created_date" : 6,
     "id" : "aeiou",
-    "updated_date" : 2,
+    "updated_date" : 1,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -147,9 +147,9 @@ public class StoreSubscriptionsAPI: APIBase {
       "required" : false
     } ]
   },
-  "created_date" : 3,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 8,
+  "updated_date" : 5,
   "properties" : [ "" ]
 }}]
      
@@ -278,45 +278,45 @@ public class StoreSubscriptionsAPI: APIBase {
   "template" : "aeiou",
   "short_description" : "aeiou",
   "geo_country_list" : [ "aeiou" ],
-  "store_end" : 4,
+  "store_end" : 7,
   "unique_key" : "aeiou",
   "availability" : "all",
   "long_description" : "aeiou",
-  "sort" : 5,
+  "sort" : 6,
   "tags" : [ "aeiou" ],
-  "consolidation_day_of_month" : 4,
+  "consolidation_day_of_month" : 0,
   "plans" : [ {
-    "end_date" : 4,
-    "initial_fee" : 7.134931693460148,
-    "late_payment_fee" : 8.815899500933332,
+    "end_date" : 5,
+    "initial_fee" : 9.301444243932576,
+    "late_payment_fee" : 3.616076749251911,
     "billing_cycle_length" : 5,
     "reactivation_sku" : "aeiou",
     "currency_code" : "aeiou",
-    "recurring_fee" : 3.5861245036057667,
+    "recurring_fee" : 1.0246457001441578,
     "min_cycles" : 7,
     "recurring_sku" : "aeiou",
-    "max_bill_attempts" : 0,
+    "max_bill_attempts" : 2,
     "additional_properties" : {
       "key" : ""
     },
     "id" : "aeiou",
     "locked" : false,
-    "start_date" : 6,
+    "start_date" : 1,
     "initial_sku" : "aeiou",
     "published" : false,
-    "grace_period" : 8,
+    "grace_period" : 7,
     "consolidated" : false,
     "first_billing_cycle_unit" : "millisecond",
     "late_payment_sku" : "aeiou",
-    "first_billing_cycle_length" : 9,
+    "first_billing_cycle_length" : 2,
     "migrate_to_plan" : "aeiou",
     "name" : "aeiou",
     "billing_cycle_unit" : "millisecond",
-    "reactivation_fee" : 1.6740744093644133,
-    "max_cycles" : 6
+    "reactivation_fee" : 1.2315135367772556,
+    "max_cycles" : 4
   } ],
-  "store_start" : 0,
-  "vendor_id" : 0,
+  "store_start" : 1,
+  "vendor_id" : 5,
   "name" : "aeiou",
   "additional_properties" : {
     "key" : {
@@ -325,7 +325,7 @@ public class StoreSubscriptionsAPI: APIBase {
   },
   "created_date" : 6,
   "id" : 1,
-  "updated_date" : 2,
+  "updated_date" : 4,
   "category" : "aeiou"
 }}]
      
@@ -373,9 +373,9 @@ public class StoreSubscriptionsAPI: APIBase {
   "name" : "aeiou",
   "plan_template" : {
     "name" : "aeiou",
-    "created_date" : 0,
+    "created_date" : 6,
     "id" : "aeiou",
-    "updated_date" : 6,
+    "updated_date" : 1,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -397,7 +397,7 @@ public class StoreSubscriptionsAPI: APIBase {
   },
   "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 7,
+  "updated_date" : 5,
   "properties" : [ "" ]
 }}]
      
@@ -443,10 +443,10 @@ public class StoreSubscriptionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 5,
   "last" : true,
-  "size" : 0,
-  "total_elements" : 7,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -454,13 +454,13 @@ public class StoreSubscriptionsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 7,
+  "total_pages" : 3,
+  "number_of_elements" : 2,
   "content" : [ {
     "name" : "aeiou",
     "plan_template" : {
       "name" : "aeiou",
-      "created_date" : 1,
+      "created_date" : 6,
       "id" : "aeiou",
       "updated_date" : 1,
       "properties" : [ {
@@ -482,7 +482,7 @@ public class StoreSubscriptionsAPI: APIBase {
         "required" : false
       } ]
     },
-    "created_date" : 4,
+    "created_date" : 0,
     "id" : "aeiou",
     "updated_date" : 5,
     "properties" : [ "" ]
@@ -534,10 +534,10 @@ public class StoreSubscriptionsAPI: APIBase {
      List available subscription items and associated plans
      - GET /subscriptions
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 9,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 6,
+  "size" : 6,
+  "total_elements" : 8,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -545,61 +545,61 @@ public class StoreSubscriptionsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 8,
-  "number_of_elements" : 3,
+  "total_pages" : 9,
+  "number_of_elements" : 9,
   "content" : [ {
     "geo_policy_type" : "whitelist",
     "template" : "aeiou",
     "short_description" : "aeiou",
     "geo_country_list" : [ "aeiou" ],
-    "store_end" : 4,
+    "store_end" : 7,
     "unique_key" : "aeiou",
     "availability" : "all",
     "long_description" : "aeiou",
-    "sort" : 3,
+    "sort" : 6,
     "tags" : [ "aeiou" ],
-    "consolidation_day_of_month" : 6,
+    "consolidation_day_of_month" : 0,
     "plans" : [ {
-      "end_date" : 2,
-      "initial_fee" : 0.533076383145521,
-      "late_payment_fee" : 1.330336756173901,
+      "end_date" : 5,
+      "initial_fee" : 9.301444243932576,
+      "late_payment_fee" : 3.616076749251911,
       "billing_cycle_length" : 5,
       "reactivation_sku" : "aeiou",
       "currency_code" : "aeiou",
-      "recurring_fee" : 8.287999108808206,
-      "min_cycles" : 0,
+      "recurring_fee" : 1.0246457001441578,
+      "min_cycles" : 7,
       "recurring_sku" : "aeiou",
-      "max_bill_attempts" : 9,
+      "max_bill_attempts" : 2,
       "additional_properties" : {
         "key" : ""
       },
       "id" : "aeiou",
       "locked" : false,
-      "start_date" : 5,
+      "start_date" : 1,
       "initial_sku" : "aeiou",
       "published" : false,
-      "grace_period" : 0,
+      "grace_period" : 7,
       "consolidated" : false,
       "first_billing_cycle_unit" : "millisecond",
       "late_payment_sku" : "aeiou",
-      "first_billing_cycle_length" : 0,
+      "first_billing_cycle_length" : 2,
       "migrate_to_plan" : "aeiou",
       "name" : "aeiou",
       "billing_cycle_unit" : "millisecond",
-      "reactivation_fee" : 4.268829034241687,
-      "max_cycles" : 3
+      "reactivation_fee" : 1.2315135367772556,
+      "max_cycles" : 4
     } ],
     "store_start" : 1,
-    "vendor_id" : 4,
+    "vendor_id" : 5,
     "name" : "aeiou",
     "additional_properties" : {
       "key" : {
         "type" : "aeiou"
       }
     },
-    "created_date" : 3,
-    "id" : 4,
-    "updated_date" : 9,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 4,
     "category" : "aeiou"
   } ],
   "first" : true
@@ -730,9 +730,9 @@ public class StoreSubscriptionsAPI: APIBase {
   "name" : "aeiou",
   "plan_template" : {
     "name" : "aeiou",
-    "created_date" : 0,
+    "created_date" : 6,
     "id" : "aeiou",
-    "updated_date" : 8,
+    "updated_date" : 1,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -752,9 +752,9 @@ public class StoreSubscriptionsAPI: APIBase {
       "required" : false
     } ]
   },
-  "created_date" : 2,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 7,
+  "updated_date" : 5,
   "properties" : [ "" ]
 }}]
      

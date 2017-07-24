@@ -33,9 +33,9 @@ public class PaymentsWalletsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "code" : "aeiou",
   "currency_name" : "aeiou",
-  "balance" : 0.5329889055018866,
-  "user_id" : 4,
-  "id" : 0
+  "balance" : 0.8008281904610115,
+  "user_id" : 1,
+  "id" : 6
 }}]
      
      - parameter userId: (path) The ID of the user for whom wallet is being retrieved 
@@ -88,10 +88,10 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 9,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 3,
+  "size" : 2,
+  "total_elements" : 4,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -99,8 +99,8 @@ public class PaymentsWalletsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
-  "number_of_elements" : 8,
+  "total_pages" : 7,
+  "number_of_elements" : 3,
   "content" : [ {
     "transaction_id" : "aeiou",
     "type_hint" : "aeiou",
@@ -108,20 +108,20 @@ public class PaymentsWalletsAPI: APIBase {
     "type" : "aeiou",
     "currency_code" : "aeiou",
     "is_refunded" : false,
-    "wallet_id" : 9,
-    "balance" : 3.8747651019543827,
+    "wallet_id" : 7,
+    "balance" : 0.8008281904610115,
     "response" : "aeiou",
-    "invoice_id" : 7,
+    "invoice_id" : 5,
     "details" : "aeiou",
     "id" : 1,
-    "create_date" : 5,
+    "create_date" : 6,
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 0,
+      "id" : 5,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
-    "value" : 2.7674684408706005,
+    "value" : 2.3021358869347655,
     "successful" : false
   } ],
   "first" : true
@@ -186,8 +186,8 @@ public class PaymentsWalletsAPI: APIBase {
      - examples: [{contentType=application/json, example=[ {
   "code" : "aeiou",
   "currency_name" : "aeiou",
-  "balance" : 4.373567666884627,
-  "user_id" : 0,
+  "balance" : 0.8008281904610115,
+  "user_id" : 1,
   "id" : 6
 } ]}]
      
@@ -230,10 +230,10 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 6,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 9,
+  "size" : 5,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -241,10 +241,10 @@ public class PaymentsWalletsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 7,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
-    "total" : 4.3779098625422925,
+    "total" : 0.8008281904610115,
     "currency_code" : "aeiou"
   } ],
   "first" : true
@@ -305,10 +305,10 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 1,
+  "number" : 9,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 5,
+  "size" : 2,
+  "total_elements" : 4,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -316,8 +316,8 @@ public class PaymentsWalletsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 5,
-  "number_of_elements" : 5,
+  "total_pages" : 7,
+  "number_of_elements" : 3,
   "content" : [ {
     "transaction_id" : "aeiou",
     "type_hint" : "aeiou",
@@ -325,20 +325,20 @@ public class PaymentsWalletsAPI: APIBase {
     "type" : "aeiou",
     "currency_code" : "aeiou",
     "is_refunded" : false,
-    "wallet_id" : 0,
-    "balance" : 7.106362405941875,
+    "wallet_id" : 7,
+    "balance" : 0.8008281904610115,
     "response" : "aeiou",
-    "invoice_id" : 3,
+    "invoice_id" : 5,
     "details" : "aeiou",
-    "id" : 0,
-    "create_date" : 3,
+    "id" : 1,
+    "create_date" : 6,
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 4,
+      "id" : 5,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
-    "value" : 8.9759905716387,
+    "value" : 2.3021358869347655,
     "successful" : false
   } ],
   "first" : true
@@ -407,10 +407,10 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 5,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 1,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -418,14 +418,14 @@ public class PaymentsWalletsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 1,
+  "total_pages" : 9,
   "number_of_elements" : 5,
   "content" : [ {
     "code" : "aeiou",
     "currency_name" : "aeiou",
-    "balance" : 9.599135860127976,
-    "user_id" : 3,
-    "id" : 5
+    "balance" : 0.8008281904610115,
+    "user_id" : 1,
+    "id" : 6
   } ],
   "first" : true
 }}]
@@ -483,20 +483,20 @@ public class PaymentsWalletsAPI: APIBase {
   "type" : "aeiou",
   "currency_code" : "aeiou",
   "is_refunded" : false,
-  "wallet_id" : 1,
-  "balance" : 3.810674370280048,
+  "wallet_id" : 7,
+  "balance" : 0.8008281904610115,
   "response" : "aeiou",
-  "invoice_id" : 0,
+  "invoice_id" : 5,
   "details" : "aeiou",
-  "id" : 5,
-  "create_date" : 9,
+  "id" : 1,
+  "create_date" : 6,
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 2,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
-  "value" : 6.773418265566315,
+  "value" : 2.3021358869347655,
   "successful" : false
 }}]
      

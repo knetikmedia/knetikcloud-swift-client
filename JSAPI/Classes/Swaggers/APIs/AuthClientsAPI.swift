@@ -34,12 +34,12 @@ public class AuthClientsAPI: APIBase {
   "grant_types" : [ "aeiou" ],
   "is_public" : false,
   "name" : "aeiou",
-  "id" : 2,
+  "id" : 6,
   "redirect_uris" : [ "aeiou" ],
   "secret" : "aeiou",
   "locked" : false,
-  "access_token_validity_seconds" : 8,
-  "refresh_token_validity_seconds" : 5
+  "access_token_validity_seconds" : 0,
+  "refresh_token_validity_seconds" : 1
 }}]
      
      - parameter clientResource: (body) The client resource object (optional)
@@ -122,12 +122,12 @@ public class AuthClientsAPI: APIBase {
   "grant_types" : [ "aeiou" ],
   "is_public" : false,
   "name" : "aeiou",
-  "id" : 5,
+  "id" : 6,
   "redirect_uris" : [ "aeiou" ],
   "secret" : "aeiou",
   "locked" : false,
   "access_token_validity_seconds" : 0,
-  "refresh_token_validity_seconds" : 0
+  "refresh_token_validity_seconds" : 1
 }}]
      
      - parameter clientKey: (path) The key of the client 
@@ -212,10 +212,10 @@ public class AuthClientsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 9,
+  "number" : 5,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 0,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -224,18 +224,18 @@ public class AuthClientsAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
-  "number_of_elements" : 6,
+  "number_of_elements" : 5,
   "content" : [ {
     "client_key" : "aeiou",
     "grant_types" : [ "aeiou" ],
     "is_public" : false,
     "name" : "aeiou",
-    "id" : 4,
+    "id" : 6,
     "redirect_uris" : [ "aeiou" ],
     "secret" : "aeiou",
     "locked" : false,
-    "access_token_validity_seconds" : 6,
-    "refresh_token_validity_seconds" : 0
+    "access_token_validity_seconds" : 0,
+    "refresh_token_validity_seconds" : 1
   } ],
   "first" : true
 }}]
@@ -368,12 +368,12 @@ public class AuthClientsAPI: APIBase {
   "grant_types" : [ "aeiou" ],
   "is_public" : false,
   "name" : "aeiou",
-  "id" : 2,
+  "id" : 6,
   "redirect_uris" : [ "aeiou" ],
   "secret" : "aeiou",
   "locked" : false,
-  "access_token_validity_seconds" : 6,
-  "refresh_token_validity_seconds" : 8
+  "access_token_validity_seconds" : 0,
+  "refresh_token_validity_seconds" : 1
 }}]
      
      - parameter clientKey: (path) The key of the client 

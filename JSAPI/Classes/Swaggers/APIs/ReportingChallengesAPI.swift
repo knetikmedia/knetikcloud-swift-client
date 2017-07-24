@@ -34,10 +34,10 @@ public class ReportingChallengesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 1,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 0,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -45,11 +45,11 @@ public class ReportingChallengesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 3,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
-    "score" : 3,
-    "user_id" : 7,
+    "score" : 0,
+    "user_id" : 6,
     "fullname" : "aeiou",
     "email" : "aeiou",
     "username" : "aeiou"
@@ -108,10 +108,10 @@ public class ReportingChallengesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 0,
+  "number" : 1,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 9,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -119,11 +119,11 @@ public class ReportingChallengesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 7,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
-    "score" : 6,
-    "user_id" : 8,
+    "score" : 0,
+    "user_id" : 6,
     "fullname" : "aeiou",
     "email" : "aeiou",
     "username" : "aeiou"

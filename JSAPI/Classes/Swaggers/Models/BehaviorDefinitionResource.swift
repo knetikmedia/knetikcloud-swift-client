@@ -14,7 +14,7 @@ public class BehaviorDefinitionResource: JSONEncodable {
     /** Pre-requisite behaviors that an item must have in order to also have this behavior */
     public var prerequisiteBehaviors: [Behavior]?
     /** Configurable properties of the behavior */
-    public var properties: [PropertyDefinitionResource]?
+    public var properties: [PropertyFieldResource]?
     /** The behavior type */
     public var typeHint: String?
 

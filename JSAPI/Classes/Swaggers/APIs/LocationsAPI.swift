@@ -103,7 +103,7 @@ public class LocationsAPI: APIBase {
   "country_code_iso3" : "aeiou",
   "code" : "aeiou",
   "name" : "aeiou",
-  "id" : 7
+  "id" : 0
 } ]}]
      
      - parameter countryCodeIso3: (path) The iso3 code of the country 
@@ -147,9 +147,9 @@ public class LocationsAPI: APIBase {
   "icon" : "aeiou",
   "name" : "aeiou",
   "active" : false,
-  "created_date" : 6,
-  "updated_date" : 9,
-  "factor" : 7.735053146024984,
+  "created_date" : 0,
+  "updated_date" : 1,
+  "factor" : 6.027456183070403,
   "type" : "real"
 }}]
 

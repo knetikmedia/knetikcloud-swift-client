@@ -51,10 +51,10 @@ public class ReportingOrdersAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 1,
+  "number" : 5,
   "last" : true,
-  "size" : 0,
-  "total_elements" : 9,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -62,13 +62,13 @@ public class ReportingOrdersAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 9,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "date" : "aeiou",
-    "revenue" : 1.9623963357148777,
-    "user_count" : 9,
-    "count" : 2
+    "revenue" : 6.027456183070403,
+    "user_count" : 1,
+    "count" : 0
   } ],
   "first" : true
 }}]

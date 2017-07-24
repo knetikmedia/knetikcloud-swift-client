@@ -196,10 +196,10 @@ public class SearchAPI: APIBase {
      - POST /search/index/{type}
      - The body is an ElasticSearch query in JSON format. Please see their <a href='https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html'>documentation</a> for details on the format and search options. The searchable object's format depends on on the type. See individual search endpoints on other resources for details on their format.
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 0,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 8,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -208,7 +208,7 @@ public class SearchAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
-  "number_of_elements" : 8,
+  "number_of_elements" : 6,
   "content" : [ { } ],
   "first" : true
 }}]

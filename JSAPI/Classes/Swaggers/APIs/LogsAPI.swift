@@ -73,12 +73,12 @@ public class LogsAPI: APIBase {
     "reason" : "aeiou",
     "rule_end_date" : 6,
     "rule_name" : "aeiou",
-    "rule_start_date" : 8,
+    "rule_start_date" : 1,
     "ran" : false
   } ],
   "id" : "aeiou",
   "parameters" : "{}",
-  "event_start_date" : 3,
+  "event_start_date" : 0,
   "customer" : "aeiou"
 }}]
      
@@ -127,10 +127,10 @@ public class LogsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 5,
   "last" : true,
-  "size" : 5,
-  "total_elements" : 0,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -138,22 +138,22 @@ public class LogsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 3,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "event_id" : "aeiou",
     "event_name" : "aeiou",
     "rules" : [ {
       "rule_id" : "aeiou",
       "reason" : "aeiou",
-      "rule_end_date" : 2,
+      "rule_end_date" : 6,
       "rule_name" : "aeiou",
-      "rule_start_date" : 8,
+      "rule_start_date" : 1,
       "ran" : false
     } ],
     "id" : "aeiou",
     "parameters" : "{}",
-    "event_start_date" : 1,
+    "event_start_date" : 0,
     "customer" : "aeiou"
   } ],
   "first" : true
@@ -210,15 +210,15 @@ public class LogsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "end_date" : 3,
+  "end_date" : 0,
   "error_msg" : "aeiou",
-  "http_status_code" : 0,
+  "http_status_code" : 6,
   "payload" : "{}",
   "response" : "aeiou",
-  "retry_count" : 8,
+  "retry_count" : 1,
   "id" : "aeiou",
   "url" : "aeiou",
-  "start_date" : 7
+  "start_date" : 5
 }}]
      
      - parameter id: (path) The forward log entry id 
@@ -266,10 +266,10 @@ public class LogsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 9,
+  "number" : 5,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 3,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -277,18 +277,18 @@ public class LogsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
+  "total_pages" : 3,
   "number_of_elements" : 2,
   "content" : [ {
-    "end_date" : 8,
+    "end_date" : 0,
     "error_msg" : "aeiou",
-    "http_status_code" : 8,
+    "http_status_code" : 6,
     "payload" : "{}",
     "response" : "aeiou",
-    "retry_count" : 4,
+    "retry_count" : 1,
     "id" : "aeiou",
     "url" : "aeiou",
-    "start_date" : 1
+    "start_date" : 5
   } ],
   "first" : true
 }}]
@@ -350,7 +350,7 @@ public class LogsAPI: APIBase {
   "details" : {
     "key" : "aeiou"
   },
-  "created_date" : 1,
+  "created_date" : 0,
   "id" : "aeiou",
   "request_id" : "aeiou"
 }}]
@@ -399,10 +399,10 @@ public class LogsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 9,
+  "number" : 1,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 1,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -411,7 +411,7 @@ public class LogsAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
-  "number_of_elements" : 2,
+  "number_of_elements" : 5,
   "content" : [ {
     "action_description" : "aeiou",
     "user_id" : 6,
@@ -419,7 +419,7 @@ public class LogsAPI: APIBase {
     "details" : {
       "key" : "aeiou"
     },
-    "created_date" : 1,
+    "created_date" : 0,
     "id" : "aeiou",
     "request_id" : "aeiou"
   } ],

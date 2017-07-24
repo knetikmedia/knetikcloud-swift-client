@@ -33,26 +33,24 @@ public class PaymentsStripeAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "payment_method_type" : {
     "name" : "aeiou",
-    "id" : 6
+    "id" : 2
   },
   "last4" : "aeiou",
-  "short_description" : "aeiou",
   "unique_key" : "aeiou",
   "verified" : true,
-  "long_description" : "aeiou",
-  "sort" : 2,
-  "expiration_date" : 2,
+  "sort" : 7,
+  "expiration_date" : 6,
   "token" : "aeiou",
-  "expiration_year" : 3,
+  "expiration_year" : 5,
   "default" : true,
   "payment_type" : "card",
-  "user_id" : 9,
-  "expiration_month" : 2,
+  "user_id" : 3,
+  "expiration_month" : 1,
   "name" : "aeiou",
   "disabled" : false,
-  "created_date" : 3,
+  "created_date" : 0,
   "id" : 5,
-  "updated_date" : 0
+  "updated_date" : 9
 }}]
      
      - parameter request: (body) The request to create a Stripe customer with payment info (optional)

@@ -31,7 +31,7 @@ public class BRERuleEngineRulesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "end_date" : 7,
+  "end_date" : 0,
   "condition" : {
     "args" : [ { } ],
     "operator" : { }
@@ -42,7 +42,7 @@ public class BRERuleEngineRulesAPI: APIBase {
   "description" : "aeiou",
   "event_name" : "aeiou",
   "id" : "aeiou",
-  "sort" : 4,
+  "sort" : 6,
   "actions" : {
     "variables" : [ {
       "name" : "aeiou",
@@ -55,7 +55,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     "tags" : [ "aeiou" ]
   },
   "enabled" : false,
-  "start_date" : 6
+  "start_date" : 1
 }}]
      
      - parameter breRule: (body) The BRE rule object (optional)
@@ -172,7 +172,7 @@ public class BRERuleEngineRulesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "end_date" : 2,
+  "end_date" : 0,
   "condition" : {
     "args" : [ { } ],
     "operator" : { }
@@ -183,7 +183,7 @@ public class BRERuleEngineRulesAPI: APIBase {
   "description" : "aeiou",
   "event_name" : "aeiou",
   "id" : "aeiou",
-  "sort" : 2,
+  "sort" : 6,
   "actions" : {
     "variables" : [ {
       "name" : "aeiou",
@@ -196,7 +196,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     "tags" : [ "aeiou" ]
   },
   "enabled" : false,
-  "start_date" : 7
+  "start_date" : 1
 }}]
      
      - parameter id: (path) The id of the rule 
@@ -246,10 +246,10 @@ public class BRERuleEngineRulesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 5,
   "last" : true,
   "size" : 2,
-  "total_elements" : 3,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -257,10 +257,10 @@ public class BRERuleEngineRulesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 0,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
-    "end_date" : 6,
+    "end_date" : 0,
     "condition" : {
       "args" : [ { } ],
       "operator" : { }
@@ -271,7 +271,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     "description" : "aeiou",
     "event_name" : "aeiou",
     "id" : "aeiou",
-    "sort" : 1,
+    "sort" : 6,
     "actions" : {
       "variables" : [ {
         "name" : "aeiou",
@@ -284,7 +284,7 @@ public class BRERuleEngineRulesAPI: APIBase {
       "tags" : [ "aeiou" ]
     },
     "enabled" : false,
-    "start_date" : 6
+    "start_date" : 1
   } ],
   "first" : true
 }}]
@@ -386,7 +386,7 @@ public class BRERuleEngineRulesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "end_date" : 7,
+  "end_date" : 0,
   "condition" : {
     "args" : [ { } ],
     "operator" : { }
@@ -397,7 +397,7 @@ public class BRERuleEngineRulesAPI: APIBase {
   "description" : "aeiou",
   "event_name" : "aeiou",
   "id" : "aeiou",
-  "sort" : 2,
+  "sort" : 6,
   "actions" : {
     "variables" : [ {
       "name" : "aeiou",
@@ -410,7 +410,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     "tags" : [ "aeiou" ]
   },
   "enabled" : false,
-  "start_date" : 8
+  "start_date" : 1
 }}]
      
      - parameter id: (path) The id of the rule 

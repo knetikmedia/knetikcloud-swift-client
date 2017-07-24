@@ -31,53 +31,53 @@ public class UsersSubscriptionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "grace_end" : 2,
-  "bill_date" : 9,
-  "item_id" : 7,
-  "inventory_id" : 8,
-  "recurring_price" : 5.286496023380131,
+  "grace_end" : 7,
+  "bill_date" : 0,
+  "item_id" : 3,
+  "inventory_id" : 9,
+  "price_override" : 4.965218492984954,
+  "recurring_price" : 5.025004791520295,
   "inventory_status" : "pending",
-  "subscription_status" : 4,
-  "credit" : 7.421464323508424,
+  "subscription_status" : 9,
+  "price_override_reason" : "aeiou",
+  "credit" : 6.027456183070403,
   "credit_log" : [ {
     "reason" : "aeiou",
-    "amount" : 0.5243669091765435,
-    "inventory_id" : 7,
+    "amount" : 1.4658129805029452,
+    "inventory_id" : 2,
     "created_date" : 5,
-    "id" : 6
+    "id" : 5
   } ],
   "sku" : "aeiou",
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 7,
+    "id" : 6,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
   "payment_method" : {
     "payment_method_type" : {
       "name" : "aeiou",
-      "id" : 6
+      "id" : 1
     },
     "last4" : "aeiou",
-    "short_description" : "aeiou",
     "unique_key" : "aeiou",
     "verified" : true,
-    "long_description" : "aeiou",
-    "sort" : 5,
-    "expiration_date" : 1,
+    "sort" : 6,
+    "expiration_date" : 4,
     "token" : "aeiou",
-    "expiration_year" : 4,
+    "expiration_year" : 1,
     "default" : true,
     "payment_type" : "card",
-    "user_id" : 4,
-    "expiration_month" : 3,
+    "user_id" : 1,
+    "expiration_month" : 7,
     "name" : "aeiou",
     "disabled" : false,
-    "created_date" : 5,
-    "id" : 0,
-    "updated_date" : 8
+    "created_date" : 2,
+    "id" : 1,
+    "updated_date" : 7
   },
-  "start_date" : 1
+  "start_date" : 9
 }}]
      
      - parameter userId: (path) The id of the user 
@@ -122,53 +122,53 @@ public class UsersSubscriptionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "grace_end" : 1,
-  "bill_date" : 4,
-  "item_id" : 5,
-  "inventory_id" : 2,
-  "recurring_price" : 8.368513925464905,
+  "grace_end" : 7,
+  "bill_date" : 0,
+  "item_id" : 3,
+  "inventory_id" : 9,
+  "price_override" : 4.965218492984954,
+  "recurring_price" : 5.025004791520295,
   "inventory_status" : "pending",
   "subscription_status" : 9,
-  "credit" : 1.5183469296873398,
+  "price_override_reason" : "aeiou",
+  "credit" : 6.027456183070403,
   "credit_log" : [ {
     "reason" : "aeiou",
-    "amount" : 6.244748116656297,
+    "amount" : 1.4658129805029452,
     "inventory_id" : 2,
     "created_date" : 5,
-    "id" : 6
+    "id" : 5
   } ],
   "sku" : "aeiou",
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 5,
+    "id" : 6,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
   "payment_method" : {
     "payment_method_type" : {
       "name" : "aeiou",
-      "id" : 9
+      "id" : 1
     },
     "last4" : "aeiou",
-    "short_description" : "aeiou",
     "unique_key" : "aeiou",
     "verified" : true,
-    "long_description" : "aeiou",
-    "sort" : 3,
-    "expiration_date" : 8,
+    "sort" : 6,
+    "expiration_date" : 4,
     "token" : "aeiou",
-    "expiration_year" : 8,
+    "expiration_year" : 1,
     "default" : true,
     "payment_type" : "card",
     "user_id" : 1,
-    "expiration_month" : 4,
+    "expiration_month" : 7,
     "name" : "aeiou",
     "disabled" : false,
-    "created_date" : 5,
-    "id" : 7,
-    "updated_date" : 9
+    "created_date" : 2,
+    "id" : 1,
+    "updated_date" : 7
   },
-  "start_date" : 5
+  "start_date" : 9
 } ]}]
      
      - parameter userId: (path) The id of the user 
@@ -215,19 +215,19 @@ public class UsersSubscriptionsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "shipping_city_name" : "aeiou",
   "order_notes" : "aeiou",
-  "parent_invoice_id" : 5,
-  "discount" : 6.208219525837686,
-  "state_tax" : 6.724013052101769,
+  "parent_invoice_id" : 1,
+  "discount" : 6.027456183070403,
+  "state_tax" : 4.965218492984954,
   "cart_id" : "aeiou",
   "name_prefix" : "aeiou",
   "billing_postal_code" : "aeiou",
-  "shipping" : 0.5552810365441474,
+  "shipping" : 7.457744773683766,
   "billing_state_name" : "aeiou",
   "billing_country_name" : "aeiou",
   "currency" : "aeiou",
   "current_fulfillment_status" : "aeiou",
-  "grand_total" : 2.486830305839675,
-  "id" : 0,
+  "grand_total" : 5.962133916683182,
+  "id" : 5,
   "current_payment_status" : "aeiou",
   "billing_address1" : "aeiou",
   "invoice_number" : "aeiou",
@@ -235,38 +235,37 @@ public class UsersSubscriptionsAPI: APIBase {
   "email" : "aeiou",
   "vendor_name" : "aeiou",
   "billing_full_name" : "aeiou",
-  "sort" : 8,
+  "sort" : 1,
   "shipping_full_name" : "aeiou",
-  "fed_tax" : 7.462866958167922,
-  "payment_method_id" : 0,
+  "fed_tax" : 1.4658129805029452,
+  "payment_method_id" : 6,
   "phone" : "aeiou",
   "external_ref" : "aeiou",
   "shipping_address2" : "aeiou",
-  "subtotal" : 7.844737919352472,
+  "subtotal" : 5.025004791520295,
   "shipping_address1" : "aeiou",
-  "vendor_id" : 9,
+  "vendor_id" : 6,
   "shipping_state_name" : "aeiou",
   "billing_city_name" : "aeiou",
   "phone_number" : "aeiou",
-  "created_date" : 2,
+  "created_date" : 0,
   "shipping_country_name" : "aeiou",
-  "updated_date" : 1,
+  "updated_date" : 9,
   "items" : [ {
     "type_hint" : "aeiou",
-    "total_price" : 4.858451787531183,
-    "affiliate_id" : 6,
-    "item_id" : 4,
-    "system_price" : 6.003957237211607,
+    "total_price" : 1.2315135367772556,
+    "item_id" : 9,
+    "system_price" : 7.386281948385884,
     "item_name" : "aeiou",
-    "original_unit_price" : 3.919446830031874,
-    "unit_price" : 3.9594070167517534,
-    "qty" : 2,
-    "invoice_id" : 1,
+    "original_unit_price" : 2.027123023002322,
+    "unit_price" : 1.0246457001441578,
+    "qty" : 4,
+    "invoice_id" : 7,
     "current_fulfillment_status" : "aeiou",
-    "id" : 1,
+    "id" : 2,
     "sale_name" : "aeiou",
     "bundle_sku" : "aeiou",
-    "original_total_price" : 8.276331195652428,
+    "original_total_price" : 3.616076749251911,
     "sku" : "aeiou",
     "sku_description" : "aeiou"
   } ],
@@ -461,6 +460,49 @@ public class UsersSubscriptionsAPI: APIBase {
         path = path.stringByReplacingOccurrencesOfString("{inventory_id}", withString: "\(inventoryId)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
         let parameters = planId?.encodeToJSON() as? [String:AnyObject]
+ 
+        let convertedParameters = APIHelper.convertBoolToString(parameters)
+ 
+        let requestBuilder: RequestBuilder<Void>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", URLString: URLString, parameters: convertedParameters, isBody: true)
+    }
+
+    /**
+     Set a new subscription price for a user
+     
+     - parameter userId: (path) The id of the user 
+     - parameter inventoryId: (path) The id of the user&#39;s inventory 
+     - parameter theOverrideDetails: (body) override (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    public class func setUserSubscriptionPrice(userId userId: Int32, inventoryId: Int32, theOverrideDetails: SubscriptionPriceOverrideRequest? = nil, completion: ((error: ErrorType?) -> Void)) {
+        setUserSubscriptionPriceWithRequestBuilder(userId: userId, inventoryId: inventoryId, theOverrideDetails: theOverrideDetails).execute { (response, error) -> Void in
+            completion(error: error);
+        }
+    }
+
+
+    /**
+     Set a new subscription price for a user
+     - PUT /users/{userId}/subscriptions/{inventoryId}/price-override
+     - This new price will be what the user is charged at the begining of each new period. This override is specific to the current subscription and will not carry over if they end and later re-subscribe. It will persist if the plan is changed using the setUserSubscriptionPlan endpoint.
+     - OAuth:
+       - type: oauth2
+       - name: OAuth2
+     
+     - parameter userId: (path) The id of the user 
+     - parameter inventoryId: (path) The id of the user&#39;s inventory 
+     - parameter theOverrideDetails: (body) override (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    public class func setUserSubscriptionPriceWithRequestBuilder(userId userId: Int32, inventoryId: Int32, theOverrideDetails: SubscriptionPriceOverrideRequest? = nil) -> RequestBuilder<Void> {
+        var path = "/users/{userId}/subscriptions/{inventoryId}/price-override"
+        path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
+        path = path.stringByReplacingOccurrencesOfString("{inventory_id}", withString: "\(inventoryId)", options: .LiteralSearch, range: nil)
+        let URLString = JSAPIAPI.basePath + path
+        let parameters = theOverrideDetails?.encodeToJSON() as? [String:AnyObject]
  
         let convertedParameters = APIHelper.convertBoolToString(parameters)
  

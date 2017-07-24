@@ -76,10 +76,10 @@ public class BRERuleEngineVariablesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 0,
   "last" : true,
-  "size" : 6,
-  "total_elements" : 1,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -87,7 +87,7 @@ public class BRERuleEngineVariablesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
+  "total_pages" : 5,
   "number_of_elements" : 6,
   "content" : [ {
     "name" : "aeiou",

@@ -80,9 +80,9 @@ public class StoreShippingAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 2,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 3,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -271,9 +271,9 @@ public class StoreShippingAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 9,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 0,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -336,10 +336,10 @@ public class StoreShippingAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 1,
   "last" : true,
   "size" : 5,
-  "total_elements" : 6,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -347,8 +347,8 @@ public class StoreShippingAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 0,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "behaviors" : [ {
       "behavior" : {
@@ -359,9 +359,9 @@ public class StoreShippingAPI: APIBase {
       "required" : false
     } ],
     "name" : "aeiou",
-    "created_date" : 4,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 4,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -481,9 +481,9 @@ public class StoreShippingAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 6,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 8,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

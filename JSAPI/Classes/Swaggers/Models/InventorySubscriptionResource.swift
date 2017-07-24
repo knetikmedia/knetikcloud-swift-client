@@ -30,9 +30,13 @@ public class InventorySubscriptionResource: JSONEncodable {
     public var itemId: Int32?
     /** The payment method object */
     public var paymentMethod: PaymentMethodResource?
-    /** The recurring price */
+    /** The recurring price that has been set to override the base price. Null if not overriding */
+    public var priceOverride: Double?
+    /** An explanation for the reason the price is being overridden */
+    public var priceOverrideReason: String?
+    /** The default recurring price */
     public var recurringPrice: Double?
-    /** The sku of the subscription */
+    /** The recurring sku of the subscription */
     public var sku: String?
     /** The date the subscription will start */
     public var startDate: Int64?
@@ -54,6 +58,8 @@ public class InventorySubscriptionResource: JSONEncodable {
         nillableDictionary["inventory_status"] = self.inventoryStatus?.rawValue
         nillableDictionary["item_id"] = self.itemId?.encodeToJSON()
         nillableDictionary["payment_method"] = self.paymentMethod?.encodeToJSON()
+        nillableDictionary["price_override"] = self.priceOverride
+        nillableDictionary["price_override_reason"] = self.priceOverrideReason
         nillableDictionary["recurring_price"] = self.recurringPrice
         nillableDictionary["sku"] = self.sku
         nillableDictionary["start_date"] = self.startDate?.encodeToJSON()

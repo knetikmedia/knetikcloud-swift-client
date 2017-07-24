@@ -28,7 +28,7 @@ public class UtilBatchAPI: APIBase {
      - GET /batch/{token}
      - Tokens expire in 24 hours
      - examples: [{contentType=application/json, example=[ {
-  "code" : 1,
+  "code" : 0,
   "body" : "{}",
   "uri" : "aeiou"
 } ]}]
@@ -71,7 +71,7 @@ public class UtilBatchAPI: APIBase {
      - POST /batch
      - Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service
      - examples: [{contentType=application/json, example=[ {
-  "code" : 3,
+  "code" : 0,
   "body" : "{}",
   "uri" : "aeiou"
 } ]}]

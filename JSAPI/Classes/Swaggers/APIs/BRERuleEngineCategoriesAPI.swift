@@ -32,9 +32,9 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 9,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 2,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -137,10 +137,10 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 1,
+  "number" : 0,
   "last" : true,
-  "size" : 5,
-  "total_elements" : 9,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -148,8 +148,8 @@ public class BRERuleEngineCategoriesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 0,
-  "number_of_elements" : 9,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
     "template" : "aeiou",
     "name" : "aeiou",
@@ -255,9 +255,9 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 1,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 8,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -320,10 +320,10 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 4,
+  "number" : 1,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 3,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -331,13 +331,13 @@ public class BRERuleEngineCategoriesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
+  "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "name" : "aeiou",
-    "created_date" : 2,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 3,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -455,9 +455,9 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 8,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 4,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

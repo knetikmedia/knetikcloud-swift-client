@@ -76,10 +76,10 @@ public class UsersFriendshipsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 6,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 6,
+  "size" : 5,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -87,11 +87,11 @@ public class UsersFriendshipsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 0,
+  "total_pages" : 2,
   "number_of_elements" : 1,
   "content" : [ {
     "avatar_url" : "aeiou",
-    "id" : 1,
+    "id" : 0,
     "display_name" : "aeiou",
     "username" : "aeiou"
   } ],
@@ -188,9 +188,9 @@ public class UsersFriendshipsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 6,
   "last" : true,
-  "size" : 4,
+  "size" : 5,
   "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
@@ -199,11 +199,11 @@ public class UsersFriendshipsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 5,
-  "number_of_elements" : 8,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
     "avatar_url" : "aeiou",
-    "id" : 7,
+    "id" : 0,
     "display_name" : "aeiou",
     "username" : "aeiou"
   } ],

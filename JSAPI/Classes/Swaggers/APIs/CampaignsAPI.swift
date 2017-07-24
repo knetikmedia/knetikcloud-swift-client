@@ -75,28 +75,28 @@ public class CampaignsAPI: APIBase {
     "unique_key" : "aeiou",
     "currency_rewards" : [ {
       "currency_name" : "aeiou",
-      "max_rank" : 7,
-      "min_rank" : 3,
+      "max_rank" : 5,
+      "min_rank" : 2,
       "percent" : false,
-      "value" : 1.388242920009417,
+      "value" : 7.061401241503109,
       "currency_code" : "aeiou"
     } ],
     "name" : "aeiou",
-    "created_date" : 1,
-    "id" : 0,
+    "created_date" : 5,
+    "id" : 9,
     "long_description" : "aeiou",
-    "max_placing" : 7,
-    "updated_date" : 5,
+    "max_placing" : 1,
+    "updated_date" : 1,
     "item_rewards" : [ {
-      "quantity" : 6,
-      "item_id" : 8,
+      "quantity" : 7,
+      "item_id" : 3,
       "max_rank" : 2,
       "item_name" : "aeiou",
-      "min_rank" : 3
+      "min_rank" : 4
     } ]
   },
   "short_description" : "aeiou",
-  "next_challenge_date" : 5,
+  "next_challenge_date" : 1,
   "active" : false,
   "long_description" : "aeiou",
   "leaderboard_strategy" : "aeiou",
@@ -107,9 +107,9 @@ public class CampaignsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "created_date" : 3,
-  "id" : 5,
-  "updated_date" : 0,
+  "created_date" : 0,
+  "id" : 6,
+  "updated_date" : 1,
   "reward_status" : "pending"
 }}]
      
@@ -151,9 +151,9 @@ public class CampaignsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 8,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 2,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -298,24 +298,24 @@ public class CampaignsAPI: APIBase {
     "unique_key" : "aeiou",
     "currency_rewards" : [ {
       "currency_name" : "aeiou",
-      "max_rank" : 1,
+      "max_rank" : 5,
       "min_rank" : 2,
       "percent" : false,
-      "value" : 5.349526134873165,
+      "value" : 7.061401241503109,
       "currency_code" : "aeiou"
     } ],
     "name" : "aeiou",
-    "created_date" : 2,
-    "id" : 4,
+    "created_date" : 5,
+    "id" : 9,
     "long_description" : "aeiou",
-    "max_placing" : 4,
-    "updated_date" : 4,
+    "max_placing" : 1,
+    "updated_date" : 1,
     "item_rewards" : [ {
-      "quantity" : 6,
-      "item_id" : 7,
-      "max_rank" : 6,
+      "quantity" : 7,
+      "item_id" : 3,
+      "max_rank" : 2,
       "item_name" : "aeiou",
-      "min_rank" : 3
+      "min_rank" : 4
     } ]
   },
   "short_description" : "aeiou",
@@ -330,9 +330,9 @@ public class CampaignsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "created_date" : 9,
-  "id" : 4,
-  "updated_date" : 8,
+  "created_date" : 0,
+  "id" : 6,
+  "updated_date" : 1,
   "reward_status" : "pending"
 }}]
      
@@ -378,10 +378,10 @@ public class CampaignsAPI: APIBase {
      List the challenges associated with a campaign
      - GET /campaigns/{id}/challenges
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 6,
   "last" : true,
-  "size" : 3,
-  "total_elements" : 5,
+  "size" : 9,
+  "total_elements" : 6,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -389,59 +389,59 @@ public class CampaignsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 6,
+  "total_pages" : 3,
+  "number_of_elements" : 8,
   "content" : [ {
-    "end_date" : 1,
+    "end_date" : 5,
     "template" : "aeiou",
     "reward_set" : {
       "short_description" : "aeiou",
       "unique_key" : "aeiou",
       "currency_rewards" : [ {
         "currency_name" : "aeiou",
-        "max_rank" : 0,
-        "min_rank" : 9,
+        "max_rank" : 2,
+        "min_rank" : 4,
         "percent" : false,
-        "value" : 8.985750739143926,
+        "value" : 7.386281948385884,
         "currency_code" : "aeiou"
       } ],
       "name" : "aeiou",
-      "created_date" : 0,
-      "id" : 0,
+      "created_date" : 3,
+      "id" : 1,
       "long_description" : "aeiou",
-      "max_placing" : 9,
-      "updated_date" : 3,
+      "max_placing" : 1,
+      "updated_date" : 4,
       "item_rewards" : [ {
-        "quantity" : 3,
-        "item_id" : 0,
-        "max_rank" : 8,
+        "quantity" : 7,
+        "item_id" : 1,
+        "max_rank" : 1,
         "item_name" : "aeiou",
-        "min_rank" : 8
+        "min_rank" : 6
       } ]
     },
     "short_description" : "aeiou",
-    "next_event_date" : 5,
+    "next_event_date" : 7,
     "long_description" : "aeiou",
     "reward_lag_minutes" : 9,
     "leaderboard_strategy" : "aeiou",
     "schedule" : {
-      "duration" : 2,
+      "duration" : 5,
       "repeat" : "DAILY",
       "duration_unit" : "millisecond"
     },
-    "copy_of" : 3,
-    "activities" : 3,
+    "copy_of" : 1,
+    "activities" : 0,
     "name" : "aeiou",
     "additional_properties" : {
       "key" : {
         "type" : "aeiou"
       }
     },
-    "created_date" : 2,
-    "id" : 5,
-    "updated_date" : 8,
-    "campaign_id" : 2,
-    "start_date" : 5
+    "created_date" : 5,
+    "id" : 2,
+    "updated_date" : 9,
+    "campaign_id" : 6,
+    "start_date" : 9
   } ],
   "first" : true
 }}]
@@ -498,7 +498,7 @@ public class CampaignsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 6,
+  "created_date" : 0,
   "id" : "aeiou",
   "updated_date" : 6,
   "properties" : [ {
@@ -563,9 +563,9 @@ public class CampaignsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 1,
   "last" : true,
-  "size" : 6,
+  "size" : 5,
   "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
@@ -574,13 +574,13 @@ public class CampaignsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 5,
-  "number_of_elements" : 0,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "name" : "aeiou",
-    "created_date" : 3,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 5,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -648,10 +648,10 @@ public class CampaignsAPI: APIBase {
      List and search campaigns
      - GET /campaigns
      - examples: [{contentType=application/json, example={
-  "number" : 4,
+  "number" : 6,
   "last" : true,
-  "size" : 6,
-  "total_elements" : 8,
+  "size" : 1,
+  "total_elements" : 4,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -659,7 +659,7 @@ public class CampaignsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
+  "total_pages" : 5,
   "number_of_elements" : 7,
   "content" : [ {
     "template" : "aeiou",
@@ -668,28 +668,28 @@ public class CampaignsAPI: APIBase {
       "unique_key" : "aeiou",
       "currency_rewards" : [ {
         "currency_name" : "aeiou",
-        "max_rank" : 3,
-        "min_rank" : 0,
+        "max_rank" : 5,
+        "min_rank" : 2,
         "percent" : false,
-        "value" : 4.532405019008875,
+        "value" : 7.061401241503109,
         "currency_code" : "aeiou"
       } ],
       "name" : "aeiou",
-      "created_date" : 4,
-      "id" : 7,
+      "created_date" : 5,
+      "id" : 9,
       "long_description" : "aeiou",
-      "max_placing" : 3,
-      "updated_date" : 2,
+      "max_placing" : 1,
+      "updated_date" : 1,
       "item_rewards" : [ {
-        "quantity" : 4,
-        "item_id" : 6,
-        "max_rank" : 8,
+        "quantity" : 7,
+        "item_id" : 3,
+        "max_rank" : 2,
         "item_name" : "aeiou",
-        "min_rank" : 8
+        "min_rank" : 4
       } ]
     },
     "short_description" : "aeiou",
-    "next_challenge_date" : 8,
+    "next_challenge_date" : 1,
     "active" : false,
     "long_description" : "aeiou",
     "leaderboard_strategy" : "aeiou",
@@ -700,9 +700,9 @@ public class CampaignsAPI: APIBase {
         "type" : "aeiou"
       }
     },
-    "created_date" : 8,
-    "id" : 5,
-    "updated_date" : 4,
+    "created_date" : 0,
+    "id" : 6,
+    "updated_date" : 1,
     "reward_status" : "pending"
   } ],
   "first" : true
@@ -805,24 +805,24 @@ public class CampaignsAPI: APIBase {
     "unique_key" : "aeiou",
     "currency_rewards" : [ {
       "currency_name" : "aeiou",
-      "max_rank" : 6,
-      "min_rank" : 8,
+      "max_rank" : 5,
+      "min_rank" : 2,
       "percent" : false,
-      "value" : 2.9099719278554748,
+      "value" : 7.061401241503109,
       "currency_code" : "aeiou"
     } ],
     "name" : "aeiou",
-    "created_date" : 0,
-    "id" : 8,
+    "created_date" : 5,
+    "id" : 9,
     "long_description" : "aeiou",
-    "max_placing" : 2,
-    "updated_date" : 4,
+    "max_placing" : 1,
+    "updated_date" : 1,
     "item_rewards" : [ {
-      "quantity" : 3,
-      "item_id" : 8,
-      "max_rank" : 3,
+      "quantity" : 7,
+      "item_id" : 3,
+      "max_rank" : 2,
       "item_name" : "aeiou",
-      "min_rank" : 2
+      "min_rank" : 4
     } ]
   },
   "short_description" : "aeiou",
@@ -837,9 +837,9 @@ public class CampaignsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "created_date" : 8,
-  "id" : 0,
-  "updated_date" : 4,
+  "created_date" : 0,
+  "id" : 6,
+  "updated_date" : 1,
   "reward_status" : "pending"
 }}]
      
@@ -883,9 +883,9 @@ public class CampaignsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 6,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 3,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

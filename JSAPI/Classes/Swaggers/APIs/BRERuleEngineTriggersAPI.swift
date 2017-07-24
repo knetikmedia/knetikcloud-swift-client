@@ -37,6 +37,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
   "category" : "achievement",
   "parameters" : [ {
     "name" : "aeiou",
+    "optional" : false,
     "type" : "aeiou"
   } ],
   "tags" : [ "aeiou" ],
@@ -126,6 +127,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
   "category" : "achievement",
   "parameters" : [ {
     "name" : "aeiou",
+    "optional" : false,
     "type" : "aeiou"
   } ],
   "tags" : [ "aeiou" ],
@@ -206,9 +208,9 @@ public class BRERuleEngineTriggersAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 4,
+  "number" : 0,
   "last" : true,
-  "size" : 6,
+  "size" : 1,
   "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
@@ -217,8 +219,8 @@ public class BRERuleEngineTriggersAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 9,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
     "trigger_name" : "aeiou",
     "system_trigger" : false,
@@ -226,6 +228,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
     "category" : "achievement",
     "parameters" : [ {
       "name" : "aeiou",
+      "optional" : false,
       "type" : "aeiou"
     } ],
     "tags" : [ "aeiou" ],
@@ -295,6 +298,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
   "category" : "achievement",
   "parameters" : [ {
     "name" : "aeiou",
+    "optional" : false,
     "type" : "aeiou"
   } ],
   "tags" : [ "aeiou" ],

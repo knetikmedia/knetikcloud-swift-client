@@ -180,16 +180,17 @@ public class UsersAPI: APIBase {
   "template" : "aeiou",
   "gender" : "aeiou",
   "city" : "aeiou",
-  "date_of_birth" : 6,
+  "date_of_birth" : 1,
   "description" : "aeiou",
   "currency_code" : "aeiou",
   "language_code" : "aeiou",
   "password" : "aeiou",
+  "last_activity" : 5,
   "children" : [ {
     "avatar_url" : "aeiou",
     "context" : "aeiou",
-    "relationship_id" : 2,
-    "id" : 2,
+    "relationship_id" : 6,
+    "id" : 0,
     "display_name" : "aeiou",
     "username" : "aeiou"
   } ],
@@ -198,11 +199,11 @@ public class UsersAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "id" : 7,
+  "id" : 5,
   "state" : "aeiou",
   "first_name" : "aeiou",
   "email" : "aeiou",
-  "last_updated" : 6,
+  "last_updated" : 2,
   "address" : "aeiou",
   "address2" : "aeiou",
   "last_name" : "aeiou",
@@ -300,9 +301,9 @@ public class UsersAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 4,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 1,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -365,9 +366,9 @@ public class UsersAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 4,
+  "number" : 1,
   "last" : true,
-  "size" : 3,
+  "size" : 5,
   "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
@@ -376,13 +377,13 @@ public class UsersAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 1,
+  "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "name" : "aeiou",
     "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 1,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -463,10 +464,10 @@ public class UsersAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 5,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 7,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -474,14 +475,15 @@ public class UsersAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 8,
+  "total_pages" : 3,
+  "number_of_elements" : 2,
   "content" : [ {
-    "member_since" : 8,
-    "last_updated" : 4,
+    "member_since" : 5,
+    "last_updated" : 1,
+    "last_activity" : 6,
     "avatar_url" : "aeiou",
     "fullname" : "aeiou",
-    "id" : 3,
+    "id" : 0,
     "display_name" : "aeiou",
     "email" : "aeiou",
     "username" : "aeiou"
@@ -589,20 +591,21 @@ public class UsersAPI: APIBase {
      - POST /users
      - Password should be in plain text and will be encrypted on receipt. Use SSL for security
      - examples: [{contentType=application/json, example={
-  "member_since" : 9,
+  "member_since" : 7,
   "template" : "aeiou",
   "gender" : "aeiou",
   "city" : "aeiou",
-  "date_of_birth" : 3,
+  "date_of_birth" : 1,
   "description" : "aeiou",
   "currency_code" : "aeiou",
   "language_code" : "aeiou",
   "password" : "aeiou",
+  "last_activity" : 5,
   "children" : [ {
     "avatar_url" : "aeiou",
     "context" : "aeiou",
-    "relationship_id" : 3,
-    "id" : 1,
+    "relationship_id" : 6,
+    "id" : 0,
     "display_name" : "aeiou",
     "username" : "aeiou"
   } ],
@@ -615,7 +618,7 @@ public class UsersAPI: APIBase {
   "state" : "aeiou",
   "first_name" : "aeiou",
   "email" : "aeiou",
-  "last_updated" : 7,
+  "last_updated" : 2,
   "address" : "aeiou",
   "address2" : "aeiou",
   "last_name" : "aeiou",
@@ -774,7 +777,7 @@ public class UsersAPI: APIBase {
      - parameter passwordReset: (body) An object containing one of three methods to look up a user (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func submitPasswordReset(passwordReset passwordReset: ARequestToResetAUsersPasswordByUsingAKnownUserProperty? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func submitPasswordReset(passwordReset passwordReset: PasswordResetRequest? = nil, completion: ((error: ErrorType?) -> Void)) {
         submitPasswordResetWithRequestBuilder(passwordReset: passwordReset).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -790,7 +793,7 @@ public class UsersAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func submitPasswordResetWithRequestBuilder(passwordReset passwordReset: ARequestToResetAUsersPasswordByUsingAKnownUserProperty? = nil) -> RequestBuilder<Void> {
+    public class func submitPasswordResetWithRequestBuilder(passwordReset passwordReset: PasswordResetRequest? = nil) -> RequestBuilder<Void> {
         let path = "/users/password-reset"
         let URLString = JSAPIAPI.basePath + path
         let parameters = passwordReset?.encodeToJSON() as? [String:AnyObject]
@@ -866,7 +869,7 @@ public class UsersAPI: APIBase {
   "name" : "aeiou",
   "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 0,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

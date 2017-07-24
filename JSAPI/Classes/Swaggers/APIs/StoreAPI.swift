@@ -42,14 +42,14 @@ public class StoreAPI: APIBase {
   "name" : "aeiou",
   "sku_template" : {
     "name" : "aeiou",
-    "created_date" : 8,
+    "created_date" : 6,
     "id" : "aeiou",
-    "updated_date" : 3,
+    "updated_date" : 1,
     "properties" : [ "" ]
   },
-  "created_date" : 5,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 6,
+  "updated_date" : 5,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -236,21 +236,12 @@ public class StoreAPI: APIBase {
   "type_hint" : "aeiou",
   "description" : "aeiou",
   "properties" : [ {
+    "inner_type" : "integer",
+    "valid_values" : [ "aeiou" ],
     "name" : "aeiou",
-    "type" : "aeiou",
-    "field_list" : {
-      "property_definition_fields" : [ {
-        "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "type" : "integer",
-        "inner_type_fields" : [ "" ],
-        "required" : false
-      } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
-    },
+    "description" : "aeiou",
+    "type" : "integer",
+    "inner_type_fields" : [ "" ],
     "required" : false
   } ]
 } ]}]
@@ -304,14 +295,14 @@ public class StoreAPI: APIBase {
   "name" : "aeiou",
   "sku_template" : {
     "name" : "aeiou",
-    "created_date" : 5,
+    "created_date" : 6,
     "id" : "aeiou",
-    "updated_date" : 7,
+    "updated_date" : 1,
     "properties" : [ "" ]
   },
-  "created_date" : 2,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 7,
+  "updated_date" : 5,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -374,10 +365,10 @@ public class StoreAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 5,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 3,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -385,7 +376,7 @@ public class StoreAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 8,
+  "total_pages" : 3,
   "number_of_elements" : 2,
   "content" : [ {
     "behaviors" : [ {
@@ -399,14 +390,14 @@ public class StoreAPI: APIBase {
     "name" : "aeiou",
     "sku_template" : {
       "name" : "aeiou",
-      "created_date" : 5,
+      "created_date" : 6,
       "id" : "aeiou",
-      "updated_date" : 3,
+      "updated_date" : 1,
       "properties" : [ "" ]
     },
-    "created_date" : 7,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 8,
+    "updated_date" : 5,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -476,10 +467,10 @@ public class StoreAPI: APIBase {
      - GET /store
      - The exact structure of each items may differ to include fields specific to the type. The same is true for behaviors.
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 0,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 6,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -487,8 +478,8 @@ public class StoreAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 1,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ "" ],
   "first" : true
 }}]
@@ -596,7 +587,7 @@ public class StoreAPI: APIBase {
   "number" : 0,
   "last" : true,
   "size" : 1,
-  "total_elements" : 0,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -605,7 +596,7 @@ public class StoreAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
-  "number_of_elements" : 1,
+  "number_of_elements" : 6,
   "content" : [ "" ],
   "first" : true
 }}]
@@ -695,14 +686,14 @@ public class StoreAPI: APIBase {
   "name" : "aeiou",
   "sku_template" : {
     "name" : "aeiou",
-    "created_date" : 3,
+    "created_date" : 6,
     "id" : "aeiou",
-    "updated_date" : 4,
+    "updated_date" : 1,
     "properties" : [ "" ]
   },
-  "created_date" : 4,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 3,
+  "updated_date" : 5,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

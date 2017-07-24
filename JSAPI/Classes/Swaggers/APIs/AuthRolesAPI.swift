@@ -31,20 +31,20 @@ public class AuthRolesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "role" : "aeiou",
-  "user_count" : 0,
+  "user_count" : 5,
   "name" : "aeiou",
   "role_permission" : [ {
     "parent" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
     "permission" : "aeiou",
-    "created_date" : 5,
-    "updated_date" : 7,
+    "created_date" : 1,
+    "updated_date" : 5,
     "locked" : false
   } ],
-  "created_date" : 4,
+  "created_date" : 6,
   "locked" : false,
-  "client_count" : 6
+  "client_count" : 0
 }}]
      
      - parameter roleResource: (body) The role resource object (optional)
@@ -128,20 +128,20 @@ public class AuthRolesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "role" : "aeiou",
-  "user_count" : 6,
+  "user_count" : 5,
   "name" : "aeiou",
   "role_permission" : [ {
     "parent" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
     "permission" : "aeiou",
-    "created_date" : 4,
-    "updated_date" : 7,
+    "created_date" : 1,
+    "updated_date" : 5,
     "locked" : false
   } ],
-  "created_date" : 9,
+  "created_date" : 6,
   "locked" : false,
-  "client_count" : 4
+  "client_count" : 0
 } ]}]
      
      - parameter clientKey: (path) The client key 
@@ -185,20 +185,20 @@ public class AuthRolesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "role" : "aeiou",
-  "user_count" : 1,
+  "user_count" : 5,
   "name" : "aeiou",
   "role_permission" : [ {
     "parent" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
     "permission" : "aeiou",
-    "created_date" : 7,
-    "updated_date" : 2,
+    "created_date" : 1,
+    "updated_date" : 5,
     "locked" : false
   } ],
-  "created_date" : 3,
+  "created_date" : 6,
   "locked" : false,
-  "client_count" : 6
+  "client_count" : 0
 }}]
      
      - parameter role: (path) The role value 
@@ -243,10 +243,10 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 2,
   "last" : true,
-  "size" : 5,
-  "total_elements" : 4,
+  "size" : 9,
+  "total_elements" : 3,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -254,24 +254,24 @@ public class AuthRolesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 0,
-  "number_of_elements" : 0,
+  "total_pages" : 2,
+  "number_of_elements" : 7,
   "content" : [ {
     "role" : "aeiou",
-    "user_count" : 4,
+    "user_count" : 5,
     "name" : "aeiou",
     "role_permission" : [ {
       "parent" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
       "permission" : "aeiou",
-      "created_date" : 8,
-      "updated_date" : 7,
+      "created_date" : 1,
+      "updated_date" : 5,
       "locked" : false
     } ],
-    "created_date" : 3,
+    "created_date" : 6,
     "locked" : false,
-    "client_count" : 2
+    "client_count" : 0
   } ],
   "first" : true
 }}]
@@ -322,20 +322,20 @@ public class AuthRolesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "role" : "aeiou",
-  "user_count" : 0,
+  "user_count" : 5,
   "name" : "aeiou",
   "role_permission" : [ {
     "parent" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
     "permission" : "aeiou",
-    "created_date" : 7,
-    "updated_date" : 7,
+    "created_date" : 1,
+    "updated_date" : 5,
     "locked" : false
   } ],
-  "created_date" : 8,
+  "created_date" : 6,
   "locked" : false,
-  "client_count" : 4
+  "client_count" : 0
 } ]}]
      
      - parameter userId: (path) The user&#39;s id 
@@ -383,12 +383,12 @@ public class AuthRolesAPI: APIBase {
   "grant_types" : [ "aeiou" ],
   "is_public" : false,
   "name" : "aeiou",
-  "id" : 5,
+  "id" : 6,
   "redirect_uris" : [ "aeiou" ],
   "secret" : "aeiou",
   "locked" : false,
-  "access_token_validity_seconds" : 5,
-  "refresh_token_validity_seconds" : 8
+  "access_token_validity_seconds" : 0,
+  "refresh_token_validity_seconds" : 1
 }}]
      
      - parameter clientKey: (path) The client key 
@@ -431,20 +431,20 @@ public class AuthRolesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "role" : "aeiou",
-  "user_count" : 0,
+  "user_count" : 5,
   "name" : "aeiou",
   "role_permission" : [ {
     "parent" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
     "permission" : "aeiou",
-    "created_date" : 8,
-    "updated_date" : 0,
+    "created_date" : 1,
+    "updated_date" : 5,
     "locked" : false
   } ],
-  "created_date" : 3,
+  "created_date" : 6,
   "locked" : false,
-  "client_count" : 8
+  "client_count" : 0
 }}]
      
      - parameter role: (path) The role value 
@@ -486,20 +486,21 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "member_since" : 1,
+  "member_since" : 7,
   "template" : "aeiou",
   "gender" : "aeiou",
   "city" : "aeiou",
-  "date_of_birth" : 7,
+  "date_of_birth" : 1,
   "description" : "aeiou",
   "currency_code" : "aeiou",
   "language_code" : "aeiou",
   "password" : "aeiou",
+  "last_activity" : 5,
   "children" : [ {
     "avatar_url" : "aeiou",
     "context" : "aeiou",
-    "relationship_id" : 5,
-    "id" : 1,
+    "relationship_id" : 6,
+    "id" : 0,
     "display_name" : "aeiou",
     "username" : "aeiou"
   } ],
@@ -512,7 +513,7 @@ public class AuthRolesAPI: APIBase {
   "state" : "aeiou",
   "first_name" : "aeiou",
   "email" : "aeiou",
-  "last_updated" : 5,
+  "last_updated" : 2,
   "address" : "aeiou",
   "address2" : "aeiou",
   "last_name" : "aeiou",
@@ -568,20 +569,20 @@ public class AuthRolesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "role" : "aeiou",
-  "user_count" : 7,
+  "user_count" : 5,
   "name" : "aeiou",
   "role_permission" : [ {
     "parent" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
     "permission" : "aeiou",
-    "created_date" : 0,
+    "created_date" : 1,
     "updated_date" : 5,
     "locked" : false
   } ],
-  "created_date" : 7,
+  "created_date" : 6,
   "locked" : false,
-  "client_count" : 4
+  "client_count" : 0
 }}]
      
      - parameter role: (path) The role value 

@@ -33,26 +33,24 @@ public class PaymentsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "payment_method_type" : {
     "name" : "aeiou",
-    "id" : 8
+    "id" : 2
   },
   "last4" : "aeiou",
-  "short_description" : "aeiou",
   "unique_key" : "aeiou",
   "verified" : true,
-  "long_description" : "aeiou",
-  "sort" : 4,
-  "expiration_date" : 8,
+  "sort" : 7,
+  "expiration_date" : 6,
   "token" : "aeiou",
-  "expiration_year" : 6,
+  "expiration_year" : 5,
   "default" : true,
   "payment_type" : "card",
-  "user_id" : 4,
-  "expiration_month" : 7,
+  "user_id" : 3,
+  "expiration_month" : 1,
   "name" : "aeiou",
   "disabled" : false,
-  "created_date" : 7,
-  "id" : 6,
-  "updated_date" : 7
+  "created_date" : 0,
+  "id" : 5,
+  "updated_date" : 9
 }}]
      
      - parameter userId: (path) ID of the user for whom the payment method is being created 
@@ -139,26 +137,24 @@ public class PaymentsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "payment_method_type" : {
     "name" : "aeiou",
-    "id" : 5
+    "id" : 2
   },
   "last4" : "aeiou",
-  "short_description" : "aeiou",
   "unique_key" : "aeiou",
   "verified" : true,
-  "long_description" : "aeiou",
-  "sort" : 0,
-  "expiration_date" : 4,
+  "sort" : 7,
+  "expiration_date" : 6,
   "token" : "aeiou",
-  "expiration_year" : 2,
+  "expiration_year" : 5,
   "default" : true,
   "payment_type" : "card",
-  "user_id" : 6,
-  "expiration_month" : 0,
+  "user_id" : 3,
+  "expiration_month" : 1,
   "name" : "aeiou",
   "disabled" : false,
-  "created_date" : 9,
-  "id" : 8,
-  "updated_date" : 8
+  "created_date" : 0,
+  "id" : 5,
+  "updated_date" : 9
 }}]
      
      - parameter userId: (path) ID of the user for whom the payment method is being retrieved 
@@ -184,16 +180,28 @@ public class PaymentsAPI: APIBase {
     }
 
     /**
+     * enum for parameter filterPaymentType
+     */
+    public enum FilterPaymentType_getPaymentMethods: String { 
+        case Card = "card"
+        case BankAccount = "bank_account"
+    }
+
+    /**
      Get all payment methods for a user
      
      - parameter userId: (path) ID of the user for whom the payment methods are being retrieved 
+     - parameter filterName: (query) Filter for payment methods whose name starts with a given string (optional)
+     - parameter filterPaymentType: (query) Filter for payment methods with a specific payment type (optional)
+     - parameter filterPaymentMethodTypeId: (query) Filter for payment methods with a specific payment method type by id (optional)
+     - parameter filterPaymentMethodTypeName: (query) Filter for payment methods whose payment method type name starts with a given string (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
      - parameter order: (query) a comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func getPaymentMethods(userId userId: Int32, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: [PaymentMethodResource]?, error: ErrorType?) -> Void)) {
-        getPaymentMethodsWithRequestBuilder(userId: userId, size: size, page: page, order: order).execute { (response, error) -> Void in
+    public class func getPaymentMethods(userId userId: Int32, filterName: String? = nil, filterPaymentType: FilterPaymentType_getPaymentMethods? = nil, filterPaymentMethodTypeId: Int32? = nil, filterPaymentMethodTypeName: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: [PaymentMethodResource]?, error: ErrorType?) -> Void)) {
+        getPaymentMethodsWithRequestBuilder(userId: userId, filterName: filterName, filterPaymentType: filterPaymentType, filterPaymentMethodTypeId: filterPaymentMethodTypeId, filterPaymentMethodTypeName: filterPaymentMethodTypeName, size: size, page: page, order: order).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
     }
@@ -208,41 +216,47 @@ public class PaymentsAPI: APIBase {
      - examples: [{contentType=application/json, example=[ {
   "payment_method_type" : {
     "name" : "aeiou",
-    "id" : 7
+    "id" : 2
   },
   "last4" : "aeiou",
-  "short_description" : "aeiou",
   "unique_key" : "aeiou",
   "verified" : true,
-  "long_description" : "aeiou",
-  "sort" : 2,
-  "expiration_date" : 0,
+  "sort" : 7,
+  "expiration_date" : 6,
   "token" : "aeiou",
-  "expiration_year" : 9,
+  "expiration_year" : 5,
   "default" : true,
   "payment_type" : "card",
-  "user_id" : 7,
-  "expiration_month" : 0,
+  "user_id" : 3,
+  "expiration_month" : 1,
   "name" : "aeiou",
   "disabled" : false,
-  "created_date" : 4,
-  "id" : 4,
-  "updated_date" : 7
+  "created_date" : 0,
+  "id" : 5,
+  "updated_date" : 9
 } ]}]
      
      - parameter userId: (path) ID of the user for whom the payment methods are being retrieved 
+     - parameter filterName: (query) Filter for payment methods whose name starts with a given string (optional)
+     - parameter filterPaymentType: (query) Filter for payment methods with a specific payment type (optional)
+     - parameter filterPaymentMethodTypeId: (query) Filter for payment methods with a specific payment method type by id (optional)
+     - parameter filterPaymentMethodTypeName: (query) Filter for payment methods whose payment method type name starts with a given string (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
      - parameter order: (query) a comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
 
      - returns: RequestBuilder<[PaymentMethodResource]> 
      */
-    public class func getPaymentMethodsWithRequestBuilder(userId userId: Int32, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<[PaymentMethodResource]> {
+    public class func getPaymentMethodsWithRequestBuilder(userId userId: Int32, filterName: String? = nil, filterPaymentType: FilterPaymentType_getPaymentMethods? = nil, filterPaymentMethodTypeId: Int32? = nil, filterPaymentMethodTypeName: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<[PaymentMethodResource]> {
         var path = "/users/{userId}/payment-methods"
         path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
 
         let nillableParameters: [String:AnyObject?] = [
+            "filter_name": filterName,
+            "filter_payment_type": filterPaymentType?.rawValue,
+            "filter_payment_method_type_id": filterPaymentMethodTypeId?.encodeToJSON(),
+            "filter_payment_method_type_name": filterPaymentMethodTypeName,
             "size": size?.encodeToJSON(),
             "page": page?.encodeToJSON(),
             "order": order
@@ -279,13 +293,13 @@ public class PaymentsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "payment_type" : {
     "name" : "aeiou",
-    "id" : 4
+    "id" : 5
   },
-  "created" : 3,
+  "created" : 0,
   "captured" : false,
   "details" : "{}",
-  "id" : 3,
-  "invoice" : 3
+  "id" : 6,
+  "invoice" : 1
 }}]
      
      - parameter request: (body) Payment authorization request (optional)
@@ -368,26 +382,24 @@ public class PaymentsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "payment_method_type" : {
     "name" : "aeiou",
-    "id" : 8
+    "id" : 2
   },
   "last4" : "aeiou",
-  "short_description" : "aeiou",
   "unique_key" : "aeiou",
   "verified" : true,
-  "long_description" : "aeiou",
-  "sort" : 2,
-  "expiration_date" : 5,
+  "sort" : 7,
+  "expiration_date" : 6,
   "token" : "aeiou",
-  "expiration_year" : 1,
+  "expiration_year" : 5,
   "default" : true,
   "payment_type" : "card",
-  "user_id" : 4,
-  "expiration_month" : 5,
+  "user_id" : 3,
+  "expiration_month" : 1,
   "name" : "aeiou",
   "disabled" : false,
-  "created_date" : 7,
-  "id" : 4,
-  "updated_date" : 1
+  "created_date" : 0,
+  "id" : 5,
+  "updated_date" : 9
 }}]
      
      - parameter userId: (path) ID of the user for whom the payment method is being updated 

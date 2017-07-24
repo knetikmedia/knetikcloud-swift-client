@@ -11,6 +11,7 @@ import Foundation
 public class CustomerConfig: JSONEncodable {
     public var aliases: String?
     public var database: DatabaseConfig?
+    public var io: IOConfig?
     public var name: String?
     public var s3Config: S3Config?
 
@@ -21,6 +22,7 @@ public class CustomerConfig: JSONEncodable {
         var nillableDictionary = [String:AnyObject?]()
         nillableDictionary["aliases"] = self.aliases
         nillableDictionary["database"] = self.database?.encodeToJSON()
+        nillableDictionary["io"] = self.io?.encodeToJSON()
         nillableDictionary["name"] = self.name
         nillableDictionary["s3_config"] = self.s3Config?.encodeToJSON()
         let dictionary: [String:AnyObject] = APIHelper.rejectNil(nillableDictionary) ?? [:]

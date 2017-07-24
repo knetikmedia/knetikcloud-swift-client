@@ -49,10 +49,10 @@ public class ReportingUsersAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 6,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 4,
+  "size" : 5,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -60,11 +60,11 @@ public class ReportingUsersAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 1,
-  "number_of_elements" : 8,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
     "date" : "aeiou",
-    "count" : 9
+    "count" : 0
   } ],
   "first" : true
 }}]

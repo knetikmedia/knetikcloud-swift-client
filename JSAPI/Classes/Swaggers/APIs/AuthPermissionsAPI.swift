@@ -34,8 +34,8 @@ public class AuthPermissionsAPI: APIBase {
   "name" : "aeiou",
   "description" : "aeiou",
   "permission" : "aeiou",
-  "created_date" : 4,
-  "updated_date" : 7,
+  "created_date" : 0,
+  "updated_date" : 6,
   "locked" : false
 }}]
      
@@ -123,8 +123,8 @@ public class AuthPermissionsAPI: APIBase {
   "name" : "aeiou",
   "description" : "aeiou",
   "permission" : "aeiou",
-  "created_date" : 1,
-  "updated_date" : 4,
+  "created_date" : 0,
+  "updated_date" : 6,
   "locked" : false
 }}]
      
@@ -170,9 +170,9 @@ public class AuthPermissionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 1,
   "last" : true,
-  "size" : 7,
+  "size" : 5,
   "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
@@ -181,15 +181,15 @@ public class AuthPermissionsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 8,
-  "number_of_elements" : 1,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "parent" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
     "permission" : "aeiou",
-    "created_date" : 2,
-    "updated_date" : 1,
+    "created_date" : 0,
+    "updated_date" : 6,
     "locked" : false
   } ],
   "first" : true
@@ -245,8 +245,8 @@ public class AuthPermissionsAPI: APIBase {
   "name" : "aeiou",
   "description" : "aeiou",
   "permission" : "aeiou",
-  "created_date" : 1,
-  "updated_date" : 3,
+  "created_date" : 0,
+  "updated_date" : 6,
   "locked" : false
 }}]
      

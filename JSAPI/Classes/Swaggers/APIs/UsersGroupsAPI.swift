@@ -32,7 +32,7 @@ public class UsersGroupsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "avatar_url" : "aeiou",
-  "id" : 9,
+  "id" : 0,
   "display_name" : "aeiou",
   "status" : "moderator",
   "username" : "aeiou"
@@ -78,7 +78,7 @@ public class UsersGroupsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "avatar_url" : "aeiou",
-  "id" : 7,
+  "id" : 0,
   "display_name" : "aeiou",
   "status" : "moderator",
   "username" : "aeiou"
@@ -124,7 +124,7 @@ public class UsersGroupsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "template" : "aeiou",
   "parent" : "aeiou",
-  "sub_member_count" : 5,
+  "sub_member_count" : 6,
   "unique_name" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -133,7 +133,7 @@ public class UsersGroupsAPI: APIBase {
       "type" : "aeiou"
     }
   },
-  "member_count" : 1,
+  "member_count" : 0,
   "message_of_the_day" : "aeiou",
   "status" : "open"
 }}]
@@ -176,9 +176,9 @@ public class UsersGroupsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 5,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 1,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -319,7 +319,7 @@ public class UsersGroupsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "template" : "aeiou",
   "parent" : "aeiou",
-  "sub_member_count" : 3,
+  "sub_member_count" : 6,
   "unique_name" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -372,7 +372,7 @@ public class UsersGroupsAPI: APIBase {
      - GET /users/groups/{uniqueName}/members/{userId}
      - examples: [{contentType=application/json, example={
   "avatar_url" : "aeiou",
-  "id" : 4,
+  "id" : 0,
   "display_name" : "aeiou",
   "status" : "moderator",
   "username" : "aeiou"
@@ -420,10 +420,10 @@ public class UsersGroupsAPI: APIBase {
      Lists members of the group
      - GET /users/groups/{uniqueName}/members
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 6,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 4,
+  "size" : 5,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -431,11 +431,11 @@ public class UsersGroupsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 5,
-  "number_of_elements" : 4,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
     "avatar_url" : "aeiou",
-    "id" : 5,
+    "id" : 0,
     "display_name" : "aeiou",
     "status" : "moderator",
     "username" : "aeiou"
@@ -491,9 +491,9 @@ public class UsersGroupsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 4,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 5,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -556,10 +556,10 @@ public class UsersGroupsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 1,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 7,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -567,13 +567,13 @@ public class UsersGroupsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 0,
-  "number_of_elements" : 9,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "name" : "aeiou",
-    "created_date" : 6,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 0,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -805,9 +805,9 @@ public class UsersGroupsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "aeiou",
-  "created_date" : 3,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 7,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -879,10 +879,10 @@ public class UsersGroupsAPI: APIBase {
      List and search groups
      - GET /users/groups
      - examples: [{contentType=application/json, example={
-  "number" : 4,
+  "number" : 1,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 3,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -890,12 +890,12 @@ public class UsersGroupsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 1,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "template" : "aeiou",
     "parent" : "aeiou",
-    "sub_member_count" : 8,
+    "sub_member_count" : 6,
     "unique_name" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -904,7 +904,7 @@ public class UsersGroupsAPI: APIBase {
         "type" : "aeiou"
       }
     },
-    "member_count" : 7,
+    "member_count" : 0,
     "message_of_the_day" : "aeiou",
     "status" : "open"
   } ],

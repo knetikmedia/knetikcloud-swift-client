@@ -106,7 +106,7 @@ public class PaymentsPayPalClassicAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example=5}]
+     - examples: [{contentType=application/json, example=0}]
      
      - parameter request: (body) The request to finalize a PayPal billing agreement (optional)
 

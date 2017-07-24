@@ -45,13 +45,13 @@ public class DevicesAPI: APIBase {
   "name" : "aeiou",
   "location" : "aeiou",
   "model" : "aeiou",
-  "created_date" : 4,
-  "id" : 7,
-  "updated_date" : 5,
+  "created_date" : 0,
+  "id" : 6,
+  "updated_date" : 1,
   "make" : "aeiou",
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 2,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
@@ -110,13 +110,13 @@ public class DevicesAPI: APIBase {
   "name" : "aeiou",
   "location" : "aeiou",
   "model" : "aeiou",
-  "created_date" : 9,
-  "id" : 0,
+  "created_date" : 0,
+  "id" : 6,
   "updated_date" : 1,
   "make" : "aeiou",
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 9,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
@@ -300,13 +300,13 @@ public class DevicesAPI: APIBase {
   "name" : "aeiou",
   "location" : "aeiou",
   "model" : "aeiou",
-  "created_date" : 4,
+  "created_date" : 0,
   "id" : 6,
-  "updated_date" : 3,
+  "updated_date" : 1,
   "make" : "aeiou",
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 8,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
@@ -358,10 +358,10 @@ public class DevicesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 5,
   "last" : true,
-  "size" : 3,
-  "total_elements" : 8,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -369,8 +369,8 @@ public class DevicesAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 5,
+  "total_pages" : 3,
+  "number_of_elements" : 2,
   "content" : [ {
     "data" : {
       "key" : "aeiou"
@@ -386,13 +386,13 @@ public class DevicesAPI: APIBase {
     "name" : "aeiou",
     "location" : "aeiou",
     "model" : "aeiou",
-    "created_date" : 3,
-    "id" : 5,
-    "updated_date" : 2,
+    "created_date" : 0,
+    "id" : 6,
+    "updated_date" : 1,
     "make" : "aeiou",
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 3,
+      "id" : 5,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
@@ -465,13 +465,13 @@ public class DevicesAPI: APIBase {
   "name" : "aeiou",
   "location" : "aeiou",
   "model" : "aeiou",
-  "created_date" : 5,
-  "id" : 8,
-  "updated_date" : 6,
+  "created_date" : 0,
+  "id" : 6,
+  "updated_date" : 1,
   "make" : "aeiou",
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 8,
+    "id" : 5,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },

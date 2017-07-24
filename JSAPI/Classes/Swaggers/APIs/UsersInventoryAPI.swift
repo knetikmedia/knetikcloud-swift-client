@@ -34,19 +34,19 @@ public class UsersInventoryAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "shipping_city_name" : "aeiou",
   "order_notes" : "aeiou",
-  "parent_invoice_id" : 5,
-  "discount" : 9.09444952353115,
-  "state_tax" : 4.3118188916115585,
+  "parent_invoice_id" : 1,
+  "discount" : 6.027456183070403,
+  "state_tax" : 4.965218492984954,
   "cart_id" : "aeiou",
   "name_prefix" : "aeiou",
   "billing_postal_code" : "aeiou",
-  "shipping" : 1.5149820234560452,
+  "shipping" : 7.457744773683766,
   "billing_state_name" : "aeiou",
   "billing_country_name" : "aeiou",
   "currency" : "aeiou",
   "current_fulfillment_status" : "aeiou",
-  "grand_total" : 0.5952597830435635,
-  "id" : 4,
+  "grand_total" : 5.962133916683182,
+  "id" : 5,
   "current_payment_status" : "aeiou",
   "billing_address1" : "aeiou",
   "invoice_number" : "aeiou",
@@ -56,42 +56,41 @@ public class UsersInventoryAPI: APIBase {
   "billing_full_name" : "aeiou",
   "sort" : 1,
   "shipping_full_name" : "aeiou",
-  "fed_tax" : 1.5396861927445293,
-  "payment_method_id" : 3,
+  "fed_tax" : 1.4658129805029452,
+  "payment_method_id" : 6,
   "phone" : "aeiou",
   "external_ref" : "aeiou",
   "shipping_address2" : "aeiou",
-  "subtotal" : 5.6432984485525175,
+  "subtotal" : 5.025004791520295,
   "shipping_address1" : "aeiou",
-  "vendor_id" : 3,
+  "vendor_id" : 6,
   "shipping_state_name" : "aeiou",
   "billing_city_name" : "aeiou",
   "phone_number" : "aeiou",
-  "created_date" : 9,
+  "created_date" : 0,
   "shipping_country_name" : "aeiou",
-  "updated_date" : 6,
+  "updated_date" : 9,
   "items" : [ {
     "type_hint" : "aeiou",
-    "total_price" : 7.909903842709317,
-    "affiliate_id" : 2,
-    "item_id" : 3,
-    "system_price" : 4.791852525698767,
+    "total_price" : 1.2315135367772556,
+    "item_id" : 9,
+    "system_price" : 7.386281948385884,
     "item_name" : "aeiou",
-    "original_unit_price" : 6.557395502461318,
-    "unit_price" : 2.412414166399236,
-    "qty" : 5,
-    "invoice_id" : 6,
+    "original_unit_price" : 2.027123023002322,
+    "unit_price" : 1.0246457001441578,
+    "qty" : 4,
+    "invoice_id" : 7,
     "current_fulfillment_status" : "aeiou",
-    "id" : 3,
+    "id" : 2,
     "sale_name" : "aeiou",
     "bundle_sku" : "aeiou",
-    "original_total_price" : 1.207807094404737,
+    "original_total_price" : 3.616076749251911,
     "sku" : "aeiou",
     "sku_description" : "aeiou"
   } ],
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 2,
+    "id" : 9,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
@@ -233,9 +232,9 @@ public class UsersInventoryAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 1,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 0,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -414,10 +413,10 @@ public class UsersInventoryAPI: APIBase {
      List and search entitlement items
      - GET /entitlements
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 0,
   "last" : true,
-  "size" : 4,
-  "total_elements" : 7,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -425,8 +424,8 @@ public class UsersInventoryAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 4,
-  "number_of_elements" : 9,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ "" ],
   "first" : true
 }}]
@@ -485,9 +484,9 @@ public class UsersInventoryAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 6,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 0,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -550,10 +549,10 @@ public class UsersInventoryAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 1,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 9,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -561,8 +560,8 @@ public class UsersInventoryAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 3,
-  "number_of_elements" : 6,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
     "behaviors" : [ {
       "behavior" : {
@@ -573,9 +572,9 @@ public class UsersInventoryAPI: APIBase {
       "required" : false
     } ],
     "name" : "aeiou",
-    "created_date" : 8,
+    "created_date" : 0,
     "id" : "aeiou",
-    "updated_date" : 3,
+    "updated_date" : 6,
     "properties" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -651,10 +650,10 @@ public class UsersInventoryAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 9,
   "last" : true,
-  "size" : 8,
-  "total_elements" : 1,
+  "size" : 2,
+  "total_elements" : 4,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -662,21 +661,21 @@ public class UsersInventoryAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 5,
-  "number_of_elements" : 2,
+  "total_pages" : 7,
+  "number_of_elements" : 3,
   "content" : [ {
     "behavior_data" : "{}",
-    "expires" : 9,
-    "item_id" : 8,
+    "expires" : 6,
+    "item_id" : 5,
     "invoice_id" : 5,
     "item_name" : "aeiou",
-    "created_date" : 1,
-    "id" : 4,
-    "updated_date" : 9,
+    "created_date" : 0,
+    "id" : 1,
+    "updated_date" : 2,
     "item_type_hint" : "aeiou",
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 0,
+      "id" : 7,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
@@ -744,17 +743,17 @@ public class UsersInventoryAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "behavior_data" : "{}",
-  "expires" : 2,
-  "item_id" : 7,
-  "invoice_id" : 7,
+  "expires" : 6,
+  "item_id" : 5,
+  "invoice_id" : 5,
   "item_name" : "aeiou",
-  "created_date" : 9,
-  "id" : 6,
-  "updated_date" : 6,
+  "created_date" : 0,
+  "id" : 1,
+  "updated_date" : 2,
   "item_type_hint" : "aeiou",
   "user" : {
     "avatar_url" : "aeiou",
-    "id" : 8,
+    "id" : 7,
     "display_name" : "aeiou",
     "username" : "aeiou"
   },
@@ -806,10 +805,10 @@ public class UsersInventoryAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 2,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 2,
+  "size" : 9,
+  "total_elements" : 3,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -817,24 +816,24 @@ public class UsersInventoryAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 0,
-  "number_of_elements" : 3,
+  "total_pages" : 2,
+  "number_of_elements" : 7,
   "content" : [ {
     "item" : {
       "name" : "aeiou",
-      "id" : 2
+      "id" : 6
     },
     "log_date" : 1,
-    "id" : 2,
+    "id" : 0,
     "type" : "aeiou",
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 8,
+      "id" : 5,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
     "info" : "aeiou",
-    "user_inventory" : 0
+    "user_inventory" : 5
   } ],
   "first" : true
 }}]
@@ -893,9 +892,9 @@ public class UsersInventoryAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 9,
   "last" : true,
-  "size" : 3,
+  "size" : 2,
   "total_elements" : 4,
   "sort" : [ {
     "ignore_case" : true,
@@ -904,21 +903,21 @@ public class UsersInventoryAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
+  "total_pages" : 7,
   "number_of_elements" : 3,
   "content" : [ {
     "behavior_data" : "{}",
     "expires" : 6,
-    "item_id" : 6,
-    "invoice_id" : 6,
+    "item_id" : 5,
+    "invoice_id" : 5,
     "item_name" : "aeiou",
-    "created_date" : 4,
-    "id" : 4,
-    "updated_date" : 4,
+    "created_date" : 0,
+    "id" : 1,
+    "updated_date" : 2,
     "item_type_hint" : "aeiou",
     "user" : {
       "avatar_url" : "aeiou",
-      "id" : 2,
+      "id" : 7,
       "display_name" : "aeiou",
       "username" : "aeiou"
     },
@@ -1072,9 +1071,9 @@ public class UsersInventoryAPI: APIBase {
     "required" : false
   } ],
   "name" : "aeiou",
-  "created_date" : 6,
+  "created_date" : 0,
   "id" : "aeiou",
-  "updated_date" : 1,
+  "updated_date" : 6,
   "properties" : [ {
     "name" : "aeiou",
     "type" : "aeiou",

@@ -34,24 +34,24 @@ public class CampaignsRewardsAPI: APIBase {
   "unique_key" : "aeiou",
   "currency_rewards" : [ {
     "currency_name" : "aeiou",
-    "max_rank" : 3,
-    "min_rank" : 3,
+    "max_rank" : 6,
+    "min_rank" : 1,
     "percent" : false,
-    "value" : 5.5514658837036945,
+    "value" : 5.962133916683182,
     "currency_code" : "aeiou"
   } ],
   "name" : "aeiou",
-  "created_date" : 4,
-  "id" : 4,
+  "created_date" : 0,
+  "id" : 5,
   "long_description" : "aeiou",
-  "max_placing" : 7,
-  "updated_date" : 7,
+  "max_placing" : 2,
+  "updated_date" : 4,
   "item_rewards" : [ {
-    "quantity" : 8,
+    "quantity" : 3,
     "item_id" : 2,
-    "max_rank" : 2,
+    "max_rank" : 7,
     "item_name" : "aeiou",
-    "min_rank" : 7
+    "min_rank" : 9
   } ]
 }}]
      
@@ -132,24 +132,24 @@ public class CampaignsRewardsAPI: APIBase {
   "unique_key" : "aeiou",
   "currency_rewards" : [ {
     "currency_name" : "aeiou",
-    "max_rank" : 0,
-    "min_rank" : 5,
+    "max_rank" : 6,
+    "min_rank" : 1,
     "percent" : false,
-    "value" : 8.20436402954557,
+    "value" : 5.962133916683182,
     "currency_code" : "aeiou"
   } ],
   "name" : "aeiou",
-  "created_date" : 8,
-  "id" : 2,
+  "created_date" : 0,
+  "id" : 5,
   "long_description" : "aeiou",
-  "max_placing" : 5,
-  "updated_date" : 0,
+  "max_placing" : 2,
+  "updated_date" : 4,
   "item_rewards" : [ {
-    "quantity" : 9,
-    "item_id" : 0,
-    "max_rank" : 1,
+    "quantity" : 3,
+    "item_id" : 2,
+    "max_rank" : 7,
     "item_name" : "aeiou",
-    "min_rank" : 5
+    "min_rank" : 9
   } ]
 }}]
      
@@ -192,10 +192,10 @@ public class CampaignsRewardsAPI: APIBase {
      List and search reward sets
      - GET /rewards
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 7,
   "last" : true,
-  "size" : 3,
-  "total_elements" : 6,
+  "size" : 1,
+  "total_elements" : 1,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -203,7 +203,7 @@ public class CampaignsRewardsAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 8,
+  "total_pages" : 6,
   "number_of_elements" : 1,
   "content" : [ {
     "short_description" : "aeiou",
@@ -211,23 +211,23 @@ public class CampaignsRewardsAPI: APIBase {
     "currency_rewards" : [ {
       "currency_name" : "aeiou",
       "max_rank" : 6,
-      "min_rank" : 6,
+      "min_rank" : 1,
       "percent" : false,
-      "value" : 7.685256314902807,
+      "value" : 5.962133916683182,
       "currency_code" : "aeiou"
     } ],
     "name" : "aeiou",
     "created_date" : 0,
-    "id" : 7,
+    "id" : 5,
     "long_description" : "aeiou",
-    "max_placing" : 6,
-    "updated_date" : 9,
+    "max_placing" : 2,
+    "updated_date" : 4,
     "item_rewards" : [ {
-      "quantity" : 8,
+      "quantity" : 3,
       "item_id" : 2,
-      "max_rank" : 5,
+      "max_rank" : 7,
       "item_name" : "aeiou",
-      "min_rank" : 5
+      "min_rank" : 9
     } ]
   } ],
   "first" : true
@@ -283,24 +283,24 @@ public class CampaignsRewardsAPI: APIBase {
   "unique_key" : "aeiou",
   "currency_rewards" : [ {
     "currency_name" : "aeiou",
-    "max_rank" : 2,
-    "min_rank" : 5,
+    "max_rank" : 6,
+    "min_rank" : 1,
     "percent" : false,
-    "value" : 3.309865348513874,
+    "value" : 5.962133916683182,
     "currency_code" : "aeiou"
   } ],
   "name" : "aeiou",
-  "created_date" : 8,
+  "created_date" : 0,
   "id" : 5,
   "long_description" : "aeiou",
-  "max_placing" : 9,
+  "max_placing" : 2,
   "updated_date" : 4,
   "item_rewards" : [ {
-    "quantity" : 2,
-    "item_id" : 3,
-    "max_rank" : 8,
+    "quantity" : 3,
+    "item_id" : 2,
+    "max_rank" : 7,
     "item_name" : "aeiou",
-    "min_rank" : 3
+    "min_rank" : 9
   } ]
 }}]
      

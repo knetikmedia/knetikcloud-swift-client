@@ -50,10 +50,10 @@ public class ReportingUsageAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 1,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 8,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -62,9 +62,9 @@ public class ReportingUsageAPI: APIBase {
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
-  "number_of_elements" : 8,
+  "number_of_elements" : 5,
   "content" : [ {
-    "date" : 1,
+    "date" : 6,
     "method" : "aeiou",
     "count" : 0,
     "url" : "aeiou"
@@ -145,10 +145,10 @@ public class ReportingUsageAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 0,
+  "number" : 1,
   "last" : true,
-  "size" : 1,
-  "total_elements" : 9,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -156,12 +156,12 @@ public class ReportingUsageAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
+  "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
-    "date" : 9,
+    "date" : 6,
     "method" : "aeiou",
-    "count" : 8,
+    "count" : 0,
     "url" : "aeiou"
   } ],
   "first" : true
@@ -240,10 +240,10 @@ public class ReportingUsageAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 9,
+  "number" : 1,
   "last" : true,
-  "size" : 3,
-  "total_elements" : 3,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -251,12 +251,12 @@ public class ReportingUsageAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 3,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
-    "date" : 2,
+    "date" : 6,
     "method" : "aeiou",
-    "count" : 7,
+    "count" : 0,
     "url" : "aeiou"
   } ],
   "first" : true
@@ -335,10 +335,10 @@ public class ReportingUsageAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 3,
+  "number" : 1,
   "last" : true,
-  "size" : 0,
-  "total_elements" : 3,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -346,12 +346,12 @@ public class ReportingUsageAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 1,
-  "number_of_elements" : 0,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
-    "date" : 0,
+    "date" : 6,
     "method" : "aeiou",
-    "count" : 4,
+    "count" : 0,
     "url" : "aeiou"
   } ],
   "first" : true
@@ -430,10 +430,10 @@ public class ReportingUsageAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 4,
+  "number" : 1,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 9,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -441,12 +441,12 @@ public class ReportingUsageAPI: APIBase {
     "ascending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 3,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
-    "date" : 0,
+    "date" : 6,
     "method" : "aeiou",
-    "count" : 9,
+    "count" : 0,
     "url" : "aeiou"
   } ],
   "first" : true
