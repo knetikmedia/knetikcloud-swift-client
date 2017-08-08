@@ -32,21 +32,21 @@ public class PaymentsStripeAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "payment_method_type" : {
-    "name" : "aeiou",
+    "name" : "name",
     "id" : 2
   },
-  "last4" : "aeiou",
-  "unique_key" : "aeiou",
+  "last4" : "last4",
+  "unique_key" : "unique_key",
   "verified" : true,
   "sort" : 7,
   "expiration_date" : 6,
-  "token" : "aeiou",
+  "token" : "token",
   "expiration_year" : 5,
   "default" : true,
   "payment_type" : "card",
   "user_id" : 3,
   "expiration_month" : 1,
-  "name" : "aeiou",
+  "name" : "name",
   "disabled" : false,
   "created_date" : 0,
   "id" : 5,

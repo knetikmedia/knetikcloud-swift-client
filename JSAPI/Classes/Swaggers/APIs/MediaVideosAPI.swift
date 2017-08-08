@@ -17,7 +17,7 @@ public class MediaVideosAPI: APIBase {
      - parameter userId: (body) The user id (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func addUserToVideoWhitelist(id id: Int64, userId: Int32? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func addUserToVideoWhitelist(id id: Int64, userId: IntWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         addUserToVideoWhitelistWithRequestBuilder(id: id, userId: userId).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -37,7 +37,7 @@ public class MediaVideosAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func addUserToVideoWhitelistWithRequestBuilder(id id: Int64, userId: Int32? = nil) -> RequestBuilder<Void> {
+    public class func addUserToVideoWhitelistWithRequestBuilder(id id: Int64, userId: IntWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/media/videos/{id}/whitelist"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
@@ -70,57 +70,92 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "authored" : 6,
-  "short_description" : "aeiou",
-  "extension" : "aeiou",
+  "authored" : 0,
+  "short_description" : "short_description",
+  "extension" : "extension",
   "privacy" : "private",
-  "uploader" : "",
+  "uploader" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
   "banned" : false,
-  "embed" : "aeiou",
-  "id" : 2,
-  "views" : 1,
-  "height" : 3,
-  "thumbnail" : "aeiou",
+  "embed" : "embed",
+  "id" : 5,
+  "views" : 3,
+  "height" : 1,
+  "thumbnail" : "thumbnail",
   "comments" : [ {
-    "summary" : "aeiou",
-    "context" : "aeiou",
-    "context_id" : 1,
-    "created_date" : 5,
-    "id" : 5,
-    "updated_date" : 2,
+    "summary" : "summary",
+    "context" : "context",
+    "context_id" : 0,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 5,
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 7,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
-    "content" : "aeiou"
+    "content" : "content"
+  }, {
+    "summary" : "summary",
+    "context" : "context",
+    "context_id" : 0,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 5,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "content" : "content"
   } ],
   "author" : {
-    "name" : "aeiou",
-    "id" : 0
+    "name" : "name",
+    "id" : 6
   },
-  "length" : 4,
+  "length" : 5,
   "active" : false,
-  "long_description" : "aeiou",
+  "long_description" : "long_description",
   "published" : false,
-  "priority" : 7,
-  "tags" : [ "aeiou" ],
-  "size" : 1,
-  "mime_type" : "aeiou",
-  "name" : "aeiou",
-  "width" : 6,
-  "location" : "aeiou",
+  "priority" : 2,
+  "tags" : [ "tags", "tags" ],
+  "size" : 7,
+  "mime_type" : "mime_type",
+  "name" : "name",
+  "width" : 2,
+  "location" : "location",
   "contributors" : [ {
-    "role" : "aeiou",
-    "artist" : "",
-    "media" : ""
+    "role" : "role",
+    "artist" : {
+      "name" : "name",
+      "id" : 6
+    },
+    "media" : {
+      "name" : "name",
+      "id" : 6
+    }
+  }, {
+    "role" : "role",
+    "artist" : {
+      "name" : "name",
+      "id" : 6
+    },
+    "media" : {
+      "name" : "name",
+      "id" : 6
+    }
   } ],
-  "created_date" : 9,
-  "updated_date" : 1,
+  "created_date" : 6,
+  "updated_date" : 9,
   "category" : {
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "name" : "name",
+    "id" : "id"
   }
 }}]
      
@@ -161,19 +196,19 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "summary" : "aeiou",
-  "context" : "aeiou",
+  "summary" : "summary",
+  "context" : "context",
   "context_id" : 0,
   "created_date" : 6,
   "id" : 1,
   "updated_date" : 5,
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
-  "content" : "aeiou"
+  "content" : "content"
 }}]
      
      - parameter videoId: (path) The video id  
@@ -240,7 +275,7 @@ public class MediaVideosAPI: APIBase {
      - parameter reason: (body) The flag reason (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func addVideoFlag(videoId videoId: Int64, reason: String? = nil, completion: ((data: FlagResource?, error: ErrorType?) -> Void)) {
+    public class func addVideoFlag(videoId videoId: Int64, reason: StringWrapper? = nil, completion: ((data: FlagResource?, error: ErrorType?) -> Void)) {
         addVideoFlagWithRequestBuilder(videoId: videoId, reason: reason).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
@@ -254,17 +289,17 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "reason" : "aeiou",
-  "context" : "aeiou",
-  "context_id" : "aeiou",
+  "reason" : "reason",
+  "context" : "context",
+  "context_id" : "context_id",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 1,
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -273,7 +308,7 @@ public class MediaVideosAPI: APIBase {
 
      - returns: RequestBuilder<FlagResource> 
      */
-    public class func addVideoFlagWithRequestBuilder(videoId videoId: Int64, reason: String? = nil) -> RequestBuilder<FlagResource> {
+    public class func addVideoFlagWithRequestBuilder(videoId videoId: Int64, reason: StringWrapper? = nil) -> RequestBuilder<FlagResource> {
         var path = "/media/videos/{videoId}/moderation"
         path = path.stringByReplacingOccurrencesOfString("{video_id}", withString: "\(videoId)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
@@ -307,13 +342,16 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "relationship_details" : "aeiou",
+  "relationship_details" : "relationship_details",
   "from" : {
-    "name" : "aeiou",
-    "id" : 0
+    "name" : "name",
+    "id" : 6
   },
-  "id" : 6,
-  "to" : ""
+  "id" : 0,
+  "to" : {
+    "name" : "name",
+    "id" : 6
+  }
 }}]
      
      - parameter videoId: (path) The video id 
@@ -355,16 +393,16 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "context" : "aeiou",
-  "name" : "aeiou",
-  "context_id" : "aeiou",
+  "context" : "context",
+  "name" : "name",
+  "context_id" : "context_id",
   "created_date" : 0,
   "id" : 6,
   "user" : {
-    "avatar_url" : "aeiou",
+    "avatar_url" : "avatar_url",
     "id" : 1,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -615,71 +653,202 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 4,
   "last" : true,
-  "size" : 4,
-  "total_elements" : 5,
+  "size" : 1,
+  "total_elements" : 1,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
-  "number_of_elements" : 1,
+  "total_pages" : 1,
+  "number_of_elements" : 7,
   "content" : [ {
-    "authored" : 6,
-    "short_description" : "aeiou",
-    "extension" : "aeiou",
+    "authored" : 0,
+    "short_description" : "short_description",
+    "extension" : "extension",
     "privacy" : "private",
-    "uploader" : "",
+    "uploader" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
     "banned" : false,
-    "embed" : "aeiou",
-    "id" : 2,
-    "views" : 1,
-    "height" : 3,
-    "thumbnail" : "aeiou",
+    "embed" : "embed",
+    "id" : 5,
+    "views" : 3,
+    "height" : 1,
+    "thumbnail" : "thumbnail",
     "comments" : [ {
-      "summary" : "aeiou",
-      "context" : "aeiou",
-      "context_id" : 1,
-      "created_date" : 5,
-      "id" : 5,
-      "updated_date" : 2,
+      "summary" : "summary",
+      "context" : "context",
+      "context_id" : 0,
+      "created_date" : 6,
+      "id" : 1,
+      "updated_date" : 5,
       "user" : {
-        "avatar_url" : "aeiou",
-        "id" : 7,
-        "display_name" : "aeiou",
-        "username" : "aeiou"
+        "avatar_url" : "avatar_url",
+        "id" : 1,
+        "display_name" : "display_name",
+        "username" : "username"
       },
-      "content" : "aeiou"
+      "content" : "content"
+    }, {
+      "summary" : "summary",
+      "context" : "context",
+      "context_id" : 0,
+      "created_date" : 6,
+      "id" : 1,
+      "updated_date" : 5,
+      "user" : {
+        "avatar_url" : "avatar_url",
+        "id" : 1,
+        "display_name" : "display_name",
+        "username" : "username"
+      },
+      "content" : "content"
     } ],
     "author" : {
-      "name" : "aeiou",
-      "id" : 0
+      "name" : "name",
+      "id" : 6
     },
-    "length" : 4,
+    "length" : 5,
     "active" : false,
-    "long_description" : "aeiou",
+    "long_description" : "long_description",
     "published" : false,
-    "priority" : 7,
-    "tags" : [ "aeiou" ],
-    "size" : 1,
-    "mime_type" : "aeiou",
-    "name" : "aeiou",
-    "width" : 6,
-    "location" : "aeiou",
+    "priority" : 2,
+    "tags" : [ "tags", "tags" ],
+    "size" : 7,
+    "mime_type" : "mime_type",
+    "name" : "name",
+    "width" : 2,
+    "location" : "location",
     "contributors" : [ {
-      "role" : "aeiou",
-      "artist" : "",
-      "media" : ""
+      "role" : "role",
+      "artist" : {
+        "name" : "name",
+        "id" : 6
+      },
+      "media" : {
+        "name" : "name",
+        "id" : 6
+      }
+    }, {
+      "role" : "role",
+      "artist" : {
+        "name" : "name",
+        "id" : 6
+      },
+      "media" : {
+        "name" : "name",
+        "id" : 6
+      }
     } ],
-    "created_date" : 9,
-    "updated_date" : 1,
+    "created_date" : 6,
+    "updated_date" : 9,
     "category" : {
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "name" : "name",
+      "id" : "id"
+    }
+  }, {
+    "authored" : 0,
+    "short_description" : "short_description",
+    "extension" : "extension",
+    "privacy" : "private",
+    "uploader" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "banned" : false,
+    "embed" : "embed",
+    "id" : 5,
+    "views" : 3,
+    "height" : 1,
+    "thumbnail" : "thumbnail",
+    "comments" : [ {
+      "summary" : "summary",
+      "context" : "context",
+      "context_id" : 0,
+      "created_date" : 6,
+      "id" : 1,
+      "updated_date" : 5,
+      "user" : {
+        "avatar_url" : "avatar_url",
+        "id" : 1,
+        "display_name" : "display_name",
+        "username" : "username"
+      },
+      "content" : "content"
+    }, {
+      "summary" : "summary",
+      "context" : "context",
+      "context_id" : 0,
+      "created_date" : 6,
+      "id" : 1,
+      "updated_date" : 5,
+      "user" : {
+        "avatar_url" : "avatar_url",
+        "id" : 1,
+        "display_name" : "display_name",
+        "username" : "username"
+      },
+      "content" : "content"
+    } ],
+    "author" : {
+      "name" : "name",
+      "id" : 6
+    },
+    "length" : 5,
+    "active" : false,
+    "long_description" : "long_description",
+    "published" : false,
+    "priority" : 2,
+    "tags" : [ "tags", "tags" ],
+    "size" : 7,
+    "mime_type" : "mime_type",
+    "name" : "name",
+    "width" : 2,
+    "location" : "location",
+    "contributors" : [ {
+      "role" : "role",
+      "artist" : {
+        "name" : "name",
+        "id" : 6
+      },
+      "media" : {
+        "name" : "name",
+        "id" : 6
+      }
+    }, {
+      "role" : "role",
+      "artist" : {
+        "name" : "name",
+        "id" : 6
+      },
+      "media" : {
+        "name" : "name",
+        "id" : 6
+      }
+    } ],
+    "created_date" : 6,
+    "updated_date" : 9,
+    "category" : {
+      "name" : "name",
+      "id" : "id"
     }
   } ],
   "first" : true
@@ -732,57 +901,92 @@ public class MediaVideosAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "authored" : 6,
-  "short_description" : "aeiou",
-  "extension" : "aeiou",
+  "authored" : 0,
+  "short_description" : "short_description",
+  "extension" : "extension",
   "privacy" : "private",
-  "uploader" : "",
+  "uploader" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
   "banned" : false,
-  "embed" : "aeiou",
-  "id" : 2,
-  "views" : 1,
-  "height" : 3,
-  "thumbnail" : "aeiou",
+  "embed" : "embed",
+  "id" : 5,
+  "views" : 3,
+  "height" : 1,
+  "thumbnail" : "thumbnail",
   "comments" : [ {
-    "summary" : "aeiou",
-    "context" : "aeiou",
-    "context_id" : 1,
-    "created_date" : 5,
-    "id" : 5,
-    "updated_date" : 2,
+    "summary" : "summary",
+    "context" : "context",
+    "context_id" : 0,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 5,
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 7,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
-    "content" : "aeiou"
+    "content" : "content"
+  }, {
+    "summary" : "summary",
+    "context" : "context",
+    "context_id" : 0,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 5,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "content" : "content"
   } ],
   "author" : {
-    "name" : "aeiou",
-    "id" : 0
+    "name" : "name",
+    "id" : 6
   },
-  "length" : 4,
+  "length" : 5,
   "active" : false,
-  "long_description" : "aeiou",
+  "long_description" : "long_description",
   "published" : false,
-  "priority" : 7,
-  "tags" : [ "aeiou" ],
-  "size" : 1,
-  "mime_type" : "aeiou",
-  "name" : "aeiou",
-  "width" : 6,
-  "location" : "aeiou",
+  "priority" : 2,
+  "tags" : [ "tags", "tags" ],
+  "size" : 7,
+  "mime_type" : "mime_type",
+  "name" : "name",
+  "width" : 2,
+  "location" : "location",
   "contributors" : [ {
-    "role" : "aeiou",
-    "artist" : "",
-    "media" : ""
+    "role" : "role",
+    "artist" : {
+      "name" : "name",
+      "id" : 6
+    },
+    "media" : {
+      "name" : "name",
+      "id" : 6
+    }
+  }, {
+    "role" : "role",
+    "artist" : {
+      "name" : "name",
+      "id" : 6
+    },
+    "media" : {
+      "name" : "name",
+      "id" : 6
+    }
   } ],
-  "created_date" : 9,
-  "updated_date" : 1,
+  "created_date" : 6,
+  "updated_date" : 9,
   "category" : {
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "name" : "name",
+    "id" : "id"
   }
 }}]
      
@@ -825,33 +1029,55 @@ public class MediaVideosAPI: APIBase {
      Returns a page of comments for a video
      - GET /media/videos/{videoId}/comments
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 5,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 3,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 7,
+  "total_pages" : 3,
+  "number_of_elements" : 2,
   "content" : [ {
-    "summary" : "aeiou",
-    "context" : "aeiou",
+    "summary" : "summary",
+    "context" : "context",
     "context_id" : 0,
     "created_date" : 6,
     "id" : 1,
     "updated_date" : 5,
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 5,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
-    "content" : "aeiou"
+    "content" : "content"
+  }, {
+    "summary" : "summary",
+    "context" : "context",
+    "context_id" : 0,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 5,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "content" : "content"
   } ],
   "first" : true
 }}]
@@ -900,30 +1126,50 @@ public class MediaVideosAPI: APIBase {
      Returns a page of dispositions for a video
      - GET /media/videos/{videoId}/dispositions
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 1,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 7,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
+  "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
-    "context" : "aeiou",
-    "name" : "aeiou",
-    "context_id" : "aeiou",
+    "context" : "context",
+    "name" : "name",
+    "context_id" : "context_id",
     "created_date" : 0,
     "id" : 6,
     "user" : {
-      "avatar_url" : "aeiou",
+      "avatar_url" : "avatar_url",
       "id" : 1,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "display_name" : "display_name",
+      "username" : "username"
+    }
+  }, {
+    "context" : "context",
+    "name" : "name",
+    "context_id" : "context_id",
+    "created_date" : 0,
+    "id" : 6,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     }
   } ],
   "first" : true
@@ -973,27 +1219,49 @@ public class MediaVideosAPI: APIBase {
      Returns a page of video relationships
      - GET /media/videos/{videoId}/related
      - examples: [{contentType=application/json, example={
-  "number" : 1,
+  "number" : 6,
   "last" : true,
   "size" : 5,
-  "total_elements" : 2,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 5,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
-    "relationship_details" : "aeiou",
+    "relationship_details" : "relationship_details",
     "from" : {
-      "name" : "aeiou",
-      "id" : 0
+      "name" : "name",
+      "id" : 6
     },
-    "id" : 6,
-    "to" : ""
+    "id" : 0,
+    "to" : {
+      "name" : "name",
+      "id" : 6
+    }
+  }, {
+    "relationship_details" : "relationship_details",
+    "from" : {
+      "name" : "name",
+      "id" : 6
+    },
+    "id" : 0,
+    "to" : {
+      "name" : "name",
+      "id" : 6
+    }
   } ],
   "first" : true
 }}]
@@ -1054,71 +1322,202 @@ public class MediaVideosAPI: APIBase {
      Search videos using the documented filters
      - GET /media/videos
      - examples: [{contentType=application/json, example={
-  "number" : 7,
+  "number" : 4,
   "last" : true,
-  "size" : 4,
-  "total_elements" : 5,
+  "size" : 1,
+  "total_elements" : 1,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
-  "number_of_elements" : 1,
+  "total_pages" : 1,
+  "number_of_elements" : 7,
   "content" : [ {
-    "authored" : 6,
-    "short_description" : "aeiou",
-    "extension" : "aeiou",
+    "authored" : 0,
+    "short_description" : "short_description",
+    "extension" : "extension",
     "privacy" : "private",
-    "uploader" : "",
+    "uploader" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
     "banned" : false,
-    "embed" : "aeiou",
-    "id" : 2,
-    "views" : 1,
-    "height" : 3,
-    "thumbnail" : "aeiou",
+    "embed" : "embed",
+    "id" : 5,
+    "views" : 3,
+    "height" : 1,
+    "thumbnail" : "thumbnail",
     "comments" : [ {
-      "summary" : "aeiou",
-      "context" : "aeiou",
-      "context_id" : 1,
-      "created_date" : 5,
-      "id" : 5,
-      "updated_date" : 2,
+      "summary" : "summary",
+      "context" : "context",
+      "context_id" : 0,
+      "created_date" : 6,
+      "id" : 1,
+      "updated_date" : 5,
       "user" : {
-        "avatar_url" : "aeiou",
-        "id" : 7,
-        "display_name" : "aeiou",
-        "username" : "aeiou"
+        "avatar_url" : "avatar_url",
+        "id" : 1,
+        "display_name" : "display_name",
+        "username" : "username"
       },
-      "content" : "aeiou"
+      "content" : "content"
+    }, {
+      "summary" : "summary",
+      "context" : "context",
+      "context_id" : 0,
+      "created_date" : 6,
+      "id" : 1,
+      "updated_date" : 5,
+      "user" : {
+        "avatar_url" : "avatar_url",
+        "id" : 1,
+        "display_name" : "display_name",
+        "username" : "username"
+      },
+      "content" : "content"
     } ],
     "author" : {
-      "name" : "aeiou",
-      "id" : 0
+      "name" : "name",
+      "id" : 6
     },
-    "length" : 4,
+    "length" : 5,
     "active" : false,
-    "long_description" : "aeiou",
+    "long_description" : "long_description",
     "published" : false,
-    "priority" : 7,
-    "tags" : [ "aeiou" ],
-    "size" : 1,
-    "mime_type" : "aeiou",
-    "name" : "aeiou",
-    "width" : 6,
-    "location" : "aeiou",
+    "priority" : 2,
+    "tags" : [ "tags", "tags" ],
+    "size" : 7,
+    "mime_type" : "mime_type",
+    "name" : "name",
+    "width" : 2,
+    "location" : "location",
     "contributors" : [ {
-      "role" : "aeiou",
-      "artist" : "",
-      "media" : ""
+      "role" : "role",
+      "artist" : {
+        "name" : "name",
+        "id" : 6
+      },
+      "media" : {
+        "name" : "name",
+        "id" : 6
+      }
+    }, {
+      "role" : "role",
+      "artist" : {
+        "name" : "name",
+        "id" : 6
+      },
+      "media" : {
+        "name" : "name",
+        "id" : 6
+      }
     } ],
-    "created_date" : 9,
-    "updated_date" : 1,
+    "created_date" : 6,
+    "updated_date" : 9,
     "category" : {
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "name" : "name",
+      "id" : "id"
+    }
+  }, {
+    "authored" : 0,
+    "short_description" : "short_description",
+    "extension" : "extension",
+    "privacy" : "private",
+    "uploader" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "banned" : false,
+    "embed" : "embed",
+    "id" : 5,
+    "views" : 3,
+    "height" : 1,
+    "thumbnail" : "thumbnail",
+    "comments" : [ {
+      "summary" : "summary",
+      "context" : "context",
+      "context_id" : 0,
+      "created_date" : 6,
+      "id" : 1,
+      "updated_date" : 5,
+      "user" : {
+        "avatar_url" : "avatar_url",
+        "id" : 1,
+        "display_name" : "display_name",
+        "username" : "username"
+      },
+      "content" : "content"
+    }, {
+      "summary" : "summary",
+      "context" : "context",
+      "context_id" : 0,
+      "created_date" : 6,
+      "id" : 1,
+      "updated_date" : 5,
+      "user" : {
+        "avatar_url" : "avatar_url",
+        "id" : 1,
+        "display_name" : "display_name",
+        "username" : "username"
+      },
+      "content" : "content"
+    } ],
+    "author" : {
+      "name" : "name",
+      "id" : 6
+    },
+    "length" : 5,
+    "active" : false,
+    "long_description" : "long_description",
+    "published" : false,
+    "priority" : 2,
+    "tags" : [ "tags", "tags" ],
+    "size" : 7,
+    "mime_type" : "mime_type",
+    "name" : "name",
+    "width" : 2,
+    "location" : "location",
+    "contributors" : [ {
+      "role" : "role",
+      "artist" : {
+        "name" : "name",
+        "id" : 6
+      },
+      "media" : {
+        "name" : "name",
+        "id" : 6
+      }
+    }, {
+      "role" : "role",
+      "artist" : {
+        "name" : "name",
+        "id" : 6
+      },
+      "media" : {
+        "name" : "name",
+        "id" : 6
+      }
+    } ],
+    "created_date" : 6,
+    "updated_date" : 9,
+    "category" : {
+      "name" : "name",
+      "id" : "id"
     }
   } ],
   "first" : true
@@ -1307,7 +1706,7 @@ public class MediaVideosAPI: APIBase {
      - parameter content: (body) The comment content (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func updateVideoComment(videoId videoId: Int64, id: Int64, content: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func updateVideoComment(videoId videoId: Int64, id: Int64, content: StringWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         updateVideoCommentWithRequestBuilder(videoId: videoId, id: id, content: content).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -1327,7 +1726,7 @@ public class MediaVideosAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func updateVideoCommentWithRequestBuilder(videoId videoId: Int64, id: Int64, content: String? = nil) -> RequestBuilder<Void> {
+    public class func updateVideoCommentWithRequestBuilder(videoId videoId: Int64, id: Int64, content: StringWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/media/videos/{videoId}/comments/{id}/content"
         path = path.stringByReplacingOccurrencesOfString("{video_id}", withString: "\(videoId)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
@@ -1349,7 +1748,7 @@ public class MediaVideosAPI: APIBase {
      - parameter details: (body) The video relationship details (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func updateVideoRelationship(videoId videoId: Int64, relationshipId: Int64, details: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func updateVideoRelationship(videoId videoId: Int64, relationshipId: Int64, details: StringWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         updateVideoRelationshipWithRequestBuilder(videoId: videoId, relationshipId: relationshipId, details: details).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -1369,7 +1768,7 @@ public class MediaVideosAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func updateVideoRelationshipWithRequestBuilder(videoId videoId: Int64, relationshipId: Int64, details: String? = nil) -> RequestBuilder<Void> {
+    public class func updateVideoRelationshipWithRequestBuilder(videoId videoId: Int64, relationshipId: Int64, details: StringWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/media/videos/{videoId}/related/{id}/relationship_details"
         path = path.stringByReplacingOccurrencesOfString("{video_id}", withString: "\(videoId)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{relationship_id}", withString: "\(relationshipId)", options: .LiteralSearch, range: nil)

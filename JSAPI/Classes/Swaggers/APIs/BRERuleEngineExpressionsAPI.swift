@@ -30,10 +30,15 @@ public class BRERuleEngineExpressionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "value_type" : "aeiou",
-  "key_type" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou"
+  "value_type" : "value_type",
+  "key_type" : "key_type",
+  "name" : "name",
+  "description" : "description"
+}, {
+  "value_type" : "value_type",
+  "key_type" : "key_type",
+  "name" : "name",
+  "description" : "description"
 } ]}]
 
      - returns: RequestBuilder<[LookupTypeResource]> 

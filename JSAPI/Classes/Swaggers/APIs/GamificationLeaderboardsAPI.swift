@@ -37,14 +37,24 @@ public class GamificationLeaderboardsAPI: APIBase {
     "rank" : 0,
     "updated_date" : 1,
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 5,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    }
+  }, {
+    "score" : 6,
+    "rank" : 0,
+    "updated_date" : 1,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     }
   } ],
   "id" : 5,
-  "strategy" : "aeiou"
+  "strategy" : "strategy"
 }}]
      
      - parameter contextType: (path) The context type for the leaderboard 
@@ -103,10 +113,10 @@ public class GamificationLeaderboardsAPI: APIBase {
   "rank" : 0,
   "updated_date" : 1,
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -149,7 +159,7 @@ public class GamificationLeaderboardsAPI: APIBase {
     /**
      Get a list of available leaderboard strategy names
      - GET /leaderboards/strategies
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example=[ "", "" ]}]
 
      - returns: RequestBuilder<[String]> 
      */

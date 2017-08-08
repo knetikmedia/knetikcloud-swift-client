@@ -30,9 +30,9 @@ public class MediaModerationAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "reason" : "aeiou",
-  "context" : "aeiou",
-  "context_id" : "aeiou",
+  "reason" : "reason",
+  "context" : "context",
+  "context_id" : "context_id",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 5,
@@ -91,16 +91,33 @@ public class MediaModerationAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 3,
   "number_of_elements" : 2,
   "content" : [ {
-    "reason" : "aeiou",
-    "context" : "aeiou",
-    "context_id" : "aeiou",
+    "reason" : "reason",
+    "context" : "context",
+    "context_id" : "context_id",
+    "created_date" : 0,
+    "id" : 6,
+    "updated_date" : 5,
+    "resolution" : "banned",
+    "resolved" : 1
+  }, {
+    "reason" : "reason",
+    "context" : "context",
+    "context_id" : "context_id",
     "created_date" : 0,
     "id" : 6,
     "updated_date" : 5,

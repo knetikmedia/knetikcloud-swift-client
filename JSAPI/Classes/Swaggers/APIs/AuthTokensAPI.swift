@@ -75,9 +75,9 @@ public class AuthTokensAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "client_id" : "aeiou",
-  "token" : "aeiou",
-  "username" : "aeiou"
+  "client_id" : "client_id",
+  "token" : "token",
+  "username" : "username"
 }}]
      
      - parameter username: (path) The username of the user 
@@ -134,16 +134,28 @@ public class AuthTokensAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
   "number_of_elements" : 6,
   "content" : [ {
-    "client_id" : "aeiou",
-    "token" : "aeiou",
-    "username" : "aeiou"
+    "client_id" : "client_id",
+    "token" : "token",
+    "username" : "username"
+  }, {
+    "client_id" : "client_id",
+    "token" : "token",
+    "username" : "username"
   } ],
   "first" : true
 }}]

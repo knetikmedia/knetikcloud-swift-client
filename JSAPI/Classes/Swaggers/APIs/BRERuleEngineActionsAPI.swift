@@ -62,14 +62,32 @@ public class BRERuleEngineActionsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "variables" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "optional" : false,
-    "type" : "aeiou"
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
   } ],
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "category" : "achievement",
-  "tags" : [ "aeiou" ]
+  "tags" : [ "tags", "tags" ]
+}, {
+  "variables" : [ {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
+  } ],
+  "name" : "name",
+  "description" : "description",
+  "category" : "achievement",
+  "tags" : [ "tags", "tags" ]
 } ]}]
      
      - parameter filterCategory: (query) Filter for actions that are within a specific category (optional)

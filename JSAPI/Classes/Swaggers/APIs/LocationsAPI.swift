@@ -26,9 +26,13 @@ public class LocationsAPI: APIBase {
      Get a list of countries
      - GET /location/countries
      - examples: [{contentType=application/json, example=[ {
-  "name" : "aeiou",
-  "iso2" : "aeiou",
-  "iso3" : "aeiou"
+  "name" : "name",
+  "iso2" : "iso2",
+  "iso3" : "iso3"
+}, {
+  "name" : "name",
+  "iso2" : "iso2",
+  "iso3" : "iso3"
 } ]}]
 
      - returns: RequestBuilder<[CountryResource]> 
@@ -64,7 +68,7 @@ public class LocationsAPI: APIBase {
      Get the iso3 code of your country
      - GET /location/geolocation/country
      - Determined by geo ip location
-     - examples: [{contentType=application/json, example="aeiou"}]
+     - examples: [{contentType=application/json, example=""}]
 
      - returns: RequestBuilder<String> 
      */
@@ -100,9 +104,14 @@ public class LocationsAPI: APIBase {
      Get a list of a country's states
      - GET /location/countries/{country_code_iso3}/states
      - examples: [{contentType=application/json, example=[ {
-  "country_code_iso3" : "aeiou",
-  "code" : "aeiou",
-  "name" : "aeiou",
+  "country_code_iso3" : "country_code_iso3",
+  "code" : "code",
+  "name" : "name",
+  "id" : 0
+}, {
+  "country_code_iso3" : "country_code_iso3",
+  "code" : "code",
+  "name" : "name",
   "id" : 0
 } ]}]
      
@@ -143,9 +152,9 @@ public class LocationsAPI: APIBase {
      - GET /location/geolocation/currency
      - Determined by geo ip location, currency to country mapping and a fallback setting
      - examples: [{contentType=application/json, example={
-  "code" : "aeiou",
-  "icon" : "aeiou",
-  "name" : "aeiou",
+  "code" : "code",
+  "icon" : "icon",
+  "name" : "name",
   "active" : false,
   "created_date" : 0,
   "updated_date" : 1,

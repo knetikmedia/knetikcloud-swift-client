@@ -73,31 +73,103 @@ public class StoreBundlesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
-      "type_hint" : "aeiou",
-      "description" : "aeiou"
+      "type_hint" : "type_hint",
+      "description" : "description"
+    },
+    "modifiable" : false,
+    "required" : false
+  }, {
+    "behavior" : {
+      "type_hint" : "type_hint",
+      "description" : "description"
     },
     "modifiable" : false,
     "required" : false
   } ],
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -261,31 +333,103 @@ public class StoreBundlesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
-      "type_hint" : "aeiou",
-      "description" : "aeiou"
+      "type_hint" : "type_hint",
+      "description" : "description"
+    },
+    "modifiable" : false,
+    "required" : false
+  }, {
+    "behavior" : {
+      "type_hint" : "type_hint",
+      "description" : "description"
     },
     "modifiable" : false,
     "required" : false
   } ],
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -337,8 +481,16 @@ public class StoreBundlesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
@@ -346,31 +498,206 @@ public class StoreBundlesAPI: APIBase {
   "content" : [ {
     "behaviors" : [ {
       "behavior" : {
-        "type_hint" : "aeiou",
-        "description" : "aeiou"
+        "type_hint" : "type_hint",
+        "description" : "description"
+      },
+      "modifiable" : false,
+      "required" : false
+    }, {
+      "behavior" : {
+        "type_hint" : "type_hint",
+        "description" : "description"
       },
       "modifiable" : false,
       "required" : false
     } ],
-    "name" : "aeiou",
+    "name" : "name",
     "created_date" : 0,
-    "id" : "aeiou",
+    "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  }, {
+    "behaviors" : [ {
+      "behavior" : {
+        "type_hint" : "type_hint",
+        "description" : "description"
+      },
+      "modifiable" : false,
+      "required" : false
+    }, {
+      "behavior" : {
+        "type_hint" : "type_hint",
+        "description" : "description"
+      },
+      "modifiable" : false,
+      "required" : false
+    } ],
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     } ]
@@ -468,31 +795,103 @@ public class StoreBundlesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
-      "type_hint" : "aeiou",
-      "description" : "aeiou"
+      "type_hint" : "type_hint",
+      "description" : "description"
+    },
+    "modifiable" : false,
+    "required" : false
+  }, {
+    "behavior" : {
+      "type_hint" : "type_hint",
+      "description" : "description"
     },
     "modifiable" : false,
     "required" : false
   } ],
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]

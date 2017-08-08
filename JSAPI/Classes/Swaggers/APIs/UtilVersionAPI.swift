@@ -26,7 +26,7 @@ public class UtilVersionAPI: APIBase {
      Get current version info
      - GET /version
      - examples: [{contentType=application/json, example={
-  "version" : "aeiou"
+  "version" : "version"
 }}]
 
      - returns: RequestBuilder<Version> 

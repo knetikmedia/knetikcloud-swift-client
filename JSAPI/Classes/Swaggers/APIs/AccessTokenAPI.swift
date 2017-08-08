@@ -39,10 +39,10 @@ public class AccessTokenAPI: APIBase {
      Get access token
      - POST /oauth/token
      - examples: [{contentType=application/json, example={
-  "access_token" : "aeiou",
-  "scope" : "aeiou",
-  "token_type" : "aeiou",
-  "expires_in" : "aeiou"
+  "access_token" : "access_token",
+  "scope" : "scope",
+  "token_type" : "token_type",
+  "expires_in" : "expires_in"
 }}]
      
      - parameter grantType: (form) Grant type 

@@ -30,9 +30,9 @@ public class CurrenciesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "code" : "aeiou",
-  "icon" : "aeiou",
-  "name" : "aeiou",
+  "code" : "code",
+  "icon" : "icon",
+  "name" : "name",
   "active" : false,
   "created_date" : 0,
   "updated_date" : 1,
@@ -124,16 +124,33 @@ public class CurrenciesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
   "number_of_elements" : 5,
   "content" : [ {
-    "code" : "aeiou",
-    "icon" : "aeiou",
-    "name" : "aeiou",
+    "code" : "code",
+    "icon" : "icon",
+    "name" : "name",
+    "active" : false,
+    "created_date" : 0,
+    "updated_date" : 1,
+    "factor" : 6.027456183070403,
+    "type" : "real"
+  }, {
+    "code" : "code",
+    "icon" : "icon",
+    "name" : "name",
     "active" : false,
     "created_date" : 0,
     "updated_date" : 1,
@@ -189,9 +206,9 @@ public class CurrenciesAPI: APIBase {
      Get a single currency
      - GET /currencies/{code}
      - examples: [{contentType=application/json, example={
-  "code" : "aeiou",
-  "icon" : "aeiou",
-  "name" : "aeiou",
+  "code" : "code",
+  "icon" : "icon",
+  "name" : "name",
   "active" : false,
   "created_date" : 0,
   "updated_date" : 1,

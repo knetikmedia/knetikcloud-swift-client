@@ -30,13 +30,13 @@ public class AuthClientsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "client_key" : "aeiou",
-  "grant_types" : [ "aeiou" ],
+  "client_key" : "client_key",
+  "grant_types" : [ "grant_types", "grant_types" ],
   "is_public" : false,
-  "name" : "aeiou",
+  "name" : "name",
   "id" : 6,
-  "redirect_uris" : [ "aeiou" ],
-  "secret" : "aeiou",
+  "redirect_uris" : [ "redirect_uris", "redirect_uris" ],
+  "secret" : "secret",
   "locked" : false,
   "access_token_validity_seconds" : 0,
   "refresh_token_validity_seconds" : 1
@@ -118,13 +118,13 @@ public class AuthClientsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "client_key" : "aeiou",
-  "grant_types" : [ "aeiou" ],
+  "client_key" : "client_key",
+  "grant_types" : [ "grant_types", "grant_types" ],
   "is_public" : false,
-  "name" : "aeiou",
+  "name" : "name",
   "id" : 6,
-  "redirect_uris" : [ "aeiou" ],
-  "secret" : "aeiou",
+  "redirect_uris" : [ "redirect_uris", "redirect_uris" ],
+  "secret" : "secret",
   "locked" : false,
   "access_token_validity_seconds" : 0,
   "refresh_token_validity_seconds" : 1
@@ -169,8 +169,11 @@ public class AuthClientsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "name" : "aeiou",
-  "description" : "aeiou"
+  "name" : "name",
+  "description" : "description"
+}, {
+  "name" : "name",
+  "description" : "description"
 } ]}]
 
      - returns: RequestBuilder<[GrantTypeResource]> 
@@ -219,20 +222,39 @@ public class AuthClientsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
   "number_of_elements" : 5,
   "content" : [ {
-    "client_key" : "aeiou",
-    "grant_types" : [ "aeiou" ],
+    "client_key" : "client_key",
+    "grant_types" : [ "grant_types", "grant_types" ],
     "is_public" : false,
-    "name" : "aeiou",
+    "name" : "name",
     "id" : 6,
-    "redirect_uris" : [ "aeiou" ],
-    "secret" : "aeiou",
+    "redirect_uris" : [ "redirect_uris", "redirect_uris" ],
+    "secret" : "secret",
+    "locked" : false,
+    "access_token_validity_seconds" : 0,
+    "refresh_token_validity_seconds" : 1
+  }, {
+    "client_key" : "client_key",
+    "grant_types" : [ "grant_types", "grant_types" ],
+    "is_public" : false,
+    "name" : "name",
+    "id" : 6,
+    "redirect_uris" : [ "redirect_uris", "redirect_uris" ],
+    "secret" : "secret",
     "locked" : false,
     "access_token_validity_seconds" : 0,
     "refresh_token_validity_seconds" : 1
@@ -364,13 +386,13 @@ public class AuthClientsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "client_key" : "aeiou",
-  "grant_types" : [ "aeiou" ],
+  "client_key" : "client_key",
+  "grant_types" : [ "grant_types", "grant_types" ],
   "is_public" : false,
-  "name" : "aeiou",
+  "name" : "name",
   "id" : 6,
-  "redirect_uris" : [ "aeiou" ],
-  "secret" : "aeiou",
+  "redirect_uris" : [ "redirect_uris", "redirect_uris" ],
+  "secret" : "secret",
   "locked" : false,
   "access_token_validity_seconds" : 0,
   "refresh_token_validity_seconds" : 1

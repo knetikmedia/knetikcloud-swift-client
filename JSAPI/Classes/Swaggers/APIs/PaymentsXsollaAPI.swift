@@ -29,7 +29,7 @@ public class PaymentsXsollaAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example="aeiou"}]
+     - examples: [{contentType=application/json, example=""}]
      
      - parameter request: (body) The payment request to be sent to XSolla (optional)
 

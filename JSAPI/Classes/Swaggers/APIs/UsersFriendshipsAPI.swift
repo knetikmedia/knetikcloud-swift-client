@@ -76,24 +76,37 @@ public class UsersFriendshipsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 0,
   "last" : true,
-  "size" : 5,
+  "size" : 1,
   "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 1,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
-    "avatar_url" : "aeiou",
-    "id" : 0,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  }, {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   } ],
   "first" : true
 }}]
@@ -143,7 +156,7 @@ public class UsersFriendshipsAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example="aeiou"}]
+     - examples: [{contentType=application/json, example=""}]
      
      - parameter userId: (path) The id of the user or &#39;me&#39; if logged in 
 
@@ -188,24 +201,37 @@ public class UsersFriendshipsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 6,
+  "number" : 0,
   "last" : true,
-  "size" : 5,
+  "size" : 1,
   "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 1,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
-    "avatar_url" : "aeiou",
-    "id" : 0,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  }, {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   } ],
   "first" : true
 }}]
@@ -242,7 +268,7 @@ public class UsersFriendshipsAPI: APIBase {
      - parameter token: (body) The invite token (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func redeemFriendshipToken(userId userId: String, token: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func redeemFriendshipToken(userId userId: String, token: StringWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         redeemFriendshipTokenWithRequestBuilder(userId: userId, token: token).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -262,7 +288,7 @@ public class UsersFriendshipsAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func redeemFriendshipTokenWithRequestBuilder(userId userId: String, token: String? = nil) -> RequestBuilder<Void> {
+    public class func redeemFriendshipTokenWithRequestBuilder(userId userId: String, token: StringWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/users/{userId}/friends/tokens"
         path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path

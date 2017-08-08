@@ -31,69 +31,167 @@ public class InvoicesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "shipping_city_name" : "aeiou",
-  "order_notes" : "aeiou",
+  "shipping_city_name" : "shipping_city_name",
+  "order_notes" : "order_notes",
   "parent_invoice_id" : 1,
   "discount" : 6.027456183070403,
   "state_tax" : 4.965218492984954,
-  "cart_id" : "aeiou",
-  "name_prefix" : "aeiou",
-  "billing_postal_code" : "aeiou",
+  "cart_id" : "cart_id",
+  "name_prefix" : "name_prefix",
+  "billing_postal_code" : "billing_postal_code",
   "shipping" : 7.457744773683766,
-  "billing_state_name" : "aeiou",
-  "billing_country_name" : "aeiou",
-  "currency" : "aeiou",
-  "current_fulfillment_status" : "aeiou",
+  "billing_state_name" : "billing_state_name",
+  "billing_country_name" : "billing_country_name",
+  "currency" : "currency",
+  "current_fulfillment_status" : "current_fulfillment_status",
   "grand_total" : 5.962133916683182,
   "id" : 5,
-  "current_payment_status" : "aeiou",
-  "billing_address1" : "aeiou",
-  "invoice_number" : "aeiou",
-  "billing_address2" : "aeiou",
-  "email" : "aeiou",
-  "vendor_name" : "aeiou",
-  "billing_full_name" : "aeiou",
+  "current_payment_status" : "current_payment_status",
+  "billing_address1" : "billing_address1",
+  "invoice_number" : "invoice_number",
+  "billing_address2" : "billing_address2",
+  "email" : "email",
+  "vendor_name" : "vendor_name",
+  "billing_full_name" : "billing_full_name",
   "sort" : 1,
-  "shipping_full_name" : "aeiou",
+  "shipping_full_name" : "shipping_full_name",
   "fed_tax" : 1.4658129805029452,
   "payment_method_id" : 6,
-  "phone" : "aeiou",
-  "external_ref" : "aeiou",
-  "shipping_address2" : "aeiou",
+  "phone" : "phone",
+  "external_ref" : "external_ref",
+  "shipping_address2" : "shipping_address2",
   "subtotal" : 5.025004791520295,
-  "shipping_address1" : "aeiou",
-  "vendor_id" : 6,
-  "shipping_state_name" : "aeiou",
-  "billing_city_name" : "aeiou",
-  "phone_number" : "aeiou",
+  "shipping_address1" : "shipping_address1",
+  "vendor_id" : 9,
+  "shipping_state_name" : "shipping_state_name",
+  "billing_city_name" : "billing_city_name",
+  "phone_number" : "phone_number",
   "created_date" : 0,
-  "shipping_country_name" : "aeiou",
+  "shipping_country_name" : "shipping_country_name",
   "updated_date" : 9,
   "items" : [ {
-    "type_hint" : "aeiou",
+    "type_hint" : "type_hint",
     "total_price" : 1.2315135367772556,
     "item_id" : 9,
     "system_price" : 7.386281948385884,
-    "item_name" : "aeiou",
+    "item_name" : "item_name",
     "original_unit_price" : 2.027123023002322,
     "unit_price" : 1.0246457001441578,
     "qty" : 4,
     "invoice_id" : 7,
-    "current_fulfillment_status" : "aeiou",
+    "current_fulfillment_status" : "current_fulfillment_status",
     "id" : 2,
-    "sale_name" : "aeiou",
-    "bundle_sku" : "aeiou",
+    "sale_name" : "sale_name",
+    "bundle_sku" : "bundle_sku",
     "original_total_price" : 3.616076749251911,
-    "sku" : "aeiou",
-    "sku_description" : "aeiou"
+    "sku" : "sku",
+    "sku_description" : "sku_description"
+  }, {
+    "type_hint" : "type_hint",
+    "total_price" : 1.2315135367772556,
+    "item_id" : 9,
+    "system_price" : 7.386281948385884,
+    "item_name" : "item_name",
+    "original_unit_price" : 2.027123023002322,
+    "unit_price" : 1.0246457001441578,
+    "qty" : 4,
+    "invoice_id" : 7,
+    "current_fulfillment_status" : "current_fulfillment_status",
+    "id" : 2,
+    "sale_name" : "sale_name",
+    "bundle_sku" : "bundle_sku",
+    "original_total_price" : 3.616076749251911,
+    "sku" : "sku",
+    "sku_description" : "sku_description"
   } ],
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 9,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
-  "shipping_postal_code" : "aeiou"
+  "shipping_postal_code" : "shipping_postal_code"
+}, {
+  "shipping_city_name" : "shipping_city_name",
+  "order_notes" : "order_notes",
+  "parent_invoice_id" : 1,
+  "discount" : 6.027456183070403,
+  "state_tax" : 4.965218492984954,
+  "cart_id" : "cart_id",
+  "name_prefix" : "name_prefix",
+  "billing_postal_code" : "billing_postal_code",
+  "shipping" : 7.457744773683766,
+  "billing_state_name" : "billing_state_name",
+  "billing_country_name" : "billing_country_name",
+  "currency" : "currency",
+  "current_fulfillment_status" : "current_fulfillment_status",
+  "grand_total" : 5.962133916683182,
+  "id" : 5,
+  "current_payment_status" : "current_payment_status",
+  "billing_address1" : "billing_address1",
+  "invoice_number" : "invoice_number",
+  "billing_address2" : "billing_address2",
+  "email" : "email",
+  "vendor_name" : "vendor_name",
+  "billing_full_name" : "billing_full_name",
+  "sort" : 1,
+  "shipping_full_name" : "shipping_full_name",
+  "fed_tax" : 1.4658129805029452,
+  "payment_method_id" : 6,
+  "phone" : "phone",
+  "external_ref" : "external_ref",
+  "shipping_address2" : "shipping_address2",
+  "subtotal" : 5.025004791520295,
+  "shipping_address1" : "shipping_address1",
+  "vendor_id" : 9,
+  "shipping_state_name" : "shipping_state_name",
+  "billing_city_name" : "billing_city_name",
+  "phone_number" : "phone_number",
+  "created_date" : 0,
+  "shipping_country_name" : "shipping_country_name",
+  "updated_date" : 9,
+  "items" : [ {
+    "type_hint" : "type_hint",
+    "total_price" : 1.2315135367772556,
+    "item_id" : 9,
+    "system_price" : 7.386281948385884,
+    "item_name" : "item_name",
+    "original_unit_price" : 2.027123023002322,
+    "unit_price" : 1.0246457001441578,
+    "qty" : 4,
+    "invoice_id" : 7,
+    "current_fulfillment_status" : "current_fulfillment_status",
+    "id" : 2,
+    "sale_name" : "sale_name",
+    "bundle_sku" : "bundle_sku",
+    "original_total_price" : 3.616076749251911,
+    "sku" : "sku",
+    "sku_description" : "sku_description"
+  }, {
+    "type_hint" : "type_hint",
+    "total_price" : 1.2315135367772556,
+    "item_id" : 9,
+    "system_price" : 7.386281948385884,
+    "item_name" : "item_name",
+    "original_unit_price" : 2.027123023002322,
+    "unit_price" : 1.0246457001441578,
+    "qty" : 4,
+    "invoice_id" : 7,
+    "current_fulfillment_status" : "current_fulfillment_status",
+    "id" : 2,
+    "sale_name" : "sale_name",
+    "bundle_sku" : "bundle_sku",
+    "original_total_price" : 3.616076749251911,
+    "sku" : "sku",
+    "sku_description" : "sku_description"
+  } ],
+  "user" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
+  "shipping_postal_code" : "shipping_postal_code"
 } ]}]
      
      - parameter req: (body) Invoice to be created (optional)
@@ -127,7 +225,7 @@ public class InvoicesAPI: APIBase {
     /**
      Lists available fulfillment statuses
      - GET /invoices/fulfillment-statuses
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example=[ "", "" ]}]
 
      - returns: RequestBuilder<[String]> 
      */
@@ -166,69 +264,86 @@ public class InvoicesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "shipping_city_name" : "aeiou",
-  "order_notes" : "aeiou",
+  "shipping_city_name" : "shipping_city_name",
+  "order_notes" : "order_notes",
   "parent_invoice_id" : 1,
   "discount" : 6.027456183070403,
   "state_tax" : 4.965218492984954,
-  "cart_id" : "aeiou",
-  "name_prefix" : "aeiou",
-  "billing_postal_code" : "aeiou",
+  "cart_id" : "cart_id",
+  "name_prefix" : "name_prefix",
+  "billing_postal_code" : "billing_postal_code",
   "shipping" : 7.457744773683766,
-  "billing_state_name" : "aeiou",
-  "billing_country_name" : "aeiou",
-  "currency" : "aeiou",
-  "current_fulfillment_status" : "aeiou",
+  "billing_state_name" : "billing_state_name",
+  "billing_country_name" : "billing_country_name",
+  "currency" : "currency",
+  "current_fulfillment_status" : "current_fulfillment_status",
   "grand_total" : 5.962133916683182,
   "id" : 5,
-  "current_payment_status" : "aeiou",
-  "billing_address1" : "aeiou",
-  "invoice_number" : "aeiou",
-  "billing_address2" : "aeiou",
-  "email" : "aeiou",
-  "vendor_name" : "aeiou",
-  "billing_full_name" : "aeiou",
+  "current_payment_status" : "current_payment_status",
+  "billing_address1" : "billing_address1",
+  "invoice_number" : "invoice_number",
+  "billing_address2" : "billing_address2",
+  "email" : "email",
+  "vendor_name" : "vendor_name",
+  "billing_full_name" : "billing_full_name",
   "sort" : 1,
-  "shipping_full_name" : "aeiou",
+  "shipping_full_name" : "shipping_full_name",
   "fed_tax" : 1.4658129805029452,
   "payment_method_id" : 6,
-  "phone" : "aeiou",
-  "external_ref" : "aeiou",
-  "shipping_address2" : "aeiou",
+  "phone" : "phone",
+  "external_ref" : "external_ref",
+  "shipping_address2" : "shipping_address2",
   "subtotal" : 5.025004791520295,
-  "shipping_address1" : "aeiou",
-  "vendor_id" : 6,
-  "shipping_state_name" : "aeiou",
-  "billing_city_name" : "aeiou",
-  "phone_number" : "aeiou",
+  "shipping_address1" : "shipping_address1",
+  "vendor_id" : 9,
+  "shipping_state_name" : "shipping_state_name",
+  "billing_city_name" : "billing_city_name",
+  "phone_number" : "phone_number",
   "created_date" : 0,
-  "shipping_country_name" : "aeiou",
+  "shipping_country_name" : "shipping_country_name",
   "updated_date" : 9,
   "items" : [ {
-    "type_hint" : "aeiou",
+    "type_hint" : "type_hint",
     "total_price" : 1.2315135367772556,
     "item_id" : 9,
     "system_price" : 7.386281948385884,
-    "item_name" : "aeiou",
+    "item_name" : "item_name",
     "original_unit_price" : 2.027123023002322,
     "unit_price" : 1.0246457001441578,
     "qty" : 4,
     "invoice_id" : 7,
-    "current_fulfillment_status" : "aeiou",
+    "current_fulfillment_status" : "current_fulfillment_status",
     "id" : 2,
-    "sale_name" : "aeiou",
-    "bundle_sku" : "aeiou",
+    "sale_name" : "sale_name",
+    "bundle_sku" : "bundle_sku",
     "original_total_price" : 3.616076749251911,
-    "sku" : "aeiou",
-    "sku_description" : "aeiou"
+    "sku" : "sku",
+    "sku_description" : "sku_description"
+  }, {
+    "type_hint" : "type_hint",
+    "total_price" : 1.2315135367772556,
+    "item_id" : 9,
+    "system_price" : 7.386281948385884,
+    "item_name" : "item_name",
+    "original_unit_price" : 2.027123023002322,
+    "unit_price" : 1.0246457001441578,
+    "qty" : 4,
+    "invoice_id" : 7,
+    "current_fulfillment_status" : "current_fulfillment_status",
+    "id" : 2,
+    "sale_name" : "sale_name",
+    "bundle_sku" : "bundle_sku",
+    "original_total_price" : 3.616076749251911,
+    "sku" : "sku",
+    "sku_description" : "sku_description"
   } ],
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 9,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
-  "shipping_postal_code" : "aeiou"
+  "shipping_postal_code" : "shipping_postal_code"
 }}]
      
      - parameter id: (path) The id of the invoice 
@@ -280,8 +395,16 @@ public class InvoicesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
@@ -289,8 +412,13 @@ public class InvoicesAPI: APIBase {
   "content" : [ {
     "date" : 0,
     "invoice_id" : 6,
-    "message" : "aeiou",
-    "type" : "aeiou"
+    "message" : "message",
+    "type" : "type"
+  }, {
+    "date" : 0,
+    "invoice_id" : 6,
+    "message" : "message",
+    "type" : "type"
   } ],
   "first" : true
 }}]
@@ -357,83 +485,189 @@ public class InvoicesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 8,
+  "number" : 6,
   "last" : true,
-  "size" : 6,
-  "total_elements" : 3,
+  "size" : 9,
+  "total_elements" : 6,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 6,
-  "number_of_elements" : 9,
+  "total_pages" : 3,
+  "number_of_elements" : 8,
   "content" : [ {
-    "shipping_city_name" : "aeiou",
-    "order_notes" : "aeiou",
+    "shipping_city_name" : "shipping_city_name",
+    "order_notes" : "order_notes",
     "parent_invoice_id" : 1,
     "discount" : 6.027456183070403,
     "state_tax" : 4.965218492984954,
-    "cart_id" : "aeiou",
-    "name_prefix" : "aeiou",
-    "billing_postal_code" : "aeiou",
+    "cart_id" : "cart_id",
+    "name_prefix" : "name_prefix",
+    "billing_postal_code" : "billing_postal_code",
     "shipping" : 7.457744773683766,
-    "billing_state_name" : "aeiou",
-    "billing_country_name" : "aeiou",
-    "currency" : "aeiou",
-    "current_fulfillment_status" : "aeiou",
+    "billing_state_name" : "billing_state_name",
+    "billing_country_name" : "billing_country_name",
+    "currency" : "currency",
+    "current_fulfillment_status" : "current_fulfillment_status",
     "grand_total" : 5.962133916683182,
     "id" : 5,
-    "current_payment_status" : "aeiou",
-    "billing_address1" : "aeiou",
-    "invoice_number" : "aeiou",
-    "billing_address2" : "aeiou",
-    "email" : "aeiou",
-    "vendor_name" : "aeiou",
-    "billing_full_name" : "aeiou",
+    "current_payment_status" : "current_payment_status",
+    "billing_address1" : "billing_address1",
+    "invoice_number" : "invoice_number",
+    "billing_address2" : "billing_address2",
+    "email" : "email",
+    "vendor_name" : "vendor_name",
+    "billing_full_name" : "billing_full_name",
     "sort" : 1,
-    "shipping_full_name" : "aeiou",
+    "shipping_full_name" : "shipping_full_name",
     "fed_tax" : 1.4658129805029452,
     "payment_method_id" : 6,
-    "phone" : "aeiou",
-    "external_ref" : "aeiou",
-    "shipping_address2" : "aeiou",
+    "phone" : "phone",
+    "external_ref" : "external_ref",
+    "shipping_address2" : "shipping_address2",
     "subtotal" : 5.025004791520295,
-    "shipping_address1" : "aeiou",
-    "vendor_id" : 6,
-    "shipping_state_name" : "aeiou",
-    "billing_city_name" : "aeiou",
-    "phone_number" : "aeiou",
+    "shipping_address1" : "shipping_address1",
+    "vendor_id" : 9,
+    "shipping_state_name" : "shipping_state_name",
+    "billing_city_name" : "billing_city_name",
+    "phone_number" : "phone_number",
     "created_date" : 0,
-    "shipping_country_name" : "aeiou",
+    "shipping_country_name" : "shipping_country_name",
     "updated_date" : 9,
     "items" : [ {
-      "type_hint" : "aeiou",
+      "type_hint" : "type_hint",
       "total_price" : 1.2315135367772556,
       "item_id" : 9,
       "system_price" : 7.386281948385884,
-      "item_name" : "aeiou",
+      "item_name" : "item_name",
       "original_unit_price" : 2.027123023002322,
       "unit_price" : 1.0246457001441578,
       "qty" : 4,
       "invoice_id" : 7,
-      "current_fulfillment_status" : "aeiou",
+      "current_fulfillment_status" : "current_fulfillment_status",
       "id" : 2,
-      "sale_name" : "aeiou",
-      "bundle_sku" : "aeiou",
+      "sale_name" : "sale_name",
+      "bundle_sku" : "bundle_sku",
       "original_total_price" : 3.616076749251911,
-      "sku" : "aeiou",
-      "sku_description" : "aeiou"
+      "sku" : "sku",
+      "sku_description" : "sku_description"
+    }, {
+      "type_hint" : "type_hint",
+      "total_price" : 1.2315135367772556,
+      "item_id" : 9,
+      "system_price" : 7.386281948385884,
+      "item_name" : "item_name",
+      "original_unit_price" : 2.027123023002322,
+      "unit_price" : 1.0246457001441578,
+      "qty" : 4,
+      "invoice_id" : 7,
+      "current_fulfillment_status" : "current_fulfillment_status",
+      "id" : 2,
+      "sale_name" : "sale_name",
+      "bundle_sku" : "bundle_sku",
+      "original_total_price" : 3.616076749251911,
+      "sku" : "sku",
+      "sku_description" : "sku_description"
     } ],
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 9,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
-    "shipping_postal_code" : "aeiou"
+    "shipping_postal_code" : "shipping_postal_code"
+  }, {
+    "shipping_city_name" : "shipping_city_name",
+    "order_notes" : "order_notes",
+    "parent_invoice_id" : 1,
+    "discount" : 6.027456183070403,
+    "state_tax" : 4.965218492984954,
+    "cart_id" : "cart_id",
+    "name_prefix" : "name_prefix",
+    "billing_postal_code" : "billing_postal_code",
+    "shipping" : 7.457744773683766,
+    "billing_state_name" : "billing_state_name",
+    "billing_country_name" : "billing_country_name",
+    "currency" : "currency",
+    "current_fulfillment_status" : "current_fulfillment_status",
+    "grand_total" : 5.962133916683182,
+    "id" : 5,
+    "current_payment_status" : "current_payment_status",
+    "billing_address1" : "billing_address1",
+    "invoice_number" : "invoice_number",
+    "billing_address2" : "billing_address2",
+    "email" : "email",
+    "vendor_name" : "vendor_name",
+    "billing_full_name" : "billing_full_name",
+    "sort" : 1,
+    "shipping_full_name" : "shipping_full_name",
+    "fed_tax" : 1.4658129805029452,
+    "payment_method_id" : 6,
+    "phone" : "phone",
+    "external_ref" : "external_ref",
+    "shipping_address2" : "shipping_address2",
+    "subtotal" : 5.025004791520295,
+    "shipping_address1" : "shipping_address1",
+    "vendor_id" : 9,
+    "shipping_state_name" : "shipping_state_name",
+    "billing_city_name" : "billing_city_name",
+    "phone_number" : "phone_number",
+    "created_date" : 0,
+    "shipping_country_name" : "shipping_country_name",
+    "updated_date" : 9,
+    "items" : [ {
+      "type_hint" : "type_hint",
+      "total_price" : 1.2315135367772556,
+      "item_id" : 9,
+      "system_price" : 7.386281948385884,
+      "item_name" : "item_name",
+      "original_unit_price" : 2.027123023002322,
+      "unit_price" : 1.0246457001441578,
+      "qty" : 4,
+      "invoice_id" : 7,
+      "current_fulfillment_status" : "current_fulfillment_status",
+      "id" : 2,
+      "sale_name" : "sale_name",
+      "bundle_sku" : "bundle_sku",
+      "original_total_price" : 3.616076749251911,
+      "sku" : "sku",
+      "sku_description" : "sku_description"
+    }, {
+      "type_hint" : "type_hint",
+      "total_price" : 1.2315135367772556,
+      "item_id" : 9,
+      "system_price" : 7.386281948385884,
+      "item_name" : "item_name",
+      "original_unit_price" : 2.027123023002322,
+      "unit_price" : 1.0246457001441578,
+      "qty" : 4,
+      "invoice_id" : 7,
+      "current_fulfillment_status" : "current_fulfillment_status",
+      "id" : 2,
+      "sale_name" : "sale_name",
+      "bundle_sku" : "bundle_sku",
+      "original_total_price" : 3.616076749251911,
+      "sku" : "sku",
+      "sku_description" : "sku_description"
+    } ],
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "shipping_postal_code" : "shipping_postal_code"
   } ],
   "first" : true
 }}]
@@ -506,7 +740,7 @@ public class InvoicesAPI: APIBase {
     /**
      Lists available payment statuses
      - GET /invoices/payment-statuses
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example=[ "", "" ]}]
 
      - returns: RequestBuilder<[String]> 
      */
@@ -526,10 +760,10 @@ public class InvoicesAPI: APIBase {
     }
 
     /**
-     Trigger payment of an invoice
+     Pay an invoice using a saved payment method
      
      - parameter id: (path) The id of the invoice 
-     - parameter request: (body) Payment info (optional)
+     - parameter request: (body) The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     public class func payInvoice(id id: Int32, request: PayBySavedMethodRequest? = nil, completion: ((error: ErrorType?) -> Void)) {
@@ -540,14 +774,14 @@ public class InvoicesAPI: APIBase {
 
 
     /**
-     Trigger payment of an invoice
+     Pay an invoice using a saved payment method
      - POST /invoices/{id}/payments
      - OAuth:
        - type: oauth2
        - name: OAuth2
      
      - parameter id: (path) The id of the invoice 
-     - parameter request: (body) Payment info (optional)
+     - parameter request: (body) The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited. (optional)
 
      - returns: RequestBuilder<Void> 
      */
@@ -573,7 +807,7 @@ public class InvoicesAPI: APIBase {
      - parameter status: (body) The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setBundledInvoiceItemFulfillmentStatus(id id: Int32, bundleSku: String, sku: String, status: String, completion: ((error: ErrorType?) -> Void)) {
+    public class func setBundledInvoiceItemFulfillmentStatus(id id: Int32, bundleSku: String, sku: String, status: StringWrapper, completion: ((error: ErrorType?) -> Void)) {
         setBundledInvoiceItemFulfillmentStatusWithRequestBuilder(id: id, bundleSku: bundleSku, sku: sku, status: status).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -595,7 +829,7 @@ public class InvoicesAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func setBundledInvoiceItemFulfillmentStatusWithRequestBuilder(id id: Int32, bundleSku: String, sku: String, status: String) -> RequestBuilder<Void> {
+    public class func setBundledInvoiceItemFulfillmentStatusWithRequestBuilder(id id: Int32, bundleSku: String, sku: String, status: StringWrapper) -> RequestBuilder<Void> {
         var path = "/invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{bundleSku}", withString: "\(bundleSku)", options: .LiteralSearch, range: nil)
@@ -617,7 +851,7 @@ public class InvoicesAPI: APIBase {
      - parameter externalRef: (body) External reference info (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setExternalRef(id id: Int32, externalRef: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func setExternalRef(id id: Int32, externalRef: StringWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         setExternalRefWithRequestBuilder(id: id, externalRef: externalRef).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -636,7 +870,7 @@ public class InvoicesAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func setExternalRefWithRequestBuilder(id id: Int32, externalRef: String? = nil) -> RequestBuilder<Void> {
+    public class func setExternalRefWithRequestBuilder(id id: Int32, externalRef: StringWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/invoices/{id}/external-ref"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
@@ -657,7 +891,7 @@ public class InvoicesAPI: APIBase {
      - parameter status: (body) The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setInvoiceItemFulfillmentStatus(id id: Int32, sku: String, status: String, completion: ((error: ErrorType?) -> Void)) {
+    public class func setInvoiceItemFulfillmentStatus(id id: Int32, sku: String, status: StringWrapper, completion: ((error: ErrorType?) -> Void)) {
         setInvoiceItemFulfillmentStatusWithRequestBuilder(id: id, sku: sku, status: status).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -678,7 +912,7 @@ public class InvoicesAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func setInvoiceItemFulfillmentStatusWithRequestBuilder(id id: Int32, sku: String, status: String) -> RequestBuilder<Void> {
+    public class func setInvoiceItemFulfillmentStatusWithRequestBuilder(id id: Int32, sku: String, status: StringWrapper) -> RequestBuilder<Void> {
         var path = "/invoices/{id}/items/{sku}/fulfillment-status"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{sku}", withString: "\(sku)", options: .LiteralSearch, range: nil)
@@ -699,7 +933,7 @@ public class InvoicesAPI: APIBase {
      - parameter orderNotes: (body) Payment status info (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setOrderNotes(id id: Int32, orderNotes: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func setOrderNotes(id id: Int32, orderNotes: StringWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         setOrderNotesWithRequestBuilder(id: id, orderNotes: orderNotes).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -718,7 +952,7 @@ public class InvoicesAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func setOrderNotesWithRequestBuilder(id id: Int32, orderNotes: String? = nil) -> RequestBuilder<Void> {
+    public class func setOrderNotesWithRequestBuilder(id id: Int32, orderNotes: StringWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/invoices/{id}/order-notes"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path

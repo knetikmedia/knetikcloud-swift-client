@@ -32,8 +32,8 @@ public class TaxesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
-  "name" : "aeiou",
-  "country_iso3" : "aeiou"
+  "name" : "name",
+  "country_iso3" : "country_iso3"
 }}]
      
      - parameter taxResource: (body) The tax object (optional)
@@ -76,9 +76,9 @@ public class TaxesAPI: APIBase {
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
   "federally_exempt" : false,
-  "name" : "aeiou",
-  "state_code" : "aeiou",
-  "country_iso3" : "aeiou"
+  "name" : "name",
+  "state_code" : "state_code",
+  "country_iso3" : "country_iso3"
 }}]
      
      - parameter countryCodeIso3: (path) The iso3 code of the country 
@@ -201,8 +201,8 @@ public class TaxesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
-  "name" : "aeiou",
-  "country_iso3" : "aeiou"
+  "name" : "name",
+  "country_iso3" : "country_iso3"
 }}]
      
      - parameter countryCodeIso3: (path) The iso3 code of the country 
@@ -252,8 +252,16 @@ public class TaxesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
@@ -261,8 +269,13 @@ public class TaxesAPI: APIBase {
   "content" : [ {
     "tax_shipping" : false,
     "rate" : 0.8008281904610115,
-    "name" : "aeiou",
-    "country_iso3" : "aeiou"
+    "name" : "name",
+    "country_iso3" : "country_iso3"
+  }, {
+    "tax_shipping" : false,
+    "rate" : 0.8008281904610115,
+    "name" : "name",
+    "country_iso3" : "country_iso3"
   } ],
   "first" : true
 }}]
@@ -313,9 +326,9 @@ public class TaxesAPI: APIBase {
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
   "federally_exempt" : false,
-  "name" : "aeiou",
-  "state_code" : "aeiou",
-  "country_iso3" : "aeiou"
+  "name" : "name",
+  "state_code" : "state_code",
+  "country_iso3" : "country_iso3"
 }}]
      
      - parameter countryCodeIso3: (path) The iso3 code of the country 
@@ -367,8 +380,16 @@ public class TaxesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
@@ -377,9 +398,16 @@ public class TaxesAPI: APIBase {
     "tax_shipping" : false,
     "rate" : 0.8008281904610115,
     "federally_exempt" : false,
-    "name" : "aeiou",
-    "state_code" : "aeiou",
-    "country_iso3" : "aeiou"
+    "name" : "name",
+    "state_code" : "state_code",
+    "country_iso3" : "country_iso3"
+  }, {
+    "tax_shipping" : false,
+    "rate" : 0.8008281904610115,
+    "federally_exempt" : false,
+    "name" : "name",
+    "state_code" : "state_code",
+    "country_iso3" : "country_iso3"
   } ],
   "first" : true
 }}]
@@ -437,8 +465,16 @@ public class TaxesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
@@ -447,9 +483,16 @@ public class TaxesAPI: APIBase {
     "tax_shipping" : false,
     "rate" : 0.8008281904610115,
     "federally_exempt" : false,
-    "name" : "aeiou",
-    "state_code" : "aeiou",
-    "country_iso3" : "aeiou"
+    "name" : "name",
+    "state_code" : "state_code",
+    "country_iso3" : "country_iso3"
+  }, {
+    "tax_shipping" : false,
+    "rate" : 0.8008281904610115,
+    "federally_exempt" : false,
+    "name" : "name",
+    "state_code" : "state_code",
+    "country_iso3" : "country_iso3"
   } ],
   "first" : true
 }}]
@@ -504,8 +547,8 @@ public class TaxesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
-  "name" : "aeiou",
-  "country_iso3" : "aeiou"
+  "name" : "name",
+  "country_iso3" : "country_iso3"
 }}]
      
      - parameter countryCodeIso3: (path) The iso3 code of the country 
@@ -551,9 +594,9 @@ public class TaxesAPI: APIBase {
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
   "federally_exempt" : false,
-  "name" : "aeiou",
-  "state_code" : "aeiou",
-  "country_iso3" : "aeiou"
+  "name" : "name",
+  "state_code" : "state_code",
+  "country_iso3" : "country_iso3"
 }}]
      
      - parameter countryCodeIso3: (path) The iso3 code of the country 

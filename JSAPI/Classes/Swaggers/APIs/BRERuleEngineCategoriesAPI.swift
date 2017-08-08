@@ -31,25 +31,90 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -144,18 +209,34 @@ public class BRERuleEngineCategoriesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
   "number_of_elements" : 6,
   "content" : [ {
-    "template" : "aeiou",
-    "name" : "aeiou",
+    "template" : "template",
+    "name" : "name",
     "additional_properties" : {
       "key" : {
-        "type" : "aeiou"
+        "type" : "type"
+      }
+    }
+  }, {
+    "template" : "template",
+    "name" : "name",
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
       }
     }
   } ],
@@ -205,11 +286,11 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "template" : "aeiou",
-  "name" : "aeiou",
+  "template" : "template",
+  "name" : "name",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   }
 }}]
@@ -254,25 +335,90 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -327,32 +473,193 @@ public class BRERuleEngineCategoriesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "created_date" : 0,
-    "id" : "aeiou",
+    "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  }, {
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     } ]
@@ -406,11 +713,11 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "template" : "aeiou",
-  "name" : "aeiou",
+  "template" : "template",
+  "name" : "name",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   }
 }}]
@@ -454,25 +761,90 @@ public class BRERuleEngineCategoriesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]

@@ -149,7 +149,7 @@ public class StoreShoppingCartsAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example="aeiou"}]
+     - examples: [{contentType=application/json, example=""}]
      
      - parameter owner: (query) Set the owner of a cart. If not specified, defaults to the calling user&#39;s id. If specified and is not the calling user&#39;s id, SHOPPING_CARTS_ADMIN permission is required (optional)
      - parameter currencyCode: (query) Set the currency for the cart, by currency code. May be disallowed by site settings. (optional)
@@ -195,28 +195,66 @@ public class StoreShoppingCartsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "country_tax" : 5.637376656633329,
-  "error_message" : "aeiou",
+  "error_message" : "error_message",
   "owner" : 9,
   "discount_total" : 1.2315135367772556,
   "shipping_cost" : 6.438423552598547,
   "created" : 7,
   "state_tax" : 3.5571952270680973,
-  "currency_code" : "aeiou",
-  "selected_shipping_options" : [ "" ],
+  "currency_code" : "currency_code",
+  "selected_shipping_options" : [ {
+    "original_price" : 0.8008281904610115,
+    "taxable" : true,
+    "shipping_item_id" : 1,
+    "price" : 6.027456183070403,
+    "vendor_id" : 5,
+    "name" : "name",
+    "description" : "description",
+    "vendor_name" : "vendor_name",
+    "sku" : "sku",
+    "currency_code" : "currency_code"
+  }, {
+    "original_price" : 0.8008281904610115,
+    "taxable" : true,
+    "shipping_item_id" : 1,
+    "price" : 6.027456183070403,
+    "vendor_id" : 5,
+    "name" : "name",
+    "description" : "description",
+    "vendor_name" : "vendor_name",
+    "sku" : "sku",
+    "currency_code" : "currency_code"
+  } ],
   "shippable" : true,
   "coupons" : [ {
-    "code" : "aeiou",
+    "code" : "code",
     "max_quantity" : 7,
-    "unique_key" : "aeiou",
+    "unique_key" : "unique_key",
     "self_exclusive" : false,
-    "description" : "aeiou",
+    "description" : "description",
     "target_item_id" : 3,
-    "valid_for_tags" : [ "aeiou" ],
+    "valid_for_tags" : [ "valid_for_tags", "valid_for_tags" ],
     "discount_type" : "value",
     "type" : "coupon_cart",
     "min_cart_total" : 9.301444243932576,
     "vendor_id" : 4,
-    "name" : "aeiou",
+    "name" : "name",
+    "exclusive" : false,
+    "max_discount" : 2.3021358869347655,
+    "value" : 2.027123023002322
+  }, {
+    "code" : "code",
+    "max_quantity" : 7,
+    "unique_key" : "unique_key",
+    "self_exclusive" : false,
+    "description" : "description",
+    "target_item_id" : 3,
+    "valid_for_tags" : [ "valid_for_tags", "valid_for_tags" ],
+    "discount_type" : "value",
+    "type" : "coupon_cart",
+    "min_cart_total" : 9.301444243932576,
+    "vendor_id" : 4,
+    "name" : "name",
     "exclusive" : false,
     "max_discount" : 2.3021358869347655,
     "value" : 2.027123023002322
@@ -225,20 +263,20 @@ public class StoreShoppingCartsAPI: APIBase {
   "invoice_id" : 6.84685269835264,
   "error_code" : 1,
   "grand_total" : 1.4894159098541704,
-  "id" : "aeiou",
+  "id" : "id",
   "shipping_address" : {
-    "zip" : "aeiou",
-    "country_code_iso3" : "aeiou",
-    "name_prefix" : "aeiou",
-    "postal_state_code" : "aeiou",
-    "city" : "aeiou",
-    "order_notes" : "aeiou",
-    "last_name" : "aeiou",
-    "shipping_address_line2" : "aeiou",
-    "phone_number" : "aeiou",
-    "shipping_address_line1" : "aeiou",
-    "first_name" : "aeiou",
-    "email" : "aeiou"
+    "zip" : "zip",
+    "country_code_iso3" : "country_code_iso3",
+    "name_prefix" : "name_prefix",
+    "postal_state_code" : "postal_state_code",
+    "city" : "city",
+    "order_notes" : "order_notes",
+    "last_name" : "last_name",
+    "shipping_address_line2" : "shipping_address_line2",
+    "phone_number" : "phone_number",
+    "shipping_address_line1" : "shipping_address_line1",
+    "first_name" : "first_name",
+    "email" : "email"
   },
   "available_shipping_options" : [ {
     "original_price" : 0.8008281904610115,
@@ -246,37 +284,73 @@ public class StoreShoppingCartsAPI: APIBase {
     "shipping_item_id" : 1,
     "price" : 6.027456183070403,
     "vendor_id" : 5,
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "vendor_name" : "aeiou",
-    "sku" : "aeiou",
-    "currency_code" : "aeiou"
+    "name" : "name",
+    "description" : "description",
+    "vendor_name" : "vendor_name",
+    "sku" : "sku",
+    "currency_code" : "currency_code"
+  }, {
+    "original_price" : 0.8008281904610115,
+    "taxable" : true,
+    "shipping_item_id" : 1,
+    "price" : 6.027456183070403,
+    "vendor_id" : 5,
+    "name" : "name",
+    "description" : "description",
+    "vendor_name" : "vendor_name",
+    "sku" : "sku",
+    "currency_code" : "currency_code"
   } ],
   "items" : [ {
-    "thumb_url" : "aeiou",
+    "thumb_url" : "thumb_url",
     "store_item_id" : 9,
-    "unique_key" : "aeiou",
-    "description" : "aeiou",
+    "unique_key" : "unique_key",
+    "description" : "description",
     "discount" : {
-      "unique_key" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "sku" : "aeiou",
+      "unique_key" : "unique_key",
+      "name" : "name",
+      "description" : "description",
+      "sku" : "sku",
       "value" : 7.457744773683766
     },
-    "vendor_name" : "aeiou",
+    "vendor_name" : "vendor_name",
     "original_unit_price" : 5.025004791520295,
     "original_line_total" : 4.965218492984954,
     "unit_price" : 6.683562403749608,
-    "currency_code" : "aeiou",
+    "currency_code" : "currency_code",
     "line_total" : 1.1730742509559433,
-    "tags" : [ "aeiou" ],
+    "tags" : [ "tags", "tags" ],
     "qty" : 9,
     "vendor_id" : 8,
-    "name" : "aeiou",
-    "sale_name" : "aeiou",
-    "sku" : "aeiou",
-    "sku_description" : "aeiou"
+    "name" : "name",
+    "sale_name" : "sale_name",
+    "sku" : "sku",
+    "sku_description" : "sku_description"
+  }, {
+    "thumb_url" : "thumb_url",
+    "store_item_id" : 9,
+    "unique_key" : "unique_key",
+    "description" : "description",
+    "discount" : {
+      "unique_key" : "unique_key",
+      "name" : "name",
+      "description" : "description",
+      "sku" : "sku",
+      "value" : 7.457744773683766
+    },
+    "vendor_name" : "vendor_name",
+    "original_unit_price" : 5.025004791520295,
+    "original_line_total" : 4.965218492984954,
+    "unit_price" : 6.683562403749608,
+    "currency_code" : "currency_code",
+    "line_total" : 1.1730742509559433,
+    "tags" : [ "tags", "tags" ],
+    "qty" : 9,
+    "vendor_id" : 8,
+    "name" : "name",
+    "sale_name" : "sale_name",
+    "sku" : "sku",
+    "sku_description" : "sku_description"
   } ],
   "updated" : 1,
   "status" : "active"
@@ -332,8 +406,16 @@ public class StoreShoppingCartsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
@@ -343,9 +425,18 @@ public class StoreShoppingCartsAPI: APIBase {
     "invoice_id" : 1.4658129805029452,
     "created_date" : 0,
     "grand_total" : 6.027456183070403,
-    "id" : "aeiou",
+    "id" : "id",
     "items_in_cart" : 5,
-    "currency_code" : "aeiou",
+    "currency_code" : "currency_code",
+    "status" : "active"
+  }, {
+    "subtotal" : 5.637376656633329,
+    "invoice_id" : 1.4658129805029452,
+    "created_date" : 0,
+    "grand_total" : 6.027456183070403,
+    "id" : "id",
+    "items_in_cart" : 5,
+    "currency_code" : "currency_code",
     "status" : "active"
   } ],
   "first" : true
@@ -443,12 +534,27 @@ public class StoreShoppingCartsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "vendor_id2" : [ "" ],
-  "vendor_id1" : [ {
-    "name" : "aeiou",
+  "vendor_id2" : [ {
+    "name" : "name",
     "id" : 0,
-    "iso2" : "aeiou",
-    "iso3" : "aeiou"
+    "iso2" : "iso2",
+    "iso3" : "iso3"
+  }, {
+    "name" : "name",
+    "id" : 0,
+    "iso2" : "iso2",
+    "iso3" : "iso3"
+  } ],
+  "vendor_id1" : [ {
+    "name" : "name",
+    "id" : 0,
+    "iso2" : "iso2",
+    "iso3" : "iso3"
+  }, {
+    "name" : "name",
+    "id" : 0,
+    "iso2" : "iso2",
+    "iso3" : "iso3"
   } ]
 }}]
      
@@ -522,7 +628,7 @@ public class StoreShoppingCartsAPI: APIBase {
      - parameter currencyCode: (body) The code of the currency (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setCartCurrency(id id: String, currencyCode: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func setCartCurrency(id id: String, currencyCode: StringWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         setCartCurrencyWithRequestBuilder(id: id, currencyCode: currencyCode).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -542,7 +648,7 @@ public class StoreShoppingCartsAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func setCartCurrencyWithRequestBuilder(id id: String, currencyCode: String? = nil) -> RequestBuilder<Void> {
+    public class func setCartCurrencyWithRequestBuilder(id id: String, currencyCode: StringWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/carts/{id}/currency"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
@@ -562,7 +668,7 @@ public class StoreShoppingCartsAPI: APIBase {
      - parameter userId: (body) The id of the user (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setCartOwner(id id: String, userId: Int32? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func setCartOwner(id id: String, userId: IntWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         setCartOwnerWithRequestBuilder(id: id, userId: userId).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -581,7 +687,7 @@ public class StoreShoppingCartsAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func setCartOwnerWithRequestBuilder(id id: String, userId: Int32? = nil) -> RequestBuilder<Void> {
+    public class func setCartOwnerWithRequestBuilder(id id: String, userId: IntWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/carts/{id}/owner"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path

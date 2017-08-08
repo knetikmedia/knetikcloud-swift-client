@@ -57,17 +57,30 @@ public class ReportingUsageAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "date" : 6,
-    "method" : "aeiou",
+    "method" : "method",
     "count" : 0,
-    "url" : "aeiou"
+    "url" : "url"
+  }, {
+    "date" : 6,
+    "method" : "method",
+    "count" : 0,
+    "url" : "url"
   } ],
   "first" : true
 }}]
@@ -152,17 +165,30 @@ public class ReportingUsageAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "date" : 6,
-    "method" : "aeiou",
+    "method" : "method",
     "count" : 0,
-    "url" : "aeiou"
+    "url" : "url"
+  }, {
+    "date" : 6,
+    "method" : "method",
+    "count" : 0,
+    "url" : "url"
   } ],
   "first" : true
 }}]
@@ -247,17 +273,30 @@ public class ReportingUsageAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "date" : 6,
-    "method" : "aeiou",
+    "method" : "method",
     "count" : 0,
-    "url" : "aeiou"
+    "url" : "url"
+  }, {
+    "date" : 6,
+    "method" : "method",
+    "count" : 0,
+    "url" : "url"
   } ],
   "first" : true
 }}]
@@ -342,17 +381,30 @@ public class ReportingUsageAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "date" : 6,
-    "method" : "aeiou",
+    "method" : "method",
     "count" : 0,
-    "url" : "aeiou"
+    "url" : "url"
+  }, {
+    "date" : 6,
+    "method" : "method",
+    "count" : 0,
+    "url" : "url"
   } ],
   "first" : true
 }}]
@@ -437,17 +489,30 @@ public class ReportingUsageAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "date" : 6,
-    "method" : "aeiou",
+    "method" : "method",
     "count" : 0,
-    "url" : "aeiou"
+    "url" : "url"
+  }, {
+    "date" : 6,
+    "method" : "method",
+    "count" : 0,
+    "url" : "url"
   } ],
   "first" : true
 }}]
@@ -505,7 +570,7 @@ public class ReportingUsageAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example=[ "", "" ]}]
      
      - parameter startDate: (query) The beginning of the range being requested, unix timestamp in seconds 
      - parameter endDate: (query) The ending of the range being requested, unix timestamp in seconds 

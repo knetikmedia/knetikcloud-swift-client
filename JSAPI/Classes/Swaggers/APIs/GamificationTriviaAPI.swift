@@ -32,10 +32,10 @@ public class GamificationTriviaAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "answer" : {
-    "type" : "aeiou"
+    "type" : "type"
   },
   "correct" : false,
-  "id" : "aeiou"
+  "id" : "id"
 }}]
      
      - parameter questionId: (path) The id of the question 
@@ -63,7 +63,7 @@ public class GamificationTriviaAPI: APIBase {
      - parameter tag: (body) The new tag (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func addQuestionTag(id id: String, tag: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func addQuestionTag(id id: String, tag: StringWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         addQuestionTagWithRequestBuilder(id: id, tag: tag).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -82,7 +82,7 @@ public class GamificationTriviaAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func addQuestionTagWithRequestBuilder(id id: String, tag: String? = nil) -> RequestBuilder<Void> {
+    public class func addQuestionTagWithRequestBuilder(id id: String, tag: StringWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/trivia/questions/{id}/tags"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
@@ -119,7 +119,7 @@ public class GamificationTriviaAPI: APIBase {
      - parameter filterImportId: (query) Filter for questions from a specific import job (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func addTagToQuestionsBatch(tag tag: String? = nil, filterSearch: String? = nil, filterIdset: String? = nil, filterCategory: String? = nil, filterTag: String? = nil, filterTagset: String? = nil, filterType: FilterType_addTagToQuestionsBatch? = nil, filterPublished: Bool? = nil, filterImportId: Int64? = nil, completion: ((data: Int32?, error: ErrorType?) -> Void)) {
+    public class func addTagToQuestionsBatch(tag tag: StringWrapper? = nil, filterSearch: String? = nil, filterIdset: String? = nil, filterCategory: String? = nil, filterTag: String? = nil, filterTagset: String? = nil, filterType: FilterType_addTagToQuestionsBatch? = nil, filterPublished: Bool? = nil, filterImportId: Int64? = nil, completion: ((data: Int32?, error: ErrorType?) -> Void)) {
         addTagToQuestionsBatchWithRequestBuilder(tag: tag, filterSearch: filterSearch, filterIdset: filterIdset, filterCategory: filterCategory, filterTag: filterTag, filterTagset: filterTagset, filterType: filterType, filterPublished: filterPublished, filterImportId: filterImportId).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
@@ -147,7 +147,7 @@ public class GamificationTriviaAPI: APIBase {
 
      - returns: RequestBuilder<Int32> 
      */
-    public class func addTagToQuestionsBatchWithRequestBuilder(tag tag: String? = nil, filterSearch: String? = nil, filterIdset: String? = nil, filterCategory: String? = nil, filterTag: String? = nil, filterTagset: String? = nil, filterType: FilterType_addTagToQuestionsBatch? = nil, filterPublished: Bool? = nil, filterImportId: Int64? = nil) -> RequestBuilder<Int32> {
+    public class func addTagToQuestionsBatchWithRequestBuilder(tag tag: StringWrapper? = nil, filterSearch: String? = nil, filterIdset: String? = nil, filterCategory: String? = nil, filterTag: String? = nil, filterTagset: String? = nil, filterType: FilterType_addTagToQuestionsBatch? = nil, filterPublished: Bool? = nil, filterImportId: Int64? = nil) -> RequestBuilder<Int32> {
         let path = "/trivia/questions/tags"
         let URLString = JSAPIAPI.basePath + path
         let parameters = tag?.encodeToJSON() as? [String:AnyObject]
@@ -182,16 +182,19 @@ public class GamificationTriviaAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "output" : [ {
     "line_number" : 1,
-    "description" : "aeiou"
+    "description" : "description"
+  }, {
+    "line_number" : 1,
+    "description" : "description"
   } ],
   "record_count" : 5,
-  "category_id" : "aeiou",
-  "vendor" : "aeiou",
-  "name" : "aeiou",
+  "category_id" : "category_id",
+  "vendor" : "vendor",
+  "name" : "name",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 5,
-  "url" : "aeiou",
+  "url" : "url",
   "status" : "PENDING_VALIDATION"
 }}]
      
@@ -231,31 +234,41 @@ public class GamificationTriviaAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "template" : "aeiou",
-  "question" : "",
+  "template" : "template",
+  "question" : {
+    "type" : "type"
+  },
   "import_id" : 1,
   "answers" : [ {
-    "answer" : "",
+    "answer" : {
+      "type" : "type"
+    },
     "correct" : false,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "answer" : {
+      "type" : "type"
+    },
+    "correct" : false,
+    "id" : "id"
   } ],
-  "source1" : "aeiou",
-  "source2" : "aeiou",
-  "tags" : [ "aeiou" ],
+  "source1" : "source1",
+  "source2" : "source2",
+  "tags" : [ "tags", "tags" ],
   "difficulty" : 6,
-  "vendor" : "aeiou",
+  "vendor" : "vendor",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 5,
   "category" : {
-    "name" : "aeiou",
+    "name" : "name",
     "active" : false,
-    "id" : "aeiou"
+    "id" : "id"
   },
   "published_date" : 5
 }}]
@@ -297,30 +310,177 @@ public class GamificationTriviaAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "question_property" : "",
-  "answer_property" : {
-    "name" : "aeiou",
-    "type" : "aeiou",
+  "question_property" : {
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   },
-  "name" : "aeiou",
+  "answer_property" : {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  },
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
-  "properties" : [ "" ]
+  "properties" : [ {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
 }}]
      
      - parameter questionTemplateResource: (body) The question template resource object (optional)
@@ -530,16 +690,19 @@ public class GamificationTriviaAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "output" : [ {
     "line_number" : 1,
-    "description" : "aeiou"
+    "description" : "description"
+  }, {
+    "line_number" : 1,
+    "description" : "description"
   } ],
   "record_count" : 5,
-  "category_id" : "aeiou",
-  "vendor" : "aeiou",
-  "name" : "aeiou",
+  "category_id" : "category_id",
+  "vendor" : "vendor",
+  "name" : "name",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 5,
-  "url" : "aeiou",
+  "url" : "url",
   "status" : "PENDING_VALIDATION"
 }}]
      
@@ -596,8 +759,16 @@ public class GamificationTriviaAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
@@ -605,16 +776,36 @@ public class GamificationTriviaAPI: APIBase {
   "content" : [ {
     "output" : [ {
       "line_number" : 1,
-      "description" : "aeiou"
+      "description" : "description"
+    }, {
+      "line_number" : 1,
+      "description" : "description"
     } ],
     "record_count" : 5,
-    "category_id" : "aeiou",
-    "vendor" : "aeiou",
-    "name" : "aeiou",
+    "category_id" : "category_id",
+    "vendor" : "vendor",
+    "name" : "name",
     "created_date" : 0,
     "id" : 6,
     "updated_date" : 5,
-    "url" : "aeiou",
+    "url" : "url",
+    "status" : "PENDING_VALIDATION"
+  }, {
+    "output" : [ {
+      "line_number" : 1,
+      "description" : "description"
+    }, {
+      "line_number" : 1,
+      "description" : "description"
+    } ],
+    "record_count" : 5,
+    "category_id" : "category_id",
+    "vendor" : "vendor",
+    "name" : "name",
+    "created_date" : 0,
+    "id" : 6,
+    "updated_date" : 5,
+    "url" : "url",
     "status" : "PENDING_VALIDATION"
   } ],
   "first" : true
@@ -673,31 +864,41 @@ public class GamificationTriviaAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "template" : "aeiou",
-  "question" : "",
+  "template" : "template",
+  "question" : {
+    "type" : "type"
+  },
   "import_id" : 1,
   "answers" : [ {
-    "answer" : "",
+    "answer" : {
+      "type" : "type"
+    },
     "correct" : false,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "answer" : {
+      "type" : "type"
+    },
+    "correct" : false,
+    "id" : "id"
   } ],
-  "source1" : "aeiou",
-  "source2" : "aeiou",
-  "tags" : [ "aeiou" ],
+  "source1" : "source1",
+  "source2" : "source2",
+  "tags" : [ "tags", "tags" ],
   "difficulty" : 6,
-  "vendor" : "aeiou",
+  "vendor" : "vendor",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 5,
   "category" : {
-    "name" : "aeiou",
+    "name" : "name",
     "active" : false,
-    "id" : "aeiou"
+    "id" : "id"
   },
   "published_date" : 5
 }}]
@@ -744,10 +945,10 @@ public class GamificationTriviaAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "answer" : {
-    "type" : "aeiou"
+    "type" : "type"
   },
   "correct" : false,
-  "id" : "aeiou"
+  "id" : "id"
 }}]
      
      - parameter questionId: (path) The id of the question 
@@ -793,10 +994,16 @@ public class GamificationTriviaAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "answer" : {
-    "type" : "aeiou"
+    "type" : "type"
   },
   "correct" : false,
-  "id" : "aeiou"
+  "id" : "id"
+}, {
+  "answer" : {
+    "type" : "type"
+  },
+  "correct" : false,
+  "id" : "id"
 } ]}]
      
      - parameter questionId: (path) The id of the question 
@@ -840,12 +1047,19 @@ public class GamificationTriviaAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "category_id" : "aeiou",
-  "media_type" : "aeiou",
+  "category_id" : "category_id",
+  "media_type" : "media_type",
   "state" : "UPDATED",
   "updated_date" : 0,
-  "question_id" : "aeiou",
-  "tags" : [ "aeiou" ]
+  "question_id" : "question_id",
+  "tags" : [ "tags", "tags" ]
+}, {
+  "category_id" : "category_id",
+  "media_type" : "media_type",
+  "state" : "UPDATED",
+  "updated_date" : 0,
+  "question_id" : "question_id",
+  "tags" : [ "tags", "tags" ]
 } ]}]
      
      - parameter since: (query) Timestamp in seconds (optional)
@@ -888,7 +1102,7 @@ public class GamificationTriviaAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example=[ "", "" ]}]
      
      - parameter id: (path) The id of the question 
 
@@ -930,30 +1144,177 @@ public class GamificationTriviaAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "question_property" : "",
-  "answer_property" : {
-    "name" : "aeiou",
-    "type" : "aeiou",
+  "question_property" : {
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   },
-  "name" : "aeiou",
+  "answer_property" : {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  },
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
-  "properties" : [ "" ]
+  "properties" : [ {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
 }}]
      
      - parameter id: (path) The id of the template 
@@ -1005,37 +1366,364 @@ public class GamificationTriviaAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
-    "question_property" : "",
-    "answer_property" : {
-      "name" : "aeiou",
-      "type" : "aeiou",
+    "question_property" : {
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     },
-    "name" : "aeiou",
+    "answer_property" : {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    },
+    "name" : "name",
     "created_date" : 0,
-    "id" : "aeiou",
+    "id" : "id",
     "updated_date" : 6,
-    "properties" : [ "" ]
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  }, {
+    "question_property" : {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    },
+    "answer_property" : {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    },
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
   } ],
   "first" : true
 }}]
@@ -1102,38 +1790,94 @@ public class GamificationTriviaAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
   "number_of_elements" : 7,
   "content" : [ {
-    "template" : "aeiou",
-    "question" : "",
+    "template" : "template",
+    "question" : {
+      "type" : "type"
+    },
     "import_id" : 1,
     "answers" : [ {
-      "answer" : "",
+      "answer" : {
+        "type" : "type"
+      },
       "correct" : false,
-      "id" : "aeiou"
+      "id" : "id"
+    }, {
+      "answer" : {
+        "type" : "type"
+      },
+      "correct" : false,
+      "id" : "id"
     } ],
-    "source1" : "aeiou",
-    "source2" : "aeiou",
-    "tags" : [ "aeiou" ],
+    "source1" : "source1",
+    "source2" : "source2",
+    "tags" : [ "tags", "tags" ],
     "difficulty" : 6,
-    "vendor" : "aeiou",
+    "vendor" : "vendor",
     "additional_properties" : {
       "key" : {
-        "type" : "aeiou"
+        "type" : "type"
       }
     },
     "created_date" : 0,
-    "id" : "aeiou",
+    "id" : "id",
     "updated_date" : 5,
     "category" : {
-      "name" : "aeiou",
+      "name" : "name",
       "active" : false,
-      "id" : "aeiou"
+      "id" : "id"
+    },
+    "published_date" : 5
+  }, {
+    "template" : "template",
+    "question" : {
+      "type" : "type"
+    },
+    "import_id" : 1,
+    "answers" : [ {
+      "answer" : {
+        "type" : "type"
+      },
+      "correct" : false,
+      "id" : "id"
+    }, {
+      "answer" : {
+        "type" : "type"
+      },
+      "correct" : false,
+      "id" : "id"
+    } ],
+    "source1" : "source1",
+    "source2" : "source2",
+    "tags" : [ "tags", "tags" ],
+    "difficulty" : 6,
+    "vendor" : "vendor",
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 5,
+    "category" : {
+      "name" : "name",
+      "active" : false,
+      "id" : "id"
     },
     "published_date" : 5
   } ],
@@ -1266,16 +2010,19 @@ public class GamificationTriviaAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "output" : [ {
     "line_number" : 1,
-    "description" : "aeiou"
+    "description" : "description"
+  }, {
+    "line_number" : 1,
+    "description" : "description"
   } ],
   "record_count" : 5,
-  "category_id" : "aeiou",
-  "vendor" : "aeiou",
-  "name" : "aeiou",
+  "category_id" : "category_id",
+  "vendor" : "vendor",
+  "name" : "name",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 5,
-  "url" : "aeiou",
+  "url" : "url",
   "status" : "PENDING_VALIDATION"
 }}]
      
@@ -1485,16 +2232,19 @@ public class GamificationTriviaAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "output" : [ {
     "line_number" : 1,
-    "description" : "aeiou"
+    "description" : "description"
+  }, {
+    "line_number" : 1,
+    "description" : "description"
   } ],
   "record_count" : 5,
-  "category_id" : "aeiou",
-  "vendor" : "aeiou",
-  "name" : "aeiou",
+  "category_id" : "category_id",
+  "vendor" : "vendor",
+  "name" : "name",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 5,
-  "url" : "aeiou",
+  "url" : "url",
   "status" : "PENDING_VALIDATION"
 }}]
      
@@ -1537,31 +2287,41 @@ public class GamificationTriviaAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "template" : "aeiou",
-  "question" : "",
+  "template" : "template",
+  "question" : {
+    "type" : "type"
+  },
   "import_id" : 1,
   "answers" : [ {
-    "answer" : "",
+    "answer" : {
+      "type" : "type"
+    },
     "correct" : false,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "answer" : {
+      "type" : "type"
+    },
+    "correct" : false,
+    "id" : "id"
   } ],
-  "source1" : "aeiou",
-  "source2" : "aeiou",
-  "tags" : [ "aeiou" ],
+  "source1" : "source1",
+  "source2" : "source2",
+  "tags" : [ "tags", "tags" ],
   "difficulty" : 6,
-  "vendor" : "aeiou",
+  "vendor" : "vendor",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 5,
   "category" : {
-    "name" : "aeiou",
+    "name" : "name",
     "active" : false,
-    "id" : "aeiou"
+    "id" : "id"
   },
   "published_date" : 5
 }}]
@@ -1647,30 +2407,177 @@ public class GamificationTriviaAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "question_property" : "",
-  "answer_property" : {
-    "name" : "aeiou",
-    "type" : "aeiou",
+  "question_property" : {
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   },
-  "name" : "aeiou",
+  "answer_property" : {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  },
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
-  "properties" : [ "" ]
+  "properties" : [ {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
 }}]
      
      - parameter id: (path) The id of the template 

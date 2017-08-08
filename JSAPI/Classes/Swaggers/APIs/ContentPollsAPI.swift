@@ -17,7 +17,7 @@ public class ContentPollsAPI: APIBase {
      - parameter answerKey: (body) The answer key (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func answerPoll(id id: String, answerKey: String? = nil, completion: ((data: PollResponseResource?, error: ErrorType?) -> Void)) {
+    public class func answerPoll(id id: String, answerKey: StringWrapper? = nil, completion: ((data: PollResponseResource?, error: ErrorType?) -> Void)) {
         answerPollWithRequestBuilder(id: id, answerKey: answerKey).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
@@ -32,14 +32,14 @@ public class ContentPollsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "answered_date" : 0,
-  "poll_id" : "aeiou",
-  "answer" : "aeiou",
-  "id" : "aeiou",
+  "poll_id" : "poll_id",
+  "answer" : "answer",
+  "id" : "id",
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 6,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -48,7 +48,7 @@ public class ContentPollsAPI: APIBase {
 
      - returns: RequestBuilder<PollResponseResource> 
      */
-    public class func answerPollWithRequestBuilder(id id: String, answerKey: String? = nil) -> RequestBuilder<PollResponseResource> {
+    public class func answerPollWithRequestBuilder(id id: String, answerKey: StringWrapper? = nil) -> RequestBuilder<PollResponseResource> {
         var path = "/media/polls/{id}/response"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
@@ -82,29 +82,33 @@ public class ContentPollsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "template" : "aeiou",
+  "template" : "template",
   "answers" : [ {
     "count" : 0,
-    "text" : "aeiou",
-    "key" : "aeiou"
+    "text" : "text",
+    "key" : "key"
+  }, {
+    "count" : 0,
+    "text" : "text",
+    "key" : "key"
   } ],
   "active" : false,
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 6,
-  "id" : "aeiou",
-  "text" : "aeiou",
+  "id" : "id",
+  "text" : "text",
   "updated_date" : 1,
   "category" : {
-    "name" : "aeiou",
+    "name" : "name",
     "active" : false,
-    "id" : "aeiou"
+    "id" : "id"
   },
   "type" : "TEXT",
-  "tags" : [ "aeiou" ]
+  "tags" : [ "tags", "tags" ]
 }}]
      
      - parameter pollResource: (body) The poll object (optional)
@@ -144,25 +148,90 @@ public class ContentPollsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -286,29 +355,33 @@ public class ContentPollsAPI: APIBase {
      Get a single poll
      - GET /media/polls/{id}
      - examples: [{contentType=application/json, example={
-  "template" : "aeiou",
+  "template" : "template",
   "answers" : [ {
     "count" : 0,
-    "text" : "aeiou",
-    "key" : "aeiou"
+    "text" : "text",
+    "key" : "key"
+  }, {
+    "count" : 0,
+    "text" : "text",
+    "key" : "key"
   } ],
   "active" : false,
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 6,
-  "id" : "aeiou",
-  "text" : "aeiou",
+  "id" : "id",
+  "text" : "text",
   "updated_date" : 1,
   "category" : {
-    "name" : "aeiou",
+    "name" : "name",
     "active" : false,
-    "id" : "aeiou"
+    "id" : "id"
   },
   "type" : "TEXT",
-  "tags" : [ "aeiou" ]
+  "tags" : [ "tags", "tags" ]
 }}]
      
      - parameter id: (path) The poll id 
@@ -352,14 +425,14 @@ public class ContentPollsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "answered_date" : 0,
-  "poll_id" : "aeiou",
-  "answer" : "aeiou",
-  "id" : "aeiou",
+  "poll_id" : "poll_id",
+  "answer" : "answer",
+  "id" : "id",
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 6,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -403,25 +476,90 @@ public class ContentPollsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -476,32 +614,193 @@ public class ContentPollsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "created_date" : 0,
-    "id" : "aeiou",
+    "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  }, {
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     } ]
@@ -564,36 +863,76 @@ public class ContentPollsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
   "number_of_elements" : 5,
   "content" : [ {
-    "template" : "aeiou",
+    "template" : "template",
     "answers" : [ {
       "count" : 0,
-      "text" : "aeiou",
-      "key" : "aeiou"
+      "text" : "text",
+      "key" : "key"
+    }, {
+      "count" : 0,
+      "text" : "text",
+      "key" : "key"
     } ],
     "active" : false,
     "additional_properties" : {
       "key" : {
-        "type" : "aeiou"
+        "type" : "type"
       }
     },
     "created_date" : 6,
-    "id" : "aeiou",
-    "text" : "aeiou",
+    "id" : "id",
+    "text" : "text",
     "updated_date" : 1,
     "category" : {
-      "name" : "aeiou",
+      "name" : "name",
       "active" : false,
-      "id" : "aeiou"
+      "id" : "id"
     },
     "type" : "TEXT",
-    "tags" : [ "aeiou" ]
+    "tags" : [ "tags", "tags" ]
+  }, {
+    "template" : "template",
+    "answers" : [ {
+      "count" : 0,
+      "text" : "text",
+      "key" : "key"
+    }, {
+      "count" : 0,
+      "text" : "text",
+      "key" : "key"
+    } ],
+    "active" : false,
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "created_date" : 6,
+    "id" : "id",
+    "text" : "text",
+    "updated_date" : 1,
+    "category" : {
+      "name" : "name",
+      "active" : false,
+      "id" : "id"
+    },
+    "type" : "TEXT",
+    "tags" : [ "tags", "tags" ]
   } ],
   "first" : true
 }}]
@@ -650,29 +989,33 @@ public class ContentPollsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "template" : "aeiou",
+  "template" : "template",
   "answers" : [ {
     "count" : 0,
-    "text" : "aeiou",
-    "key" : "aeiou"
+    "text" : "text",
+    "key" : "key"
+  }, {
+    "count" : 0,
+    "text" : "text",
+    "key" : "key"
   } ],
   "active" : false,
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 6,
-  "id" : "aeiou",
-  "text" : "aeiou",
+  "id" : "id",
+  "text" : "text",
   "updated_date" : 1,
   "category" : {
-    "name" : "aeiou",
+    "name" : "name",
     "active" : false,
-    "id" : "aeiou"
+    "id" : "id"
   },
   "type" : "TEXT",
-  "tags" : [ "aeiou" ]
+  "tags" : [ "tags", "tags" ]
 }}]
      
      - parameter id: (path) The poll id 
@@ -714,25 +1057,90 @@ public class ContentPollsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]

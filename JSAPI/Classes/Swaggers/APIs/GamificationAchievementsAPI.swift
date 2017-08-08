@@ -31,21 +31,21 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "rule_id" : "aeiou",
-  "template" : "aeiou",
+  "rule_id" : "rule_id",
+  "template" : "template",
   "hidden" : false,
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
   "required_progress" : 6,
-  "trigger_event_name" : "aeiou",
+  "trigger_event_name" : "trigger_event_name",
   "updated_date" : 1,
-  "tags" : [ "aeiou" ]
+  "tags" : [ "tags", "tags" ]
 }}]
      
      - parameter achievement: (body) The achievement definition (optional)
@@ -85,25 +85,90 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -231,21 +296,21 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "rule_id" : "aeiou",
-  "template" : "aeiou",
+  "rule_id" : "rule_id",
+  "template" : "template",
   "hidden" : false,
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
   "required_progress" : 6,
-  "trigger_event_name" : "aeiou",
+  "trigger_event_name" : "trigger_event_name",
   "updated_date" : 1,
-  "tags" : [ "aeiou" ]
+  "tags" : [ "tags", "tags" ]
 }}]
      
      - parameter name: (path) The name of the achievement 
@@ -288,25 +353,90 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -361,32 +491,193 @@ public class GamificationAchievementsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "created_date" : 0,
-    "id" : "aeiou",
+    "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  }, {
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     } ]
@@ -438,17 +729,37 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "trigger_name" : "aeiou",
+  "trigger_name" : "trigger_name",
   "system_trigger" : false,
-  "event_name" : "aeiou",
+  "event_name" : "event_name",
   "category" : "achievement",
   "parameters" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "optional" : false,
-    "type" : "aeiou"
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
   } ],
-  "tags" : [ "aeiou" ],
-  "trigger_description" : "aeiou"
+  "tags" : [ "tags", "tags" ],
+  "trigger_description" : "trigger_description"
+}, {
+  "trigger_name" : "trigger_name",
+  "system_trigger" : false,
+  "event_name" : "event_name",
+  "category" : "achievement",
+  "parameters" : [ {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
+  } ],
+  "tags" : [ "tags", "tags" ],
+  "trigger_description" : "trigger_description"
 } ]}]
 
      - returns: RequestBuilder<[BreTriggerResource]> 
@@ -501,28 +812,52 @@ public class GamificationAchievementsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
   "number_of_elements" : 5,
   "content" : [ {
-    "rule_id" : "aeiou",
-    "template" : "aeiou",
+    "rule_id" : "rule_id",
+    "template" : "template",
     "hidden" : false,
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "name" : "name",
+    "description" : "description",
     "additional_properties" : {
       "key" : {
-        "type" : "aeiou"
+        "type" : "type"
       }
     },
     "created_date" : 0,
     "required_progress" : 6,
-    "trigger_event_name" : "aeiou",
+    "trigger_event_name" : "trigger_event_name",
     "updated_date" : 1,
-    "tags" : [ "aeiou" ]
+    "tags" : [ "tags", "tags" ]
+  }, {
+    "rule_id" : "rule_id",
+    "template" : "template",
+    "hidden" : false,
+    "name" : "name",
+    "description" : "description",
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "created_date" : 0,
+    "required_progress" : 6,
+    "trigger_event_name" : "trigger_event_name",
+    "updated_date" : 1,
+    "tags" : [ "tags", "tags" ]
   } ],
   "first" : true
 }}]
@@ -581,21 +916,37 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "rule_id" : "aeiou",
-  "template" : "aeiou",
+  "rule_id" : "rule_id",
+  "template" : "template",
   "hidden" : false,
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
   "required_progress" : 6,
-  "trigger_event_name" : "aeiou",
+  "trigger_event_name" : "trigger_event_name",
   "updated_date" : 1,
-  "tags" : [ "aeiou" ]
+  "tags" : [ "tags", "tags" ]
+}, {
+  "rule_id" : "rule_id",
+  "template" : "template",
+  "hidden" : false,
+  "name" : "name",
+  "description" : "description",
+  "additional_properties" : {
+    "key" : {
+      "type" : "type"
+    }
+  },
+  "created_date" : 0,
+  "required_progress" : 6,
+  "trigger_event_name" : "trigger_event_name",
+  "updated_date" : 1,
+  "tags" : [ "tags", "tags" ]
 } ]}]
      
      - parameter name: (path) The name of the derived achievement 
@@ -641,16 +992,22 @@ public class GamificationAchievementsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "achievements" : [ {
-    "achievement_name" : "aeiou",
+    "achievement_name" : "achievement_name",
+    "achieved" : false,
+    "earned_date" : 6,
+    "created_date" : 0,
+    "updated_date" : 1
+  }, {
+    "achievement_name" : "achievement_name",
     "achieved" : false,
     "earned_date" : 6,
     "created_date" : 0,
     "updated_date" : 1
   } ],
-  "group_name" : "aeiou",
+  "group_name" : "group_name",
   "user_id" : 5,
   "progress" : 5,
-  "id" : "aeiou"
+  "id" : "id"
 }}]
      
      - parameter userId: (path) The user&#39;s id 
@@ -708,24 +1065,56 @@ public class GamificationAchievementsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
   "number_of_elements" : 7,
   "content" : [ {
     "achievements" : [ {
-      "achievement_name" : "aeiou",
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    }, {
+      "achievement_name" : "achievement_name",
       "achieved" : false,
       "earned_date" : 6,
       "created_date" : 0,
       "updated_date" : 1
     } ],
-    "group_name" : "aeiou",
+    "group_name" : "group_name",
     "user_id" : 5,
     "progress" : 5,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "achievements" : [ {
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    }, {
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    } ],
+    "group_name" : "group_name",
+    "user_id" : 5,
+    "progress" : 5,
+    "id" : "id"
   } ],
   "first" : true
 }}]
@@ -794,24 +1183,56 @@ public class GamificationAchievementsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
   "number_of_elements" : 7,
   "content" : [ {
     "achievements" : [ {
-      "achievement_name" : "aeiou",
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    }, {
+      "achievement_name" : "achievement_name",
       "achieved" : false,
       "earned_date" : 6,
       "created_date" : 0,
       "updated_date" : 1
     } ],
-    "group_name" : "aeiou",
+    "group_name" : "group_name",
     "user_id" : 5,
     "progress" : 5,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "achievements" : [ {
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    }, {
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    } ],
+    "group_name" : "group_name",
+    "user_id" : 5,
+    "progress" : 5,
+    "id" : "id"
   } ],
   "first" : true
 }}]
@@ -879,24 +1300,56 @@ public class GamificationAchievementsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
   "number_of_elements" : 7,
   "content" : [ {
     "achievements" : [ {
-      "achievement_name" : "aeiou",
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    }, {
+      "achievement_name" : "achievement_name",
       "achieved" : false,
       "earned_date" : 6,
       "created_date" : 0,
       "updated_date" : 1
     } ],
-    "group_name" : "aeiou",
+    "group_name" : "group_name",
     "user_id" : 5,
     "progress" : 5,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "achievements" : [ {
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    }, {
+      "achievement_name" : "achievement_name",
+      "achieved" : false,
+      "earned_date" : 6,
+      "created_date" : 0,
+      "updated_date" : 1
+    } ],
+    "group_name" : "group_name",
+    "user_id" : 5,
+    "progress" : 5,
+    "id" : "id"
   } ],
   "first" : true
 }}]
@@ -938,7 +1391,7 @@ public class GamificationAchievementsAPI: APIBase {
      - parameter progress: (body) The amount to add to the progress value (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func incrementAchievementProgress(userId userId: Int32, achievementName: String, progress: Int32? = nil, completion: ((data: UserAchievementGroupResource?, error: ErrorType?) -> Void)) {
+    public class func incrementAchievementProgress(userId userId: Int32, achievementName: String, progress: IntWrapper? = nil, completion: ((data: UserAchievementGroupResource?, error: ErrorType?) -> Void)) {
         incrementAchievementProgressWithRequestBuilder(userId: userId, achievementName: achievementName, progress: progress).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
@@ -954,16 +1407,22 @@ public class GamificationAchievementsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "achievements" : [ {
-    "achievement_name" : "aeiou",
+    "achievement_name" : "achievement_name",
+    "achieved" : false,
+    "earned_date" : 6,
+    "created_date" : 0,
+    "updated_date" : 1
+  }, {
+    "achievement_name" : "achievement_name",
     "achieved" : false,
     "earned_date" : 6,
     "created_date" : 0,
     "updated_date" : 1
   } ],
-  "group_name" : "aeiou",
+  "group_name" : "group_name",
   "user_id" : 5,
   "progress" : 5,
-  "id" : "aeiou"
+  "id" : "id"
 }}]
      
      - parameter userId: (path) The user&#39;s id 
@@ -972,7 +1431,7 @@ public class GamificationAchievementsAPI: APIBase {
 
      - returns: RequestBuilder<UserAchievementGroupResource> 
      */
-    public class func incrementAchievementProgressWithRequestBuilder(userId userId: Int32, achievementName: String, progress: Int32? = nil) -> RequestBuilder<UserAchievementGroupResource> {
+    public class func incrementAchievementProgressWithRequestBuilder(userId userId: Int32, achievementName: String, progress: IntWrapper? = nil) -> RequestBuilder<UserAchievementGroupResource> {
         var path = "/users/{userId}/achievements/{achievementName}/progress"
         path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{achievement_name}", withString: "\(achievementName)", options: .LiteralSearch, range: nil)
@@ -994,7 +1453,7 @@ public class GamificationAchievementsAPI: APIBase {
      - parameter progress: (body) The new progress value (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setAchievementProgress(userId userId: Int32, achievementName: String, progress: Int32? = nil, completion: ((data: UserAchievementGroupResource?, error: ErrorType?) -> Void)) {
+    public class func setAchievementProgress(userId userId: Int32, achievementName: String, progress: IntWrapper? = nil, completion: ((data: UserAchievementGroupResource?, error: ErrorType?) -> Void)) {
         setAchievementProgressWithRequestBuilder(userId: userId, achievementName: achievementName, progress: progress).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
@@ -1010,16 +1469,22 @@ public class GamificationAchievementsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "achievements" : [ {
-    "achievement_name" : "aeiou",
+    "achievement_name" : "achievement_name",
+    "achieved" : false,
+    "earned_date" : 6,
+    "created_date" : 0,
+    "updated_date" : 1
+  }, {
+    "achievement_name" : "achievement_name",
     "achieved" : false,
     "earned_date" : 6,
     "created_date" : 0,
     "updated_date" : 1
   } ],
-  "group_name" : "aeiou",
+  "group_name" : "group_name",
   "user_id" : 5,
   "progress" : 5,
-  "id" : "aeiou"
+  "id" : "id"
 }}]
      
      - parameter userId: (path) The user&#39;s id 
@@ -1028,7 +1493,7 @@ public class GamificationAchievementsAPI: APIBase {
 
      - returns: RequestBuilder<UserAchievementGroupResource> 
      */
-    public class func setAchievementProgressWithRequestBuilder(userId userId: Int32, achievementName: String, progress: Int32? = nil) -> RequestBuilder<UserAchievementGroupResource> {
+    public class func setAchievementProgressWithRequestBuilder(userId userId: Int32, achievementName: String, progress: IntWrapper? = nil) -> RequestBuilder<UserAchievementGroupResource> {
         var path = "/users/{userId}/achievements/{achievementName}/progress"
         path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{achievement_name}", withString: "\(achievementName)", options: .LiteralSearch, range: nil)
@@ -1064,21 +1529,21 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "rule_id" : "aeiou",
-  "template" : "aeiou",
+  "rule_id" : "rule_id",
+  "template" : "template",
   "hidden" : false,
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
   "required_progress" : 6,
-  "trigger_event_name" : "aeiou",
+  "trigger_event_name" : "trigger_event_name",
   "updated_date" : 1,
-  "tags" : [ "aeiou" ]
+  "tags" : [ "tags", "tags" ]
 }}]
      
      - parameter name: (path) The name of the achievement 
@@ -1120,25 +1585,90 @@ public class GamificationAchievementsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]

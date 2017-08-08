@@ -58,14 +58,27 @@ public class ReportingOrdersAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
   "number_of_elements" : 5,
   "content" : [ {
-    "date" : "aeiou",
+    "date" : "date",
+    "revenue" : 6.027456183070403,
+    "user_count" : 1,
+    "count" : 0
+  }, {
+    "date" : "date",
     "revenue" : 6.027456183070403,
     "user_count" : 1,
     "count" : 0

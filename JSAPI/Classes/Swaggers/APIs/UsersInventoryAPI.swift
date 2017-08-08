@@ -32,69 +32,86 @@ public class UsersInventoryAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "shipping_city_name" : "aeiou",
-  "order_notes" : "aeiou",
+  "shipping_city_name" : "shipping_city_name",
+  "order_notes" : "order_notes",
   "parent_invoice_id" : 1,
   "discount" : 6.027456183070403,
   "state_tax" : 4.965218492984954,
-  "cart_id" : "aeiou",
-  "name_prefix" : "aeiou",
-  "billing_postal_code" : "aeiou",
+  "cart_id" : "cart_id",
+  "name_prefix" : "name_prefix",
+  "billing_postal_code" : "billing_postal_code",
   "shipping" : 7.457744773683766,
-  "billing_state_name" : "aeiou",
-  "billing_country_name" : "aeiou",
-  "currency" : "aeiou",
-  "current_fulfillment_status" : "aeiou",
+  "billing_state_name" : "billing_state_name",
+  "billing_country_name" : "billing_country_name",
+  "currency" : "currency",
+  "current_fulfillment_status" : "current_fulfillment_status",
   "grand_total" : 5.962133916683182,
   "id" : 5,
-  "current_payment_status" : "aeiou",
-  "billing_address1" : "aeiou",
-  "invoice_number" : "aeiou",
-  "billing_address2" : "aeiou",
-  "email" : "aeiou",
-  "vendor_name" : "aeiou",
-  "billing_full_name" : "aeiou",
+  "current_payment_status" : "current_payment_status",
+  "billing_address1" : "billing_address1",
+  "invoice_number" : "invoice_number",
+  "billing_address2" : "billing_address2",
+  "email" : "email",
+  "vendor_name" : "vendor_name",
+  "billing_full_name" : "billing_full_name",
   "sort" : 1,
-  "shipping_full_name" : "aeiou",
+  "shipping_full_name" : "shipping_full_name",
   "fed_tax" : 1.4658129805029452,
   "payment_method_id" : 6,
-  "phone" : "aeiou",
-  "external_ref" : "aeiou",
-  "shipping_address2" : "aeiou",
+  "phone" : "phone",
+  "external_ref" : "external_ref",
+  "shipping_address2" : "shipping_address2",
   "subtotal" : 5.025004791520295,
-  "shipping_address1" : "aeiou",
-  "vendor_id" : 6,
-  "shipping_state_name" : "aeiou",
-  "billing_city_name" : "aeiou",
-  "phone_number" : "aeiou",
+  "shipping_address1" : "shipping_address1",
+  "vendor_id" : 9,
+  "shipping_state_name" : "shipping_state_name",
+  "billing_city_name" : "billing_city_name",
+  "phone_number" : "phone_number",
   "created_date" : 0,
-  "shipping_country_name" : "aeiou",
+  "shipping_country_name" : "shipping_country_name",
   "updated_date" : 9,
   "items" : [ {
-    "type_hint" : "aeiou",
+    "type_hint" : "type_hint",
     "total_price" : 1.2315135367772556,
     "item_id" : 9,
     "system_price" : 7.386281948385884,
-    "item_name" : "aeiou",
+    "item_name" : "item_name",
     "original_unit_price" : 2.027123023002322,
     "unit_price" : 1.0246457001441578,
     "qty" : 4,
     "invoice_id" : 7,
-    "current_fulfillment_status" : "aeiou",
+    "current_fulfillment_status" : "current_fulfillment_status",
     "id" : 2,
-    "sale_name" : "aeiou",
-    "bundle_sku" : "aeiou",
+    "sale_name" : "sale_name",
+    "bundle_sku" : "bundle_sku",
     "original_total_price" : 3.616076749251911,
-    "sku" : "aeiou",
-    "sku_description" : "aeiou"
+    "sku" : "sku",
+    "sku_description" : "sku_description"
+  }, {
+    "type_hint" : "type_hint",
+    "total_price" : 1.2315135367772556,
+    "item_id" : 9,
+    "system_price" : 7.386281948385884,
+    "item_name" : "item_name",
+    "original_unit_price" : 2.027123023002322,
+    "unit_price" : 1.0246457001441578,
+    "qty" : 4,
+    "invoice_id" : 7,
+    "current_fulfillment_status" : "current_fulfillment_status",
+    "id" : 2,
+    "sale_name" : "sale_name",
+    "bundle_sku" : "bundle_sku",
+    "original_total_price" : 3.616076749251911,
+    "sku" : "sku",
+    "sku_description" : "sku_description"
   } ],
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 9,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
-  "shipping_postal_code" : "aeiou"
+  "shipping_postal_code" : "shipping_postal_code"
 }}]
      
      - parameter id: (path) The id of the user 
@@ -225,31 +242,103 @@ public class UsersInventoryAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
-      "type_hint" : "aeiou",
-      "description" : "aeiou"
+      "type_hint" : "type_hint",
+      "description" : "description"
+    },
+    "modifiable" : false,
+    "required" : false
+  }, {
+    "behavior" : {
+      "type_hint" : "type_hint",
+      "description" : "description"
     },
     "modifiable" : false,
     "required" : false
   } ],
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -420,13 +509,21 @@ public class UsersInventoryAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
   "number_of_elements" : 6,
-  "content" : [ "" ],
+  "content" : [ "", "" ],
   "first" : true
 }}]
      
@@ -477,31 +574,103 @@ public class UsersInventoryAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
-      "type_hint" : "aeiou",
-      "description" : "aeiou"
+      "type_hint" : "type_hint",
+      "description" : "description"
+    },
+    "modifiable" : false,
+    "required" : false
+  }, {
+    "behavior" : {
+      "type_hint" : "type_hint",
+      "description" : "description"
     },
     "modifiable" : false,
     "required" : false
   } ],
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]
@@ -556,8 +725,16 @@ public class UsersInventoryAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
@@ -565,31 +742,206 @@ public class UsersInventoryAPI: APIBase {
   "content" : [ {
     "behaviors" : [ {
       "behavior" : {
-        "type_hint" : "aeiou",
-        "description" : "aeiou"
+        "type_hint" : "type_hint",
+        "description" : "description"
+      },
+      "modifiable" : false,
+      "required" : false
+    }, {
+      "behavior" : {
+        "type_hint" : "type_hint",
+        "description" : "description"
       },
       "modifiable" : false,
       "required" : false
     } ],
-    "name" : "aeiou",
+    "name" : "name",
     "created_date" : 0,
-    "id" : "aeiou",
+    "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  }, {
+    "behaviors" : [ {
+      "behavior" : {
+        "type_hint" : "type_hint",
+        "description" : "description"
+      },
+      "modifiable" : false,
+      "required" : false
+    }, {
+      "behavior" : {
+        "type_hint" : "type_hint",
+        "description" : "description"
+      },
+      "modifiable" : false,
+      "required" : false
+    } ],
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     } ]
@@ -650,34 +1002,59 @@ public class UsersInventoryAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 9,
+  "number" : 7,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 4,
+  "size" : 3,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 3,
+  "total_pages" : 4,
+  "number_of_elements" : 9,
   "content" : [ {
     "behavior_data" : "{}",
     "expires" : 6,
     "item_id" : 5,
     "invoice_id" : 5,
-    "item_name" : "aeiou",
+    "item_name" : "item_name",
     "created_date" : 0,
     "id" : 1,
     "updated_date" : 2,
-    "item_type_hint" : "aeiou",
+    "item_type_hint" : "item_type_hint",
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 7,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "status" : "pending"
+  }, {
+    "behavior_data" : "{}",
+    "expires" : 6,
+    "item_id" : 5,
+    "invoice_id" : 5,
+    "item_name" : "item_name",
+    "created_date" : 0,
+    "id" : 1,
+    "updated_date" : 2,
+    "item_type_hint" : "item_type_hint",
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
     "status" : "pending"
   } ],
@@ -746,16 +1123,16 @@ public class UsersInventoryAPI: APIBase {
   "expires" : 6,
   "item_id" : 5,
   "invoice_id" : 5,
-  "item_name" : "aeiou",
+  "item_name" : "item_name",
   "created_date" : 0,
   "id" : 1,
   "updated_date" : 2,
-  "item_type_hint" : "aeiou",
+  "item_type_hint" : "item_type_hint",
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 7,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
   "status" : "pending"
 }}]
@@ -805,35 +1182,59 @@ public class UsersInventoryAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 5,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 3,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 7,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "item" : {
-      "name" : "aeiou",
-      "id" : 6
+      "name" : "name",
+      "id" : 5
     },
-    "log_date" : 1,
+    "log_date" : 6,
     "id" : 0,
-    "type" : "aeiou",
+    "type" : "type",
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 5,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
-    "info" : "aeiou",
-    "user_inventory" : 5
+    "info" : "info",
+    "user_inventory" : 1
+  }, {
+    "item" : {
+      "name" : "name",
+      "id" : 5
+    },
+    "log_date" : 6,
+    "id" : 0,
+    "type" : "type",
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "info" : "info",
+    "user_inventory" : 1
   } ],
   "first" : true
 }}]
@@ -892,34 +1293,59 @@ public class UsersInventoryAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 9,
+  "number" : 7,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 4,
+  "size" : 3,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 3,
+  "total_pages" : 4,
+  "number_of_elements" : 9,
   "content" : [ {
     "behavior_data" : "{}",
     "expires" : 6,
     "item_id" : 5,
     "invoice_id" : 5,
-    "item_name" : "aeiou",
+    "item_name" : "item_name",
     "created_date" : 0,
     "id" : 1,
     "updated_date" : 2,
-    "item_type_hint" : "aeiou",
+    "item_type_hint" : "item_type_hint",
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 7,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "status" : "pending"
+  }, {
+    "behavior_data" : "{}",
+    "expires" : 6,
+    "item_id" : 5,
+    "invoice_id" : 5,
+    "item_name" : "item_name",
+    "created_date" : 0,
+    "id" : 1,
+    "updated_date" : 2,
+    "item_type_hint" : "item_type_hint",
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
     "status" : "pending"
   } ],
@@ -1064,31 +1490,103 @@ public class UsersInventoryAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
-      "type_hint" : "aeiou",
-      "description" : "aeiou"
+      "type_hint" : "type_hint",
+      "description" : "description"
+    },
+    "modifiable" : false,
+    "required" : false
+  }, {
+    "behavior" : {
+      "type_hint" : "type_hint",
+      "description" : "description"
     },
     "modifiable" : false,
     "required" : false
   } ],
-  "name" : "aeiou",
+  "name" : "name",
   "created_date" : 0,
-  "id" : "aeiou",
+  "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
         "inner_type" : "integer",
-        "valid_values" : [ "aeiou" ],
-        "name" : "aeiou",
-        "description" : "aeiou",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
         "type" : "integer",
-        "inner_type_fields" : [ "" ],
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
         "required" : false
       } ],
-      "property_type" : "aeiou",
-      "property_fields" : [ "" ]
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
     },
     "required" : false
   } ]

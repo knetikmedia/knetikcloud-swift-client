@@ -31,19 +31,19 @@ public class UsersAddressesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "address2" : "aeiou",
-  "city" : "aeiou",
-  "address1" : "aeiou",
-  "phone2" : "aeiou",
-  "last_name" : "aeiou",
-  "phone1" : "aeiou",
-  "country_code" : "aeiou",
+  "address2" : "address2",
+  "city" : "city",
+  "address1" : "address1",
+  "phone2" : "phone2",
+  "last_name" : "last_name",
+  "phone1" : "phone1",
+  "country_code" : "country_code",
   "default" : true,
-  "name" : "aeiou",
+  "name" : "name",
   "id" : 0,
-  "postal_code" : "aeiou",
-  "state_code" : "aeiou",
-  "first_name" : "aeiou"
+  "postal_code" : "postal_code",
+  "state_code" : "state_code",
+  "first_name" : "first_name"
 }}]
      
      - parameter userId: (path) The id of the user 
@@ -128,19 +128,19 @@ public class UsersAddressesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "address2" : "aeiou",
-  "city" : "aeiou",
-  "address1" : "aeiou",
-  "phone2" : "aeiou",
-  "last_name" : "aeiou",
-  "phone1" : "aeiou",
-  "country_code" : "aeiou",
+  "address2" : "address2",
+  "city" : "city",
+  "address1" : "address1",
+  "phone2" : "phone2",
+  "last_name" : "last_name",
+  "phone1" : "phone1",
+  "country_code" : "country_code",
   "default" : true,
-  "name" : "aeiou",
+  "name" : "name",
   "id" : 0,
-  "postal_code" : "aeiou",
-  "state_code" : "aeiou",
-  "first_name" : "aeiou"
+  "postal_code" : "postal_code",
+  "state_code" : "state_code",
+  "first_name" : "first_name"
 }}]
      
      - parameter userId: (path) The id of the user 
@@ -195,26 +195,48 @@ public class UsersAddressesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
   "number_of_elements" : 1,
   "content" : [ {
-    "address2" : "aeiou",
-    "city" : "aeiou",
-    "address1" : "aeiou",
-    "phone2" : "aeiou",
-    "last_name" : "aeiou",
-    "phone1" : "aeiou",
-    "country_code" : "aeiou",
+    "address2" : "address2",
+    "city" : "city",
+    "address1" : "address1",
+    "phone2" : "phone2",
+    "last_name" : "last_name",
+    "phone1" : "phone1",
+    "country_code" : "country_code",
     "default" : true,
-    "name" : "aeiou",
+    "name" : "name",
     "id" : 0,
-    "postal_code" : "aeiou",
-    "state_code" : "aeiou",
-    "first_name" : "aeiou"
+    "postal_code" : "postal_code",
+    "state_code" : "state_code",
+    "first_name" : "first_name"
+  }, {
+    "address2" : "address2",
+    "city" : "city",
+    "address1" : "address1",
+    "phone2" : "phone2",
+    "last_name" : "last_name",
+    "phone1" : "phone1",
+    "country_code" : "country_code",
+    "default" : true,
+    "name" : "name",
+    "id" : 0,
+    "postal_code" : "postal_code",
+    "state_code" : "state_code",
+    "first_name" : "first_name"
   } ],
   "first" : true
 }}]
@@ -268,19 +290,19 @@ public class UsersAddressesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "address2" : "aeiou",
-  "city" : "aeiou",
-  "address1" : "aeiou",
-  "phone2" : "aeiou",
-  "last_name" : "aeiou",
-  "phone1" : "aeiou",
-  "country_code" : "aeiou",
+  "address2" : "address2",
+  "city" : "city",
+  "address1" : "address1",
+  "phone2" : "phone2",
+  "last_name" : "last_name",
+  "phone1" : "phone1",
+  "country_code" : "country_code",
   "default" : true,
-  "name" : "aeiou",
+  "name" : "name",
   "id" : 0,
-  "postal_code" : "aeiou",
-  "state_code" : "aeiou",
-  "first_name" : "aeiou"
+  "postal_code" : "postal_code",
+  "state_code" : "state_code",
+  "first_name" : "first_name"
 }}]
      
      - parameter userId: (path) The id of the user 

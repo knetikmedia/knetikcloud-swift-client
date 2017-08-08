@@ -66,20 +66,27 @@ public class LogsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "event_id" : "aeiou",
-  "event_name" : "aeiou",
+  "event_id" : "event_id",
+  "event_name" : "event_name",
   "rules" : [ {
-    "rule_id" : "aeiou",
-    "reason" : "aeiou",
+    "rule_id" : "rule_id",
+    "reason" : "reason",
     "rule_end_date" : 6,
-    "rule_name" : "aeiou",
+    "rule_name" : "rule_name",
+    "rule_start_date" : 1,
+    "ran" : false
+  }, {
+    "rule_id" : "rule_id",
+    "reason" : "reason",
+    "rule_end_date" : 6,
+    "rule_name" : "rule_name",
     "rule_start_date" : 1,
     "ran" : false
   } ],
-  "id" : "aeiou",
+  "id" : "id",
   "parameters" : "{}",
   "event_start_date" : 0,
-  "customer" : "aeiou"
+  "customer" : "customer"
 }}]
      
      - parameter id: (path) The BRE event log entry id 
@@ -134,27 +141,64 @@ public class LogsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
   "number_of_elements" : 5,
   "content" : [ {
-    "event_id" : "aeiou",
-    "event_name" : "aeiou",
+    "event_id" : "event_id",
+    "event_name" : "event_name",
     "rules" : [ {
-      "rule_id" : "aeiou",
-      "reason" : "aeiou",
+      "rule_id" : "rule_id",
+      "reason" : "reason",
       "rule_end_date" : 6,
-      "rule_name" : "aeiou",
+      "rule_name" : "rule_name",
+      "rule_start_date" : 1,
+      "ran" : false
+    }, {
+      "rule_id" : "rule_id",
+      "reason" : "reason",
+      "rule_end_date" : 6,
+      "rule_name" : "rule_name",
       "rule_start_date" : 1,
       "ran" : false
     } ],
-    "id" : "aeiou",
+    "id" : "id",
     "parameters" : "{}",
     "event_start_date" : 0,
-    "customer" : "aeiou"
+    "customer" : "customer"
+  }, {
+    "event_id" : "event_id",
+    "event_name" : "event_name",
+    "rules" : [ {
+      "rule_id" : "rule_id",
+      "reason" : "reason",
+      "rule_end_date" : 6,
+      "rule_name" : "rule_name",
+      "rule_start_date" : 1,
+      "ran" : false
+    }, {
+      "rule_id" : "rule_id",
+      "reason" : "reason",
+      "rule_end_date" : 6,
+      "rule_name" : "rule_name",
+      "rule_start_date" : 1,
+      "ran" : false
+    } ],
+    "id" : "id",
+    "parameters" : "{}",
+    "event_start_date" : 0,
+    "customer" : "customer"
   } ],
   "first" : true
 }}]
@@ -211,13 +255,13 @@ public class LogsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
-  "error_msg" : "aeiou",
+  "error_msg" : "error_msg",
   "http_status_code" : 6,
   "payload" : "{}",
-  "response" : "aeiou",
+  "response" : "response",
   "retry_count" : 1,
-  "id" : "aeiou",
-  "url" : "aeiou",
+  "id" : "id",
+  "url" : "url",
   "start_date" : 5
 }}]
      
@@ -273,21 +317,39 @@ public class LogsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 3,
   "number_of_elements" : 2,
   "content" : [ {
     "end_date" : 0,
-    "error_msg" : "aeiou",
+    "error_msg" : "error_msg",
     "http_status_code" : 6,
     "payload" : "{}",
-    "response" : "aeiou",
+    "response" : "response",
     "retry_count" : 1,
-    "id" : "aeiou",
-    "url" : "aeiou",
+    "id" : "id",
+    "url" : "url",
+    "start_date" : 5
+  }, {
+    "end_date" : 0,
+    "error_msg" : "error_msg",
+    "http_status_code" : 6,
+    "payload" : "{}",
+    "response" : "response",
+    "retry_count" : 1,
+    "id" : "id",
+    "url" : "url",
     "start_date" : 5
   } ],
   "first" : true
@@ -344,15 +406,15 @@ public class LogsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "action_description" : "aeiou",
+  "action_description" : "action_description",
   "user_id" : 6,
-  "action_name" : "aeiou",
+  "action_name" : "action_name",
   "details" : {
-    "key" : "aeiou"
+    "key" : "details"
   },
   "created_date" : 0,
-  "id" : "aeiou",
-  "request_id" : "aeiou"
+  "id" : "id",
+  "request_id" : "request_id"
 }}]
      
      - parameter id: (path) The user log entry id 
@@ -406,22 +468,40 @@ public class LogsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
-    "action_description" : "aeiou",
+    "action_description" : "action_description",
     "user_id" : 6,
-    "action_name" : "aeiou",
+    "action_name" : "action_name",
     "details" : {
-      "key" : "aeiou"
+      "key" : "details"
     },
     "created_date" : 0,
-    "id" : "aeiou",
-    "request_id" : "aeiou"
+    "id" : "id",
+    "request_id" : "request_id"
+  }, {
+    "action_description" : "action_description",
+    "user_id" : 6,
+    "action_name" : "action_name",
+    "details" : {
+      "key" : "details"
+    },
+    "created_date" : 0,
+    "id" : "id",
+    "request_id" : "request_id"
   } ],
   "first" : true
 }}]

@@ -31,17 +31,21 @@ public class BRERuleEngineTriggersAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "trigger_name" : "aeiou",
+  "trigger_name" : "trigger_name",
   "system_trigger" : false,
-  "event_name" : "aeiou",
+  "event_name" : "event_name",
   "category" : "achievement",
   "parameters" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "optional" : false,
-    "type" : "aeiou"
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
   } ],
-  "tags" : [ "aeiou" ],
-  "trigger_description" : "aeiou"
+  "tags" : [ "tags", "tags" ],
+  "trigger_description" : "trigger_description"
 }}]
      
      - parameter breTriggerResource: (body) The BRE trigger resource object (optional)
@@ -121,17 +125,21 @@ public class BRERuleEngineTriggersAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "trigger_name" : "aeiou",
+  "trigger_name" : "trigger_name",
   "system_trigger" : false,
-  "event_name" : "aeiou",
+  "event_name" : "event_name",
   "category" : "achievement",
   "parameters" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "optional" : false,
-    "type" : "aeiou"
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
   } ],
-  "tags" : [ "aeiou" ],
-  "trigger_description" : "aeiou"
+  "tags" : [ "tags", "tags" ],
+  "trigger_description" : "trigger_description"
 }}]
      
      - parameter eventName: (path) The trigger event name 
@@ -215,24 +223,52 @@ public class BRERuleEngineTriggersAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
   "number_of_elements" : 6,
   "content" : [ {
-    "trigger_name" : "aeiou",
+    "trigger_name" : "trigger_name",
     "system_trigger" : false,
-    "event_name" : "aeiou",
+    "event_name" : "event_name",
     "category" : "achievement",
     "parameters" : [ {
-      "name" : "aeiou",
+      "name" : "name",
       "optional" : false,
-      "type" : "aeiou"
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "optional" : false,
+      "type" : "type"
     } ],
-    "tags" : [ "aeiou" ],
-    "trigger_description" : "aeiou"
+    "tags" : [ "tags", "tags" ],
+    "trigger_description" : "trigger_description"
+  }, {
+    "trigger_name" : "trigger_name",
+    "system_trigger" : false,
+    "event_name" : "event_name",
+    "category" : "achievement",
+    "parameters" : [ {
+      "name" : "name",
+      "optional" : false,
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "optional" : false,
+      "type" : "type"
+    } ],
+    "tags" : [ "tags", "tags" ],
+    "trigger_description" : "trigger_description"
   } ],
   "first" : true
 }}]
@@ -292,17 +328,21 @@ public class BRERuleEngineTriggersAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "trigger_name" : "aeiou",
+  "trigger_name" : "trigger_name",
   "system_trigger" : false,
-  "event_name" : "aeiou",
+  "event_name" : "event_name",
   "category" : "achievement",
   "parameters" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "optional" : false,
-    "type" : "aeiou"
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
   } ],
-  "tags" : [ "aeiou" ],
-  "trigger_description" : "aeiou"
+  "tags" : [ "tags", "tags" ],
+  "trigger_description" : "trigger_description"
 }}]
      
      - parameter eventName: (path) The trigger event name 

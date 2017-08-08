@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   s.license = 'Proprietary'
   s.homepage = 'https://github.com/swagger-api/swagger-codegen'
   s.summary = 'JSAPI Swift SDK'
-  s.source_files = 'JSAPI/Classes/Swaggers/**/*.swift'
+  s.source_files = 'JSAPI/Classes/**/*.swift'
   s.dependency 'Alamofire', '~> 3.5.1'
 end

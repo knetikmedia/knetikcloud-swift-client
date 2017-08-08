@@ -31,8 +31,8 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "code" : "aeiou",
-  "currency_name" : "aeiou",
+  "code" : "code",
+  "currency_name" : "currency_name",
   "balance" : 0.8008281904610115,
   "user_id" : 1,
   "id" : 6
@@ -88,40 +88,70 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 9,
+  "number" : 0,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 4,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 3,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
-    "transaction_id" : "aeiou",
-    "type_hint" : "aeiou",
+    "transaction_id" : "transaction_id",
+    "type_hint" : "type_hint",
     "source" : "digital",
-    "type" : "aeiou",
-    "currency_code" : "aeiou",
+    "type" : "type",
+    "currency_code" : "currency_code",
     "is_refunded" : false,
-    "wallet_id" : 7,
+    "wallet_id" : 2,
     "balance" : 0.8008281904610115,
-    "response" : "aeiou",
+    "response" : "response",
     "invoice_id" : 5,
-    "details" : "aeiou",
+    "details" : "details",
     "id" : 1,
     "create_date" : 6,
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 5,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
-    "value" : 2.3021358869347655,
+    "value" : 5.637376656633329,
+    "successful" : false
+  }, {
+    "transaction_id" : "transaction_id",
+    "type_hint" : "type_hint",
+    "source" : "digital",
+    "type" : "type",
+    "currency_code" : "currency_code",
+    "is_refunded" : false,
+    "wallet_id" : 2,
+    "balance" : 0.8008281904610115,
+    "response" : "response",
+    "invoice_id" : 5,
+    "details" : "details",
+    "id" : 1,
+    "create_date" : 6,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "value" : 5.637376656633329,
     "successful" : false
   } ],
   "first" : true
@@ -184,8 +214,14 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "code" : "aeiou",
-  "currency_name" : "aeiou",
+  "code" : "code",
+  "currency_name" : "currency_name",
+  "balance" : 0.8008281904610115,
+  "user_id" : 1,
+  "id" : 6
+}, {
+  "code" : "code",
+  "currency_name" : "currency_name",
   "balance" : 0.8008281904610115,
   "user_id" : 1,
   "id" : 6
@@ -237,15 +273,26 @@ public class PaymentsWalletsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
   "number_of_elements" : 1,
   "content" : [ {
     "total" : 0.8008281904610115,
-    "currency_code" : "aeiou"
+    "currency_code" : "currency_code"
+  }, {
+    "total" : 0.8008281904610115,
+    "currency_code" : "currency_code"
   } ],
   "first" : true
 }}]
@@ -305,40 +352,70 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 9,
+  "number" : 0,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 4,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 3,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
-    "transaction_id" : "aeiou",
-    "type_hint" : "aeiou",
+    "transaction_id" : "transaction_id",
+    "type_hint" : "type_hint",
     "source" : "digital",
-    "type" : "aeiou",
-    "currency_code" : "aeiou",
+    "type" : "type",
+    "currency_code" : "currency_code",
     "is_refunded" : false,
-    "wallet_id" : 7,
+    "wallet_id" : 2,
     "balance" : 0.8008281904610115,
-    "response" : "aeiou",
+    "response" : "response",
     "invoice_id" : 5,
-    "details" : "aeiou",
+    "details" : "details",
     "id" : 1,
     "create_date" : 6,
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 5,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
-    "value" : 2.3021358869347655,
+    "value" : 5.637376656633329,
+    "successful" : false
+  }, {
+    "transaction_id" : "transaction_id",
+    "type_hint" : "type_hint",
+    "source" : "digital",
+    "type" : "type",
+    "currency_code" : "currency_code",
+    "is_refunded" : false,
+    "wallet_id" : 2,
+    "balance" : 0.8008281904610115,
+    "response" : "response",
+    "invoice_id" : 5,
+    "details" : "details",
+    "id" : 1,
+    "create_date" : 6,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "value" : 5.637376656633329,
     "successful" : false
   } ],
   "first" : true
@@ -407,22 +484,36 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 0,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 7,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
-  "number_of_elements" : 5,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
-    "code" : "aeiou",
-    "currency_name" : "aeiou",
+    "code" : "code",
+    "currency_name" : "currency_name",
+    "balance" : 0.8008281904610115,
+    "user_id" : 1,
+    "id" : 6
+  }, {
+    "code" : "code",
+    "currency_name" : "currency_name",
     "balance" : 0.8008281904610115,
     "user_id" : 1,
     "id" : 6
@@ -477,26 +568,26 @@ public class PaymentsWalletsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "transaction_id" : "aeiou",
-  "type_hint" : "aeiou",
+  "transaction_id" : "transaction_id",
+  "type_hint" : "type_hint",
   "source" : "digital",
-  "type" : "aeiou",
-  "currency_code" : "aeiou",
+  "type" : "type",
+  "currency_code" : "currency_code",
   "is_refunded" : false,
-  "wallet_id" : 7,
+  "wallet_id" : 2,
   "balance" : 0.8008281904610115,
-  "response" : "aeiou",
+  "response" : "response",
   "invoice_id" : 5,
-  "details" : "aeiou",
+  "details" : "details",
   "id" : 1,
   "create_date" : 6,
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
-  "value" : 2.3021358869347655,
+  "value" : 5.637376656633329,
   "successful" : false
 }}]
      

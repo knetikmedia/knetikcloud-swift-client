@@ -30,18 +30,18 @@ public class StoreSalesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "short_description" : "aeiou",
+  "short_description" : "short_description",
   "item" : 1,
   "sale_end_date" : 5,
   "vendor" : 2,
-  "name" : "aeiou",
+  "name" : "name",
   "discount_value" : 0.8008281904610115,
   "sale_start_date" : 5,
   "id" : 6,
-  "long_description" : "aeiou",
-  "tag" : "aeiou",
+  "long_description" : "long_description",
+  "tag" : "tag",
   "discount_type" : "value",
-  "currency_code" : "aeiou"
+  "currency_code" : "currency_code"
 }}]
      
      - parameter catalogSale: (body) The catalog sale object (optional)
@@ -120,18 +120,18 @@ public class StoreSalesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "short_description" : "aeiou",
+  "short_description" : "short_description",
   "item" : 1,
   "sale_end_date" : 5,
   "vendor" : 2,
-  "name" : "aeiou",
+  "name" : "name",
   "discount_value" : 0.8008281904610115,
   "sale_start_date" : 5,
   "id" : 6,
-  "long_description" : "aeiou",
-  "tag" : "aeiou",
+  "long_description" : "long_description",
+  "tag" : "tag",
   "discount_type" : "value",
-  "currency_code" : "aeiou"
+  "currency_code" : "currency_code"
 }}]
      
      - parameter id: (path) The id of the sale 
@@ -183,25 +183,46 @@ public class StoreSalesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 4,
   "number_of_elements" : 9,
   "content" : [ {
-    "short_description" : "aeiou",
+    "short_description" : "short_description",
     "item" : 1,
     "sale_end_date" : 5,
     "vendor" : 2,
-    "name" : "aeiou",
+    "name" : "name",
     "discount_value" : 0.8008281904610115,
     "sale_start_date" : 5,
     "id" : 6,
-    "long_description" : "aeiou",
-    "tag" : "aeiou",
+    "long_description" : "long_description",
+    "tag" : "tag",
     "discount_type" : "value",
-    "currency_code" : "aeiou"
+    "currency_code" : "currency_code"
+  }, {
+    "short_description" : "short_description",
+    "item" : 1,
+    "sale_end_date" : 5,
+    "vendor" : 2,
+    "name" : "name",
+    "discount_value" : 0.8008281904610115,
+    "sale_start_date" : 5,
+    "id" : 6,
+    "long_description" : "long_description",
+    "tag" : "tag",
+    "discount_type" : "value",
+    "currency_code" : "currency_code"
   } ],
   "first" : true
 }}]
@@ -252,18 +273,18 @@ public class StoreSalesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "short_description" : "aeiou",
+  "short_description" : "short_description",
   "item" : 1,
   "sale_end_date" : 5,
   "vendor" : 2,
-  "name" : "aeiou",
+  "name" : "name",
   "discount_value" : 0.8008281904610115,
   "sale_start_date" : 5,
   "id" : 6,
-  "long_description" : "aeiou",
-  "tag" : "aeiou",
+  "long_description" : "long_description",
+  "tag" : "tag",
   "discount_type" : "value",
-  "currency_code" : "aeiou"
+  "currency_code" : "currency_code"
 }}]
      
      - parameter id: (path) The id of the sale 

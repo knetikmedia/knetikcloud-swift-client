@@ -31,9 +31,9 @@ public class ConfigsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "public_read" : false,
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "value" : "aeiou"
+  "name" : "name",
+  "description" : "description",
+  "value" : "value"
 }}]
      
      - parameter config: (body) The config object (optional)
@@ -114,9 +114,9 @@ public class ConfigsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "public_read" : false,
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "value" : "aeiou"
+  "name" : "name",
+  "description" : "description",
+  "value" : "value"
 }}]
      
      - parameter name: (path) The config name 
@@ -169,17 +169,30 @@ public class ConfigsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
   "number_of_elements" : 6,
   "content" : [ {
     "public_read" : false,
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "value" : "aeiou"
+    "name" : "name",
+    "description" : "description",
+    "value" : "value"
+  }, {
+    "public_read" : false,
+    "name" : "name",
+    "description" : "description",
+    "value" : "value"
   } ],
   "first" : true
 }}]

@@ -140,7 +140,16 @@ class Decoders {
                     return NSDate(timeIntervalSince1970: Double(sourceInt / 1000) )
                 }
                 fatalError("formatter failed to parse \(source)")
-            } 
+            }
+
+            // Decoder for ISOFullDate
+            Decoders.addDecoder(clazz: ISOFullDate.self, decoder: { (source: AnyObject) -> ISOFullDate in
+                if let string = source as? String,
+                   let isoDate = ISOFullDate.from(string: string) {
+                    return isoDate
+                }
+                fatalError("formatter failed to parse \(source)")
+            }) 
 
             // Decoder for [AchievementDefinitionResource]
             Decoders.addDecoder(clazz: [AchievementDefinitionResource].self) { (source: AnyObject) -> [AchievementDefinitionResource] in
@@ -397,6 +406,7 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = AmazonS3Activity()
                 instance.action = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["action"])
+                instance.cdnUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["cdn_url"])
                 instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
                 instance.filename = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["filename"])
                 instance.id = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["id"])
@@ -1672,6 +1682,45 @@ class Decoders {
             }
 
 
+            // Decoder for [FattMerchantPaymentMethod]
+            Decoders.addDecoder(clazz: [FattMerchantPaymentMethod].self) { (source: AnyObject) -> [FattMerchantPaymentMethod] in
+                return Decoders.decode(clazz: [FattMerchantPaymentMethod].self, source: source)
+            }
+            // Decoder for FattMerchantPaymentMethod
+            Decoders.addDecoder(clazz: FattMerchantPaymentMethod.self) { (source: AnyObject) -> FattMerchantPaymentMethod in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = FattMerchantPaymentMethod()
+                instance.address1 = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["address1"])
+                instance.address2 = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["address2"])
+                instance.addressCity = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["address_city"])
+                instance.addressCountry = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["address_country"])
+                instance.addressState = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["address_state"])
+                instance.addressZip = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["address_zip"])
+                instance.cardLastFour = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["card_last_four"])
+                instance.createdAt = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["created_at"])
+                instance.customerId = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["customer_id"])
+                instance.deletedAt = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["deleted_at"])
+                instance.id = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["id"])
+                instance.nickname = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["nickname"])
+                instance.updatedAt = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["updated_at"])
+                return instance
+            }
+
+
+            // Decoder for [FattMerchantPaymentMethodRequest]
+            Decoders.addDecoder(clazz: [FattMerchantPaymentMethodRequest].self) { (source: AnyObject) -> [FattMerchantPaymentMethodRequest] in
+                return Decoders.decode(clazz: [FattMerchantPaymentMethodRequest].self, source: source)
+            }
+            // Decoder for FattMerchantPaymentMethodRequest
+            Decoders.addDecoder(clazz: FattMerchantPaymentMethodRequest.self) { (source: AnyObject) -> FattMerchantPaymentMethodRequest in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = FattMerchantPaymentMethodRequest()
+                instance.method = Decoders.decodeOptional(clazz: FattMerchantPaymentMethod.self, source: sourceDictionary["method"])
+                instance.userId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["user_id"])
+                return instance
+            }
+
+
             // Decoder for [FinalizeBillingAgreementRequest]
             Decoders.addDecoder(clazz: [FinalizeBillingAgreementRequest].self) { (source: AnyObject) -> [FinalizeBillingAgreementRequest] in
                 return Decoders.decode(clazz: [FinalizeBillingAgreementRequest].self, source: source)
@@ -1938,6 +1987,19 @@ class Decoders {
                 instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
                 instance.url = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["url"])
                 instance.vendor = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["vendor"])
+                return instance
+            }
+
+
+            // Decoder for [IntWrapper]
+            Decoders.addDecoder(clazz: [IntWrapper].self) { (source: AnyObject) -> [IntWrapper] in
+                return Decoders.decode(clazz: [IntWrapper].self, source: source)
+            }
+            // Decoder for IntWrapper
+            Decoders.addDecoder(clazz: IntWrapper.self) { (source: AnyObject) -> IntWrapper in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = IntWrapper()
+                instance.value = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["value"])
                 return instance
             }
 
@@ -2476,6 +2538,7 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = Order()
                 instance.ascending = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["ascending"])
+                instance.descending = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["descending"])
                 instance.direction = Order.Direction(rawValue: (sourceDictionary["direction"] as? String) ?? "") 
                 instance.ignoreCase = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["ignore_case"])
                 instance.nullHandling = Order.NullHandling(rawValue: (sourceDictionary["null_handling"] as? String) ?? "") 
@@ -4099,6 +4162,26 @@ class Decoders {
             }
 
 
+            // Decoder for [PaymentMethodDetails]
+            Decoders.addDecoder(clazz: [PaymentMethodDetails].self) { (source: AnyObject) -> [PaymentMethodDetails] in
+                return Decoders.decode(clazz: [PaymentMethodDetails].self, source: source)
+            }
+            // Decoder for PaymentMethodDetails
+            Decoders.addDecoder(clazz: PaymentMethodDetails.self) { (source: AnyObject) -> PaymentMethodDetails in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = PaymentMethodDetails()
+                instance._default = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["default"])
+                instance.expirationDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["expiration_date"])
+                instance.expirationMonth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["expiration_month"])
+                instance.expirationYear = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["expiration_year"])
+                instance.last4 = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["last4"])
+                instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
+                instance.uniqueKey = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_key"])
+                instance.verified = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["verified"])
+                return instance
+            }
+
+
             // Decoder for [PaymentMethodResource]
             Decoders.addDecoder(clazz: [PaymentMethodResource].self) { (source: AnyObject) -> [PaymentMethodResource] in
                 return Decoders.decode(clazz: [PaymentMethodResource].self, source: source)
@@ -4350,6 +4433,20 @@ class Decoders {
                 instance.properties = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["properties"])
                 instance.questionProperty = Decoders.decodeOptional(clazz: PropertyDefinitionResource.self, source: sourceDictionary["question_property"])
                 instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
+                return instance
+            }
+
+
+            // Decoder for [QuickBuyRequest]
+            Decoders.addDecoder(clazz: [QuickBuyRequest].self) { (source: AnyObject) -> [QuickBuyRequest] in
+                return Decoders.decode(clazz: [QuickBuyRequest].self, source: source)
+            }
+            // Decoder for QuickBuyRequest
+            Decoders.addDecoder(clazz: QuickBuyRequest.self) { (source: AnyObject) -> QuickBuyRequest in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = QuickBuyRequest()
+                instance.sku = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["sku"])
+                instance.userId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["user_id"])
                 return instance
             }
 
@@ -4899,6 +4996,19 @@ class Decoders {
             }
 
 
+            // Decoder for [StringWrapper]
+            Decoders.addDecoder(clazz: [StringWrapper].self) { (source: AnyObject) -> [StringWrapper] in
+                return Decoders.decode(clazz: [StringWrapper].self, source: source)
+            }
+            // Decoder for StringWrapper
+            Decoders.addDecoder(clazz: StringWrapper.self) { (source: AnyObject) -> StringWrapper in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = StringWrapper()
+                instance.value = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
             // Decoder for [StripeCreatePaymentMethod]
             Decoders.addDecoder(clazz: [StripeCreatePaymentMethod].self) { (source: AnyObject) -> [StripeCreatePaymentMethod] in
                 return Decoders.decode(clazz: [StripeCreatePaymentMethod].self, source: source)
@@ -4907,6 +5017,7 @@ class Decoders {
             Decoders.addDecoder(clazz: StripeCreatePaymentMethod.self) { (source: AnyObject) -> StripeCreatePaymentMethod in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = StripeCreatePaymentMethod()
+                instance.details = Decoders.decodeOptional(clazz: PaymentMethodDetails.self, source: sourceDictionary["details"])
                 instance.token = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["token"])
                 instance.userId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["user_id"])
                 return instance
@@ -6080,6 +6191,29 @@ class Decoders {
                 instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.typeHint = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type_hint"])
                 instance.group = Decoders.decodeOptional(clazz: LimitedGettableGroup.self, source: sourceDictionary["group"])
+                return instance
+            }
+
+
+            // Decoder for [LogLevelEvent]
+            Decoders.addDecoder(clazz: [LogLevelEvent].self) { (source: AnyObject) -> [LogLevelEvent] in
+                return Decoders.decode(clazz: [LogLevelEvent].self, source: source)
+            }
+            // Decoder for LogLevelEvent
+            Decoders.addDecoder(clazz: LogLevelEvent.self) { (source: AnyObject) -> LogLevelEvent in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = LogLevelEvent()
+                instance.client = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["client"])
+                instance.customer = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["customer"])
+                instance.doNotBroadcast = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["do_not_broadcast"])
+                instance.section = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["section"])
+                instance.source = Decoders.decodeOptional(clazz: AnyObject.self, source: sourceDictionary["source"])
+                instance.specifics = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["specifics"])
+                instance.synchronous = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["synchronous"])
+                instance.timestamp = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["timestamp"])
+                instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
+                instance.level = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["level"])
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
                 return instance
             }
 

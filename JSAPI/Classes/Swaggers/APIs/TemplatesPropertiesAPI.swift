@@ -29,15 +29,39 @@ public class TemplatesPropertiesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "property_definition_fields" : [ {
     "inner_type" : "integer",
-    "valid_values" : [ "aeiou" ],
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
     "type" : "integer",
-    "inner_type_fields" : [ "" ],
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  }, {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
     "required" : false
   } ],
-  "property_type" : "aeiou",
-  "property_fields" : [ "" ]
+  "property_type" : "property_type",
+  "property_fields" : [ {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  }, {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  } ]
 }}]
      
      - parameter type: (path) type 
@@ -78,15 +102,75 @@ public class TemplatesPropertiesAPI: APIBase {
      - examples: [{contentType=application/json, example=[ {
   "property_definition_fields" : [ {
     "inner_type" : "integer",
-    "valid_values" : [ "aeiou" ],
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
     "type" : "integer",
-    "inner_type_fields" : [ "" ],
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  }, {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
     "required" : false
   } ],
-  "property_type" : "aeiou",
-  "property_fields" : [ "" ]
+  "property_type" : "property_type",
+  "property_fields" : [ {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  }, {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  } ]
+}, {
+  "property_definition_fields" : [ {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  }, {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  } ],
+  "property_type" : "property_type",
+  "property_fields" : [ {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  }, {
+    "inner_type" : "integer",
+    "valid_values" : [ "valid_values", "valid_values" ],
+    "name" : "name",
+    "description" : "description",
+    "type" : "integer",
+    "inner_type_fields" : [ null, null ],
+    "required" : false
+  } ]
 } ]}]
 
      - returns: RequestBuilder<[PropertyFieldListResource]> 

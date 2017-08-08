@@ -32,28 +32,38 @@ public class DevicesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "data" : {
-    "key" : "aeiou"
+    "key" : "data"
   },
-  "os" : "aeiou",
-  "description" : "aeiou",
-  "device_type" : "aeiou",
-  "users" : [ "" ],
-  "authorization" : "aeiou",
+  "os" : "os",
+  "description" : "description",
+  "device_type" : "device_type",
+  "users" : [ {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  }, {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  } ],
+  "authorization" : "authorization",
   "condition" : "New",
-  "serial" : "aeiou",
-  "mac_address" : "aeiou",
-  "name" : "aeiou",
-  "location" : "aeiou",
-  "model" : "aeiou",
+  "serial" : "serial",
+  "mac_address" : "mac_address",
+  "name" : "name",
+  "location" : "location",
+  "model" : "model",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 1,
-  "make" : "aeiou",
+  "make" : "make",
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
   "status" : "Active"
 }}]
@@ -97,28 +107,38 @@ public class DevicesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "data" : {
-    "key" : "aeiou"
+    "key" : "data"
   },
-  "os" : "aeiou",
-  "description" : "aeiou",
-  "device_type" : "aeiou",
-  "users" : [ "" ],
-  "authorization" : "aeiou",
+  "os" : "os",
+  "description" : "description",
+  "device_type" : "device_type",
+  "users" : [ {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  }, {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  } ],
+  "authorization" : "authorization",
   "condition" : "New",
-  "serial" : "aeiou",
-  "mac_address" : "aeiou",
-  "name" : "aeiou",
-  "location" : "aeiou",
-  "model" : "aeiou",
+  "serial" : "serial",
+  "mac_address" : "mac_address",
+  "name" : "name",
+  "location" : "location",
+  "model" : "model",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 1,
-  "make" : "aeiou",
+  "make" : "make",
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
   "status" : "Active"
 }}]
@@ -287,28 +307,38 @@ public class DevicesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "data" : {
-    "key" : "aeiou"
+    "key" : "data"
   },
-  "os" : "aeiou",
-  "description" : "aeiou",
-  "device_type" : "aeiou",
-  "users" : [ "" ],
-  "authorization" : "aeiou",
+  "os" : "os",
+  "description" : "description",
+  "device_type" : "device_type",
+  "users" : [ {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  }, {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  } ],
+  "authorization" : "authorization",
   "condition" : "New",
-  "serial" : "aeiou",
-  "mac_address" : "aeiou",
-  "name" : "aeiou",
-  "location" : "aeiou",
-  "model" : "aeiou",
+  "serial" : "serial",
+  "mac_address" : "mac_address",
+  "name" : "name",
+  "location" : "location",
+  "model" : "model",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 1,
-  "make" : "aeiou",
+  "make" : "make",
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
   "status" : "Active"
 }}]
@@ -360,41 +390,95 @@ public class DevicesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 9,
+  "size" : 2,
+  "total_elements" : 7,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 3,
-  "number_of_elements" : 2,
+  "total_pages" : 9,
+  "number_of_elements" : 5,
   "content" : [ {
     "data" : {
-      "key" : "aeiou"
+      "key" : "data"
     },
-    "os" : "aeiou",
-    "description" : "aeiou",
-    "device_type" : "aeiou",
-    "users" : [ "" ],
-    "authorization" : "aeiou",
+    "os" : "os",
+    "description" : "description",
+    "device_type" : "device_type",
+    "users" : [ {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    }, {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    } ],
+    "authorization" : "authorization",
     "condition" : "New",
-    "serial" : "aeiou",
-    "mac_address" : "aeiou",
-    "name" : "aeiou",
-    "location" : "aeiou",
-    "model" : "aeiou",
+    "serial" : "serial",
+    "mac_address" : "mac_address",
+    "name" : "name",
+    "location" : "location",
+    "model" : "model",
     "created_date" : 0,
     "id" : 6,
     "updated_date" : 1,
-    "make" : "aeiou",
+    "make" : "make",
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 5,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "status" : "Active"
+  }, {
+    "data" : {
+      "key" : "data"
+    },
+    "os" : "os",
+    "description" : "description",
+    "device_type" : "device_type",
+    "users" : [ {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    }, {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    } ],
+    "authorization" : "authorization",
+    "condition" : "New",
+    "serial" : "serial",
+    "mac_address" : "mac_address",
+    "name" : "name",
+    "location" : "location",
+    "model" : "model",
+    "created_date" : 0,
+    "id" : 6,
+    "updated_date" : 1,
+    "make" : "make",
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
     "status" : "Active"
   } ],
@@ -452,28 +536,38 @@ public class DevicesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "data" : {
-    "key" : "aeiou"
+    "key" : "data"
   },
-  "os" : "aeiou",
-  "description" : "aeiou",
-  "device_type" : "aeiou",
-  "users" : [ "" ],
-  "authorization" : "aeiou",
+  "os" : "os",
+  "description" : "description",
+  "device_type" : "device_type",
+  "users" : [ {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  }, {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  } ],
+  "authorization" : "authorization",
   "condition" : "New",
-  "serial" : "aeiou",
-  "mac_address" : "aeiou",
-  "name" : "aeiou",
-  "location" : "aeiou",
-  "model" : "aeiou",
+  "serial" : "serial",
+  "mac_address" : "mac_address",
+  "name" : "name",
+  "location" : "location",
+  "model" : "model",
   "created_date" : 0,
   "id" : 6,
   "updated_date" : 1,
-  "make" : "aeiou",
+  "make" : "make",
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
   "status" : "Active"
 }}]

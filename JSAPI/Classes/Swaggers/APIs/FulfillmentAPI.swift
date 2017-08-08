@@ -31,8 +31,8 @@ public class FulfillmentAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "core" : false,
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "id" : 0
 }}]
      
@@ -110,8 +110,8 @@ public class FulfillmentAPI: APIBase {
      - GET /store/fulfillment/types/{id}
      - examples: [{contentType=application/json, example={
   "core" : false,
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "id" : 0
 }}]
      
@@ -161,16 +161,29 @@ public class FulfillmentAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
   "number_of_elements" : 1,
   "content" : [ {
     "core" : false,
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "name" : "name",
+    "description" : "description",
+    "id" : 0
+  }, {
+    "core" : false,
+    "name" : "name",
+    "description" : "description",
     "id" : 0
   } ],
   "first" : true

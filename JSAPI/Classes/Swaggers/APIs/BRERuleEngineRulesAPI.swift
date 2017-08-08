@@ -33,26 +33,30 @@ public class BRERuleEngineRulesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
   "condition" : {
-    "args" : [ { } ],
+    "args" : [ { }, { } ],
     "operator" : { }
   },
   "system_rule" : false,
-  "condition_text" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "event_name" : "aeiou",
-  "id" : "aeiou",
+  "condition_text" : "condition_text",
+  "name" : "name",
+  "description" : "description",
+  "event_name" : "event_name",
+  "id" : "id",
   "sort" : 6,
   "actions" : {
     "variables" : [ {
-      "name" : "aeiou",
+      "name" : "name",
       "optional" : false,
-      "type" : "aeiou"
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "optional" : false,
+      "type" : "type"
     } ],
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "name" : "name",
+    "description" : "description",
     "category" : "achievement",
-    "tags" : [ "aeiou" ]
+    "tags" : [ "tags", "tags" ]
   },
   "enabled" : false,
   "start_date" : 1
@@ -134,7 +138,7 @@ public class BRERuleEngineRulesAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example="aeiou"}]
+     - examples: [{contentType=application/json, example=""}]
      
      - parameter expression: (body) The expression (optional)
 
@@ -174,26 +178,30 @@ public class BRERuleEngineRulesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
   "condition" : {
-    "args" : [ { } ],
+    "args" : [ { }, { } ],
     "operator" : { }
   },
   "system_rule" : false,
-  "condition_text" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "event_name" : "aeiou",
-  "id" : "aeiou",
+  "condition_text" : "condition_text",
+  "name" : "name",
+  "description" : "description",
+  "event_name" : "event_name",
+  "id" : "id",
   "sort" : 6,
   "actions" : {
     "variables" : [ {
-      "name" : "aeiou",
+      "name" : "name",
       "optional" : false,
-      "type" : "aeiou"
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "optional" : false,
+      "type" : "type"
     } ],
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "name" : "name",
+    "description" : "description",
     "category" : "achievement",
-    "tags" : [ "aeiou" ]
+    "tags" : [ "tags", "tags" ]
   },
   "enabled" : false,
   "start_date" : 1
@@ -253,8 +261,16 @@ public class BRERuleEngineRulesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
@@ -262,26 +278,60 @@ public class BRERuleEngineRulesAPI: APIBase {
   "content" : [ {
     "end_date" : 0,
     "condition" : {
-      "args" : [ { } ],
+      "args" : [ { }, { } ],
       "operator" : { }
     },
     "system_rule" : false,
-    "condition_text" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "event_name" : "aeiou",
-    "id" : "aeiou",
+    "condition_text" : "condition_text",
+    "name" : "name",
+    "description" : "description",
+    "event_name" : "event_name",
+    "id" : "id",
     "sort" : 6,
     "actions" : {
       "variables" : [ {
-        "name" : "aeiou",
+        "name" : "name",
         "optional" : false,
-        "type" : "aeiou"
+        "type" : "type"
+      }, {
+        "name" : "name",
+        "optional" : false,
+        "type" : "type"
       } ],
-      "name" : "aeiou",
-      "description" : "aeiou",
+      "name" : "name",
+      "description" : "description",
       "category" : "achievement",
-      "tags" : [ "aeiou" ]
+      "tags" : [ "tags", "tags" ]
+    },
+    "enabled" : false,
+    "start_date" : 1
+  }, {
+    "end_date" : 0,
+    "condition" : {
+      "args" : [ { }, { } ],
+      "operator" : { }
+    },
+    "system_rule" : false,
+    "condition_text" : "condition_text",
+    "name" : "name",
+    "description" : "description",
+    "event_name" : "event_name",
+    "id" : "id",
+    "sort" : 6,
+    "actions" : {
+      "variables" : [ {
+        "name" : "name",
+        "optional" : false,
+        "type" : "type"
+      }, {
+        "name" : "name",
+        "optional" : false,
+        "type" : "type"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "category" : "achievement",
+      "tags" : [ "tags", "tags" ]
     },
     "enabled" : false,
     "start_date" : 1
@@ -388,26 +438,30 @@ public class BRERuleEngineRulesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
   "condition" : {
-    "args" : [ { } ],
+    "args" : [ { }, { } ],
     "operator" : { }
   },
   "system_rule" : false,
-  "condition_text" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "event_name" : "aeiou",
-  "id" : "aeiou",
+  "condition_text" : "condition_text",
+  "name" : "name",
+  "description" : "description",
+  "event_name" : "event_name",
+  "id" : "id",
   "sort" : 6,
   "actions" : {
     "variables" : [ {
-      "name" : "aeiou",
+      "name" : "name",
       "optional" : false,
-      "type" : "aeiou"
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "optional" : false,
+      "type" : "type"
     } ],
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "name" : "name",
+    "description" : "description",
     "category" : "achievement",
-    "tags" : [ "aeiou" ]
+    "tags" : [ "tags", "tags" ]
   },
   "enabled" : false,
   "start_date" : 1

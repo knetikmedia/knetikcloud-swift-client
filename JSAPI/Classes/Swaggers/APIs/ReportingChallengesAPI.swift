@@ -41,8 +41,16 @@ public class ReportingChallengesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
@@ -50,9 +58,15 @@ public class ReportingChallengesAPI: APIBase {
   "content" : [ {
     "score" : 0,
     "user_id" : 6,
-    "fullname" : "aeiou",
-    "email" : "aeiou",
-    "username" : "aeiou"
+    "fullname" : "fullname",
+    "email" : "email",
+    "username" : "username"
+  }, {
+    "score" : 0,
+    "user_id" : 6,
+    "fullname" : "fullname",
+    "email" : "email",
+    "username" : "username"
   } ],
   "first" : true
 }}]
@@ -115,8 +129,16 @@ public class ReportingChallengesAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
@@ -124,9 +146,15 @@ public class ReportingChallengesAPI: APIBase {
   "content" : [ {
     "score" : 0,
     "user_id" : 6,
-    "fullname" : "aeiou",
-    "email" : "aeiou",
-    "username" : "aeiou"
+    "fullname" : "fullname",
+    "email" : "email",
+    "username" : "username"
+  }, {
+    "score" : 0,
+    "user_id" : 6,
+    "fullname" : "fullname",
+    "email" : "email",
+    "username" : "username"
   } ],
   "first" : true
 }}]

@@ -30,14 +30,19 @@ public class UsersRelationshipsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "parent" : "",
-  "context" : "aeiou",
-  "id" : 6,
+  "parent" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
+  "context" : "context",
+  "id" : 0,
   "child" : {
-    "avatar_url" : "aeiou",
-    "id" : 0,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -117,14 +122,19 @@ public class UsersRelationshipsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "parent" : "",
-  "context" : "aeiou",
-  "id" : 6,
+  "parent" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
+  "context" : "context",
+  "id" : 0,
   "child" : {
-    "avatar_url" : "aeiou",
-    "id" : 0,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -170,28 +180,56 @@ public class UsersRelationshipsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 1,
+  "number" : 6,
   "last" : true,
   "size" : 5,
-  "total_elements" : 2,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 5,
+  "total_pages" : 2,
+  "number_of_elements" : 1,
   "content" : [ {
-    "parent" : "",
-    "context" : "aeiou",
-    "id" : 6,
+    "parent" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "context" : "context",
+    "id" : 0,
     "child" : {
-      "avatar_url" : "aeiou",
-      "id" : 0,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    }
+  }, {
+    "parent" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "context" : "context",
+    "id" : 0,
+    "child" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     }
   } ],
   "first" : true
@@ -243,14 +281,19 @@ public class UsersRelationshipsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "parent" : "",
-  "context" : "aeiou",
-  "id" : 6,
+  "parent" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
+  "context" : "context",
+  "id" : 0,
   "child" : {
-    "avatar_url" : "aeiou",
-    "id" : 0,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      

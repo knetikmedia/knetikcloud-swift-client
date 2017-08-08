@@ -30,16 +30,16 @@ public class DispositionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "context" : "aeiou",
-  "name" : "aeiou",
-  "context_id" : "aeiou",
+  "context" : "context",
+  "name" : "name",
+  "context_id" : "context_id",
   "created_date" : 0,
   "id" : 6,
   "user" : {
-    "avatar_url" : "aeiou",
+    "avatar_url" : "avatar_url",
     "id" : 1,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -116,16 +116,16 @@ public class DispositionsAPI: APIBase {
      Returns a disposition
      - GET /dispositions/{id}
      - examples: [{contentType=application/json, example={
-  "context" : "aeiou",
-  "name" : "aeiou",
-  "context_id" : "aeiou",
+  "context" : "context",
+  "name" : "name",
+  "context_id" : "context_id",
   "created_date" : 0,
   "id" : 6,
   "user" : {
-    "avatar_url" : "aeiou",
+    "avatar_url" : "avatar_url",
     "id" : 1,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "display_name" : "display_name",
+    "username" : "username"
   }
 }}]
      
@@ -168,7 +168,10 @@ public class DispositionsAPI: APIBase {
      - GET /dispositions/count
      - examples: [{contentType=application/json, example=[ {
   "count" : 0,
-  "name" : "aeiou"
+  "name" : "name"
+}, {
+  "count" : 0,
+  "name" : "name"
 } ]}]
      
      - parameter filterContext: (query) Filter for dispositions within a context type (games, articles, polls, etc). Optionally with a specific id like filter_context&#x3D;video:47 (optional)
@@ -215,30 +218,50 @@ public class DispositionsAPI: APIBase {
      Returns a page of dispositions
      - GET /dispositions
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 1,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 7,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
+  "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
-    "context" : "aeiou",
-    "name" : "aeiou",
-    "context_id" : "aeiou",
+    "context" : "context",
+    "name" : "name",
+    "context_id" : "context_id",
     "created_date" : 0,
     "id" : 6,
     "user" : {
-      "avatar_url" : "aeiou",
+      "avatar_url" : "avatar_url",
       "id" : 1,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "display_name" : "display_name",
+      "username" : "username"
+    }
+  }, {
+    "context" : "context",
+    "name" : "name",
+    "context_id" : "context_id",
+    "created_date" : 0,
+    "id" : 6,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     }
   } ],
   "first" : true

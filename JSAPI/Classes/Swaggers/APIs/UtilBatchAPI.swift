@@ -30,7 +30,11 @@ public class UtilBatchAPI: APIBase {
      - examples: [{contentType=application/json, example=[ {
   "code" : 0,
   "body" : "{}",
-  "uri" : "aeiou"
+  "uri" : "uri"
+}, {
+  "code" : 0,
+  "body" : "{}",
+  "uri" : "uri"
 } ]}]
      
      - parameter token: (path) token 
@@ -73,7 +77,11 @@ public class UtilBatchAPI: APIBase {
      - examples: [{contentType=application/json, example=[ {
   "code" : 0,
   "body" : "{}",
-  "uri" : "aeiou"
+  "uri" : "uri"
+}, {
+  "code" : 0,
+  "body" : "{}",
+  "uri" : "uri"
 } ]}]
      
      - parameter batch: (body) The batch object (optional)

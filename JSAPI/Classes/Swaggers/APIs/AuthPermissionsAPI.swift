@@ -30,12 +30,12 @@ public class AuthPermissionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "parent" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "permission" : "aeiou",
-  "created_date" : 0,
-  "updated_date" : 6,
+  "parent" : "parent",
+  "name" : "name",
+  "description" : "description",
+  "permission" : "permission",
+  "created_date" : 1,
+  "updated_date" : 5,
   "locked" : false
 }}]
      
@@ -119,12 +119,12 @@ public class AuthPermissionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "parent" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "permission" : "aeiou",
-  "created_date" : 0,
-  "updated_date" : 6,
+  "parent" : "parent",
+  "name" : "name",
+  "description" : "description",
+  "permission" : "permission",
+  "created_date" : 1,
+  "updated_date" : 5,
   "locked" : false
 }}]
      
@@ -170,26 +170,42 @@ public class AuthPermissionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 1,
+  "number" : 0,
   "last" : true,
-  "size" : 5,
-  "total_elements" : 2,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 7,
-  "number_of_elements" : 5,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
-    "parent" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "permission" : "aeiou",
-    "created_date" : 0,
-    "updated_date" : 6,
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
     "locked" : false
   } ],
   "first" : true
@@ -241,12 +257,12 @@ public class AuthPermissionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "parent" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "permission" : "aeiou",
-  "created_date" : 0,
-  "updated_date" : 6,
+  "parent" : "parent",
+  "name" : "name",
+  "description" : "description",
+  "permission" : "permission",
+  "created_date" : 1,
+  "updated_date" : 5,
   "locked" : false
 }}]
      

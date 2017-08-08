@@ -30,7 +30,7 @@ public class PaymentsPayPalClassicAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example="aeiou"}]
+     - examples: [{contentType=application/json, example=""}]
      
      - parameter request: (body) The request to create a PayPal billing agreement (optional)
 
@@ -68,7 +68,7 @@ public class PaymentsPayPalClassicAPI: APIBase {
      - OAuth:
        - type: oauth2
        - name: OAuth2
-     - examples: [{contentType=application/json, example="aeiou"}]
+     - examples: [{contentType=application/json, example=""}]
      
      - parameter request: (body) The request to create a PayPal payment token (optional)
 

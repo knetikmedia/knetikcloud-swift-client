@@ -31,16 +31,19 @@ public class BRERuleEngineGlobalsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
   "scopes" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou"
+    "name" : "name",
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "type" : "type"
   } ],
   "system_global" : false,
-  "type" : "aeiou",
-  "key" : "aeiou"
+  "type" : "type",
+  "key" : "key"
 }}]
      
      - parameter breGlobalResource: (body) The BRE global resource object (optional)
@@ -120,16 +123,19 @@ public class BRERuleEngineGlobalsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
   "scopes" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou"
+    "name" : "name",
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "type" : "type"
   } ],
   "system_global" : false,
-  "type" : "aeiou",
-  "key" : "aeiou"
+  "type" : "type",
+  "key" : "key"
 }}]
      
      - parameter id: (path) The id of the global definition 
@@ -181,23 +187,48 @@ public class BRERuleEngineGlobalsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 5,
   "number_of_elements" : 6,
   "content" : [ {
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
     "scopes" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
+      "name" : "name",
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "type" : "type"
     } ],
     "system_global" : false,
-    "type" : "aeiou",
-    "key" : "aeiou"
+    "type" : "type",
+    "key" : "key"
+  }, {
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "scopes" : [ {
+      "name" : "name",
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "type" : "type"
+    } ],
+    "system_global" : false,
+    "type" : "type",
+    "key" : "key"
   } ],
   "first" : true
 }}]
@@ -249,16 +280,19 @@ public class BRERuleEngineGlobalsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
   "scopes" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou"
+    "name" : "name",
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "type" : "type"
   } ],
   "system_global" : false,
-  "type" : "aeiou",
-  "key" : "aeiou"
+  "type" : "type",
+  "key" : "key"
 }}]
      
      - parameter id: (path) The id of the global definition 

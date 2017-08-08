@@ -41,15 +41,27 @@ public class UtilSecurityAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 2,
   "number_of_elements" : 1,
   "content" : [ {
-    "country" : "aeiou",
-    "ip" : "aeiou",
+    "country" : "country",
+    "ip" : "ip",
+    "time" : 0
+  }, {
+    "country" : "country",
+    "ip" : "ip",
     "time" : 0
   } ],
   "first" : true
@@ -102,8 +114,8 @@ public class UtilSecurityAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "user_id" : 0,
-  "roles" : [ "aeiou" ],
-  "client_id" : "aeiou"
+  "roles" : [ "roles", "roles" ],
+  "client_id" : "client_id"
 }}]
 
      - returns: RequestBuilder<TokenDetailsResource> 

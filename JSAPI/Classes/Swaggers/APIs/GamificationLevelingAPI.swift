@@ -31,18 +31,29 @@ public class GamificationLevelingAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "tiers" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "additional_properties" : {
-      "key" : ""
+      "key" : {
+        "type" : "type"
+      }
     },
     "required_progress" : 6,
-    "trigger_event_name" : "aeiou"
+    "trigger_event_name" : "trigger_event_name"
+  }, {
+    "name" : "name",
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "required_progress" : 6,
+    "trigger_event_name" : "trigger_event_name"
   } ],
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
@@ -126,18 +137,29 @@ public class GamificationLevelingAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "tiers" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "additional_properties" : {
-      "key" : ""
+      "key" : {
+        "type" : "type"
+      }
     },
     "required_progress" : 6,
-    "trigger_event_name" : "aeiou"
+    "trigger_event_name" : "trigger_event_name"
+  }, {
+    "name" : "name",
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "required_progress" : 6,
+    "trigger_event_name" : "trigger_event_name"
   } ],
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,
@@ -183,17 +205,37 @@ public class GamificationLevelingAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "trigger_name" : "aeiou",
+  "trigger_name" : "trigger_name",
   "system_trigger" : false,
-  "event_name" : "aeiou",
+  "event_name" : "event_name",
   "category" : "achievement",
   "parameters" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "optional" : false,
-    "type" : "aeiou"
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
   } ],
-  "tags" : [ "aeiou" ],
-  "trigger_description" : "aeiou"
+  "tags" : [ "tags", "tags" ],
+  "trigger_description" : "trigger_description"
+}, {
+  "trigger_name" : "trigger_name",
+  "system_trigger" : false,
+  "event_name" : "event_name",
+  "category" : "achievement",
+  "parameters" : [ {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "optional" : false,
+    "type" : "type"
+  } ],
+  "tags" : [ "tags", "tags" ],
+  "trigger_description" : "trigger_description"
 } ]}]
 
      - returns: RequestBuilder<[BreTriggerResource]> 
@@ -244,26 +286,74 @@ public class GamificationLevelingAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
   "number_of_elements" : 5,
   "content" : [ {
     "tiers" : [ {
-      "name" : "aeiou",
+      "name" : "name",
       "additional_properties" : {
-        "key" : ""
+        "key" : {
+          "type" : "type"
+        }
       },
       "required_progress" : 6,
-      "trigger_event_name" : "aeiou"
+      "trigger_event_name" : "trigger_event_name"
+    }, {
+      "name" : "name",
+      "additional_properties" : {
+        "key" : {
+          "type" : "type"
+        }
+      },
+      "required_progress" : 6,
+      "trigger_event_name" : "trigger_event_name"
     } ],
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "name" : "name",
+    "description" : "description",
     "additional_properties" : {
       "key" : {
-        "type" : "aeiou"
+        "type" : "type"
+      }
+    },
+    "created_date" : 0,
+    "updated_date" : 1
+  }, {
+    "tiers" : [ {
+      "name" : "name",
+      "additional_properties" : {
+        "key" : {
+          "type" : "type"
+        }
+      },
+      "required_progress" : 6,
+      "trigger_event_name" : "trigger_event_name"
+    }, {
+      "name" : "name",
+      "additional_properties" : {
+        "key" : {
+          "type" : "type"
+        }
+      },
+      "required_progress" : 6,
+      "trigger_event_name" : "trigger_event_name"
+    } ],
+    "name" : "name",
+    "description" : "description",
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
       }
     },
     "created_date" : 0,
@@ -320,10 +410,10 @@ public class GamificationLevelingAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "last_tier_name" : "aeiou",
-  "level_name" : "aeiou",
-  "next_tier_name" : "aeiou",
-  "tier_names" : [ "aeiou" ],
+  "last_tier_name" : "last_tier_name",
+  "level_name" : "level_name",
+  "next_tier_name" : "next_tier_name",
+  "tier_names" : [ "tier_names", "tier_names" ],
   "user_id" : 5,
   "progress" : 1,
   "last_tier_progress" : 0,
@@ -384,17 +474,34 @@ public class GamificationLevelingAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 3,
   "number_of_elements" : 2,
   "content" : [ {
-    "last_tier_name" : "aeiou",
-    "level_name" : "aeiou",
-    "next_tier_name" : "aeiou",
-    "tier_names" : [ "aeiou" ],
+    "last_tier_name" : "last_tier_name",
+    "level_name" : "level_name",
+    "next_tier_name" : "next_tier_name",
+    "tier_names" : [ "tier_names", "tier_names" ],
+    "user_id" : 5,
+    "progress" : 1,
+    "last_tier_progress" : 0,
+    "next_tier_progress" : 6
+  }, {
+    "last_tier_name" : "last_tier_name",
+    "level_name" : "level_name",
+    "next_tier_name" : "next_tier_name",
+    "tier_names" : [ "tier_names", "tier_names" ],
     "user_id" : 5,
     "progress" : 1,
     "last_tier_progress" : 0,
@@ -440,7 +547,7 @@ public class GamificationLevelingAPI: APIBase {
      - parameter progress: (body) The amount of progress to add (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func incrementProgress(userId userId: Int32, name: String, progress: Int32? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func incrementProgress(userId userId: Int32, name: String, progress: IntWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         incrementProgressWithRequestBuilder(userId: userId, name: name, progress: progress).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -461,7 +568,7 @@ public class GamificationLevelingAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func incrementProgressWithRequestBuilder(userId userId: Int32, name: String, progress: Int32? = nil) -> RequestBuilder<Void> {
+    public class func incrementProgressWithRequestBuilder(userId userId: Int32, name: String, progress: IntWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/users/{userId}/leveling/{name}/progress"
         path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{name}", withString: "\(name)", options: .LiteralSearch, range: nil)
@@ -483,7 +590,7 @@ public class GamificationLevelingAPI: APIBase {
      - parameter progress: (body) The new progress amount (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setProgress(userId userId: Int32, name: String, progress: Int32? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func setProgress(userId userId: Int32, name: String, progress: IntWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         setProgressWithRequestBuilder(userId: userId, name: name, progress: progress).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -504,7 +611,7 @@ public class GamificationLevelingAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func setProgressWithRequestBuilder(userId userId: Int32, name: String, progress: Int32? = nil) -> RequestBuilder<Void> {
+    public class func setProgressWithRequestBuilder(userId userId: Int32, name: String, progress: IntWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/users/{userId}/leveling/{name}/progress"
         path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{name}", withString: "\(name)", options: .LiteralSearch, range: nil)
@@ -540,18 +647,29 @@ public class GamificationLevelingAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "tiers" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "additional_properties" : {
-      "key" : ""
+      "key" : {
+        "type" : "type"
+      }
     },
     "required_progress" : 6,
-    "trigger_event_name" : "aeiou"
+    "trigger_event_name" : "trigger_event_name"
+  }, {
+    "name" : "name",
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "required_progress" : 6,
+    "trigger_event_name" : "trigger_event_name"
   } ],
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "name" : "name",
+  "description" : "description",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 0,

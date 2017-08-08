@@ -30,14 +30,22 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "role" : "aeiou",
+  "role" : "role",
   "user_count" : 5,
-  "name" : "aeiou",
+  "name" : "name",
   "role_permission" : [ {
-    "parent" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "permission" : "aeiou",
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
     "created_date" : 1,
     "updated_date" : 5,
     "locked" : false
@@ -127,14 +135,46 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "role" : "aeiou",
+  "role" : "role",
   "user_count" : 5,
-  "name" : "aeiou",
+  "name" : "name",
   "role_permission" : [ {
-    "parent" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "permission" : "aeiou",
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  } ],
+  "created_date" : 6,
+  "locked" : false,
+  "client_count" : 0
+}, {
+  "role" : "role",
+  "user_count" : 5,
+  "name" : "name",
+  "role_permission" : [ {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
     "created_date" : 1,
     "updated_date" : 5,
     "locked" : false
@@ -184,14 +224,22 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "role" : "aeiou",
+  "role" : "role",
   "user_count" : 5,
-  "name" : "aeiou",
+  "name" : "name",
   "role_permission" : [ {
-    "parent" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "permission" : "aeiou",
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
     "created_date" : 1,
     "updated_date" : 5,
     "locked" : false
@@ -224,13 +272,15 @@ public class AuthRolesAPI: APIBase {
     /**
      List and search roles
      
+     - parameter filterName: (query) Filter for roles that have a name starting with specified string (optional)
+     - parameter filterRole: (query) Filter for roles that have a role starting with specified string (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
      - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func getRoles(size size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceRoleResource?, error: ErrorType?) -> Void)) {
-        getRolesWithRequestBuilder(size: size, page: page, order: order).execute { (response, error) -> Void in
+    public class func getRoles(filterName filterName: String? = nil, filterRole: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceRoleResource?, error: ErrorType?) -> Void)) {
+        getRolesWithRequestBuilder(filterName: filterName, filterRole: filterRole, size: size, page: page, order: order).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
     }
@@ -243,28 +293,68 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 0,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 3,
+  "size" : 1,
+  "total_elements" : 5,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 7,
+  "total_pages" : 5,
+  "number_of_elements" : 6,
   "content" : [ {
-    "role" : "aeiou",
+    "role" : "role",
     "user_count" : 5,
-    "name" : "aeiou",
+    "name" : "name",
     "role_permission" : [ {
-      "parent" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "permission" : "aeiou",
+      "parent" : "parent",
+      "name" : "name",
+      "description" : "description",
+      "permission" : "permission",
+      "created_date" : 1,
+      "updated_date" : 5,
+      "locked" : false
+    }, {
+      "parent" : "parent",
+      "name" : "name",
+      "description" : "description",
+      "permission" : "permission",
+      "created_date" : 1,
+      "updated_date" : 5,
+      "locked" : false
+    } ],
+    "created_date" : 6,
+    "locked" : false,
+    "client_count" : 0
+  }, {
+    "role" : "role",
+    "user_count" : 5,
+    "name" : "name",
+    "role_permission" : [ {
+      "parent" : "parent",
+      "name" : "name",
+      "description" : "description",
+      "permission" : "permission",
+      "created_date" : 1,
+      "updated_date" : 5,
+      "locked" : false
+    }, {
+      "parent" : "parent",
+      "name" : "name",
+      "description" : "description",
+      "permission" : "permission",
       "created_date" : 1,
       "updated_date" : 5,
       "locked" : false
@@ -276,17 +366,21 @@ public class AuthRolesAPI: APIBase {
   "first" : true
 }}]
      
+     - parameter filterName: (query) Filter for roles that have a name starting with specified string (optional)
+     - parameter filterRole: (query) Filter for roles that have a role starting with specified string (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
      - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
 
      - returns: RequestBuilder<PageResourceRoleResource> 
      */
-    public class func getRolesWithRequestBuilder(size size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceRoleResource> {
+    public class func getRolesWithRequestBuilder(filterName filterName: String? = nil, filterRole: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceRoleResource> {
         let path = "/auth/roles"
         let URLString = JSAPIAPI.basePath + path
 
         let nillableParameters: [String:AnyObject?] = [
+            "filter_name": filterName,
+            "filter_role": filterRole,
             "size": size?.encodeToJSON(),
             "page": page?.encodeToJSON(),
             "order": order
@@ -321,14 +415,46 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
-  "role" : "aeiou",
+  "role" : "role",
   "user_count" : 5,
-  "name" : "aeiou",
+  "name" : "name",
   "role_permission" : [ {
-    "parent" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "permission" : "aeiou",
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  } ],
+  "created_date" : 6,
+  "locked" : false,
+  "client_count" : 0
+}, {
+  "role" : "role",
+  "user_count" : 5,
+  "name" : "name",
+  "role_permission" : [ {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
     "created_date" : 1,
     "updated_date" : 5,
     "locked" : false
@@ -379,13 +505,13 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "client_key" : "aeiou",
-  "grant_types" : [ "aeiou" ],
+  "client_key" : "client_key",
+  "grant_types" : [ "grant_types", "grant_types" ],
   "is_public" : false,
-  "name" : "aeiou",
+  "name" : "name",
   "id" : 6,
-  "redirect_uris" : [ "aeiou" ],
-  "secret" : "aeiou",
+  "redirect_uris" : [ "redirect_uris", "redirect_uris" ],
+  "secret" : "secret",
   "locked" : false,
   "access_token_validity_seconds" : 0,
   "refresh_token_validity_seconds" : 1
@@ -430,14 +556,22 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "role" : "aeiou",
+  "role" : "role",
   "user_count" : 5,
-  "name" : "aeiou",
+  "name" : "name",
   "role_permission" : [ {
-    "parent" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "permission" : "aeiou",
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
     "created_date" : 1,
     "updated_date" : 5,
     "locked" : false
@@ -487,46 +621,67 @@ public class AuthRolesAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "member_since" : 7,
-  "template" : "aeiou",
-  "gender" : "aeiou",
-  "city" : "aeiou",
+  "template" : "template",
+  "gender" : "gender",
+  "city" : "city",
   "date_of_birth" : 1,
-  "description" : "aeiou",
-  "currency_code" : "aeiou",
-  "language_code" : "aeiou",
-  "password" : "aeiou",
+  "description" : "description",
+  "currency_code" : "currency_code",
+  "language_code" : "language_code",
+  "password" : "password",
   "last_activity" : 5,
   "children" : [ {
-    "avatar_url" : "aeiou",
-    "context" : "aeiou",
+    "avatar_url" : "avatar_url",
+    "context" : "context",
     "relationship_id" : 6,
     "id" : 0,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "display_name" : "display_name",
+    "username" : "username"
+  }, {
+    "avatar_url" : "avatar_url",
+    "context" : "context",
+    "relationship_id" : 6,
+    "id" : 0,
+    "display_name" : "display_name",
+    "username" : "username"
   } ],
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "id" : 5,
-  "state" : "aeiou",
-  "first_name" : "aeiou",
-  "email" : "aeiou",
+  "state" : "state",
+  "first_name" : "first_name",
+  "email" : "email",
   "last_updated" : 2,
-  "address" : "aeiou",
-  "address2" : "aeiou",
-  "last_name" : "aeiou",
-  "display_name" : "aeiou",
-  "tags" : [ "aeiou" ],
-  "country_code" : "aeiou",
-  "avatar_url" : "aeiou",
-  "timezone_code" : "aeiou",
-  "fullname" : "aeiou",
-  "mobile_number" : "aeiou",
-  "postal_code" : "aeiou",
-  "parents" : [ "" ],
-  "username" : "aeiou"
+  "address" : "address",
+  "address2" : "address2",
+  "last_name" : "last_name",
+  "display_name" : "display_name",
+  "tags" : [ "tags", "tags" ],
+  "country_code" : "country_code",
+  "avatar_url" : "avatar_url",
+  "timezone_code" : "timezone_code",
+  "fullname" : "fullname",
+  "mobile_number" : "mobile_number",
+  "postal_code" : "postal_code",
+  "parents" : [ {
+    "avatar_url" : "avatar_url",
+    "context" : "context",
+    "relationship_id" : 6,
+    "id" : 0,
+    "display_name" : "display_name",
+    "username" : "username"
+  }, {
+    "avatar_url" : "avatar_url",
+    "context" : "context",
+    "relationship_id" : 6,
+    "id" : 0,
+    "display_name" : "display_name",
+    "username" : "username"
+  } ],
+  "username" : "username"
 }}]
      
      - parameter userId: (path) The user&#39;s id 
@@ -568,14 +723,22 @@ public class AuthRolesAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "role" : "aeiou",
+  "role" : "role",
   "user_count" : 5,
-  "name" : "aeiou",
+  "name" : "name",
   "role_permission" : [ {
-    "parent" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "permission" : "aeiou",
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
+    "created_date" : 1,
+    "updated_date" : 5,
+    "locked" : false
+  }, {
+    "parent" : "parent",
+    "name" : "name",
+    "description" : "description",
+    "permission" : "permission",
     "created_date" : 1,
     "updated_date" : 5,
     "locked" : false

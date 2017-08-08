@@ -30,19 +30,19 @@ public class ContentCommentsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "summary" : "aeiou",
-  "context" : "aeiou",
+  "summary" : "summary",
+  "context" : "context",
   "context_id" : 0,
   "created_date" : 6,
   "id" : 1,
   "updated_date" : 5,
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
-  "content" : "aeiou"
+  "content" : "content"
 }}]
      
      - parameter commentResource: (body) The comment to be added (optional)
@@ -118,19 +118,19 @@ public class ContentCommentsAPI: APIBase {
      Return a comment
      - GET /comments/{id}
      - examples: [{contentType=application/json, example={
-  "summary" : "aeiou",
-  "context" : "aeiou",
+  "summary" : "summary",
+  "context" : "context",
   "context_id" : 0,
   "created_date" : 6,
   "id" : 1,
   "updated_date" : 5,
   "user" : {
-    "avatar_url" : "aeiou",
-    "id" : 5,
-    "display_name" : "aeiou",
-    "username" : "aeiou"
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
   },
-  "content" : "aeiou"
+  "content" : "content"
 }}]
      
      - parameter id: (path) The comment id 
@@ -173,33 +173,55 @@ public class ContentCommentsAPI: APIBase {
      Returns a page of comments
      - GET /comments
      - examples: [{contentType=application/json, example={
-  "number" : 2,
+  "number" : 5,
   "last" : true,
-  "size" : 9,
-  "total_elements" : 3,
+  "size" : 7,
+  "total_elements" : 9,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 2,
-  "number_of_elements" : 7,
+  "total_pages" : 3,
+  "number_of_elements" : 2,
   "content" : [ {
-    "summary" : "aeiou",
-    "context" : "aeiou",
+    "summary" : "summary",
+    "context" : "context",
     "context_id" : 0,
     "created_date" : 6,
     "id" : 1,
     "updated_date" : 5,
     "user" : {
-      "avatar_url" : "aeiou",
-      "id" : 5,
-      "display_name" : "aeiou",
-      "username" : "aeiou"
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
     },
-    "content" : "aeiou"
+    "content" : "content"
+  }, {
+    "summary" : "summary",
+    "context" : "context",
+    "context_id" : 0,
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 5,
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "content" : "content"
   } ],
   "first" : true
 }}]
@@ -252,11 +274,11 @@ public class ContentCommentsAPI: APIBase {
      - The body is an ElasticSearch query json. Please see their <a href='https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html'>documentation</a> for details on the format and search options
      - examples: [{contentType=application/json, example={
   "owner_id" : 1,
-  "owner_username" : "aeiou",
-  "context" : "aeiou",
+  "owner_username" : "owner_username",
+  "context" : "context",
   "context_id" : 0,
   "id" : 6,
-  "content" : "aeiou"
+  "content" : "content"
 }}]
      
      - parameter query: (body) The search query (optional)
@@ -284,7 +306,7 @@ public class ContentCommentsAPI: APIBase {
      - parameter content: (body) The comment content (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func updateComment(id id: Int64, content: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func updateComment(id id: Int64, content: StringWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         updateCommentWithRequestBuilder(id: id, content: content).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -303,7 +325,7 @@ public class ContentCommentsAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func updateCommentWithRequestBuilder(id id: Int64, content: String? = nil) -> RequestBuilder<Void> {
+    public class func updateCommentWithRequestBuilder(id id: Int64, content: StringWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/comments/{id}/content"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path

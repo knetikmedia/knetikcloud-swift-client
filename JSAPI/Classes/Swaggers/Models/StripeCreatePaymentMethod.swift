@@ -9,6 +9,8 @@ import Foundation
 
 
 public class StripeCreatePaymentMethod: JSONEncodable {
+    /** Additional optional details to store on the payment method. If included, all fields in the details will override any defaults */
+    public var details: PaymentMethodDetails?
     /** A token from Stripe to identify payment info to be tied to the customer */
     public var token: String?
     /** The id of the user, if null the logged in user is used. Admin privilege need to specify other users */
@@ -19,6 +21,7 @@ public class StripeCreatePaymentMethod: JSONEncodable {
     // MARK: JSONEncodable
     func encodeToJSON() -> AnyObject {
         var nillableDictionary = [String:AnyObject?]()
+        nillableDictionary["details"] = self.details?.encodeToJSON()
         nillableDictionary["token"] = self.token
         nillableDictionary["user_id"] = self.userId?.encodeToJSON()
         let dictionary: [String:AnyObject] = APIHelper.rejectNil(nillableDictionary) ?? [:]

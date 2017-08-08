@@ -65,7 +65,7 @@ public class UtilMaintenanceAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "details" : "{}",
   "access_locked" : false,
-  "message" : "aeiou"
+  "message" : "message"
 }}]
 
      - returns: RequestBuilder<Maintenance> 

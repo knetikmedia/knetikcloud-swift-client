@@ -150,15 +150,27 @@ public class ReportingRevenueAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 7,
   "number_of_elements" : 5,
   "content" : [ {
     "volume" : 6,
-    "country" : "aeiou",
+    "country" : "country",
+    "revenue" : 0.8008281904610115
+  }, {
+    "volume" : 6,
+    "country" : "country",
     "revenue" : 0.8008281904610115
   } ],
   "first" : true
@@ -225,8 +237,16 @@ public class ReportingRevenueAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
@@ -235,7 +255,12 @@ public class ReportingRevenueAPI: APIBase {
     "volume" : 1,
     "revenue" : 6.027456183070403,
     "item_id" : 0,
-    "item_name" : "aeiou"
+    "item_name" : "item_name"
+  }, {
+    "volume" : 1,
+    "revenue" : 6.027456183070403,
+    "item_id" : 0,
+    "item_name" : "item_name"
   } ],
   "first" : true
 }}]

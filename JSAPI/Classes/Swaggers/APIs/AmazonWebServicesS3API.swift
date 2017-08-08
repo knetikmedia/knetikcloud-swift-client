@@ -32,13 +32,14 @@ public class AmazonWebServicesS3API: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "filename" : "aeiou",
-  "object_key" : "aeiou",
+  "filename" : "filename",
+  "object_key" : "object_key",
+  "cdn_url" : "cdn_url",
   "user_id" : 1,
-  "action" : "aeiou",
+  "action" : "action",
   "created_date" : 0,
   "id" : 6,
-  "url" : "aeiou"
+  "url" : "url"
 }}]
      
      - parameter filename: (query) The file name (optional)

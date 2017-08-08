@@ -31,58 +31,91 @@ public class StoreSubscriptionsAPI: APIBase {
        - name: OAuth2
      - examples: [{contentType=application/json, example={
   "geo_policy_type" : "whitelist",
-  "template" : "aeiou",
-  "short_description" : "aeiou",
-  "geo_country_list" : [ "aeiou" ],
+  "template" : "template",
+  "short_description" : "short_description",
+  "geo_country_list" : [ "geo_country_list", "geo_country_list" ],
   "store_end" : 7,
-  "unique_key" : "aeiou",
+  "unique_key" : "unique_key",
   "availability" : "all",
-  "long_description" : "aeiou",
+  "long_description" : "long_description",
   "sort" : 6,
-  "tags" : [ "aeiou" ],
+  "tags" : [ "tags", "tags" ],
   "consolidation_day_of_month" : 0,
   "plans" : [ {
     "end_date" : 5,
     "initial_fee" : 9.301444243932576,
     "late_payment_fee" : 3.616076749251911,
     "billing_cycle_length" : 5,
-    "reactivation_sku" : "aeiou",
-    "currency_code" : "aeiou",
+    "reactivation_sku" : "reactivation_sku",
+    "currency_code" : "currency_code",
     "recurring_fee" : 1.0246457001441578,
     "min_cycles" : 7,
-    "recurring_sku" : "aeiou",
+    "recurring_sku" : "recurring_sku",
     "max_bill_attempts" : 2,
     "additional_properties" : {
-      "key" : ""
+      "key" : {
+        "type" : "type"
+      }
     },
-    "id" : "aeiou",
+    "id" : "id",
     "locked" : false,
     "start_date" : 1,
-    "initial_sku" : "aeiou",
+    "initial_sku" : "initial_sku",
     "published" : false,
     "grace_period" : 7,
     "consolidated" : false,
     "first_billing_cycle_unit" : "millisecond",
-    "late_payment_sku" : "aeiou",
+    "late_payment_sku" : "late_payment_sku",
     "first_billing_cycle_length" : 2,
-    "migrate_to_plan" : "aeiou",
-    "name" : "aeiou",
+    "migrate_to_plan" : "migrate_to_plan",
+    "name" : "name",
+    "billing_cycle_unit" : "millisecond",
+    "reactivation_fee" : 1.2315135367772556,
+    "max_cycles" : 4
+  }, {
+    "end_date" : 5,
+    "initial_fee" : 9.301444243932576,
+    "late_payment_fee" : 3.616076749251911,
+    "billing_cycle_length" : 5,
+    "reactivation_sku" : "reactivation_sku",
+    "currency_code" : "currency_code",
+    "recurring_fee" : 1.0246457001441578,
+    "min_cycles" : 7,
+    "recurring_sku" : "recurring_sku",
+    "max_bill_attempts" : 2,
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "id" : "id",
+    "locked" : false,
+    "start_date" : 1,
+    "initial_sku" : "initial_sku",
+    "published" : false,
+    "grace_period" : 7,
+    "consolidated" : false,
+    "first_billing_cycle_unit" : "millisecond",
+    "late_payment_sku" : "late_payment_sku",
+    "first_billing_cycle_length" : 2,
+    "migrate_to_plan" : "migrate_to_plan",
+    "name" : "name",
     "billing_cycle_unit" : "millisecond",
     "reactivation_fee" : 1.2315135367772556,
     "max_cycles" : 4
   } ],
   "store_start" : 1,
   "vendor_id" : 5,
-  "name" : "aeiou",
+  "name" : "name",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 6,
   "id" : 1,
   "updated_date" : 4,
-  "category" : "aeiou"
+  "category" : "category"
 }}]
      
      - parameter subscriptionResource: (body) The subscription to be created (optional)
@@ -122,35 +155,182 @@ public class StoreSubscriptionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "plan_template" : {
-    "name" : "aeiou",
-    "created_date" : 6,
-    "id" : "aeiou",
-    "updated_date" : 1,
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
     "properties" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     } ]
   },
   "created_date" : 0,
-  "id" : "aeiou",
-  "updated_date" : 5,
-  "properties" : [ "" ]
+  "id" : "id",
+  "updated_date" : 6,
+  "properties" : [ {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
 }}]
      
      - parameter subscriptionTemplateResource: (body) The new subscription template (optional)
@@ -275,58 +455,91 @@ public class StoreSubscriptionsAPI: APIBase {
      - GET /subscriptions/{id}
      - examples: [{contentType=application/json, example={
   "geo_policy_type" : "whitelist",
-  "template" : "aeiou",
-  "short_description" : "aeiou",
-  "geo_country_list" : [ "aeiou" ],
+  "template" : "template",
+  "short_description" : "short_description",
+  "geo_country_list" : [ "geo_country_list", "geo_country_list" ],
   "store_end" : 7,
-  "unique_key" : "aeiou",
+  "unique_key" : "unique_key",
   "availability" : "all",
-  "long_description" : "aeiou",
+  "long_description" : "long_description",
   "sort" : 6,
-  "tags" : [ "aeiou" ],
+  "tags" : [ "tags", "tags" ],
   "consolidation_day_of_month" : 0,
   "plans" : [ {
     "end_date" : 5,
     "initial_fee" : 9.301444243932576,
     "late_payment_fee" : 3.616076749251911,
     "billing_cycle_length" : 5,
-    "reactivation_sku" : "aeiou",
-    "currency_code" : "aeiou",
+    "reactivation_sku" : "reactivation_sku",
+    "currency_code" : "currency_code",
     "recurring_fee" : 1.0246457001441578,
     "min_cycles" : 7,
-    "recurring_sku" : "aeiou",
+    "recurring_sku" : "recurring_sku",
     "max_bill_attempts" : 2,
     "additional_properties" : {
-      "key" : ""
+      "key" : {
+        "type" : "type"
+      }
     },
-    "id" : "aeiou",
+    "id" : "id",
     "locked" : false,
     "start_date" : 1,
-    "initial_sku" : "aeiou",
+    "initial_sku" : "initial_sku",
     "published" : false,
     "grace_period" : 7,
     "consolidated" : false,
     "first_billing_cycle_unit" : "millisecond",
-    "late_payment_sku" : "aeiou",
+    "late_payment_sku" : "late_payment_sku",
     "first_billing_cycle_length" : 2,
-    "migrate_to_plan" : "aeiou",
-    "name" : "aeiou",
+    "migrate_to_plan" : "migrate_to_plan",
+    "name" : "name",
+    "billing_cycle_unit" : "millisecond",
+    "reactivation_fee" : 1.2315135367772556,
+    "max_cycles" : 4
+  }, {
+    "end_date" : 5,
+    "initial_fee" : 9.301444243932576,
+    "late_payment_fee" : 3.616076749251911,
+    "billing_cycle_length" : 5,
+    "reactivation_sku" : "reactivation_sku",
+    "currency_code" : "currency_code",
+    "recurring_fee" : 1.0246457001441578,
+    "min_cycles" : 7,
+    "recurring_sku" : "recurring_sku",
+    "max_bill_attempts" : 2,
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "id" : "id",
+    "locked" : false,
+    "start_date" : 1,
+    "initial_sku" : "initial_sku",
+    "published" : false,
+    "grace_period" : 7,
+    "consolidated" : false,
+    "first_billing_cycle_unit" : "millisecond",
+    "late_payment_sku" : "late_payment_sku",
+    "first_billing_cycle_length" : 2,
+    "migrate_to_plan" : "migrate_to_plan",
+    "name" : "name",
     "billing_cycle_unit" : "millisecond",
     "reactivation_fee" : 1.2315135367772556,
     "max_cycles" : 4
   } ],
   "store_start" : 1,
   "vendor_id" : 5,
-  "name" : "aeiou",
+  "name" : "name",
   "additional_properties" : {
     "key" : {
-      "type" : "aeiou"
+      "type" : "type"
     }
   },
   "created_date" : 6,
   "id" : 1,
   "updated_date" : 4,
-  "category" : "aeiou"
+  "category" : "category"
 }}]
      
      - parameter id: (path) The id of the subscription 
@@ -370,35 +583,182 @@ public class StoreSubscriptionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "plan_template" : {
-    "name" : "aeiou",
-    "created_date" : 6,
-    "id" : "aeiou",
-    "updated_date" : 1,
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
     "properties" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     } ]
   },
   "created_date" : 0,
-  "id" : "aeiou",
-  "updated_date" : 5,
-  "properties" : [ "" ]
+  "id" : "id",
+  "updated_date" : 6,
+  "properties" : [ {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
 }}]
      
      - parameter id: (path) The id of the template 
@@ -443,49 +803,381 @@ public class StoreSubscriptionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 1,
   "last" : true,
-  "size" : 7,
-  "total_elements" : 9,
+  "size" : 5,
+  "total_elements" : 2,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 3,
-  "number_of_elements" : 2,
+  "total_pages" : 7,
+  "number_of_elements" : 5,
   "content" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "plan_template" : {
-      "name" : "aeiou",
-      "created_date" : 6,
-      "id" : "aeiou",
-      "updated_date" : 1,
+      "name" : "name",
+      "created_date" : 0,
+      "id" : "id",
+      "updated_date" : 6,
       "properties" : [ {
-        "name" : "aeiou",
-        "type" : "aeiou",
+        "name" : "name",
+        "type" : "type",
         "field_list" : {
           "property_definition_fields" : [ {
             "inner_type" : "integer",
-            "valid_values" : [ "aeiou" ],
-            "name" : "aeiou",
-            "description" : "aeiou",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
             "type" : "integer",
-            "inner_type_fields" : [ "" ],
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          }, {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
             "required" : false
           } ],
-          "property_type" : "aeiou",
-          "property_fields" : [ "" ]
+          "property_type" : "property_type",
+          "property_fields" : [ {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          }, {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          } ]
+        },
+        "required" : false
+      }, {
+        "name" : "name",
+        "type" : "type",
+        "field_list" : {
+          "property_definition_fields" : [ {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          }, {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          } ],
+          "property_type" : "property_type",
+          "property_fields" : [ {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          }, {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          } ]
         },
         "required" : false
       } ]
     },
     "created_date" : 0,
-    "id" : "aeiou",
-    "updated_date" : 5,
-    "properties" : [ "" ]
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  }, {
+    "name" : "name",
+    "plan_template" : {
+      "name" : "name",
+      "created_date" : 0,
+      "id" : "id",
+      "updated_date" : 6,
+      "properties" : [ {
+        "name" : "name",
+        "type" : "type",
+        "field_list" : {
+          "property_definition_fields" : [ {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          }, {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          } ],
+          "property_type" : "property_type",
+          "property_fields" : [ {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          }, {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          } ]
+        },
+        "required" : false
+      }, {
+        "name" : "name",
+        "type" : "type",
+        "field_list" : {
+          "property_definition_fields" : [ {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          }, {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          } ],
+          "property_type" : "property_type",
+          "property_fields" : [ {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          }, {
+            "inner_type" : "integer",
+            "valid_values" : [ "valid_values", "valid_values" ],
+            "name" : "name",
+            "description" : "description",
+            "type" : "integer",
+            "inner_type_fields" : [ null, null ],
+            "required" : false
+          } ]
+        },
+        "required" : false
+      } ]
+    },
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
   } ],
   "first" : true
 }}]
@@ -541,66 +1233,194 @@ public class StoreSubscriptionsAPI: APIBase {
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
-    "property" : "aeiou",
+    "property" : "property",
     "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
     "direction" : "ASC"
   } ],
   "total_pages" : 9,
   "number_of_elements" : 9,
   "content" : [ {
     "geo_policy_type" : "whitelist",
-    "template" : "aeiou",
-    "short_description" : "aeiou",
-    "geo_country_list" : [ "aeiou" ],
+    "template" : "template",
+    "short_description" : "short_description",
+    "geo_country_list" : [ "geo_country_list", "geo_country_list" ],
     "store_end" : 7,
-    "unique_key" : "aeiou",
+    "unique_key" : "unique_key",
     "availability" : "all",
-    "long_description" : "aeiou",
+    "long_description" : "long_description",
     "sort" : 6,
-    "tags" : [ "aeiou" ],
+    "tags" : [ "tags", "tags" ],
     "consolidation_day_of_month" : 0,
     "plans" : [ {
       "end_date" : 5,
       "initial_fee" : 9.301444243932576,
       "late_payment_fee" : 3.616076749251911,
       "billing_cycle_length" : 5,
-      "reactivation_sku" : "aeiou",
-      "currency_code" : "aeiou",
+      "reactivation_sku" : "reactivation_sku",
+      "currency_code" : "currency_code",
       "recurring_fee" : 1.0246457001441578,
       "min_cycles" : 7,
-      "recurring_sku" : "aeiou",
+      "recurring_sku" : "recurring_sku",
       "max_bill_attempts" : 2,
       "additional_properties" : {
-        "key" : ""
+        "key" : {
+          "type" : "type"
+        }
       },
-      "id" : "aeiou",
+      "id" : "id",
       "locked" : false,
       "start_date" : 1,
-      "initial_sku" : "aeiou",
+      "initial_sku" : "initial_sku",
       "published" : false,
       "grace_period" : 7,
       "consolidated" : false,
       "first_billing_cycle_unit" : "millisecond",
-      "late_payment_sku" : "aeiou",
+      "late_payment_sku" : "late_payment_sku",
       "first_billing_cycle_length" : 2,
-      "migrate_to_plan" : "aeiou",
-      "name" : "aeiou",
+      "migrate_to_plan" : "migrate_to_plan",
+      "name" : "name",
+      "billing_cycle_unit" : "millisecond",
+      "reactivation_fee" : 1.2315135367772556,
+      "max_cycles" : 4
+    }, {
+      "end_date" : 5,
+      "initial_fee" : 9.301444243932576,
+      "late_payment_fee" : 3.616076749251911,
+      "billing_cycle_length" : 5,
+      "reactivation_sku" : "reactivation_sku",
+      "currency_code" : "currency_code",
+      "recurring_fee" : 1.0246457001441578,
+      "min_cycles" : 7,
+      "recurring_sku" : "recurring_sku",
+      "max_bill_attempts" : 2,
+      "additional_properties" : {
+        "key" : {
+          "type" : "type"
+        }
+      },
+      "id" : "id",
+      "locked" : false,
+      "start_date" : 1,
+      "initial_sku" : "initial_sku",
+      "published" : false,
+      "grace_period" : 7,
+      "consolidated" : false,
+      "first_billing_cycle_unit" : "millisecond",
+      "late_payment_sku" : "late_payment_sku",
+      "first_billing_cycle_length" : 2,
+      "migrate_to_plan" : "migrate_to_plan",
+      "name" : "name",
       "billing_cycle_unit" : "millisecond",
       "reactivation_fee" : 1.2315135367772556,
       "max_cycles" : 4
     } ],
     "store_start" : 1,
     "vendor_id" : 5,
-    "name" : "aeiou",
+    "name" : "name",
     "additional_properties" : {
       "key" : {
-        "type" : "aeiou"
+        "type" : "type"
       }
     },
     "created_date" : 6,
     "id" : 1,
     "updated_date" : 4,
-    "category" : "aeiou"
+    "category" : "category"
+  }, {
+    "geo_policy_type" : "whitelist",
+    "template" : "template",
+    "short_description" : "short_description",
+    "geo_country_list" : [ "geo_country_list", "geo_country_list" ],
+    "store_end" : 7,
+    "unique_key" : "unique_key",
+    "availability" : "all",
+    "long_description" : "long_description",
+    "sort" : 6,
+    "tags" : [ "tags", "tags" ],
+    "consolidation_day_of_month" : 0,
+    "plans" : [ {
+      "end_date" : 5,
+      "initial_fee" : 9.301444243932576,
+      "late_payment_fee" : 3.616076749251911,
+      "billing_cycle_length" : 5,
+      "reactivation_sku" : "reactivation_sku",
+      "currency_code" : "currency_code",
+      "recurring_fee" : 1.0246457001441578,
+      "min_cycles" : 7,
+      "recurring_sku" : "recurring_sku",
+      "max_bill_attempts" : 2,
+      "additional_properties" : {
+        "key" : {
+          "type" : "type"
+        }
+      },
+      "id" : "id",
+      "locked" : false,
+      "start_date" : 1,
+      "initial_sku" : "initial_sku",
+      "published" : false,
+      "grace_period" : 7,
+      "consolidated" : false,
+      "first_billing_cycle_unit" : "millisecond",
+      "late_payment_sku" : "late_payment_sku",
+      "first_billing_cycle_length" : 2,
+      "migrate_to_plan" : "migrate_to_plan",
+      "name" : "name",
+      "billing_cycle_unit" : "millisecond",
+      "reactivation_fee" : 1.2315135367772556,
+      "max_cycles" : 4
+    }, {
+      "end_date" : 5,
+      "initial_fee" : 9.301444243932576,
+      "late_payment_fee" : 3.616076749251911,
+      "billing_cycle_length" : 5,
+      "reactivation_sku" : "reactivation_sku",
+      "currency_code" : "currency_code",
+      "recurring_fee" : 1.0246457001441578,
+      "min_cycles" : 7,
+      "recurring_sku" : "recurring_sku",
+      "max_bill_attempts" : 2,
+      "additional_properties" : {
+        "key" : {
+          "type" : "type"
+        }
+      },
+      "id" : "id",
+      "locked" : false,
+      "start_date" : 1,
+      "initial_sku" : "initial_sku",
+      "published" : false,
+      "grace_period" : 7,
+      "consolidated" : false,
+      "first_billing_cycle_unit" : "millisecond",
+      "late_payment_sku" : "late_payment_sku",
+      "first_billing_cycle_length" : 2,
+      "migrate_to_plan" : "migrate_to_plan",
+      "name" : "name",
+      "billing_cycle_unit" : "millisecond",
+      "reactivation_fee" : 1.2315135367772556,
+      "max_cycles" : 4
+    } ],
+    "store_start" : 1,
+    "vendor_id" : 5,
+    "name" : "name",
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
+    },
+    "created_date" : 6,
+    "id" : 1,
+    "updated_date" : 4,
+    "category" : "category"
   } ],
   "first" : true
 }}]
@@ -727,35 +1547,182 @@ public class StoreSubscriptionsAPI: APIBase {
        - type: oauth2
        - name: OAuth2
      - examples: [{contentType=application/json, example={
-  "name" : "aeiou",
+  "name" : "name",
   "plan_template" : {
-    "name" : "aeiou",
-    "created_date" : 6,
-    "id" : "aeiou",
-    "updated_date" : 1,
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
     "properties" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
           "inner_type" : "integer",
-          "valid_values" : [ "aeiou" ],
-          "name" : "aeiou",
-          "description" : "aeiou",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
           "type" : "integer",
-          "inner_type_fields" : [ "" ],
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
           "required" : false
         } ],
-        "property_type" : "aeiou",
-        "property_fields" : [ "" ]
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "name" : "name",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
       },
       "required" : false
     } ]
   },
   "created_date" : 0,
-  "id" : "aeiou",
-  "updated_date" : 5,
-  "properties" : [ "" ]
+  "id" : "id",
+  "updated_date" : 6,
+  "properties" : [ {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
 }}]
      
      - parameter id: (path) The id of the template 
