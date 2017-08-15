@@ -26,9 +26,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Create a new role
      - POST /auth/roles
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "role" : "role",
   "user_count" : 5,
@@ -88,9 +85,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Delete a role
      - DELETE /auth/roles/{role}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter role: (path) The role value 
      - parameter force: (query) If true, removes role from users/clients (optional)
@@ -131,9 +125,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Get roles for a client
      - GET /auth/clients/{clientKey}/roles
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "role" : "role",
   "user_count" : 5,
@@ -220,9 +211,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Get a single role
      - GET /auth/roles/{role}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "role" : "role",
   "user_count" : 5,
@@ -289,9 +277,6 @@ public class AuthRolesAPI: APIBase {
     /**
      List and search roles
      - GET /auth/roles
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,
@@ -411,9 +396,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Get roles for a user
      - GET /auth/users/{userId}/roles
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "role" : "role",
   "user_count" : 5,
@@ -501,9 +483,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Set roles for a client
      - PUT /auth/clients/{clientKey}/roles
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "client_key" : "client_key",
   "grant_types" : [ "grant_types", "grant_types" ],
@@ -552,9 +531,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Set permissions for a role
      - PUT /auth/roles/{role}/permissions
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "role" : "role",
   "user_count" : 5,
@@ -616,9 +592,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Set roles for a user
      - PUT /auth/users/{userId}/roles
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "member_since" : 7,
   "template" : "template",
@@ -719,9 +692,6 @@ public class AuthRolesAPI: APIBase {
     /**
      Update a role
      - PUT /auth/roles/{role}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "role" : "role",
   "user_count" : 5,

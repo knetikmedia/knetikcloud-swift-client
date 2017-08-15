@@ -29,9 +29,6 @@ public class SearchAPI: APIBase {
      Add a new object to an index
      - POST /search/index/{type}/{id}
      - Mainly intended for internal use.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter type: (path) The index type 
      - parameter id: (path) The ID of the object 
@@ -70,9 +67,6 @@ public class SearchAPI: APIBase {
      Register reference mappings
      - POST /search/mappings
      - Add a new type mapping to connect data from one index to another, or discover an exsting one. Mainly intended for internal use.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter mappings: (body) The mappings to add (optional)
 
@@ -108,9 +102,6 @@ public class SearchAPI: APIBase {
      Delete an object
      - DELETE /search/index/{type}/{id}
      - Mainly intended for internal use. Requires SEARCH_ADMIN.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter type: (path) The index type 
      - parameter id: (path) The ID of the object to delete 
@@ -151,9 +142,6 @@ public class SearchAPI: APIBase {
      Delete all objects in an index
      - DELETE /search/index/{type}
      - Mainly intended for internal use
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter type: (path) The index type 
 

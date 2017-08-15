@@ -46,9 +46,6 @@ public class ReportingUsageAPI: APIBase {
     /**
      Returns aggregated endpoint usage information by day
      - GET /reporting/usage/day
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -154,9 +151,6 @@ public class ReportingUsageAPI: APIBase {
     /**
      Returns aggregated endpoint usage information by hour
      - GET /reporting/usage/hour
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -262,9 +256,6 @@ public class ReportingUsageAPI: APIBase {
     /**
      Returns aggregated endpoint usage information by minute
      - GET /reporting/usage/minute
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -370,9 +361,6 @@ public class ReportingUsageAPI: APIBase {
     /**
      Returns aggregated endpoint usage information by month
      - GET /reporting/usage/month
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -478,9 +466,6 @@ public class ReportingUsageAPI: APIBase {
     /**
      Returns aggregated endpoint usage information by year
      - GET /reporting/usage/year
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -567,9 +552,6 @@ public class ReportingUsageAPI: APIBase {
     /**
      Returns list of endpoints called (method and url)
      - GET /reporting/usage/endpoints
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ "", "" ]}]
      
      - parameter startDate: (query) The beginning of the range being requested, unix timestamp in seconds 

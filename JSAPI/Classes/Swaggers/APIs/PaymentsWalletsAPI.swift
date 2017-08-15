@@ -27,9 +27,6 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Returns the user's wallet for the given currency code
      - GET /users/{userId}/wallets/{currencyCode}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "code" : "code",
   "currency_name" : "currency_name",
@@ -84,9 +81,6 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Retrieve a user's wallet transactions
      - GET /users/{userId}/wallets/{currencyCode}/transactions
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,
@@ -210,9 +204,6 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      List all of a user's wallets
      - GET /users/{userId}/wallets
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "code" : "code",
   "currency_name" : "currency_name",
@@ -262,9 +253,6 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Retrieves a summation of wallet balances by currency code
      - GET /wallets/totals
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 6,
   "last" : true,
@@ -348,9 +336,6 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Retrieve wallet transactions across the system
      - GET /wallets/transactions
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,
@@ -480,9 +465,6 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Retrieve a list of wallets across the system
      - GET /wallets
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,
@@ -564,9 +546,6 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Updates the balance for a user's wallet
      - PUT /users/{userId}/wallets/{currencyCode}/balance
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "transaction_id" : "transaction_id",
   "type_hint" : "type_hint",

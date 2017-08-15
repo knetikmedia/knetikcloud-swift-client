@@ -5149,6 +5149,7 @@ class Decoders {
                 let instance = SubscriptionResource()
                 instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
                 instance.availability = SubscriptionResource.Availability(rawValue: (sourceDictionary["availability"] as? String) ?? "") 
+                instance.behaviors = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["behaviors"])
                 instance.category = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["category"])
                 instance.consolidationDayOfMonth = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["consolidation_day_of_month"])
                 instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])

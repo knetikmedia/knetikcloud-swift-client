@@ -26,9 +26,6 @@ public class ConfigsAPI: APIBase {
     /**
      Create a new config
      - POST /configs
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "public_read" : false,
   "name" : "name",
@@ -68,9 +65,6 @@ public class ConfigsAPI: APIBase {
     /**
      Delete an existing config
      - DELETE /configs/{name}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter name: (path) The config name 
 
@@ -109,9 +103,6 @@ public class ConfigsAPI: APIBase {
      Get a single config
      - GET /configs/{name}
      - Only configs that are public readable will be shown without admin access
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "public_read" : false,
   "name" : "name",
@@ -158,9 +149,6 @@ public class ConfigsAPI: APIBase {
     /**
      List and search configs
      - GET /configs
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,
@@ -241,9 +229,6 @@ public class ConfigsAPI: APIBase {
     /**
      Update an existing config
      - PUT /configs/{name}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter name: (path) The config name 
      - parameter config: (body) The config object (optional)

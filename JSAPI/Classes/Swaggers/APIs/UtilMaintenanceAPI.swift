@@ -25,9 +25,6 @@ public class UtilMaintenanceAPI: APIBase {
     /**
      Delete maintenance info
      - DELETE /maintenance
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
 
      - returns: RequestBuilder<Void> 
      */
@@ -101,9 +98,6 @@ public class UtilMaintenanceAPI: APIBase {
     /**
      Set current maintenance info
      - POST /maintenance
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter maintenance: (body) The maintenance object (optional)
 
@@ -137,9 +131,6 @@ public class UtilMaintenanceAPI: APIBase {
     /**
      Update current maintenance info
      - PUT /maintenance
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter maintenance: (body) The maintenance object (optional)
 

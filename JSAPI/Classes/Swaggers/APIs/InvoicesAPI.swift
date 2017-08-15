@@ -27,9 +27,6 @@ public class InvoicesAPI: APIBase {
      Create an invoice
      - POST /invoices
      - Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "shipping_city_name" : "shipping_city_name",
   "order_notes" : "order_notes",
@@ -260,9 +257,6 @@ public class InvoicesAPI: APIBase {
     /**
      Retrieve an invoice
      - GET /invoices/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "shipping_city_name" : "shipping_city_name",
   "order_notes" : "order_notes",
@@ -384,9 +378,6 @@ public class InvoicesAPI: APIBase {
     /**
      List invoice logs
      - GET /invoices/{id}/logs
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -481,9 +472,6 @@ public class InvoicesAPI: APIBase {
      Retrieve invoices
      - GET /invoices
      - Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user's invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 6,
   "last" : true,
@@ -776,9 +764,6 @@ public class InvoicesAPI: APIBase {
     /**
      Pay an invoice using a saved payment method
      - POST /invoices/{id}/payments
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the invoice 
      - parameter request: (body) The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited. (optional)
@@ -818,9 +803,6 @@ public class InvoicesAPI: APIBase {
      Set the fulfillment status of a bundled invoice item
      - PUT /invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status
      - This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the invoice 
      - parameter bundleSku: (path) The sku of the bundle in the invoice that contains the given target 
@@ -861,9 +843,6 @@ public class InvoicesAPI: APIBase {
     /**
      Set the external reference of an invoice
      - PUT /invoices/{id}/external-ref
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the invoice 
      - parameter externalRef: (body) External reference info (optional)
@@ -902,9 +881,6 @@ public class InvoicesAPI: APIBase {
      Set the fulfillment status of an invoice item
      - PUT /invoices/{id}/items/{sku}/fulfillment-status
      - This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the invoice 
      - parameter sku: (path) The sku of an item in the invoice 
@@ -943,9 +919,6 @@ public class InvoicesAPI: APIBase {
     /**
      Set the order notes of an invoice
      - PUT /invoices/{id}/order-notes
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the invoice 
      - parameter orderNotes: (body) Payment status info (optional)
@@ -983,9 +956,6 @@ public class InvoicesAPI: APIBase {
      Set the payment status of an invoice
      - PUT /invoices/{id}/payment-status
      - This may trigger fulfillment if setting the status to 'paid'. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the invoice 
      - parameter request: (body) Payment status info (optional)
@@ -1022,9 +992,6 @@ public class InvoicesAPI: APIBase {
     /**
      Set or update billing info
      - PUT /invoices/{id}/billing-address
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the invoice 
      - parameter billingInfoRequest: (body) Address info (optional)

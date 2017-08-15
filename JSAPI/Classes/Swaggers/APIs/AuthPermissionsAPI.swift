@@ -26,9 +26,6 @@ public class AuthPermissionsAPI: APIBase {
     /**
      Create a new permission
      - POST /auth/permissions
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "parent" : "parent",
   "name" : "name",
@@ -72,9 +69,6 @@ public class AuthPermissionsAPI: APIBase {
     /**
      Delete a permission
      - DELETE /auth/permissions/{permission}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter permission: (path) The permission value 
      - parameter force: (query) If true, removes permission assigned to roles (optional)
@@ -115,9 +109,6 @@ public class AuthPermissionsAPI: APIBase {
     /**
      Get a single permission
      - GET /auth/permissions/{permission}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "parent" : "parent",
   "name" : "name",
@@ -166,9 +157,6 @@ public class AuthPermissionsAPI: APIBase {
     /**
      List and search permissions
      - GET /auth/permissions
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,
@@ -253,9 +241,6 @@ public class AuthPermissionsAPI: APIBase {
     /**
      Update a permission
      - PUT /auth/permissions/{permission}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "parent" : "parent",
   "name" : "name",

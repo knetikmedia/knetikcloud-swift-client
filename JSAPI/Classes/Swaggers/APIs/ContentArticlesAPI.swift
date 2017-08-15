@@ -27,9 +27,6 @@ public class ContentArticlesAPI: APIBase {
      Create a new article
      - POST /content/articles
      - Articles are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "active" : false,
@@ -84,9 +81,6 @@ public class ContentArticlesAPI: APIBase {
      Create an article template
      - POST /content/articles/templates
      - Article Templates define a type of article and the properties they have
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -209,9 +203,6 @@ public class ContentArticlesAPI: APIBase {
     /**
      Delete an existing article
      - DELETE /content/articles/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The article id 
 
@@ -251,9 +242,6 @@ public class ContentArticlesAPI: APIBase {
      Delete an article template
      - DELETE /content/articles/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -351,9 +339,6 @@ public class ContentArticlesAPI: APIBase {
     /**
      Get a single article template
      - GET /content/articles/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -482,9 +467,6 @@ public class ContentArticlesAPI: APIBase {
     /**
      List and search article templates
      - GET /content/articles/templates
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -715,6 +697,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      List and search articles
      
+     - parameter filterActiveOnly: (query) Filter for articles that are active (true) or inactive (false) (optional)
      - parameter filterCategory: (query) Filter for articles from a specific category by id (optional)
      - parameter filterTagset: (query) Filter for articles with at least one of a specified set of tags (separated by comma) (optional)
      - parameter filterTagIntersection: (query) Filter for articles with all of a specified set of tags (separated by comma) (optional)
@@ -725,8 +708,8 @@ public class ContentArticlesAPI: APIBase {
      - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func getArticles(filterCategory filterCategory: String? = nil, filterTagset: String? = nil, filterTagIntersection: String? = nil, filterTagExclusion: String? = nil, filterTitle: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceArticleResource?, error: ErrorType?) -> Void)) {
-        getArticlesWithRequestBuilder(filterCategory: filterCategory, filterTagset: filterTagset, filterTagIntersection: filterTagIntersection, filterTagExclusion: filterTagExclusion, filterTitle: filterTitle, size: size, page: page, order: order).execute { (response, error) -> Void in
+    public class func getArticles(filterActiveOnly filterActiveOnly: Bool? = nil, filterCategory: String? = nil, filterTagset: String? = nil, filterTagIntersection: String? = nil, filterTagExclusion: String? = nil, filterTitle: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceArticleResource?, error: ErrorType?) -> Void)) {
+        getArticlesWithRequestBuilder(filterActiveOnly: filterActiveOnly, filterCategory: filterCategory, filterTagset: filterTagset, filterTagIntersection: filterTagIntersection, filterTagExclusion: filterTagExclusion, filterTitle: filterTitle, size: size, page: page, order: order).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
     }
@@ -800,6 +783,7 @@ public class ContentArticlesAPI: APIBase {
   "first" : true
 }}]
      
+     - parameter filterActiveOnly: (query) Filter for articles that are active (true) or inactive (false) (optional)
      - parameter filterCategory: (query) Filter for articles from a specific category by id (optional)
      - parameter filterTagset: (query) Filter for articles with at least one of a specified set of tags (separated by comma) (optional)
      - parameter filterTagIntersection: (query) Filter for articles with all of a specified set of tags (separated by comma) (optional)
@@ -811,11 +795,12 @@ public class ContentArticlesAPI: APIBase {
 
      - returns: RequestBuilder<PageResourceArticleResource> 
      */
-    public class func getArticlesWithRequestBuilder(filterCategory filterCategory: String? = nil, filterTagset: String? = nil, filterTagIntersection: String? = nil, filterTagExclusion: String? = nil, filterTitle: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceArticleResource> {
+    public class func getArticlesWithRequestBuilder(filterActiveOnly filterActiveOnly: Bool? = nil, filterCategory: String? = nil, filterTagset: String? = nil, filterTagIntersection: String? = nil, filterTagExclusion: String? = nil, filterTitle: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceArticleResource> {
         let path = "/content/articles"
         let URLString = JSAPIAPI.basePath + path
 
         let nillableParameters: [String:AnyObject?] = [
+            "filter_active_only": filterActiveOnly,
             "filter_category": filterCategory,
             "filter_tagset": filterTagset,
             "filter_tag_intersection": filterTagIntersection,
@@ -852,9 +837,6 @@ public class ContentArticlesAPI: APIBase {
     /**
      Update an existing article
      - PUT /content/articles/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "active" : false,
@@ -911,9 +893,6 @@ public class ContentArticlesAPI: APIBase {
     /**
      Update an article template
      - PUT /content/articles/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,

@@ -27,9 +27,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Add an answer to a question
      - POST /trivia/questions/{questionId}/answers
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "answer" : {
     "type" : "type"
@@ -73,9 +70,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Add a tag to a question
      - POST /trivia/questions/{id}/tags
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the question 
      - parameter tag: (body) The new tag (optional)
@@ -130,9 +124,6 @@ public class GamificationTriviaAPI: APIBase {
      Add a tag to a batch of questions
      - POST /trivia/questions/tags
      - All questions that dont't have the tag and match filters will have it added. The returned number is the number of questions updated.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=0}]
      
      - parameter tag: (body) The tag to add (optional)
@@ -176,9 +167,6 @@ public class GamificationTriviaAPI: APIBase {
      Create an import job
      - POST /trivia/import
      - Set up a job to import a set of trivia questions from a cvs file at a remote url. the file will be validated asynchronously but will not be processed until started manually with the process endpoint.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "output" : [ {
     "line_number" : 1,
@@ -230,9 +218,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Create a question
      - POST /trivia/questions
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "question" : {
@@ -306,9 +291,6 @@ public class GamificationTriviaAPI: APIBase {
      Create a question template
      - POST /trivia/questions/templates
      - Question templates define a type of question and the properties they have
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "question_property" : {
     "name" : "name",
@@ -516,9 +498,6 @@ public class GamificationTriviaAPI: APIBase {
      Delete an import job
      - DELETE /trivia/import/{id}
      - Also deletes all questions that were imported by it
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the job 
 
@@ -556,9 +535,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Delete a question
      - DELETE /trivia/questions/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the question 
 
@@ -597,9 +573,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Remove an answer from a question
      - DELETE /trivia/questions/{questionId}/answers/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter questionId: (path) The id of the question 
      - parameter id: (path) The id of the answer 
@@ -641,9 +614,6 @@ public class GamificationTriviaAPI: APIBase {
      Delete a question template
      - DELETE /trivia/questions/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -684,9 +654,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Get an import job
      - GET /trivia/import/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "output" : [ {
     "line_number" : 1,
@@ -748,9 +715,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Get a list of import job
      - GET /trivia/import
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 2,
   "last" : true,
@@ -860,9 +824,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Get a single question
      - GET /trivia/questions/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "question" : {
@@ -940,9 +901,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Get an answer for a question
      - GET /trivia/questions/{questionId}/answers/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "answer" : {
     "type" : "type"
@@ -989,9 +947,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      List the answers available for a question
      - GET /trivia/questions/{questionId}/answers
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "answer" : {
     "type" : "type"
@@ -1043,9 +998,6 @@ public class GamificationTriviaAPI: APIBase {
      List question deltas in ascending order of updated date
      - GET /trivia/questions/delta
      - The 'since' parameter is important to avoid getting a full list of all questions. Implementors should make sure they pass the updated date of the last resource loaded, not the date of the last request, in order to avoid gaps
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "category_id" : "category_id",
   "media_type" : "media_type",
@@ -1099,9 +1051,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      List the tags for a question
      - GET /trivia/questions/{id}/tags
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ "", "" ]}]
      
      - parameter id: (path) The id of the question 
@@ -1140,9 +1089,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Get a single question template
      - GET /trivia/questions/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "question_property" : {
     "name" : "name",
@@ -1355,9 +1301,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      List and search question templates
      - GET /trivia/questions/templates
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -1779,9 +1722,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      List and search questions
      - GET /trivia/questions
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 2,
   "last" : true,
@@ -1948,9 +1888,6 @@ public class GamificationTriviaAPI: APIBase {
      Count questions based on filters
      - GET /trivia/questions/count
      - This is also provided by the list endpoint so you don't need to call this for pagination purposes
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=0}]
      
      - parameter filterSearch: (query) Filter for documents whose question, answers or tags contains provided string (optional)
@@ -2004,9 +1941,6 @@ public class GamificationTriviaAPI: APIBase {
      Start processing an import job
      - POST /trivia/import/{id}/process
      - Will process the CSV file and add new questions asynchronously. The status of the job must be 'VALID'.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "output" : [ {
     "line_number" : 1,
@@ -2066,9 +2000,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Remove a tag from a question
      - DELETE /trivia/questions/{id}/tags/{tag}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the question 
      - parameter tag: (path) The tag to remove 
@@ -2117,9 +2048,6 @@ public class GamificationTriviaAPI: APIBase {
      Remove a tag from a batch of questions
      - DELETE /trivia/questions/tags/{tag}
      - ll questions that have the tag and match filters will have it removed. The returned number is the number of questions updated.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=0}]
      
      - parameter tag: (path) The tag to remove 
@@ -2178,9 +2106,6 @@ public class GamificationTriviaAPI: APIBase {
      List and search tags by the beginning of the string
      - GET /trivia/tags
      - For performance reasons, search & category filters are mutually exclusive. If category is specified, search filter will be ignored in order to do fast matches for typeahead.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={ }}]
      
      - parameter filterSearch: (query) Filter for tags starting with the given text (optional)
@@ -2226,9 +2151,6 @@ public class GamificationTriviaAPI: APIBase {
      Update an import job
      - PUT /trivia/import/{id}
      - Changes should be made before process is started for there to be any effect.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "output" : [ {
     "line_number" : 1,
@@ -2283,9 +2205,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Update a question
      - PUT /trivia/questions/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "question" : {
@@ -2362,9 +2281,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Update an answer for a question
      - PUT /trivia/questions/{questionId}/answers/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter questionId: (path) The id of the question 
      - parameter id: (path) The id of the answer 
@@ -2403,9 +2319,6 @@ public class GamificationTriviaAPI: APIBase {
     /**
      Update a question template
      - PUT /trivia/questions/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "question_property" : {
     "name" : "name",
@@ -2622,9 +2535,6 @@ public class GamificationTriviaAPI: APIBase {
      Bulk update questions
      - PUT /trivia/questions
      - Will update all questions that match filters used (or all questions in system if no filters used). Body should match a question resource with only those properties you wish to set. Null values will be ignored. Returned number is how many were updated.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=0}]
      
      - parameter question: (body) New values for a set of question fields (optional)

@@ -27,9 +27,6 @@ public class UsersSubscriptionsAPI: APIBase {
     /**
      Get details about a user's subscription
      - GET /users/{userId}/subscriptions/{inventoryId}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "grace_end" : 7,
   "bill_date" : 0,
@@ -124,9 +121,6 @@ public class UsersSubscriptionsAPI: APIBase {
     /**
      Get details about a user's subscriptions
      - GET /users/{userId}/subscriptions
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example=[ {
   "grace_end" : 7,
   "bill_date" : 0,
@@ -275,9 +269,6 @@ public class UsersSubscriptionsAPI: APIBase {
     /**
      Reactivate a subscription and charge fee
      - POST /users/{userId}/subscriptions/{inventoryId}/reactivate
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "shipping_city_name" : "shipping_city_name",
   "order_notes" : "order_notes",
@@ -399,9 +390,6 @@ public class UsersSubscriptionsAPI: APIBase {
     /**
      Set a new date to bill a subscription on
      - PUT /users/{userId}/subscriptions/{inventoryId}/bill-date
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter userId: (path) The id of the user 
      - parameter inventoryId: (path) The id of the user&#39;s inventory 
@@ -442,9 +430,6 @@ public class UsersSubscriptionsAPI: APIBase {
      Set the payment method to use for a subscription
      - PUT /users/{userId}/subscriptions/{inventoryId}/payment-method
      - May send null to use floating default
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter userId: (path) The id of the user 
      - parameter inventoryId: (path) The id of the user&#39;s inventory 
@@ -485,9 +470,6 @@ public class UsersSubscriptionsAPI: APIBase {
      Set the status of a subscription
      - PUT /users/{userId}/subscriptions/{inventoryId}/status
      - Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter userId: (path) The id of the user 
      - parameter inventoryId: (path) The id of the user&#39;s inventory 
@@ -527,9 +509,6 @@ public class UsersSubscriptionsAPI: APIBase {
     /**
      Set a new subscription plan for a user
      - PUT /users/{userId}/subscriptions/{inventoryId}/plan
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter userId: (path) The id of the user 
      - parameter inventoryId: (path) The id of the user&#39;s inventory 
@@ -570,9 +549,6 @@ public class UsersSubscriptionsAPI: APIBase {
      Set a new subscription price for a user
      - PUT /users/{userId}/subscriptions/{inventoryId}/price-override
      - This new price will be what the user is charged at the begining of each new period. This override is specific to the current subscription and will not carry over if they end and later re-subscribe. It will persist if the plan is changed using the setUserSubscriptionPlan endpoint.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter userId: (path) The id of the user 
      - parameter inventoryId: (path) The id of the user&#39;s inventory 

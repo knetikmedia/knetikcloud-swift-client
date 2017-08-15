@@ -27,9 +27,6 @@ public class ContentPollsAPI: APIBase {
     /**
      Add your vote to a poll
      - POST /media/polls/{id}/response
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "answered_date" : 0,
   "poll_id" : "poll_id",
@@ -78,9 +75,6 @@ public class ContentPollsAPI: APIBase {
      Create a new poll
      - POST /media/polls
      - Polls are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "answers" : [ {
@@ -144,9 +138,6 @@ public class ContentPollsAPI: APIBase {
      Create a poll template
      - POST /media/polls/templates
      - Poll templates define a type of poll and the properties they have
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -269,9 +260,6 @@ public class ContentPollsAPI: APIBase {
     /**
      Delete an existing poll
      - DELETE /media/polls/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The poll id 
 
@@ -311,9 +299,6 @@ public class ContentPollsAPI: APIBase {
      Delete a poll template
      - DELETE /media/polls/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -420,9 +405,6 @@ public class ContentPollsAPI: APIBase {
     /**
      Get poll answer
      - GET /media/polls/{id}/response
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "answered_date" : 0,
   "poll_id" : "poll_id",
@@ -472,9 +454,6 @@ public class ContentPollsAPI: APIBase {
     /**
      Get a single poll template
      - GET /media/polls/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -603,9 +582,6 @@ public class ContentPollsAPI: APIBase {
     /**
      List and search poll templates
      - GET /media/polls/templates
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -985,9 +961,6 @@ public class ContentPollsAPI: APIBase {
     /**
      Update an existing poll
      - PUT /media/polls/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "answers" : [ {
@@ -1053,9 +1026,6 @@ public class ContentPollsAPI: APIBase {
     /**
      Update a poll template
      - PUT /media/polls/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,

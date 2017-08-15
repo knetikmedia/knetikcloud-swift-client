@@ -21,6 +21,8 @@ public class SubscriptionResource: JSONEncodable {
     public var additionalProperties: [String:Property]?
     /** Who can purchase this subscription */
     public var availability: Availability?
+    /** The behaviors linked to the item, describing various options and interactions. May not be included in item lists */
+    public var behaviors: [Behavior]?
     /** A category for filtering items */
     public var category: String?
     /** The day of the month 1..31 this subscription will renew */
@@ -65,6 +67,7 @@ public class SubscriptionResource: JSONEncodable {
         var nillableDictionary = [String:AnyObject?]()
         nillableDictionary["additional_properties"] = self.additionalProperties?.encodeToJSON()
         nillableDictionary["availability"] = self.availability?.rawValue
+        nillableDictionary["behaviors"] = self.behaviors?.encodeToJSON()
         nillableDictionary["category"] = self.category
         nillableDictionary["consolidation_day_of_month"] = self.consolidationDayOfMonth?.encodeToJSON()
         nillableDictionary["created_date"] = self.createdDate?.encodeToJSON()

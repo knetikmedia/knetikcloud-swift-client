@@ -27,9 +27,6 @@ public class ReportingSubscriptionsAPI: APIBase {
     /**
      Get a list of available subscription reports in most recent first order
      - GET /reporting/subscription
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,

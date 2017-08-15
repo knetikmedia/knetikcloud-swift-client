@@ -26,9 +26,6 @@ public class CategoriesAPI: APIBase {
     /**
      Create a new category
      - POST /categories
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "name" : "name",
@@ -74,9 +71,6 @@ public class CategoriesAPI: APIBase {
      Create a category template
      - POST /categories/templates
      - Templates define a type of category and the properties they have
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -199,9 +193,6 @@ public class CategoriesAPI: APIBase {
     /**
      Delete an existing category
      - DELETE /categories/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the category to be deleted 
 
@@ -241,9 +232,6 @@ public class CategoriesAPI: APIBase {
      Delete a category template
      - DELETE /categories/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -427,9 +415,6 @@ public class CategoriesAPI: APIBase {
     /**
      Get a single category template
      - GET /categories/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -558,9 +543,6 @@ public class CategoriesAPI: APIBase {
     /**
      List and search category templates
      - GET /categories/templates
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -871,9 +853,6 @@ public class CategoriesAPI: APIBase {
     /**
      Update an existing category
      - PUT /categories/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "name" : "name",
@@ -921,9 +900,6 @@ public class CategoriesAPI: APIBase {
     /**
      Update a category template
      - PUT /categories/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,

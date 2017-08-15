@@ -27,9 +27,6 @@ public class GamificationMetricsAPI: APIBase {
      Add a metric
      - POST /metrics
      - Post a new score/stat for an activity occurrence without ending the occurrence itself
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter metric: (body) The new metric (optional)
 

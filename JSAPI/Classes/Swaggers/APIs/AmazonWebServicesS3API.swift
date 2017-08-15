@@ -11,7 +11,53 @@ import Alamofire
 
 public class AmazonWebServicesS3API: APIBase {
     /**
-     Get a signed S3 URL
+     Get a temporary signed S3 URL for download
+     
+     - parameter bucket: (query) S3 bucket name (optional)
+     - parameter path: (query) The path to the file relative the bucket (the s3 object key) (optional)
+     - parameter expiration: (query) The number of seconds this URL will be valid. Default to 60 (optional, default to 60)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    public class func getDownloadURL(bucket bucket: String? = nil, path: String? = nil, expiration: Int32? = nil, completion: ((data: String?, error: ErrorType?) -> Void)) {
+        getDownloadURLWithRequestBuilder(bucket: bucket, path: path, expiration: expiration).execute { (response, error) -> Void in
+            completion(data: response?.body, error: error);
+        }
+    }
+
+
+    /**
+     Get a temporary signed S3 URL for download
+     - GET /amazon/s3/downloadurl
+     - To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+     - examples: [{contentType=application/json, example=""}]
+     
+     - parameter bucket: (query) S3 bucket name (optional)
+     - parameter path: (query) The path to the file relative the bucket (the s3 object key) (optional)
+     - parameter expiration: (query) The number of seconds this URL will be valid. Default to 60 (optional, default to 60)
+
+     - returns: RequestBuilder<String> 
+     */
+    public class func getDownloadURLWithRequestBuilder(bucket bucket: String? = nil, path: String? = nil, expiration: Int32? = nil) -> RequestBuilder<String> {
+        let path = "/amazon/s3/downloadurl"
+        let URLString = JSAPIAPI.basePath + path
+
+        let nillableParameters: [String:AnyObject?] = [
+            "bucket": bucket,
+            "path": path,
+            "expiration": expiration?.encodeToJSON()
+        ]
+ 
+        let parameters = APIHelper.rejectNil(nillableParameters)
+ 
+        let convertedParameters = APIHelper.convertBoolToString(parameters)
+ 
+        let requestBuilder: RequestBuilder<String>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: URLString, parameters: convertedParameters, isBody: false)
+    }
+
+    /**
+     Get a signed S3 URL for upload
      
      - parameter filename: (query) The file name (optional)
      - parameter contentType: (query) The content type (optional)
@@ -25,12 +71,9 @@ public class AmazonWebServicesS3API: APIBase {
 
 
     /**
-     Get a signed S3 URL
+     Get a signed S3 URL for upload
      - GET /amazon/s3/signedposturl
-     - Requires the file name and file content type (i.e., 'video/mpeg')
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
+     - Requires the file name and file content type (i.e., 'video/mpeg'). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
      - examples: [{contentType=application/json, example={
   "filename" : "filename",
   "object_key" : "object_key",

@@ -27,9 +27,6 @@ public class BRERuleEngineCategoriesAPI: APIBase {
      Create a BRE category template
      - POST /bre/categories/templates
      - Templates define a type of BRE category and the properties they have
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -154,9 +151,6 @@ public class BRERuleEngineCategoriesAPI: APIBase {
      Delete a BRE category template
      - DELETE /bre/categories/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -198,9 +192,6 @@ public class BRERuleEngineCategoriesAPI: APIBase {
     /**
      List categories
      - GET /bre/categories
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,
@@ -282,9 +273,6 @@ public class BRERuleEngineCategoriesAPI: APIBase {
     /**
      Get a single category
      - GET /bre/categories/{name}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "name" : "name",
@@ -331,9 +319,6 @@ public class BRERuleEngineCategoriesAPI: APIBase {
     /**
      Get a single BRE category template
      - GET /bre/categories/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -462,9 +447,6 @@ public class BRERuleEngineCategoriesAPI: APIBase {
     /**
      List and search BRE category templates
      - GET /bre/categories/templates
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -709,9 +691,6 @@ public class BRERuleEngineCategoriesAPI: APIBase {
     /**
      Update a category
      - PUT /bre/categories/{name}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "name" : "name",
@@ -757,9 +736,6 @@ public class BRERuleEngineCategoriesAPI: APIBase {
     /**
      Update a BRE category template
      - PUT /bre/categories/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,

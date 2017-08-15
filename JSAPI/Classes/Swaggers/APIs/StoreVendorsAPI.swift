@@ -26,9 +26,6 @@ public class StoreVendorsAPI: APIBase {
     /**
      Create a vendor
      - POST /vendors
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "primary_contact_email" : "primary_contact_email",
@@ -85,9 +82,6 @@ public class StoreVendorsAPI: APIBase {
      Create a vendor template
      - POST /vendors/templates
      - Vendor Templates define a type of vendor and the properties they have.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
@@ -225,9 +219,6 @@ public class StoreVendorsAPI: APIBase {
     /**
      Delete a vendor
      - DELETE /vendors/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the vendor 
 
@@ -266,9 +257,6 @@ public class StoreVendorsAPI: APIBase {
     /**
      Delete a vendor template
      - DELETE /vendors/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) force deleting the template if it&#39;s attached to other objects, cascade &#x3D; detach (optional)
@@ -369,9 +357,6 @@ public class StoreVendorsAPI: APIBase {
      Get a single vendor template
      - GET /vendors/templates/{id}
      - Vendor Templates define a type of vendor and the properties they have.
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
@@ -515,9 +500,6 @@ public class StoreVendorsAPI: APIBase {
     /**
      List and search vendor templates
      - GET /vendors/templates
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -906,9 +888,6 @@ public class StoreVendorsAPI: APIBase {
     /**
      Update a vendor
      - PUT /vendors/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "primary_contact_email" : "primary_contact_email",
@@ -967,9 +946,6 @@ public class StoreVendorsAPI: APIBase {
     /**
      Update a vendor template
      - PUT /vendors/templates/{id}
-     - OAuth:
-       - type: oauth2
-       - name: OAuth2
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
