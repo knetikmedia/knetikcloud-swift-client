@@ -16,6 +16,9 @@ public class AccessTokenAPI: APIBase {
     public enum GrantType_getOAuthToken: String { 
         case ClientCredentials = "client_credentials"
         case Password = "password"
+        case Facebook = "facebook"
+        case Google = "google"
+        case RefreshToken = "refresh_token"
     }
 
     /**
@@ -24,12 +27,14 @@ public class AccessTokenAPI: APIBase {
      - parameter grantType: (form) Grant type 
      - parameter clientId: (form) The id of the client 
      - parameter clientSecret: (form) The secret key of the client.  Used only with a grant_type of client_credentials (optional)
-     - parameter username: (form) The username of the client.  Used only with a grant_type of password (optional)
-     - parameter password: (form) The password of the client.  Used only with a grant_type of password (optional)
+     - parameter username: (form) The username of the client. Used only with a grant_type of password (optional)
+     - parameter password: (form) The password of the client. Used only with a grant_type of password (optional)
+     - parameter token: (form) The 3rd party authentication token. Used only with a grant_type of facebook, google, etc (social plugins) (optional)
+     - parameter refreshToken: (form) The refresh token obtained during prior authentication. Used only with a grant_type of refresh_token (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func getOAuthToken(grantType grantType: GrantType_getOAuthToken, clientId: String, clientSecret: String? = nil, username: String? = nil, password: String? = nil, completion: ((data: OAuth2Resource?, error: ErrorType?) -> Void)) {
-        getOAuthTokenWithRequestBuilder(grantType: grantType, clientId: clientId, clientSecret: clientSecret, username: username, password: password).execute { (response, error) -> Void in
+    public class func getOAuthToken(grantType grantType: GrantType_getOAuthToken, clientId: String, clientSecret: String? = nil, username: String? = nil, password: String? = nil, token: String? = nil, refreshToken: String? = nil, completion: ((data: OAuth2Resource?, error: ErrorType?) -> Void)) {
+        getOAuthTokenWithRequestBuilder(grantType: grantType, clientId: clientId, clientSecret: clientSecret, username: username, password: password, token: token, refreshToken: refreshToken).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
     }
@@ -48,12 +53,14 @@ public class AccessTokenAPI: APIBase {
      - parameter grantType: (form) Grant type 
      - parameter clientId: (form) The id of the client 
      - parameter clientSecret: (form) The secret key of the client.  Used only with a grant_type of client_credentials (optional)
-     - parameter username: (form) The username of the client.  Used only with a grant_type of password (optional)
-     - parameter password: (form) The password of the client.  Used only with a grant_type of password (optional)
+     - parameter username: (form) The username of the client. Used only with a grant_type of password (optional)
+     - parameter password: (form) The password of the client. Used only with a grant_type of password (optional)
+     - parameter token: (form) The 3rd party authentication token. Used only with a grant_type of facebook, google, etc (social plugins) (optional)
+     - parameter refreshToken: (form) The refresh token obtained during prior authentication. Used only with a grant_type of refresh_token (optional)
 
      - returns: RequestBuilder<OAuth2Resource> 
      */
-    public class func getOAuthTokenWithRequestBuilder(grantType grantType: GrantType_getOAuthToken, clientId: String, clientSecret: String? = nil, username: String? = nil, password: String? = nil) -> RequestBuilder<OAuth2Resource> {
+    public class func getOAuthTokenWithRequestBuilder(grantType grantType: GrantType_getOAuthToken, clientId: String, clientSecret: String? = nil, username: String? = nil, password: String? = nil, token: String? = nil, refreshToken: String? = nil) -> RequestBuilder<OAuth2Resource> {
         let path = "/oauth/token"
         let URLString = JSAPIAPI.basePath + path
 
@@ -62,7 +69,9 @@ public class AccessTokenAPI: APIBase {
             "client_id": clientId,
             "client_secret": clientSecret,
             "username": username,
-            "password": password
+            "password": password,
+            "token": token,
+            "refresh_token": refreshToken
         ]
  
         let parameters = APIHelper.rejectNil(nillableParameters)
