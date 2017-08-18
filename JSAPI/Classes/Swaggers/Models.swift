@@ -4140,6 +4140,7 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = PayBySavedMethodRequest()
                 instance.paymentMethod = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["payment_method"])
+                instance.userId = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["user_id"])
                 return instance
             }
 
