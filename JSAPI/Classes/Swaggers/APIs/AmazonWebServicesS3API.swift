@@ -29,6 +29,12 @@ public class AmazonWebServicesS3API: APIBase {
      Get a temporary signed S3 URL for download
      - GET /amazon/s3/downloadurl
      - To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=""}]
      
      - parameter bucket: (query) S3 bucket name (optional)
@@ -74,6 +80,12 @@ public class AmazonWebServicesS3API: APIBase {
      Get a signed S3 URL for upload
      - GET /amazon/s3/signedposturl
      - Requires the file name and file content type (i.e., 'video/mpeg'). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "filename" : "filename",
   "object_key" : "object_key",

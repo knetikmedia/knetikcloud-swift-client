@@ -57,6 +57,12 @@ public class BRERuleEngineActionsAPI: APIBase {
     /**
      Get a list of available actions
      - GET /bre/actions
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ {
   "variables" : [ {
     "name" : "name",

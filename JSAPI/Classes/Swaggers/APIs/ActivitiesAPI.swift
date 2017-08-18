@@ -26,6 +26,12 @@ public class ActivitiesAPI: APIBase {
     /**
      Create an activity
      - POST /activities
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "entitlements" : [ {
     "item_id" : 6,
@@ -157,6 +163,12 @@ public class ActivitiesAPI: APIBase {
      Create a new activity occurrence. Ex: start a game
      - POST /activity-occurrences
      - Has to enforce extra rules if not used as an admin
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "settings" : [ {
     "key_name" : "key_name",
@@ -257,6 +269,12 @@ public class ActivitiesAPI: APIBase {
      Create a activity template
      - POST /activities/templates
      - Activity Templates define a type of activity and the properties they have
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -379,6 +397,12 @@ public class ActivitiesAPI: APIBase {
     /**
      Delete an activity
      - DELETE /activities/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the activity 
 
@@ -418,6 +442,12 @@ public class ActivitiesAPI: APIBase {
      Delete a activity template
      - DELETE /activities/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -691,6 +721,12 @@ public class ActivitiesAPI: APIBase {
     /**
      Get a single activity template
      - GET /activities/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -819,6 +855,12 @@ public class ActivitiesAPI: APIBase {
     /**
      List and search activity templates
      - GET /activities/templates
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -1063,6 +1105,12 @@ public class ActivitiesAPI: APIBase {
     /**
      Sets the status of an activity occurrence to FINISHED and logs metrics
      - POST /activity-occurrences/{activityOccurrenceId}/results
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "users" : [ {
     "score" : 6,
@@ -1182,6 +1230,12 @@ public class ActivitiesAPI: APIBase {
     /**
      Update an activity
      - PUT /activities/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "entitlements" : [ {
     "item_id" : 6,
@@ -1315,6 +1369,12 @@ public class ActivitiesAPI: APIBase {
      Updated the status of an activity occurrence
      - PUT /activity-occurrences/{activityOccurrenceId}/status
      - If setting to 'FINISHED' you must POST to /results instead to record the metrics and get synchronous reward results
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter activityOccurrenceId: (path) The id of the activity occurrence 
      - parameter activityCccurrenceStatus: (body) The activity occurrence status object (optional)
@@ -1351,6 +1411,12 @@ public class ActivitiesAPI: APIBase {
     /**
      Update an activity template
      - PUT /activities/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,

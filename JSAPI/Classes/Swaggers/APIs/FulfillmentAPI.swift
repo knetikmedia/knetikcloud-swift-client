@@ -26,6 +26,12 @@ public class FulfillmentAPI: APIBase {
     /**
      Create a fulfillment type
      - POST /store/fulfillment/types
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "core" : false,
   "name" : "name",
@@ -65,6 +71,12 @@ public class FulfillmentAPI: APIBase {
     /**
      Delete a fulfillment type
      - DELETE /store/fulfillment/types/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id 
 
@@ -225,6 +237,12 @@ public class FulfillmentAPI: APIBase {
     /**
      Update a fulfillment type
      - PUT /store/fulfillment/types/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id 
      - parameter fulfillmentType: (body) The fulfillment type (optional)

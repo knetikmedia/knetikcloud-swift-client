@@ -26,6 +26,12 @@ public class LogsAPI: APIBase {
     /**
      Add a user log entry
      - POST /audit/logs
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter logEntry: (body) The user log entry to be added (optional)
 
@@ -59,6 +65,12 @@ public class LogsAPI: APIBase {
     /**
      Get an existing BRE event log entry by id
      - GET /bre/logs/event-log/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "event_id" : "event_id",
   "event_name" : "event_name",
@@ -124,6 +136,12 @@ public class LogsAPI: APIBase {
     /**
      Returns a list of BRE event log entries
      - GET /bre/logs/event-log
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -241,6 +259,12 @@ public class LogsAPI: APIBase {
     /**
      Get an existing forward log entry by id
      - GET /bre/logs/forward-log/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
   "error_msg" : "error_msg",
@@ -294,6 +318,12 @@ public class LogsAPI: APIBase {
     /**
      Returns a list of forward log entries
      - GET /bre/logs/forward-log
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -387,6 +417,12 @@ public class LogsAPI: APIBase {
     /**
      Returns a user log entry by id
      - GET /audit/logs/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "action_description" : "action_description",
   "user_id" : 6,
@@ -439,6 +475,12 @@ public class LogsAPI: APIBase {
     /**
      Returns a page of user logs entries
      - GET /audit/logs
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,

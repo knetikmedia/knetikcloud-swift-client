@@ -26,6 +26,12 @@ public class CurrenciesAPI: APIBase {
     /**
      Create a currency
      - POST /currencies
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "code" : "code",
   "icon" : "icon",
@@ -69,6 +75,12 @@ public class CurrenciesAPI: APIBase {
     /**
      Delete a currency
      - DELETE /currencies/{code}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter code: (path) The currency code 
 
@@ -247,6 +259,12 @@ public class CurrenciesAPI: APIBase {
     /**
      Update a currency
      - PUT /currencies/{code}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter code: (path) The currency code 
      - parameter currency: (body) The currency object (optional)

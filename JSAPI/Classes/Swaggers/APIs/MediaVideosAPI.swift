@@ -28,6 +28,12 @@ public class MediaVideosAPI: APIBase {
      Adds a user to a video's whitelist
      - POST /media/videos/{id}/whitelist
      - Whitelisted users can view video regardless of privacy setting.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The video id 
      - parameter userId: (body) The user id (optional)
@@ -63,6 +69,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Adds a new video in the system
      - POST /media/videos
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "authored" : 0,
   "short_description" : "short_description",
@@ -186,6 +198,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Add a new video comment
      - POST /media/videos/{videoId}/comments
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "summary" : "summary",
   "context" : "context",
@@ -237,6 +255,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Adds a contributor to a video
      - POST /media/videos/{videoId}/contributors
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter videoId: (path) The video id 
      - parameter contributionResource: (body) The contribution object (optional)
@@ -273,6 +297,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Add a new flag
      - POST /media/videos/{videoId}/moderation
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "reason" : "reason",
   "context" : "context",
@@ -323,6 +353,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Adds one or more existing videos as related to this one
      - POST /media/videos/{videoId}/related
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "relationship_details" : "relationship_details",
   "from" : {
@@ -371,6 +407,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Create a video disposition
      - POST /media/videos/{videoId}/dispositions
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "context" : "context",
   "name" : "name",
@@ -419,6 +461,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Deletes a video from the system if no resources are attached to it
      - DELETE /media/videos/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The video id 
 
@@ -457,6 +505,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Delete a video comment
      - DELETE /media/videos/{videoId}/comments/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter videoId: (path) The video id 
      - parameter id: (path) The comment id 
@@ -496,6 +550,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Delete a video disposition
      - DELETE /media/videos/{videoId}/dispositions/{dispositionId}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter dispositionId: (path) The disposition id 
 
@@ -533,6 +593,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Delete a flag
      - DELETE /media/videos/{videoId}/moderation
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter videoId: (path) The video id 
 
@@ -571,6 +637,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Delete a video's relationship
      - DELETE /media/videos/{videoId}/related/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter videoId: (path) The video id 
      - parameter id: (path) The relationship id 
@@ -613,6 +685,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Get user videos
      - GET /users/{userId}/videos
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 4,
   "last" : true,
@@ -858,6 +936,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Loads a specific video details
      - GET /media/videos/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "authored" : 0,
   "short_description" : "short_description",
@@ -1548,6 +1632,12 @@ public class MediaVideosAPI: APIBase {
      Removes a user from a video's whitelist
      - DELETE /media/videos/{videoId}/whitelist/{id}
      - Remove the user with the id given in the path from the whitelist of users that can view this video regardless of privacy setting.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter videoId: (path) The video id 
      - parameter id: (path) The user id 
@@ -1588,6 +1678,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Removes a contributor from a video
      - DELETE /media/videos/{videoId}/contributors/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter videoId: (path) The video id 
      - parameter id: (path) The contributor id 
@@ -1628,6 +1724,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Modifies a video's details
      - PUT /media/videos/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The video id 
      - parameter videoResource: (body) The video object (optional)
@@ -1665,6 +1767,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Update a video comment
      - PUT /media/videos/{videoId}/comments/{id}/content
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter videoId: (path) The video id 
      - parameter id: (path) The comment id 
@@ -1704,6 +1812,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Update a video's relationship details
      - PUT /media/videos/{videoId}/related/{id}/relationship_details
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter videoId: (path) The video id 
      - parameter relationshipId: (path) The relationship id 

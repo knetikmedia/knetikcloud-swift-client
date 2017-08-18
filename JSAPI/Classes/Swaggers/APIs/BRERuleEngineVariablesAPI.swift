@@ -26,6 +26,12 @@ public class BRERuleEngineVariablesAPI: APIBase {
      Get a list of variable types available
      - GET /bre/variable-types
      - Types include integer, string, user and invoice. These are used to qualify trigger parameters and action variables with strong typing.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ {
   "enumerable" : false,
   "name" : "name",
@@ -73,6 +79,12 @@ public class BRERuleEngineVariablesAPI: APIBase {
      List valid values for a type
      - GET /bre/variable-types/{name}/values
      - Used to lookup users to fill in a user constant for example. Only types marked as enumerable are suppoorted here.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,

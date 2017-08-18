@@ -29,6 +29,12 @@ public class ReportingRevenueAPI: APIBase {
      Get item revenue info
      - GET /reporting/revenue/item-sales/{currencyCode}
      - Get basic info about revenue from sales of items and bundles (not subscriptions, shipping, etc), summed up within a time range
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "sales_average" : 1.4658129805029452,
   "sale_count" : 6,
@@ -80,6 +86,12 @@ public class ReportingRevenueAPI: APIBase {
      Get refund revenue info
      - GET /reporting/revenue/refunds/{currencyCode}
      - Get basic info about revenue loss from refunds (for all item types), summed up within a time range.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "sales_average" : 1.4658129805029452,
   "sale_count" : 6,
@@ -133,6 +145,12 @@ public class ReportingRevenueAPI: APIBase {
      Get revenue info by country
      - GET /reporting/revenue/countries/{currencyCode}
      - Get basic info about revenue from sales of all types, summed up within a time range and split out by country. Sorted for largest revenue at the top
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -217,6 +235,12 @@ public class ReportingRevenueAPI: APIBase {
      Get revenue info by item
      - GET /reporting/revenue/products/{currencyCode}
      - Get basic info about revenue from sales of all types, summed up within a time range and split out by specific item. Sorted for largest revenue at the top
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -301,6 +325,12 @@ public class ReportingRevenueAPI: APIBase {
      Get subscription revenue info
      - GET /reporting/revenue/subscription-sales/{currencyCode}
      - Get basic info about revenue from sales of new subscriptions as well as recurring payemnts, summed up within a time range
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "sales_average" : 1.4658129805029452,
   "sale_count" : 6,

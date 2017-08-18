@@ -26,6 +26,12 @@ public class DispositionsAPI: APIBase {
     /**
      Add a new disposition
      - POST /dispositions
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "context" : "context",
   "name" : "name",
@@ -72,6 +78,12 @@ public class DispositionsAPI: APIBase {
     /**
      Delete a disposition
      - DELETE /dispositions/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the disposition record 
 

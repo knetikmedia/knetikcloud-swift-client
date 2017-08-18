@@ -27,6 +27,12 @@ public class UsersAddressesAPI: APIBase {
     /**
      Create a new address
      - POST /users/{userId}/addresses
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "address2" : "address2",
   "city" : "city",
@@ -78,6 +84,12 @@ public class UsersAddressesAPI: APIBase {
     /**
      Delete an address
      - DELETE /users/{userId}/addresses/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter userId: (path) The id of the user 
      - parameter id: (path) The id of the address 
@@ -118,6 +130,12 @@ public class UsersAddressesAPI: APIBase {
     /**
      Get a single address
      - GET /users/{userId}/addresses/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "address2" : "address2",
   "city" : "city",
@@ -175,6 +193,12 @@ public class UsersAddressesAPI: APIBase {
     /**
      List and search addresses
      - GET /users/{userId}/addresses
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 6,
   "last" : true,
@@ -274,6 +298,12 @@ public class UsersAddressesAPI: APIBase {
     /**
      Update an address
      - PUT /users/{userId}/addresses/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "address2" : "address2",
   "city" : "city",

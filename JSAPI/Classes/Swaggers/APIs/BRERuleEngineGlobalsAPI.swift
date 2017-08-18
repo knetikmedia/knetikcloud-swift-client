@@ -27,6 +27,12 @@ public class BRERuleEngineGlobalsAPI: APIBase {
      Create a global definition
      - POST /bre/globals/definitions
      - Once created you can then use in a custom rule. Note that global definitions cannot be modified or deleted if in use.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "description" : "description",
@@ -76,6 +82,12 @@ public class BRERuleEngineGlobalsAPI: APIBase {
      Delete a global
      - DELETE /bre/globals/definitions/{id}
      - May fail if there are existing rules against it. Cannot delete core globals
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the global definition 
 
@@ -113,6 +125,12 @@ public class BRERuleEngineGlobalsAPI: APIBase {
     /**
      Get a single global definition
      - GET /bre/globals/definitions/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "description" : "description",
@@ -167,6 +185,12 @@ public class BRERuleEngineGlobalsAPI: APIBase {
     /**
      List global definitions
      - GET /bre/globals/definitions
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,
@@ -264,6 +288,12 @@ public class BRERuleEngineGlobalsAPI: APIBase {
      Update a global definition
      - PUT /bre/globals/definitions/{id}
      - May fail if new parameters mismatch requirements of existing rules. Cannot update core globals
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "description" : "description",

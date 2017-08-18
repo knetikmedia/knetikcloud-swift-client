@@ -27,6 +27,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Adds a new member to the group
      - POST /users/groups/{uniqueName}/members
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "avatar_url" : "avatar_url",
   "id" : 0,
@@ -70,6 +76,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Adds multiple members to the group
      - POST /users/groups/{uniqueName}/members/batch-add
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ {
   "avatar_url" : "avatar_url",
   "id" : 0,
@@ -118,6 +130,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Create a group
      - POST /users/groups
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "parent" : "parent",
@@ -168,6 +186,12 @@ public class UsersGroupsAPI: APIBase {
      Create a group template
      - POST /users/groups/templates
      - Group Templates define a type of group and the properties they have
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -290,6 +314,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Removes a group from the system IF no resources are attached to it
      - DELETE /users/groups/{uniqueName}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter uniqueName: (path) The group unique name 
 
@@ -329,6 +359,12 @@ public class UsersGroupsAPI: APIBase {
      Delete a group template
      - DELETE /users/groups/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -553,6 +589,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Get a single group template
      - GET /users/groups/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -681,6 +723,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      List and search group templates
      - GET /users/groups/templates
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -963,6 +1011,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Removes a user from a group
      - DELETE /users/groups/{uniqueName}/members/{userId}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter uniqueName: (path) The group unique name 
      - parameter userId: (path) The id of the user to remove 
@@ -1003,6 +1057,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Update a group
      - PUT /users/groups/{uniqueName}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter uniqueName: (path) The group unique name 
      - parameter groupResource: (body) The updated group (optional)
@@ -1040,6 +1100,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Change a user's status
      - PUT /users/groups/{uniqueName}/members/{userId}/status
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter uniqueName: (path) The group unique name 
      - parameter userId: (path) The user id of the member to modify 
@@ -1078,6 +1144,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Update a group template
      - PUT /users/groups/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,

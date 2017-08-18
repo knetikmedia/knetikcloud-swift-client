@@ -28,6 +28,12 @@ public class StoreShippingAPI: APIBase {
      Create a shipping item
      - POST /store/shipping
      - A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=""}]
      
      - parameter cascade: (query) Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)
@@ -64,6 +70,12 @@ public class StoreShippingAPI: APIBase {
      Create a shipping template
      - POST /store/shipping/templates
      - Shipping Templates define a type of shipping and the properties they have.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
@@ -201,6 +213,12 @@ public class StoreShippingAPI: APIBase {
     /**
      Delete a shipping item
      - DELETE /store/shipping/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the shipping item 
 
@@ -239,6 +257,12 @@ public class StoreShippingAPI: APIBase {
     /**
      Delete a shipping template
      - DELETE /store/shipping/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) force deleting the template if it&#39;s attached to other objects, cascade &#x3D; detach (optional)
@@ -318,6 +342,12 @@ public class StoreShippingAPI: APIBase {
      Get a single shipping template
      - GET /store/shipping/templates/{id}
      - Shipping Templates define a type of shipping and the properties they have.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
@@ -461,6 +491,12 @@ public class StoreShippingAPI: APIBase {
     /**
      List and search shipping templates
      - GET /store/shipping/templates
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -736,6 +772,12 @@ public class StoreShippingAPI: APIBase {
     /**
      Update a shipping item
      - PUT /store/shipping/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=""}]
      
      - parameter id: (path) The id of the shipping item 
@@ -774,6 +816,12 @@ public class StoreShippingAPI: APIBase {
     /**
      Update a shipping template
      - PUT /store/shipping/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {

@@ -27,6 +27,12 @@ public class GamificationAchievementsAPI: APIBase {
      Create a new achievement definition
      - POST /achievements
      - If the definition contains a trigger event name, a BRE rule is created, so that tracking logic is executed when the triggering event occurs. If no trigger event name is specified, the user's achievement status must manually be updated via the API.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "rule_id" : "rule_id",
   "template" : "template",
@@ -78,6 +84,12 @@ public class GamificationAchievementsAPI: APIBase {
      Create an achievement template
      - POST /achievements/templates
      - Achievement templates define a type of achievement and the properties they have
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -201,6 +213,12 @@ public class GamificationAchievementsAPI: APIBase {
      Delete an achievement definition
      - DELETE /achievements/{name}
      - Will also disable the associated generated rule, if any.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter name: (path) The name of the achievement 
 
@@ -240,6 +258,12 @@ public class GamificationAchievementsAPI: APIBase {
      Delete an achievement template
      - DELETE /achievements/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -280,6 +304,12 @@ public class GamificationAchievementsAPI: APIBase {
     /**
      Get a single achievement definition
      - GET /achievements/{name}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "rule_id" : "rule_id",
   "template" : "template",
@@ -334,6 +364,12 @@ public class GamificationAchievementsAPI: APIBase {
     /**
      Get a single achievement template
      - GET /achievements/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -462,6 +498,12 @@ public class GamificationAchievementsAPI: APIBase {
     /**
      List and search achievement templates
      - GET /achievements/templates
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -704,6 +746,12 @@ public class GamificationAchievementsAPI: APIBase {
     /**
      Get the list of triggers that can be used to trigger an achievement progress update
      - GET /achievements/triggers
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ {
   "trigger_name" : "trigger_name",
   "system_trigger" : false,
@@ -777,6 +825,12 @@ public class GamificationAchievementsAPI: APIBase {
     /**
      Get all achievement definitions in the system
      - GET /achievements
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -885,6 +939,12 @@ public class GamificationAchievementsAPI: APIBase {
      Get a list of derived achievements
      - GET /achievements/derived/{name}
      - Used by other services that depend on achievements
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ {
   "rule_id" : "rule_id",
   "template" : "template",
@@ -957,6 +1017,12 @@ public class GamificationAchievementsAPI: APIBase {
      Retrieve progress on a given achievement for a given user
      - GET /users/{userId}/achievements/{achievementName}
      - Assets will not be filled in on the resources returned. Use 'Get a single poll' to retrieve the full resource with assets for a given item as needed.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "achievements" : [ {
     "achievement_name" : "achievement_name",
@@ -1021,6 +1087,12 @@ public class GamificationAchievementsAPI: APIBase {
      Retrieve progress on achievements for a given user
      - GET /users/{userId}/achievements
      - Assets will not be filled in on the resources returned. Use 'Get a single poll' to retrieve the full resource with assets for a given item as needed.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 2,
   "last" : true,
@@ -1136,6 +1208,12 @@ public class GamificationAchievementsAPI: APIBase {
      Retrieve progress on a given achievement for all users
      - GET /users/achievements/{achievementName}
      - Assets will not be filled in on the resources returned. Use 'Get single achievement progress for user' to retrieve the full resource with assets for a given user as needed.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 2,
   "last" : true,
@@ -1250,6 +1328,12 @@ public class GamificationAchievementsAPI: APIBase {
      Retrieve progress on achievements for all users
      - GET /users/achievements
      - Assets will not be filled in on the resources returned. Use 'Get single achievement progress for user' to retrieve the full resource with assets for a given user as needed.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 2,
   "last" : true,
@@ -1360,6 +1444,12 @@ public class GamificationAchievementsAPI: APIBase {
      Increment an achievement progress record for a user
      - POST /users/{userId}/achievements/{achievementName}/progress
      - If no progress record yet exists for the user, it will be created. Otherwise it will be updated and the provided value added to the existing progress. May be negative. If progress meets or exceeds the achievement's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "achievements" : [ {
     "achievement_name" : "achievement_name",
@@ -1419,6 +1509,12 @@ public class GamificationAchievementsAPI: APIBase {
      Set an achievement progress record for a user
      - PUT /users/{userId}/achievements/{achievementName}/progress
      - If no progress record yet exists for the user, it will be created. Otherwise it will be updated and progress set to the provided value. If progress meets or exceeds the achievement's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "achievements" : [ {
     "achievement_name" : "achievement_name",
@@ -1477,6 +1573,12 @@ public class GamificationAchievementsAPI: APIBase {
      Update an achievement definition
      - PUT /achievements/{name}
      - The existing generated rule, if any, will be deleted. A new rule will be created if a trigger event name is specified in the new version.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "rule_id" : "rule_id",
   "template" : "template",
@@ -1530,6 +1632,12 @@ public class GamificationAchievementsAPI: APIBase {
     /**
      Update an achievement template
      - PUT /achievements/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,

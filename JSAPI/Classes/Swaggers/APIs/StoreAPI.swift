@@ -27,6 +27,12 @@ public class StoreAPI: APIBase {
      Create an item template
      - POST /store/items/templates
      - Item Templates define a type of item and the properties they have.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
@@ -255,6 +261,12 @@ public class StoreAPI: APIBase {
      Create a store item
      - POST /store/items
      - SKUs have to be unique in the entire store. If a duplicate SKU is found, a 400 error is generated and the response will have a \"parameters\" field that is a list of duplicates. A duplicate is an object like {item_id, offending_sku_list}. Ex:<br /> {..., parameters: [[{item: 1, skus: [\"SKU-1\"]}]]}<br /> If an item is brand new and has duplicate SKUs within itself, the item ID will be 0.  Item subclasses are not allowed here, you will have to use their respective endpoints.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=""}]
      
      - parameter cascade: (query) Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)
@@ -291,6 +303,12 @@ public class StoreAPI: APIBase {
     /**
      Delete an item template
      - DELETE /store/items/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) force deleting the template if it&#39;s attached to other objects, cascade &#x3D; detach (optional)
@@ -331,6 +349,12 @@ public class StoreAPI: APIBase {
     /**
      Delete a store item
      - DELETE /store/items/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the item 
 
@@ -367,6 +391,12 @@ public class StoreAPI: APIBase {
     /**
      List available item behaviors
      - GET /store/items/behaviors
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ {
   "prerequisite_behaviors" : [ {
     "type_hint" : "type_hint",
@@ -457,6 +487,12 @@ public class StoreAPI: APIBase {
      Get a single item template
      - GET /store/items/templates/{id}
      - Item Templates define a type of item and the properties they have.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
@@ -689,6 +725,12 @@ public class StoreAPI: APIBase {
     /**
      List and search item templates
      - GET /store/items/templates
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -1366,6 +1408,12 @@ public class StoreAPI: APIBase {
      One-step purchase and pay for a single SKU item from a user's wallet
      - POST /store/quick-buy
      - Used to create and automatically pay an invoice for a single unit of a single SKU from a user's wallet. SKU must be priced in virtual currency and must not be an item that requires shipping. PAYMENTS_ADMIN permission is required if user ID is specified and is not the ID of the currently logged in user. If invoice price does not match expected price, purchase is aborted
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "shipping_city_name" : "shipping_city_name",
   "order_notes" : "order_notes",
@@ -1482,6 +1530,12 @@ public class StoreAPI: APIBase {
     /**
      Update an item template
      - PUT /store/items/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "behaviors" : [ {
     "behavior" : {
@@ -1712,6 +1766,12 @@ public class StoreAPI: APIBase {
     /**
      Update a store item
      - PUT /store/items/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=""}]
      
      - parameter id: (path) The id of the item 

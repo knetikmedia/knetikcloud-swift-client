@@ -27,6 +27,12 @@ public class MediaArtistsAPI: APIBase {
      Adds a new artist in the system
      - POST /media/artists
      - Adds a new artist in the system. Use specific media contributions endpoint to add contributions
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "contribution_count" : 0,
   "template" : "template",
@@ -100,6 +106,12 @@ public class MediaArtistsAPI: APIBase {
      Create an artist template
      - POST /media/artists/templates
      - Artist Templates define a type of artist and the properties they have
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -222,6 +234,12 @@ public class MediaArtistsAPI: APIBase {
     /**
      Removes an artist from the system IF no resources are attached to it
      - DELETE /media/artists/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The artist id 
 
@@ -261,6 +279,12 @@ public class MediaArtistsAPI: APIBase {
      Delete an artist template
      - DELETE /media/artists/templates/{id}
      - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The id of the template 
      - parameter cascade: (query) The value needed to delete used templates (optional)
@@ -381,6 +405,12 @@ public class MediaArtistsAPI: APIBase {
     /**
      Get a single artist template
      - GET /media/artists/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,
@@ -509,6 +539,12 @@ public class MediaArtistsAPI: APIBase {
     /**
      List and search artist templates
      - GET /media/artists/templates
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -901,6 +937,12 @@ public class MediaArtistsAPI: APIBase {
     /**
      Modifies an artist details
      - PUT /media/artists/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter id: (path) The artist id 
      - parameter artistResource: (body) The new artist (optional)
@@ -937,6 +979,12 @@ public class MediaArtistsAPI: APIBase {
     /**
      Update an artist template
      - PUT /media/artists/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "name" : "name",
   "created_date" : 0,

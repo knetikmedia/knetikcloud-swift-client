@@ -26,6 +26,12 @@ public class TaxesAPI: APIBase {
     /**
      Create a country tax
      - POST /tax/countries
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
@@ -66,6 +72,12 @@ public class TaxesAPI: APIBase {
     /**
      Create a state tax
      - POST /tax/countries/{country_code_iso3}/states
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
@@ -109,6 +121,12 @@ public class TaxesAPI: APIBase {
     /**
      Delete an existing tax
      - DELETE /tax/countries/{country_code_iso3}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter countryCodeIso3: (path) The iso3 code of the country 
 
@@ -147,6 +165,12 @@ public class TaxesAPI: APIBase {
     /**
      Delete an existing state tax
      - DELETE /tax/countries/{country_code_iso3}/states/{stateCode}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      
      - parameter countryCodeIso3: (path) The iso3 code of the country 
      - parameter stateCode: (path) The code of the state 
@@ -529,6 +553,12 @@ public class TaxesAPI: APIBase {
     /**
      Create or update a tax
      - PUT /tax/countries/{country_code_iso3}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
@@ -572,6 +602,12 @@ public class TaxesAPI: APIBase {
     /**
      Create or update a state tax
      - PUT /tax/countries/{country_code_iso3}/states/{stateCode}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
