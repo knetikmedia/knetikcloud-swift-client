@@ -1070,6 +1070,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Returns a page of comments for a video
      - GET /media/videos/{videoId}/comments
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -1167,6 +1173,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Returns a page of dispositions for a video
      - GET /media/videos/{videoId}/dispositions
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,
@@ -1260,6 +1272,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Returns a page of video relationships
      - GET /media/videos/{videoId}/related
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 6,
   "last" : true,
@@ -1363,6 +1381,12 @@ public class MediaVideosAPI: APIBase {
     /**
      Search videos using the documented filters
      - GET /media/videos
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 4,
   "last" : true,

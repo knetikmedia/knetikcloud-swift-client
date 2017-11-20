@@ -123,6 +123,12 @@ public class ContentCommentsAPI: APIBase {
     /**
      Return a comment
      - GET /comments/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "summary" : "summary",
   "context" : "context",
@@ -178,6 +184,12 @@ public class ContentCommentsAPI: APIBase {
     /**
      Returns a page of comments
      - GET /comments
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,

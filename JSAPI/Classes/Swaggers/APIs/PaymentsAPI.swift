@@ -214,6 +214,12 @@ public class PaymentsAPI: APIBase {
     /**
      Get a single payment method type
      - GET /payment/types/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "supports_refunds" : false,
   "supports_rebill" : false,
@@ -263,6 +269,12 @@ public class PaymentsAPI: APIBase {
     /**
      Get all payment method types
      - GET /payment/types
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,

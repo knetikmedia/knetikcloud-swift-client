@@ -330,6 +330,12 @@ public class ObjectsAPI: APIBase {
     /**
      Get a single object
      - GET /objects/{templateId}/{objectId}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "short_description" : "short_description",
   "data" : "{}",
@@ -392,6 +398,12 @@ public class ObjectsAPI: APIBase {
     /**
      List and search objects
      - GET /objects/{templateId}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,

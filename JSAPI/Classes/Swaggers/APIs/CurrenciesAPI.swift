@@ -122,6 +122,12 @@ public class CurrenciesAPI: APIBase {
     /**
      List and search currencies
      - GET /currencies
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -211,6 +217,12 @@ public class CurrenciesAPI: APIBase {
     /**
      Get a single currency
      - GET /currencies/{code}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "code" : "code",
   "icon" : "icon",

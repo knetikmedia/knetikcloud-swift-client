@@ -499,6 +499,12 @@ public class ActivitiesAPI: APIBase {
     /**
      List activity definitions
      - GET /activities
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -594,6 +600,12 @@ public class ActivitiesAPI: APIBase {
     /**
      Get a single activity
      - GET /activities/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "entitlements" : [ {
     "item_id" : 6,

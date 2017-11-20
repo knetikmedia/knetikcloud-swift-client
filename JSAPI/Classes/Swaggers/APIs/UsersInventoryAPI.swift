@@ -481,6 +481,12 @@ public class UsersInventoryAPI: APIBase {
     /**
      Get a single entitlement item
      - GET /entitlements/{entitlementId}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=""}]
      
      - parameter entitlementId: (path) The id of the entitlement 
@@ -522,6 +528,12 @@ public class UsersInventoryAPI: APIBase {
     /**
      List and search entitlement items
      - GET /entitlements
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 0,
   "last" : true,

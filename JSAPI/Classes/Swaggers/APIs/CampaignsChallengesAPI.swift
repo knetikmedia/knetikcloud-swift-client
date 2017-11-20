@@ -731,6 +731,12 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Retrieve a challenge
      - GET /challenges/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "end_date" : 5,
   "template" : "template",
@@ -836,6 +842,12 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      List and search challenge activities
      - GET /challenges/{challengeId}/activities
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -915,6 +927,12 @@ public class CampaignsChallengesAPI: APIBase {
      Get a single challenge activity
      - GET /challenges/{challengeId}/activities/{id}
      - A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "reward_set" : {
@@ -1407,6 +1425,12 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Retrieve a single challenge event details
      - GET /challenges/events/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "end_date" : 6,
   "challenge_id" : 0,
@@ -1457,6 +1481,12 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Retrieve a list of challenge events
      - GET /challenges/events
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,
@@ -1935,6 +1965,12 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Retrieve a list of challenges
      - GET /challenges
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 7,
   "last" : true,
@@ -2234,10 +2270,11 @@ public class CampaignsChallengesAPI: APIBase {
      - parameter id: (path) The challenge_activity id 
      - parameter challengeId: (path) The challenge id 
      - parameter challengeActivityResource: (body) The challenge activity resource object (optional)
+     - parameter validateSettings: (query) Whether to validate the settings being sent against the available settings on the base activity. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func updateChallengeActivity(id id: Int64, challengeId: Int64, challengeActivityResource: ChallengeActivityResource? = nil, completion: ((data: ChallengeActivityResource?, error: ErrorType?) -> Void)) {
-        updateChallengeActivityWithRequestBuilder(id: id, challengeId: challengeId, challengeActivityResource: challengeActivityResource).execute { (response, error) -> Void in
+    public class func updateChallengeActivity(id id: Int64, challengeId: Int64, challengeActivityResource: ChallengeActivityResource? = nil, validateSettings: Bool? = nil, completion: ((data: ChallengeActivityResource?, error: ErrorType?) -> Void)) {
+        updateChallengeActivityWithRequestBuilder(id: id, challengeId: challengeId, challengeActivityResource: challengeActivityResource, validateSettings: validateSettings).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
     }
@@ -2324,10 +2361,11 @@ public class CampaignsChallengesAPI: APIBase {
      - parameter id: (path) The challenge_activity id 
      - parameter challengeId: (path) The challenge id 
      - parameter challengeActivityResource: (body) The challenge activity resource object (optional)
+     - parameter validateSettings: (query) Whether to validate the settings being sent against the available settings on the base activity. (optional, default to false)
 
      - returns: RequestBuilder<ChallengeActivityResource> 
      */
-    public class func updateChallengeActivityWithRequestBuilder(id id: Int64, challengeId: Int64, challengeActivityResource: ChallengeActivityResource? = nil) -> RequestBuilder<ChallengeActivityResource> {
+    public class func updateChallengeActivityWithRequestBuilder(id id: Int64, challengeId: Int64, challengeActivityResource: ChallengeActivityResource? = nil, validateSettings: Bool? = nil) -> RequestBuilder<ChallengeActivityResource> {
         var path = "/challenges/{challengeId}/activities/{id}"
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{challenge_id}", withString: "\(challengeId)", options: .LiteralSearch, range: nil)
@@ -2338,7 +2376,7 @@ public class CampaignsChallengesAPI: APIBase {
  
         let requestBuilder: RequestBuilder<ChallengeActivityResource>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", URLString: URLString, parameters: convertedParameters, isBody: true)
+        return requestBuilder.init(method: "PUT", URLString: URLString, parameters: convertedParameters, isBody: false)
     }
 
     /**

@@ -605,6 +605,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Loads a specific group's details
      - GET /users/groups/{uniqueName}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "parent" : "parent",
@@ -659,6 +665,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Get a user from a group
      - GET /users/groups/{uniqueName}/members/{userId}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "avatar_url" : "avatar_url",
@@ -1101,6 +1113,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      Lists members of the group
      - GET /users/groups/{uniqueName}/members
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 6,
   "last" : true,
@@ -1583,6 +1601,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      List groups a user is in
      - GET /users/{userId}/groups
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ "", "" ]}]
      
      - parameter userId: (path) The id of the user 
@@ -1640,6 +1664,12 @@ public class UsersGroupsAPI: APIBase {
     /**
      List and search groups
      - GET /users/groups
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,

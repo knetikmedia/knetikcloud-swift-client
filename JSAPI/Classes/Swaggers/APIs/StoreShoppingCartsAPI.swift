@@ -155,6 +155,12 @@ public class StoreShoppingCartsAPI: APIBase {
      Create a cart
      - POST /carts
      - You don't have to have a user to create a cart but the API requires authentication to checkout
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=""}]
      
      - parameter owner: (query) Set the owner of a cart. If not specified, defaults to the calling user&#39;s id. If specified and is not the calling user&#39;s id, SHOPPING_CARTS_ADMIN permission is required (optional)

@@ -385,6 +385,12 @@ public class CampaignsAPI: APIBase {
     /**
      Returns a single campaign
      - GET /campaigns/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "reward_set" : {
@@ -484,6 +490,12 @@ public class CampaignsAPI: APIBase {
     /**
      List the challenges associated with a campaign
      - GET /campaigns/{id}/challenges
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 7,
   "last" : true,
@@ -1074,6 +1086,12 @@ public class CampaignsAPI: APIBase {
     /**
      List and search campaigns
      - GET /campaigns
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 5,
   "last" : true,

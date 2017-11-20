@@ -475,6 +475,12 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Retrieve a single subscription item and associated plans
      - GET /subscriptions/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "geo_policy_type" : "whitelist",
   "template" : "template",
@@ -1267,6 +1273,12 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      List available subscription items and associated plans
      - GET /subscriptions
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 9,
   "last" : true,

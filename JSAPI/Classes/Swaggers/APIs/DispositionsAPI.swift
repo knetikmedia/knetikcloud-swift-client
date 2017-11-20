@@ -121,6 +121,12 @@ public class DispositionsAPI: APIBase {
     /**
      Returns a disposition
      - GET /dispositions/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "context" : "context",
   "name" : "name",

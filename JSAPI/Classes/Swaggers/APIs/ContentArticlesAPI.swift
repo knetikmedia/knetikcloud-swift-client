@@ -307,6 +307,12 @@ public class ContentArticlesAPI: APIBase {
     /**
      Get a single article
      - GET /content/articles/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "template" : "template",
   "active" : false,
@@ -759,6 +765,12 @@ public class ContentArticlesAPI: APIBase {
      List and search articles
      - GET /content/articles
      - Get a list of articles with optional filtering. Assets will not be filled in on the resources returned. Use 'Get a single article' to retrieve the full resource with assets for a given item as needed.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 1,
   "last" : true,

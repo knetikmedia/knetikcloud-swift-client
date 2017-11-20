@@ -327,6 +327,12 @@ public class MediaArtistsAPI: APIBase {
     /**
      Loads a specific artist details
      - GET /media/artists/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "contribution_count" : 0,
   "template" : "template",
@@ -795,6 +801,12 @@ public class MediaArtistsAPI: APIBase {
     /**
      Search for artists
      - GET /media/artists
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 7,
   "last" : true,

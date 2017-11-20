@@ -31,6 +31,12 @@ public class GamificationLeaderboardsAPI: APIBase {
      Retrieves leaderboard details and paginated entries
      - GET /leaderboards/{contextType}/{contextId}
      - The context type identifies the type of entity (i.e., 'activity') being tracked on the leaderboard. The context ID is the unique ID of the actual entity tracked by the leaderboard. Sorting is based on the fields of LeaderboardEntryResource rather than the returned LeaderboardResource.
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "entries" : [ {
     "score" : 6,
@@ -105,6 +111,12 @@ public class GamificationLeaderboardsAPI: APIBase {
      Retrieves a specific user entry with rank
      - GET /leaderboards/{contextType}/{contextId}/users/{id}/rank
      - The context type identifies the type of entity (i.e., 'activity') being tracked on the leaderboard. The context ID is the unique ID of the actual entity tracked by the leaderboard
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "score" : 6,
   "rank" : 0,
@@ -156,6 +168,12 @@ public class GamificationLeaderboardsAPI: APIBase {
     /**
      Get a list of available leaderboard strategy names
      - GET /leaderboards/strategies
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ "", "" ]}]
 
      - returns: RequestBuilder<[String]> 

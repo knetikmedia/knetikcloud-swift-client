@@ -210,6 +210,12 @@ public class TaxesAPI: APIBase {
     /**
      Get a single tax
      - GET /tax/countries/{country_code_iso3}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.80082819046101150206595775671303272247314453125,
@@ -256,6 +262,12 @@ public class TaxesAPI: APIBase {
      List and search taxes
      - GET /tax/countries
      - Get a list of taxes
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 6,
   "last" : true,
@@ -334,6 +346,12 @@ public class TaxesAPI: APIBase {
     /**
      Get a single state tax
      - GET /tax/countries/{country_code_iso3}/states/{stateCode}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "tax_shipping" : false,
   "rate" : 0.8008281904610115,
@@ -384,6 +402,12 @@ public class TaxesAPI: APIBase {
      List and search taxes across all countries
      - GET /tax/states
      - Get a list of taxes
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 6,
   "last" : true,
@@ -469,6 +493,12 @@ public class TaxesAPI: APIBase {
      List and search taxes within a country
      - GET /tax/countries/{country_code_iso3}/states
      - Get a list of taxes
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "number" : 6,
   "last" : true,
