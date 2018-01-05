@@ -77,6 +77,7 @@ public class MediaVideosAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "authored" : 0,
+  "template" : "template",
   "short_description" : "short_description",
   "extension" : "extension",
   "privacy" : "private",
@@ -85,6 +86,11 @@ public class MediaVideosAPI: APIBase {
     "id" : 1,
     "display_name" : "display_name",
     "username" : "username"
+  },
+  "additional_properties" : {
+    "key" : {
+      "type" : "type"
+    }
   },
   "banned" : false,
   "embed" : "embed",
@@ -446,6 +452,146 @@ public class MediaVideosAPI: APIBase {
     }
 
     /**
+     Create a video template
+     
+     - parameter videoTemplateResource: (body) The video template resource object (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    public class func createVideoTemplate(videoTemplateResource videoTemplateResource: TemplateResource? = nil, completion: ((data: TemplateResource?, error: ErrorType?) -> Void)) {
+        createVideoTemplateWithRequestBuilder(videoTemplateResource: videoTemplateResource).execute { (response, error) -> Void in
+            completion(data: response?.body, error: error);
+        }
+    }
+
+
+    /**
+     Create a video template
+     - POST /media/videos/templates
+     - Video Templates define a type of video and the properties they have
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
+     - examples: [{contentType=application/json, example={
+  "allow_additional" : false,
+  "name" : "name",
+  "created_date" : 0,
+  "id" : "id",
+  "updated_date" : 6,
+  "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
+    "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
+    "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
+}}]
+     
+     - parameter videoTemplateResource: (body) The video template resource object (optional)
+
+     - returns: RequestBuilder<TemplateResource> 
+     */
+    public class func createVideoTemplateWithRequestBuilder(videoTemplateResource videoTemplateResource: TemplateResource? = nil) -> RequestBuilder<TemplateResource> {
+        let path = "/media/videos/templates"
+        let URLString = JSAPIAPI.basePath + path
+        let parameters = videoTemplateResource?.encodeToJSON() as? [String:AnyObject]
+ 
+        let convertedParameters = APIHelper.convertBoolToString(parameters)
+ 
+        let requestBuilder: RequestBuilder<TemplateResource>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: URLString, parameters: convertedParameters, isBody: true)
+    }
+
+    /**
      Deletes a video from the system if no resources are attached to it
      
      - parameter id: (path) The video id 
@@ -667,6 +813,54 @@ public class MediaVideosAPI: APIBase {
     }
 
     /**
+     Delete a video template
+     
+     - parameter id: (path) The id of the template 
+     - parameter cascade: (query) The value needed to delete used templates (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    public class func deleteVideoTemplate(id id: String, cascade: String? = nil, completion: ((error: ErrorType?) -> Void)) {
+        deleteVideoTemplateWithRequestBuilder(id: id, cascade: cascade).execute { (response, error) -> Void in
+            completion(error: error);
+        }
+    }
+
+
+    /**
+     Delete a video template
+     - DELETE /media/videos/templates/{id}
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
+     
+     - parameter id: (path) The id of the template 
+     - parameter cascade: (query) The value needed to delete used templates (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    public class func deleteVideoTemplateWithRequestBuilder(id id: String, cascade: String? = nil) -> RequestBuilder<Void> {
+        var path = "/media/videos/templates/{id}"
+        path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
+        let URLString = JSAPIAPI.basePath + path
+
+        let nillableParameters: [String:AnyObject?] = [
+            "cascade": cascade
+        ]
+ 
+        let parameters = APIHelper.rejectNil(nillableParameters)
+ 
+        let convertedParameters = APIHelper.convertBoolToString(parameters)
+ 
+        let requestBuilder: RequestBuilder<Void>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", URLString: URLString, parameters: convertedParameters, isBody: false)
+    }
+
+    /**
      Get user videos
      
      - parameter userId: (path) The user id 
@@ -715,6 +909,7 @@ public class MediaVideosAPI: APIBase {
   "number_of_elements" : 7,
   "content" : [ {
     "authored" : 0,
+    "template" : "template",
     "short_description" : "short_description",
     "extension" : "extension",
     "privacy" : "private",
@@ -723,6 +918,11 @@ public class MediaVideosAPI: APIBase {
       "id" : 1,
       "display_name" : "display_name",
       "username" : "username"
+    },
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
     },
     "banned" : false,
     "embed" : "embed",
@@ -803,6 +1003,7 @@ public class MediaVideosAPI: APIBase {
     }
   }, {
     "authored" : 0,
+    "template" : "template",
     "short_description" : "short_description",
     "extension" : "extension",
     "privacy" : "private",
@@ -811,6 +1012,11 @@ public class MediaVideosAPI: APIBase {
       "id" : 1,
       "display_name" : "display_name",
       "username" : "username"
+    },
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
     },
     "banned" : false,
     "embed" : "embed",
@@ -944,6 +1150,7 @@ public class MediaVideosAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "authored" : 0,
+  "template" : "template",
   "short_description" : "short_description",
   "extension" : "extension",
   "privacy" : "private",
@@ -952,6 +1159,11 @@ public class MediaVideosAPI: APIBase {
     "id" : 1,
     "display_name" : "display_name",
     "username" : "username"
+  },
+  "additional_properties" : {
+    "key" : {
+      "type" : "type"
+    }
   },
   "banned" : false,
   "embed" : "embed",
@@ -1352,6 +1564,422 @@ public class MediaVideosAPI: APIBase {
     }
 
     /**
+     Get a single video template
+     
+     - parameter id: (path) The id of the template 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    public class func getVideoTemplate(id id: String, completion: ((data: TemplateResource?, error: ErrorType?) -> Void)) {
+        getVideoTemplateWithRequestBuilder(id: id).execute { (response, error) -> Void in
+            completion(data: response?.body, error: error);
+        }
+    }
+
+
+    /**
+     Get a single video template
+     - GET /media/videos/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
+     - examples: [{contentType=application/json, example={
+  "allow_additional" : false,
+  "name" : "name",
+  "created_date" : 0,
+  "id" : "id",
+  "updated_date" : 6,
+  "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
+    "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
+    "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
+}}]
+     
+     - parameter id: (path) The id of the template 
+
+     - returns: RequestBuilder<TemplateResource> 
+     */
+    public class func getVideoTemplateWithRequestBuilder(id id: String) -> RequestBuilder<TemplateResource> {
+        var path = "/media/videos/templates/{id}"
+        path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
+        let URLString = JSAPIAPI.basePath + path
+
+        let nillableParameters: [String:AnyObject?] = [:]
+ 
+        let parameters = APIHelper.rejectNil(nillableParameters)
+ 
+        let convertedParameters = APIHelper.convertBoolToString(parameters)
+ 
+        let requestBuilder: RequestBuilder<TemplateResource>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: URLString, parameters: convertedParameters, isBody: true)
+    }
+
+    /**
+     List and search video templates
+     
+     - parameter size: (query) The number of objects returned per page (optional, default to 25)
+     - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
+     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    public class func getVideoTemplates(size size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceTemplateResource?, error: ErrorType?) -> Void)) {
+        getVideoTemplatesWithRequestBuilder(size: size, page: page, order: order).execute { (response, error) -> Void in
+            completion(data: response?.body, error: error);
+        }
+    }
+
+
+    /**
+     List and search video templates
+     - GET /media/videos/templates
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
+     - examples: [{contentType=application/json, example={
+  "number" : 1,
+  "last" : true,
+  "size" : 5,
+  "total_elements" : 2,
+  "sort" : [ {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  }, {
+    "ignore_case" : true,
+    "null_handling" : "NATIVE",
+    "property" : "property",
+    "ascending" : true,
+    "descending" : true,
+    "direction" : "ASC"
+  } ],
+  "total_pages" : 7,
+  "number_of_elements" : 5,
+  "content" : [ {
+    "allow_additional" : false,
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
+      "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
+      "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  }, {
+    "allow_additional" : false,
+    "name" : "name",
+    "created_date" : 0,
+    "id" : "id",
+    "updated_date" : 6,
+    "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
+      "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
+      "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
+      "type" : "type",
+      "field_list" : {
+        "property_definition_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ],
+        "property_type" : "property_type",
+        "property_fields" : [ {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        }, {
+          "inner_type" : "integer",
+          "valid_values" : [ "valid_values", "valid_values" ],
+          "name" : "name",
+          "description" : "description",
+          "type" : "integer",
+          "inner_type_fields" : [ null, null ],
+          "required" : false
+        } ]
+      },
+      "required" : false
+    } ]
+  } ],
+  "first" : true
+}}]
+     
+     - parameter size: (query) The number of objects returned per page (optional, default to 25)
+     - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
+     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
+
+     - returns: RequestBuilder<PageResourceTemplateResource> 
+     */
+    public class func getVideoTemplatesWithRequestBuilder(size size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceTemplateResource> {
+        let path = "/media/videos/templates"
+        let URLString = JSAPIAPI.basePath + path
+
+        let nillableParameters: [String:AnyObject?] = [
+            "size": size?.encodeToJSON(),
+            "page": page?.encodeToJSON(),
+            "order": order
+        ]
+ 
+        let parameters = APIHelper.rejectNil(nillableParameters)
+ 
+        let convertedParameters = APIHelper.convertBoolToString(parameters)
+ 
+        let requestBuilder: RequestBuilder<PageResourceTemplateResource>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: URLString, parameters: convertedParameters, isBody: false)
+    }
+
+    /**
      Search videos using the documented filters
      
      - parameter excludeFlagged: (query) Skip videos that have been flagged by the current user (optional, default to true)
@@ -1411,6 +2039,7 @@ public class MediaVideosAPI: APIBase {
   "number_of_elements" : 7,
   "content" : [ {
     "authored" : 0,
+    "template" : "template",
     "short_description" : "short_description",
     "extension" : "extension",
     "privacy" : "private",
@@ -1419,6 +2048,11 @@ public class MediaVideosAPI: APIBase {
       "id" : 1,
       "display_name" : "display_name",
       "username" : "username"
+    },
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
     },
     "banned" : false,
     "embed" : "embed",
@@ -1499,6 +2133,7 @@ public class MediaVideosAPI: APIBase {
     }
   }, {
     "authored" : 0,
+    "template" : "template",
     "short_description" : "short_description",
     "extension" : "extension",
     "privacy" : "private",
@@ -1507,6 +2142,11 @@ public class MediaVideosAPI: APIBase {
       "id" : 1,
       "display_name" : "display_name",
       "username" : "username"
+    },
+    "additional_properties" : {
+      "key" : {
+        "type" : "type"
+      }
     },
     "banned" : false,
     "embed" : "embed",
@@ -1859,6 +2499,148 @@ public class MediaVideosAPI: APIBase {
         let convertedParameters = APIHelper.convertBoolToString(parameters)
  
         let requestBuilder: RequestBuilder<Void>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", URLString: URLString, parameters: convertedParameters, isBody: true)
+    }
+
+    /**
+     Update a video template
+     
+     - parameter id: (path) The id of the template 
+     - parameter videoTemplateResource: (body) The video template resource object (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    public class func updateVideoTemplate(id id: String, videoTemplateResource: TemplateResource? = nil, completion: ((data: TemplateResource?, error: ErrorType?) -> Void)) {
+        updateVideoTemplateWithRequestBuilder(id: id, videoTemplateResource: videoTemplateResource).execute { (response, error) -> Void in
+            completion(data: response?.body, error: error);
+        }
+    }
+
+
+    /**
+     Update a video template
+     - PUT /media/videos/templates/{id}
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_client_credentials_grant
+     - OAuth:
+       - type: oauth2
+       - name: oauth2_password_grant
+     - examples: [{contentType=application/json, example={
+  "allow_additional" : false,
+  "name" : "name",
+  "created_date" : 0,
+  "id" : "id",
+  "updated_date" : 6,
+  "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
+    "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
+    "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
+    "type" : "type",
+    "field_list" : {
+      "property_definition_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ],
+      "property_type" : "property_type",
+      "property_fields" : [ {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      }, {
+        "inner_type" : "integer",
+        "valid_values" : [ "valid_values", "valid_values" ],
+        "name" : "name",
+        "description" : "description",
+        "type" : "integer",
+        "inner_type_fields" : [ null, null ],
+        "required" : false
+      } ]
+    },
+    "required" : false
+  } ]
+}}]
+     
+     - parameter id: (path) The id of the template 
+     - parameter videoTemplateResource: (body) The video template resource object (optional)
+
+     - returns: RequestBuilder<TemplateResource> 
+     */
+    public class func updateVideoTemplateWithRequestBuilder(id id: String, videoTemplateResource: TemplateResource? = nil) -> RequestBuilder<TemplateResource> {
+        var path = "/media/videos/templates/{id}"
+        path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
+        let URLString = JSAPIAPI.basePath + path
+        let parameters = videoTemplateResource?.encodeToJSON() as? [String:AnyObject]
+ 
+        let convertedParameters = APIHelper.convertBoolToString(parameters)
+ 
+        let requestBuilder: RequestBuilder<TemplateResource>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", URLString: URLString, parameters: convertedParameters, isBody: true)
     }

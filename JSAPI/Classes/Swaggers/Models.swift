@@ -2447,18 +2447,6 @@ class Decoders {
             }
 
 
-            // Decoder for [Mapstringobject]
-            Decoders.addDecoder(clazz: [Mapstringobject].self) { (source: AnyObject) -> [Mapstringobject] in
-                return Decoders.decode(clazz: [Mapstringobject].self, source: source)
-            }
-            // Decoder for Mapstringobject
-            Decoders.addDecoder(clazz: Mapstringobject.self) { (source: AnyObject) -> Mapstringobject in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = Mapstringobject()
-                return instance
-            }
-
-
             // Decoder for [MetricResource]
             Decoders.addDecoder(clazz: [MetricResource].self) { (source: AnyObject) -> [MetricResource] in
                 return Decoders.decode(clazz: [MetricResource].self, source: source)
@@ -3509,27 +3497,6 @@ class Decoders {
             Decoders.addDecoder(clazz: PageResourceLocationLogResource.self) { (source: AnyObject) -> PageResourceLocationLogResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = PageResourceLocationLogResource()
-                instance.content = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["content"])
-                instance.first = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["first"])
-                instance.last = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["last"])
-                instance.number = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["number"])
-                instance.numberOfElements = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["number_of_elements"])
-                instance.size = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["size"])
-                instance.sort = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["sort"])
-                instance.totalElements = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["total_elements"])
-                instance.totalPages = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["total_pages"])
-                return instance
-            }
-
-
-            // Decoder for [PageResourceMapstringobject]
-            Decoders.addDecoder(clazz: [PageResourceMapstringobject].self) { (source: AnyObject) -> [PageResourceMapstringobject] in
-                return Decoders.decode(clazz: [PageResourceMapstringobject].self, source: source)
-            }
-            // Decoder for PageResourceMapstringobject
-            Decoders.addDecoder(clazz: PageResourceMapstringobject.self) { (source: AnyObject) -> PageResourceMapstringobject in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = PageResourceMapstringobject()
                 instance.content = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["content"])
                 instance.first = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["first"])
                 instance.last = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["last"])
@@ -5970,6 +5937,7 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = VideoResource()
                 instance.active = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["active"])
+                instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
                 instance.author = Decoders.decodeOptional(clazz: SimpleReferenceResourcelong.self, source: sourceDictionary["author"])
                 instance.authored = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["authored"])
                 instance.banned = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["banned"])
@@ -5992,6 +5960,7 @@ class Decoders {
                 instance.shortDescription = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["short_description"])
                 instance.size = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["size"])
                 instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
+                instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
                 instance.thumbnail = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["thumbnail"])
                 instance.updatedDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["updated_date"])
                 instance.uploader = Decoders.decodeOptional(clazz: SimpleUserResource.self, source: sourceDictionary["uploader"])
