@@ -19,8 +19,7 @@ public class CacheClearEvent: JSONEncodable {
     public var timestamp: Int64?
     /** The type of the event. Used for polymorphic type recognition and thus must match an expected type */
     public var type: String?
-    public var customerSetup: Bool?
-    public var customerTeardown: Bool?
+    public var teardown: Bool?
 
     public init() {}
 
@@ -36,8 +35,7 @@ public class CacheClearEvent: JSONEncodable {
         nillableDictionary["synchronous"] = self.synchronous
         nillableDictionary["timestamp"] = self.timestamp?.encodeToJSON()
         nillableDictionary["type"] = self.type
-        nillableDictionary["customer_setup"] = self.customerSetup
-        nillableDictionary["customer_teardown"] = self.customerTeardown
+        nillableDictionary["teardown"] = self.teardown
         let dictionary: [String:AnyObject] = APIHelper.rejectNil(nillableDictionary) ?? [:]
         return dictionary
     }

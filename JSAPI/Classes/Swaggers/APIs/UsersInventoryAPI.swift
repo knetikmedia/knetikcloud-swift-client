@@ -274,7 +274,12 @@ public class UsersInventoryAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -315,7 +320,12 @@ public class UsersInventoryAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -631,7 +641,12 @@ public class UsersInventoryAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -672,7 +687,12 @@ public class UsersInventoryAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -803,7 +823,12 @@ public class UsersInventoryAPI: APIBase {
     "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -844,7 +869,12 @@ public class UsersInventoryAPI: APIBase {
       },
       "required" : false
     }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -907,7 +937,12 @@ public class UsersInventoryAPI: APIBase {
     "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -948,7 +983,12 @@ public class UsersInventoryAPI: APIBase {
       },
       "required" : false
     }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1574,7 +1614,12 @@ public class UsersInventoryAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -1615,7 +1660,12 @@ public class UsersInventoryAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {

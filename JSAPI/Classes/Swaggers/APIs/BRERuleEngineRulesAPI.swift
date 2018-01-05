@@ -35,6 +35,12 @@ public class BRERuleEngineRulesAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
+  "condition_text" : "condition_text",
+  "evaluation_count" : 6,
+  "description" : "description",
+  "sort" : 5,
+  "enabled" : false,
+  "run_count" : 1,
   "condition" : {
     "args" : [ {
       "definition" : "definition",
@@ -74,12 +80,9 @@ public class BRERuleEngineRulesAPI: APIBase {
     "type" : "type"
   },
   "system_rule" : false,
-  "condition_text" : "condition_text",
   "name" : "name",
-  "description" : "description",
   "event_name" : "event_name",
   "id" : "id",
-  "sort" : 6,
   "actions" : [ {
     "mapping" : "{}",
     "type" : "type"
@@ -87,8 +90,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     "mapping" : "{}",
     "type" : "type"
   } ],
-  "enabled" : false,
-  "start_date" : 1
+  "start_date" : 5
 }}]
      
      - parameter breRule: (body) The BRE rule object (optional)
@@ -215,6 +217,12 @@ public class BRERuleEngineRulesAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
+  "condition_text" : "condition_text",
+  "evaluation_count" : 6,
+  "description" : "description",
+  "sort" : 5,
+  "enabled" : false,
+  "run_count" : 1,
   "condition" : {
     "args" : [ {
       "definition" : "definition",
@@ -254,12 +262,9 @@ public class BRERuleEngineRulesAPI: APIBase {
     "type" : "type"
   },
   "system_rule" : false,
-  "condition_text" : "condition_text",
   "name" : "name",
-  "description" : "description",
   "event_name" : "event_name",
   "id" : "id",
-  "sort" : 6,
   "actions" : [ {
     "mapping" : "{}",
     "type" : "type"
@@ -267,8 +272,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     "mapping" : "{}",
     "type" : "type"
   } ],
-  "enabled" : false,
-  "start_date" : 1
+  "start_date" : 5
 }}]
      
      - parameter id: (path) The id of the rule 
@@ -321,10 +325,10 @@ public class BRERuleEngineRulesAPI: APIBase {
        - type: oauth2
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
-  "number" : 5,
+  "number" : 2,
   "last" : true,
-  "size" : 2,
-  "total_elements" : 7,
+  "size" : 9,
+  "total_elements" : 3,
   "sort" : [ {
     "ignore_case" : true,
     "null_handling" : "NATIVE",
@@ -340,10 +344,16 @@ public class BRERuleEngineRulesAPI: APIBase {
     "descending" : true,
     "direction" : "ASC"
   } ],
-  "total_pages" : 9,
-  "number_of_elements" : 5,
+  "total_pages" : 2,
+  "number_of_elements" : 7,
   "content" : [ {
     "end_date" : 0,
+    "condition_text" : "condition_text",
+    "evaluation_count" : 6,
+    "description" : "description",
+    "sort" : 5,
+    "enabled" : false,
+    "run_count" : 1,
     "condition" : {
       "args" : [ {
         "definition" : "definition",
@@ -383,12 +393,9 @@ public class BRERuleEngineRulesAPI: APIBase {
       "type" : "type"
     },
     "system_rule" : false,
-    "condition_text" : "condition_text",
     "name" : "name",
-    "description" : "description",
     "event_name" : "event_name",
     "id" : "id",
-    "sort" : 6,
     "actions" : [ {
       "mapping" : "{}",
       "type" : "type"
@@ -396,10 +403,15 @@ public class BRERuleEngineRulesAPI: APIBase {
       "mapping" : "{}",
       "type" : "type"
     } ],
-    "enabled" : false,
-    "start_date" : 1
+    "start_date" : 5
   }, {
     "end_date" : 0,
+    "condition_text" : "condition_text",
+    "evaluation_count" : 6,
+    "description" : "description",
+    "sort" : 5,
+    "enabled" : false,
+    "run_count" : 1,
     "condition" : {
       "args" : [ {
         "definition" : "definition",
@@ -439,12 +451,9 @@ public class BRERuleEngineRulesAPI: APIBase {
       "type" : "type"
     },
     "system_rule" : false,
-    "condition_text" : "condition_text",
     "name" : "name",
-    "description" : "description",
     "event_name" : "event_name",
     "id" : "id",
-    "sort" : 6,
     "actions" : [ {
       "mapping" : "{}",
       "type" : "type"
@@ -452,8 +461,7 @@ public class BRERuleEngineRulesAPI: APIBase {
       "mapping" : "{}",
       "type" : "type"
     } ],
-    "enabled" : false,
-    "start_date" : 1
+    "start_date" : 5
   } ],
   "first" : true
 }}]
@@ -562,6 +570,12 @@ public class BRERuleEngineRulesAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
+  "condition_text" : "condition_text",
+  "evaluation_count" : 6,
+  "description" : "description",
+  "sort" : 5,
+  "enabled" : false,
+  "run_count" : 1,
   "condition" : {
     "args" : [ {
       "definition" : "definition",
@@ -601,12 +615,9 @@ public class BRERuleEngineRulesAPI: APIBase {
     "type" : "type"
   },
   "system_rule" : false,
-  "condition_text" : "condition_text",
   "name" : "name",
-  "description" : "description",
   "event_name" : "event_name",
   "id" : "id",
-  "sort" : 6,
   "actions" : [ {
     "mapping" : "{}",
     "type" : "type"
@@ -614,8 +625,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     "mapping" : "{}",
     "type" : "type"
   } ],
-  "enabled" : false,
-  "start_date" : 1
+  "start_date" : 5
 }}]
      
      - parameter id: (path) The id of the rule 

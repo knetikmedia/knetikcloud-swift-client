@@ -35,17 +35,25 @@ public class UsersGroupsAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "template" : "template",
-  "avatar_url" : "avatar_url",
+  "implicit" : false,
+  "membership_id" : 0,
   "additional_properties" : {
     "key" : {
       "type" : "type"
     }
   },
-  "id" : 0,
-  "display_name" : "display_name",
+  "user" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
+  "group" : {
+    "unique_name" : "unique_name",
+    "name" : "name"
+  },
   "order" : "order",
-  "status" : "moderator",
-  "username" : "username"
+  "status" : "moderator"
 }}]
      
      - parameter uniqueName: (path) The group unique name 
@@ -91,30 +99,46 @@ public class UsersGroupsAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example=[ {
   "template" : "template",
-  "avatar_url" : "avatar_url",
+  "implicit" : false,
+  "membership_id" : 0,
   "additional_properties" : {
     "key" : {
       "type" : "type"
     }
   },
-  "id" : 0,
-  "display_name" : "display_name",
+  "user" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
+  "group" : {
+    "unique_name" : "unique_name",
+    "name" : "name"
+  },
   "order" : "order",
-  "status" : "moderator",
-  "username" : "username"
+  "status" : "moderator"
 }, {
   "template" : "template",
-  "avatar_url" : "avatar_url",
+  "implicit" : false,
+  "membership_id" : 0,
   "additional_properties" : {
     "key" : {
       "type" : "type"
     }
   },
-  "id" : 0,
-  "display_name" : "display_name",
+  "user" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
+  "group" : {
+    "unique_name" : "unique_name",
+    "name" : "name"
+  },
   "order" : "order",
-  "status" : "moderator",
-  "username" : "username"
+  "status" : "moderator"
 } ]}]
      
      - parameter uniqueName: (path) The group unique name 
@@ -171,7 +195,8 @@ public class UsersGroupsAPI: APIBase {
   },
   "member_count" : 0,
   "message_of_the_day" : "message_of_the_day",
-  "status" : "open"
+  "status" : "open",
+  "tags" : [ "tags", "tags" ]
 }}]
      
      - parameter groupResource: (body) The new group (optional)
@@ -220,7 +245,12 @@ public class UsersGroupsAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -261,7 +291,12 @@ public class UsersGroupsAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -350,7 +385,12 @@ public class UsersGroupsAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -391,7 +431,12 @@ public class UsersGroupsAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -451,7 +496,7 @@ public class UsersGroupsAPI: APIBase {
     }
 
     /**
-     Removes a group from the system IF no resources are attached to it
+     Removes a group from the system
      
      - parameter uniqueName: (path) The group unique name 
      - parameter completion: completion handler to receive the data and the error objects
@@ -464,8 +509,9 @@ public class UsersGroupsAPI: APIBase {
 
 
     /**
-     Removes a group from the system IF no resources are attached to it
+     Removes a group from the system
      - DELETE /users/groups/{uniqueName}
+     - All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group's parent if they were not added to it directly as well.
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -625,7 +671,8 @@ public class UsersGroupsAPI: APIBase {
   },
   "member_count" : 0,
   "message_of_the_day" : "message_of_the_day",
-  "status" : "open"
+  "status" : "open",
+  "tags" : [ "tags", "tags" ]
 }}]
      
      - parameter uniqueName: (path) The group unique name 
@@ -644,6 +691,77 @@ public class UsersGroupsAPI: APIBase {
         let convertedParameters = APIHelper.convertBoolToString(parameters)
  
         let requestBuilder: RequestBuilder<GroupResource>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: URLString, parameters: convertedParameters, isBody: true)
+    }
+
+    /**
+     Get group ancestors
+     
+     - parameter uniqueName: (path) The group unique name 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    public class func getGroupAncestors(uniqueName uniqueName: String, completion: ((data: [GroupResource]?, error: ErrorType?) -> Void)) {
+        getGroupAncestorsWithRequestBuilder(uniqueName: uniqueName).execute { (response, error) -> Void in
+            completion(data: response?.body, error: error);
+        }
+    }
+
+
+    /**
+     Get group ancestors
+     - GET /users/groups/{uniqueName}/ancestors
+     - Returns a list of ancestor groups in reverse order (parent, then grandparent, etc
+     - examples: [{contentType=application/json, example=[ {
+  "template" : "template",
+  "parent" : "parent",
+  "sub_member_count" : 6,
+  "unique_name" : "unique_name",
+  "name" : "name",
+  "description" : "description",
+  "additional_properties" : {
+    "key" : {
+      "type" : "type"
+    }
+  },
+  "member_count" : 0,
+  "message_of_the_day" : "message_of_the_day",
+  "status" : "open",
+  "tags" : [ "tags", "tags" ]
+}, {
+  "template" : "template",
+  "parent" : "parent",
+  "sub_member_count" : 6,
+  "unique_name" : "unique_name",
+  "name" : "name",
+  "description" : "description",
+  "additional_properties" : {
+    "key" : {
+      "type" : "type"
+    }
+  },
+  "member_count" : 0,
+  "message_of_the_day" : "message_of_the_day",
+  "status" : "open",
+  "tags" : [ "tags", "tags" ]
+} ]}]
+     
+     - parameter uniqueName: (path) The group unique name 
+
+     - returns: RequestBuilder<[GroupResource]> 
+     */
+    public class func getGroupAncestorsWithRequestBuilder(uniqueName uniqueName: String) -> RequestBuilder<[GroupResource]> {
+        var path = "/users/groups/{uniqueName}/ancestors"
+        path = path.stringByReplacingOccurrencesOfString("{unique_name}", withString: "\(uniqueName)", options: .LiteralSearch, range: nil)
+        let URLString = JSAPIAPI.basePath + path
+
+        let nillableParameters: [String:AnyObject?] = [:]
+ 
+        let parameters = APIHelper.rejectNil(nillableParameters)
+ 
+        let convertedParameters = APIHelper.convertBoolToString(parameters)
+ 
+        let requestBuilder: RequestBuilder<[GroupResource]>.Type = JSAPIAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: URLString, parameters: convertedParameters, isBody: true)
     }
@@ -673,17 +791,25 @@ public class UsersGroupsAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "template" : "template",
-  "avatar_url" : "avatar_url",
+  "implicit" : false,
+  "membership_id" : 0,
   "additional_properties" : {
     "key" : {
       "type" : "type"
     }
   },
-  "id" : 0,
-  "display_name" : "display_name",
+  "user" : {
+    "avatar_url" : "avatar_url",
+    "id" : 1,
+    "display_name" : "display_name",
+    "username" : "username"
+  },
+  "group" : {
+    "unique_name" : "unique_name",
+    "name" : "name"
+  },
   "order" : "order",
-  "status" : "moderator",
-  "username" : "username"
+  "status" : "moderator"
 }}]
      
      - parameter uniqueName: (path) The group unique name 
@@ -737,7 +863,12 @@ public class UsersGroupsAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -778,7 +909,12 @@ public class UsersGroupsAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -894,7 +1030,12 @@ public class UsersGroupsAPI: APIBase {
     "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -935,7 +1076,12 @@ public class UsersGroupsAPI: APIBase {
       },
       "required" : false
     }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -983,7 +1129,12 @@ public class UsersGroupsAPI: APIBase {
     "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1024,7 +1175,12 @@ public class UsersGroupsAPI: APIBase {
       },
       "required" : false
     }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1143,30 +1299,46 @@ public class UsersGroupsAPI: APIBase {
   "number_of_elements" : 1,
   "content" : [ {
     "template" : "template",
-    "avatar_url" : "avatar_url",
+    "implicit" : false,
+    "membership_id" : 0,
     "additional_properties" : {
       "key" : {
         "type" : "type"
       }
     },
-    "id" : 0,
-    "display_name" : "display_name",
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "group" : {
+      "unique_name" : "unique_name",
+      "name" : "name"
+    },
     "order" : "order",
-    "status" : "moderator",
-    "username" : "username"
+    "status" : "moderator"
   }, {
     "template" : "template",
-    "avatar_url" : "avatar_url",
+    "implicit" : false,
+    "membership_id" : 0,
     "additional_properties" : {
       "key" : {
         "type" : "type"
       }
     },
-    "id" : 0,
-    "display_name" : "display_name",
+    "user" : {
+      "avatar_url" : "avatar_url",
+      "id" : 1,
+      "display_name" : "display_name",
+      "username" : "username"
+    },
+    "group" : {
+      "unique_name" : "unique_name",
+      "name" : "name"
+    },
     "order" : "order",
-    "status" : "moderator",
-    "username" : "username"
+    "status" : "moderator"
   } ],
   "first" : true
 }}]
@@ -1227,7 +1399,12 @@ public class UsersGroupsAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -1268,7 +1445,12 @@ public class UsersGroupsAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -1384,7 +1566,12 @@ public class UsersGroupsAPI: APIBase {
     "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1425,7 +1612,12 @@ public class UsersGroupsAPI: APIBase {
       },
       "required" : false
     }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1473,7 +1665,12 @@ public class UsersGroupsAPI: APIBase {
     "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1514,7 +1711,12 @@ public class UsersGroupsAPI: APIBase {
       },
       "required" : false
     }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1706,7 +1908,8 @@ public class UsersGroupsAPI: APIBase {
     },
     "member_count" : 0,
     "message_of_the_day" : "message_of_the_day",
-    "status" : "open"
+    "status" : "open",
+    "tags" : [ "tags", "tags" ]
   }, {
     "template" : "template",
     "parent" : "parent",
@@ -1721,7 +1924,8 @@ public class UsersGroupsAPI: APIBase {
     },
     "member_count" : 0,
     "message_of_the_day" : "message_of_the_day",
-    "status" : "open"
+    "status" : "open",
+    "tags" : [ "tags", "tags" ]
   } ],
   "first" : true
 }}]
@@ -1826,6 +2030,7 @@ public class UsersGroupsAPI: APIBase {
     /**
      Update a group
      - PUT /users/groups/{uniqueName}
+     - If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it.
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -2016,7 +2221,12 @@ public class UsersGroupsAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -2057,7 +2267,12 @@ public class UsersGroupsAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -2148,7 +2363,12 @@ public class UsersGroupsAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -2189,7 +2409,12 @@ public class UsersGroupsAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {

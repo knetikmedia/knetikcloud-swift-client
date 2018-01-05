@@ -796,9 +796,11 @@ class Decoders {
                 instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.enabled = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["enabled"])
                 instance.endDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["end_date"])
+                instance.evaluationCount = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["evaluation_count"])
                 instance.eventName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["event_name"])
                 instance.id = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["id"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.runCount = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["run_count"])
                 instance.sort = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sort"])
                 instance.startDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["start_date"])
                 instance.systemRule = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["system_rule"])
@@ -1446,6 +1448,7 @@ class Decoders {
                 instance.active = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["active"])
                 instance.code = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["code"])
                 instance.createdDate = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["created_date"])
+                instance.defaultCurrency = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["default_currency"])
                 instance.factor = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["factor"])
                 instance.icon = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["icon"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
@@ -1948,13 +1951,13 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = GroupMemberResource()
                 instance.additionalProperties = Decoders.decodeOptional(clazz: Dictionary.self, source: sourceDictionary["additional_properties"])
-                instance.avatarUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["avatar_url"])
-                instance.displayName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["display_name"])
-                instance.id = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["id"])
+                instance.group = Decoders.decodeOptional(clazz: SimpleGroupResource.self, source: sourceDictionary["group"])
+                instance.implicit = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["implicit"])
+                instance.membershipId = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["membership_id"])
                 instance.order = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["order"])
                 instance.status = GroupMemberResource.Status(rawValue: (sourceDictionary["status"] as? String) ?? "") 
                 instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
-                instance.username = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["username"])
+                instance.user = Decoders.decodeOptional(clazz: SimpleUserResource.self, source: sourceDictionary["user"])
                 return instance
             }
 
@@ -1975,6 +1978,7 @@ class Decoders {
                 instance.parent = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["parent"])
                 instance.status = GroupResource.Status(rawValue: (sourceDictionary["status"] as? String) ?? "") 
                 instance.subMemberCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["sub_member_count"])
+                instance.tags = Decoders.decodeOptional(clazz: Array.self, source: sourceDictionary["tags"])
                 instance.template = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["template"])
                 instance.uniqueName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_name"])
                 return instance
@@ -4554,8 +4558,13 @@ class Decoders {
             Decoders.addDecoder(clazz: PropertyDefinitionResource.self) { (source: AnyObject) -> PropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = PropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 return instance
@@ -4996,6 +5005,20 @@ class Decoders {
                 let instance = SettingOption()
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
                 instance.value = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["value"])
+                return instance
+            }
+
+
+            // Decoder for [SimpleGroupResource]
+            Decoders.addDecoder(clazz: [SimpleGroupResource].self) { (source: AnyObject) -> [SimpleGroupResource] in
+                return Decoders.decode(clazz: [SimpleGroupResource].self, source: source)
+            }
+            // Decoder for SimpleGroupResource
+            Decoders.addDecoder(clazz: SimpleGroupResource.self) { (source: AnyObject) -> SimpleGroupResource in
+                let sourceDictionary = source as! [NSObject:AnyObject]
+                let instance = SimpleGroupResource()
+                instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.uniqueName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["unique_name"])
                 return instance
             }
 
@@ -6058,8 +6081,13 @@ class Decoders {
             Decoders.addDecoder(clazz: AudioPropertyDefinitionResource.self) { (source: AnyObject) -> AudioPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = AudioPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
@@ -6091,8 +6119,13 @@ class Decoders {
             Decoders.addDecoder(clazz: BooleanPropertyDefinitionResource.self) { (source: AnyObject) -> BooleanPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = BooleanPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 return instance
@@ -6116,8 +6149,7 @@ class Decoders {
                 instance.synchronous = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["synchronous"])
                 instance.timestamp = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["timestamp"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
-                instance.customerSetup = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["customer_setup"])
-                instance.customerTeardown = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["customer_teardown"])
+                instance.teardown = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["teardown"])
                 return instance
             }
 
@@ -6159,8 +6191,13 @@ class Decoders {
             Decoders.addDecoder(clazz: DatePropertyDefinitionResource.self) { (source: AnyObject) -> DatePropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = DatePropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.max = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max"])
@@ -6191,8 +6228,13 @@ class Decoders {
             Decoders.addDecoder(clazz: DoublePropertyDefinitionResource.self) { (source: AnyObject) -> DoublePropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = DoublePropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.max = Decoders.decodeOptional(clazz: Double.self, source: sourceDictionary["max"])
@@ -6265,8 +6307,13 @@ class Decoders {
             Decoders.addDecoder(clazz: FileGroupPropertyDefinitionResource.self) { (source: AnyObject) -> FileGroupPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = FileGroupPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
@@ -6302,8 +6349,13 @@ class Decoders {
             Decoders.addDecoder(clazz: FilePropertyDefinitionResource.self) { (source: AnyObject) -> FilePropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = FilePropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
@@ -6334,8 +6386,13 @@ class Decoders {
             Decoders.addDecoder(clazz: FormattedTextPropertyDefinitionResource.self) { (source: AnyObject) -> FormattedTextPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = FormattedTextPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
@@ -6382,8 +6439,13 @@ class Decoders {
             Decoders.addDecoder(clazz: ImagePropertyDefinitionResource.self) { (source: AnyObject) -> ImagePropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = ImagePropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
@@ -6417,8 +6479,13 @@ class Decoders {
             Decoders.addDecoder(clazz: IntegerPropertyDefinitionResource.self) { (source: AnyObject) -> IntegerPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = IntegerPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.max = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max"])
@@ -6464,8 +6531,13 @@ class Decoders {
             Decoders.addDecoder(clazz: ListPropertyDefinitionResource.self) { (source: AnyObject) -> ListPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = ListPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.maxCount = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_count"])
@@ -6520,8 +6592,13 @@ class Decoders {
             Decoders.addDecoder(clazz: LongPropertyDefinitionResource.self) { (source: AnyObject) -> LongPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = LongPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.max = Decoders.decodeOptional(clazz: Int64.self, source: sourceDictionary["max"])
@@ -6552,8 +6629,13 @@ class Decoders {
             Decoders.addDecoder(clazz: MapPropertyDefinitionResource.self) { (source: AnyObject) -> MapPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = MapPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.allowAdditional = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["allow_additional"])
@@ -6742,8 +6824,13 @@ class Decoders {
             Decoders.addDecoder(clazz: TextPropertyDefinitionResource.self) { (source: AnyObject) -> TextPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = TextPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.maxLength = Decoders.decodeOptional(clazz: Int32.self, source: sourceDictionary["max_length"])
@@ -6794,8 +6881,13 @@ class Decoders {
             Decoders.addDecoder(clazz: VideoPropertyDefinitionResource.self) { (source: AnyObject) -> VideoPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = VideoPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
@@ -6831,8 +6923,13 @@ class Decoders {
             Decoders.addDecoder(clazz: AudioGroupPropertyDefinitionResource.self) { (source: AnyObject) -> AudioGroupPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = AudioGroupPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
@@ -6963,8 +7060,13 @@ class Decoders {
             Decoders.addDecoder(clazz: ImageGroupPropertyDefinitionResource.self) { (source: AnyObject) -> ImageGroupPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = ImageGroupPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])
@@ -7092,8 +7194,13 @@ class Decoders {
             Decoders.addDecoder(clazz: VideoGroupPropertyDefinitionResource.self) { (source: AnyObject) -> VideoGroupPropertyDefinitionResource in
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = VideoGroupPropertyDefinitionResource()
+                instance.description = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["description"])
                 instance.fieldList = Decoders.decodeOptional(clazz: PropertyFieldListResource.self, source: sourceDictionary["field_list"])
+                instance.friendlyName = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["friendly_name"])
                 instance.name = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["name"])
+                instance.optionLabelPath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_label_path"])
+                instance.optionValuePath = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["option_value_path"])
+                instance.optionsUrl = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["options_url"])
                 instance._required = Decoders.decodeOptional(clazz: Bool.self, source: sourceDictionary["required"])
                 instance.type = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["type"])
                 instance.fileType = Decoders.decodeOptional(clazz: String.self, source: sourceDictionary["file_type"])

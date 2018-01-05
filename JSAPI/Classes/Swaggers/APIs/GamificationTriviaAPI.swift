@@ -329,7 +329,12 @@ public class GamificationTriviaAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "question_property" : {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -372,7 +377,12 @@ public class GamificationTriviaAPI: APIBase {
   },
   "allow_additional" : false,
   "answer_property" : {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -418,7 +428,12 @@ public class GamificationTriviaAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -459,7 +474,12 @@ public class GamificationTriviaAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -1200,7 +1220,12 @@ public class GamificationTriviaAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "question_property" : {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -1243,7 +1268,12 @@ public class GamificationTriviaAPI: APIBase {
   },
   "allow_additional" : false,
   "answer_property" : {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -1289,7 +1319,12 @@ public class GamificationTriviaAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -1330,7 +1365,12 @@ public class GamificationTriviaAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -1441,7 +1481,12 @@ public class GamificationTriviaAPI: APIBase {
   "number_of_elements" : 5,
   "content" : [ {
     "question_property" : {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1484,7 +1529,12 @@ public class GamificationTriviaAPI: APIBase {
     },
     "allow_additional" : false,
     "answer_property" : {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1530,7 +1580,12 @@ public class GamificationTriviaAPI: APIBase {
     "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1571,7 +1626,12 @@ public class GamificationTriviaAPI: APIBase {
       },
       "required" : false
     }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1614,7 +1674,12 @@ public class GamificationTriviaAPI: APIBase {
     } ]
   }, {
     "question_property" : {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1657,7 +1722,12 @@ public class GamificationTriviaAPI: APIBase {
     },
     "allow_additional" : false,
     "answer_property" : {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1703,7 +1773,12 @@ public class GamificationTriviaAPI: APIBase {
     "id" : "id",
     "updated_date" : 6,
     "properties" : [ {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -1744,7 +1819,12 @@ public class GamificationTriviaAPI: APIBase {
       },
       "required" : false
     }, {
+      "friendly_name" : "friendly_name",
+      "option_value_path" : "path.to.value",
+      "option_label_path" : "path.to.label",
       "name" : "name",
+      "description" : "description",
+      "options_url" : "options_url",
       "type" : "type",
       "field_list" : {
         "property_definition_fields" : [ {
@@ -2499,7 +2579,12 @@ public class GamificationTriviaAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "question_property" : {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -2542,7 +2627,12 @@ public class GamificationTriviaAPI: APIBase {
   },
   "allow_additional" : false,
   "answer_property" : {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -2588,7 +2678,12 @@ public class GamificationTriviaAPI: APIBase {
   "id" : "id",
   "updated_date" : 6,
   "properties" : [ {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {
@@ -2629,7 +2724,12 @@ public class GamificationTriviaAPI: APIBase {
     },
     "required" : false
   }, {
+    "friendly_name" : "friendly_name",
+    "option_value_path" : "path.to.value",
+    "option_label_path" : "path.to.label",
     "name" : "name",
+    "description" : "description",
+    "options_url" : "options_url",
     "type" : "type",
     "field_list" : {
       "property_definition_fields" : [ {

@@ -39,6 +39,7 @@ public class CurrenciesAPI: APIBase {
   "active" : false,
   "created_date" : 0,
   "updated_date" : 1,
+  "default_currency" : false,
   "factor" : 6.02745618307040320615897144307382404804229736328125,
   "type" : "real"
 }}]
@@ -105,6 +106,7 @@ public class CurrenciesAPI: APIBase {
     /**
      List and search currencies
      
+     - parameter filterDefault: (query) Filter for the one currency that is set as default (true), or all that are not (false) (optional)
      - parameter filterEnabledCurrencies: (query) Filter for alternate currencies setup explicitely in system config (optional)
      - parameter filterType: (query) Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
@@ -112,8 +114,8 @@ public class CurrenciesAPI: APIBase {
      - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to name:ASC)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func getCurrencies(filterEnabledCurrencies filterEnabledCurrencies: Bool? = nil, filterType: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceCurrencyResource?, error: ErrorType?) -> Void)) {
-        getCurrenciesWithRequestBuilder(filterEnabledCurrencies: filterEnabledCurrencies, filterType: filterType, size: size, page: page, order: order).execute { (response, error) -> Void in
+    public class func getCurrencies(filterDefault filterDefault: Bool? = nil, filterEnabledCurrencies: Bool? = nil, filterType: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceCurrencyResource?, error: ErrorType?) -> Void)) {
+        getCurrenciesWithRequestBuilder(filterDefault: filterDefault, filterEnabledCurrencies: filterEnabledCurrencies, filterType: filterType, size: size, page: page, order: order).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
     }
@@ -157,6 +159,7 @@ public class CurrenciesAPI: APIBase {
     "active" : false,
     "created_date" : 0,
     "updated_date" : 1,
+    "default_currency" : false,
     "factor" : 6.02745618307040320615897144307382404804229736328125,
     "type" : "real"
   }, {
@@ -166,12 +169,14 @@ public class CurrenciesAPI: APIBase {
     "active" : false,
     "created_date" : 0,
     "updated_date" : 1,
+    "default_currency" : false,
     "factor" : 6.02745618307040320615897144307382404804229736328125,
     "type" : "real"
   } ],
   "first" : true
 }}]
      
+     - parameter filterDefault: (query) Filter for the one currency that is set as default (true), or all that are not (false) (optional)
      - parameter filterEnabledCurrencies: (query) Filter for alternate currencies setup explicitely in system config (optional)
      - parameter filterType: (query) Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
@@ -180,11 +185,12 @@ public class CurrenciesAPI: APIBase {
 
      - returns: RequestBuilder<PageResourceCurrencyResource> 
      */
-    public class func getCurrenciesWithRequestBuilder(filterEnabledCurrencies filterEnabledCurrencies: Bool? = nil, filterType: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceCurrencyResource> {
+    public class func getCurrenciesWithRequestBuilder(filterDefault filterDefault: Bool? = nil, filterEnabledCurrencies: Bool? = nil, filterType: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil) -> RequestBuilder<PageResourceCurrencyResource> {
         let path = "/currencies"
         let URLString = JSAPIAPI.basePath + path
 
         let nillableParameters: [String:AnyObject?] = [
+            "filter_default": filterDefault,
             "filter_enabled_currencies": filterEnabledCurrencies,
             "filter_type": filterType,
             "size": size?.encodeToJSON(),
@@ -230,6 +236,7 @@ public class CurrenciesAPI: APIBase {
   "active" : false,
   "created_date" : 0,
   "updated_date" : 1,
+  "default_currency" : false,
   "factor" : 6.02745618307040320615897144307382404804229736328125,
   "type" : "real"
 }}]
