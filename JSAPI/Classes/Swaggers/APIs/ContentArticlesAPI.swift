@@ -26,7 +26,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      Create a new article
      - POST /content/articles
-     - Articles are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end.
+     - Articles are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end.<br><br><b>Permissions:</b> ARTICLES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -86,7 +86,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      Create an article template
      - POST /content/articles/templates
-     - Article Templates define a type of article and the properties they have
+     - Article Templates define a type of article and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -226,6 +226,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      Delete an existing article
      - DELETE /content/articles/{id}
+     - <b>Permissions Needed:</b> ARTICLES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -270,7 +271,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      Delete an article template
      - DELETE /content/articles/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -317,6 +318,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      Get a single article
      - GET /content/articles/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -380,6 +382,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      Get a single article template
      - GET /content/articles/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or ARTICLES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -525,6 +528,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      List and search article templates
      - GET /content/articles/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or ARTICLES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -804,7 +808,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      List and search articles
      - GET /content/articles
-     - Get a list of articles with optional filtering. Assets will not be filled in on the resources returned. Use 'Get a single article' to retrieve the full resource with assets for a given item as needed.
+     - Get a list of articles with optional filtering. Assets will not be filled in on the resources returned. Use 'Get a single article' to retrieve the full resource with assets for a given item as needed. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -929,6 +933,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      Update an existing article
      - PUT /content/articles/{id}
+     - <b>Permissions Needed:</b> ARTICLES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -991,6 +996,7 @@ public class ContentArticlesAPI: APIBase {
     /**
      Update an article template
      - PUT /content/articles/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

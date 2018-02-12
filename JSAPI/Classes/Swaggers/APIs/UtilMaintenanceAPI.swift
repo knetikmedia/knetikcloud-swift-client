@@ -25,6 +25,7 @@ public class UtilMaintenanceAPI: APIBase {
     /**
      Delete maintenance info
      - DELETE /maintenance
+     - <b>Permissions Needed:</b> MAINTENANCE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -64,7 +65,7 @@ public class UtilMaintenanceAPI: APIBase {
     /**
      Get current maintenance info
      - GET /maintenance
-     - Get current maintenance info. 404 if no maintenance.
+     - Get current maintenance info. 404 if no maintenance. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -110,6 +111,7 @@ public class UtilMaintenanceAPI: APIBase {
     /**
      Set current maintenance info
      - POST /maintenance
+     - <b>Permissions Needed:</b> MAINTENANCE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -149,6 +151,7 @@ public class UtilMaintenanceAPI: APIBase {
     /**
      Update current maintenance info
      - PUT /maintenance
+     - <b>Permissions Needed:</b> MAINTENANCE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

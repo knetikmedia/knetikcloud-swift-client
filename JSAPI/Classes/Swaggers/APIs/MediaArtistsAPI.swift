@@ -26,7 +26,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Adds a new artist in the system
      - POST /media/artists
-     - Adds a new artist in the system. Use specific media contributions endpoint to add contributions
+     - Adds a new artist in the system. Use specific media contributions endpoint to add contributions. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -105,7 +105,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Create an artist template
      - POST /media/artists/templates
-     - Artist Templates define a type of artist and the properties they have
+     - Artist Templates define a type of artist and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -245,6 +245,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Removes an artist from the system IF no resources are attached to it
      - DELETE /media/artists/{id}
+     - <b>Permissions Needed:</b> ARTISTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -289,7 +290,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Delete an artist template
      - DELETE /media/artists/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -337,6 +338,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Loads a specific artist details
      - GET /media/artists/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -422,6 +424,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Get a single artist template
      - GET /media/artists/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or ARTISTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -567,6 +570,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      List and search artist templates
      - GET /media/artists/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or ARTISTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -841,6 +845,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Search for artists
      - GET /media/artists
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -993,6 +998,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Modifies an artist details
      - PUT /media/artists/{id}
+     - <b>Permissions Needed:</b> ARTISTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1035,6 +1041,7 @@ public class MediaArtistsAPI: APIBase {
     /**
      Update an artist template
      - PUT /media/artists/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

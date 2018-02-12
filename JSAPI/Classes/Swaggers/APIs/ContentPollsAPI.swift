@@ -27,6 +27,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Add your vote to a poll
      - POST /media/polls/{id}/response
+     - <b>Permissions Needed:</b> POLLS_ADMIN or POLLS_USER
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -40,7 +41,7 @@ public class ContentPollsAPI: APIBase {
   "id" : "id",
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }
@@ -80,7 +81,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Create a new poll
      - POST /media/polls
-     - Polls are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end.
+     - Polls are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end. <br><br><b>Permissions Needed:</b> POLLS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -149,7 +150,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Create a poll template
      - POST /media/polls/templates
-     - Poll templates define a type of poll and the properties they have
+     - Poll templates define a type of poll and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -289,6 +290,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Delete an existing poll
      - DELETE /media/polls/{id}
+     - <b>Permissions Needed:</b> POLLS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -333,7 +335,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Delete a poll template
      - DELETE /media/polls/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -380,6 +382,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Get a single poll
      - GET /media/polls/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -452,6 +455,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Get poll answer
      - GET /media/polls/{id}/response
+     - <b>Permissions Needed:</b> POLLS_ADMIN or POLLS_USER
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -465,7 +469,7 @@ public class ContentPollsAPI: APIBase {
   "id" : "id",
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }
@@ -507,6 +511,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Get a single poll template
      - GET /media/polls/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or POLLS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -652,6 +657,7 @@ public class ContentPollsAPI: APIBase {
     /**
      List and search poll templates
      - GET /media/polls/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or POLLS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -928,7 +934,7 @@ public class ContentPollsAPI: APIBase {
     /**
      List and search polls
      - GET /media/polls
-     - Get a list of polls with optional filtering. Assets will not be filled in on the resources returned. Use 'Get a single poll' to retrieve the full resource with assets for a given item as needed.
+     - Get a list of polls with optional filtering. Assets will not be filled in on the resources returned. Use 'Get a single poll' to retrieve the full resource with assets for a given item as needed. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1065,6 +1071,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Update an existing poll
      - PUT /media/polls/{id}
+     - <b>Permissions Needed:</b> POLLS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1136,6 +1143,7 @@ public class ContentPollsAPI: APIBase {
     /**
      Update a poll template
      - PUT /media/polls/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

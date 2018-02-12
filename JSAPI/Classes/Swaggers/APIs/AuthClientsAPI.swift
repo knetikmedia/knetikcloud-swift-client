@@ -26,6 +26,7 @@ public class AuthClientsAPI: APIBase {
     /**
      Create a new client
      - POST /auth/clients
+     - <b>Permissions Needed:</b> CLIENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -77,6 +78,7 @@ public class AuthClientsAPI: APIBase {
     /**
      Delete a client
      - DELETE /auth/clients/{clientKey}
+     - <b>Permissions Needed:</b> CLIENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -120,6 +122,7 @@ public class AuthClientsAPI: APIBase {
     /**
      Get a single client
      - GET /auth/clients/{clientKey}
+     - <b>Permissions Needed:</b> CLIENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -174,6 +177,7 @@ public class AuthClientsAPI: APIBase {
     /**
      List available client grant types
      - GET /auth/clients/grant-types
+     - <b>Permissions Needed:</b> CLIENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -223,6 +227,7 @@ public class AuthClientsAPI: APIBase {
     /**
      List and search clients
      - GET /auth/clients
+     - <b>Permissions Needed:</b> CLIENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -319,6 +324,7 @@ public class AuthClientsAPI: APIBase {
     /**
      Set grant types for a client
      - PUT /auth/clients/{clientKey}/grant-types
+     - <b>Permissions Needed:</b> CLIENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -361,6 +367,7 @@ public class AuthClientsAPI: APIBase {
     /**
      Set redirect uris for a client
      - PUT /auth/clients/{clientKey}/redirect-uris
+     - <b>Permissions Needed:</b> CLIENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -403,6 +410,7 @@ public class AuthClientsAPI: APIBase {
     /**
      Update a client
      - PUT /auth/clients/{clientKey}
+     - <b>Permissions Needed:</b> CLIENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

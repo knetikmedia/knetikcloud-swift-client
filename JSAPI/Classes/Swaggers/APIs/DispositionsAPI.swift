@@ -26,6 +26,7 @@ public class DispositionsAPI: APIBase {
     /**
      Add a new disposition
      - POST /dispositions
+     - <b>Permissions Needed:</b> DISPOSITIONS_USER and user, or DISPOSITIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -40,7 +41,7 @@ public class DispositionsAPI: APIBase {
   "id" : 6,
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }
@@ -78,6 +79,7 @@ public class DispositionsAPI: APIBase {
     /**
      Delete a disposition
      - DELETE /dispositions/{id}
+     - <b>Permissions Needed:</b> DISPOSITIONS_USER and owner, or DISPOSITIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -121,6 +123,7 @@ public class DispositionsAPI: APIBase {
     /**
      Returns a disposition
      - GET /dispositions/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -135,7 +138,7 @@ public class DispositionsAPI: APIBase {
   "id" : 6,
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }
@@ -178,6 +181,7 @@ public class DispositionsAPI: APIBase {
     /**
      Returns a list of disposition counts
      - GET /dispositions/count
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -235,6 +239,7 @@ public class DispositionsAPI: APIBase {
     /**
      Returns a page of dispositions
      - GET /dispositions
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -271,7 +276,7 @@ public class DispositionsAPI: APIBase {
     "id" : 6,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }
@@ -283,7 +288,7 @@ public class DispositionsAPI: APIBase {
     "id" : 6,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }

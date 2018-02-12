@@ -47,6 +47,7 @@ public class ReportingOrdersAPI: APIBase {
     /**
      Retrieve invoice counts aggregated by time ranges
      - GET /reporting/orders/count/{currencyCode}
+     - <b>Permissions Needed:</b> REPORTING_ORDERS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

@@ -27,6 +27,7 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Returns the user's wallet for the given currency code
      - GET /users/{userId}/wallets/{currencyCode}
+     - <b>Permissions Needed:</b> WALLETS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -87,6 +88,7 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Retrieve a user's wallet transactions
      - GET /users/{userId}/wallets/{currencyCode}/transactions
+     - <b>Permissions Needed:</b> WALLETS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -131,7 +133,7 @@ public class PaymentsWalletsAPI: APIBase {
     "create_date" : 6,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -153,7 +155,7 @@ public class PaymentsWalletsAPI: APIBase {
     "create_date" : 6,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -216,6 +218,7 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      List all of a user's wallets
      - GET /users/{userId}/wallets
+     - <b>Permissions Needed:</b> WALLETS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -271,6 +274,7 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Retrieves a summation of wallet balances by currency code
      - GET /wallets/totals
+     - <b>Permissions Needed:</b> WALLETS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -360,6 +364,7 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Retrieve wallet transactions across the system
      - GET /wallets/transactions
+     - <b>Permissions Needed:</b> WALLETS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -404,7 +409,7 @@ public class PaymentsWalletsAPI: APIBase {
     "create_date" : 6,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -426,7 +431,7 @@ public class PaymentsWalletsAPI: APIBase {
     "create_date" : 6,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -495,6 +500,7 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Retrieve a list of wallets across the system
      - GET /wallets
+     - <b>Permissions Needed:</b> WALLETS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -582,6 +588,7 @@ public class PaymentsWalletsAPI: APIBase {
     /**
      Updates the balance for a user's wallet
      - PUT /users/{userId}/wallets/{currencyCode}/balance
+     - <b>Permissions Needed:</b> WALLETS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -604,7 +611,7 @@ public class PaymentsWalletsAPI: APIBase {
   "create_date" : 6,
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },

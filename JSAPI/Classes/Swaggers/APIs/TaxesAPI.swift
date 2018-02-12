@@ -26,6 +26,7 @@ public class TaxesAPI: APIBase {
     /**
      Create a country tax
      - POST /tax/countries
+     - <b>Permissions Needed:</b> TAX_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -72,6 +73,7 @@ public class TaxesAPI: APIBase {
     /**
      Create a state tax
      - POST /tax/countries/{country_code_iso3}/states
+     - <b>Permissions Needed:</b> TAX_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -121,6 +123,7 @@ public class TaxesAPI: APIBase {
     /**
      Delete an existing tax
      - DELETE /tax/countries/{country_code_iso3}
+     - <b>Permissions Needed:</b> TAX_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -165,6 +168,7 @@ public class TaxesAPI: APIBase {
     /**
      Delete an existing state tax
      - DELETE /tax/countries/{country_code_iso3}/states/{stateCode}
+     - <b>Permissions Needed:</b> TAX_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -210,6 +214,7 @@ public class TaxesAPI: APIBase {
     /**
      Get a single tax
      - GET /tax/countries/{country_code_iso3}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -261,7 +266,7 @@ public class TaxesAPI: APIBase {
     /**
      List and search taxes
      - GET /tax/countries
-     - Get a list of taxes
+     - <b>Permissions Needed:</b> TAX_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -346,6 +351,7 @@ public class TaxesAPI: APIBase {
     /**
      Get a single state tax
      - GET /tax/countries/{country_code_iso3}/states/{stateCode}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -401,7 +407,7 @@ public class TaxesAPI: APIBase {
     /**
      List and search taxes across all countries
      - GET /tax/states
-     - Get a list of taxes
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -492,7 +498,7 @@ public class TaxesAPI: APIBase {
     /**
      List and search taxes within a country
      - GET /tax/countries/{country_code_iso3}/states
-     - Get a list of taxes
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -583,6 +589,7 @@ public class TaxesAPI: APIBase {
     /**
      Create or update a tax
      - PUT /tax/countries/{country_code_iso3}
+     - <b>Permissions Needed:</b> TAX_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -632,6 +639,7 @@ public class TaxesAPI: APIBase {
     /**
      Create or update a state tax
      - PUT /tax/countries/{country_code_iso3}/states/{stateCode}
+     - <b>Permissions Needed:</b> TAX_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

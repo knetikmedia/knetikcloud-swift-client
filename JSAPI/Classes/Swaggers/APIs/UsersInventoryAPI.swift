@@ -27,7 +27,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Adds an item to the user inventory
      - POST /users/{id}/inventory
-     - The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time
+     - The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time. <br><br><b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -111,7 +111,7 @@ public class UsersInventoryAPI: APIBase {
   } ],
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -154,7 +154,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Check for access to an item without consuming
      - GET /users/{userId}/entitlements/{itemId}/check
-     - Useful for pre-check and accounts for all various buisness rules
+     - Useful for pre-check and accounts for all various buisness rules. <br><br><b>Permissions Needed:</b> INVENTORY_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -204,6 +204,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Create an entitlement item
      - POST /entitlements
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -245,7 +246,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Create an entitlement template
      - POST /entitlements/templates
-     - Entitlement templates define a type of entitlement and the properties they have
+     - Entitlement templates define a type of entitlement and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -400,6 +401,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Delete an entitlement item
      - DELETE /entitlements/{entitlementId}
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -444,7 +446,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Delete an entitlement template
      - DELETE /entitlements/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -491,6 +493,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Get a single entitlement item
      - GET /entitlements/{entitlementId}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -538,6 +541,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      List and search entitlement items
      - GET /entitlements
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -613,6 +617,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Get a single entitlement template
      - GET /entitlements/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -773,6 +778,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      List and search entitlement templates
      - GET /entitlements/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1082,6 +1088,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      List the user inventory entries for a given user
      - GET /users/{id}/inventory
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1122,7 +1129,7 @@ public class UsersInventoryAPI: APIBase {
     "item_type_hint" : "item_type_hint",
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -1139,7 +1146,7 @@ public class UsersInventoryAPI: APIBase {
     "item_type_hint" : "item_type_hint",
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -1192,7 +1199,7 @@ public class UsersInventoryAPI: APIBase {
      - parameter id: (path) The id of the user inventory 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func getUserInventory(userId userId: Int32, id: Int32, completion: ((data: UserInventoryResource?, error: ErrorType?) -> Void)) {
+    public class func getUserInventory(userId userId: String, id: Int32, completion: ((data: UserInventoryResource?, error: ErrorType?) -> Void)) {
         getUserInventoryWithRequestBuilder(userId: userId, id: id).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
@@ -1202,6 +1209,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Get an inventory entry
      - GET /users/{userId}/inventory/{id}
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1220,7 +1228,7 @@ public class UsersInventoryAPI: APIBase {
   "item_type_hint" : "item_type_hint",
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -1232,7 +1240,7 @@ public class UsersInventoryAPI: APIBase {
 
      - returns: RequestBuilder<UserInventoryResource> 
      */
-    public class func getUserInventoryWithRequestBuilder(userId userId: Int32, id: Int32) -> RequestBuilder<UserInventoryResource> {
+    public class func getUserInventoryWithRequestBuilder(userId userId: String, id: Int32) -> RequestBuilder<UserInventoryResource> {
         var path = "/users/{userId}/inventory/{id}"
         path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{id}", withString: "\(id)", options: .LiteralSearch, range: nil)
@@ -1268,6 +1276,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      List the log entries for this inventory entry
      - GET /users/{userId}/inventory/{id}/log
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1306,7 +1315,7 @@ public class UsersInventoryAPI: APIBase {
     "type" : "type",
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -1322,7 +1331,7 @@ public class UsersInventoryAPI: APIBase {
     "type" : "type",
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -1382,6 +1391,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      List the user inventory entries for all users
      - GET /inventories
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1422,7 +1432,7 @@ public class UsersInventoryAPI: APIBase {
     "item_type_hint" : "item_type_hint",
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -1439,7 +1449,7 @@ public class UsersInventoryAPI: APIBase {
     "item_type_hint" : "item_type_hint",
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -1500,6 +1510,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Grant an entitlement
      - POST /users/{userId}/entitlements
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1543,6 +1554,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Update an entitlement item
      - PUT /entitlements/{entitlementId}
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1586,6 +1598,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Update an entitlement template
      - PUT /entitlements/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1744,6 +1757,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Set the behavior data for an inventory entry
      - PUT /users/{userId}/inventory/{id}/behavior-data
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1789,7 +1803,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Set the expiration date
      - PUT /users/{userId}/inventory/{id}/expires
-     - Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill)
+     - Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill). <br><br><b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1835,6 +1849,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Set the status for an inventory entry
      - PUT /users/{userId}/inventory/{id}/status
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1881,6 +1896,7 @@ public class UsersInventoryAPI: APIBase {
     /**
      Use an item
      - POST /users/{userId}/entitlements/{itemId}/use
+     - <b>Permissions Needed:</b> INVENTORY_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

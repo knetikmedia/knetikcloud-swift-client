@@ -27,6 +27,7 @@ public class DevicesAPI: APIBase {
     /**
      Add device users
      - POST /devices/{id}/users
+     - <b>Permissions Needed:</b> DEVICES_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -36,7 +37,7 @@ public class DevicesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "owner" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -46,12 +47,12 @@ public class DevicesAPI: APIBase {
   "device_type" : "device_type",
   "users" : [ {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }, {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   } ],
@@ -106,6 +107,7 @@ public class DevicesAPI: APIBase {
     /**
      Create a device
      - POST /devices
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -115,7 +117,7 @@ public class DevicesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "owner" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -125,12 +127,12 @@ public class DevicesAPI: APIBase {
   "device_type" : "device_type",
   "users" : [ {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }, {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   } ],
@@ -183,7 +185,7 @@ public class DevicesAPI: APIBase {
     /**
      Create a device template
      - POST /devices/templates
-     - Device Templates define a type of device and the properties they have
+     - Device Templates define a type of device and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -323,6 +325,7 @@ public class DevicesAPI: APIBase {
     /**
      Delete a device
      - DELETE /devices/{id}
+     - <b>Permissions Needed:</b> DEVICES_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -367,7 +370,7 @@ public class DevicesAPI: APIBase {
     /**
      Delete an device template
      - DELETE /devices/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -415,6 +418,7 @@ public class DevicesAPI: APIBase {
     /**
      Delete a device user
      - DELETE /devices/{id}/users/{userId}
+     - <b>Permissions Needed:</b> DEVICES_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -461,6 +465,7 @@ public class DevicesAPI: APIBase {
     /**
      Delete all device users
      - DELETE /devices/{id}/users
+     - <b>Permissions Needed:</b> DEVICES_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -507,6 +512,7 @@ public class DevicesAPI: APIBase {
     /**
      Get a single device
      - GET /devices/{id}
+     - <b>Permissions Needed:</b> DEVICES_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -516,7 +522,7 @@ public class DevicesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "owner" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -526,12 +532,12 @@ public class DevicesAPI: APIBase {
   "device_type" : "device_type",
   "users" : [ {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }, {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   } ],
@@ -588,6 +594,7 @@ public class DevicesAPI: APIBase {
     /**
      Get a single device template
      - GET /devices/templates/{id}
+     - <b>Permissions Needed:</b> description
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -733,6 +740,7 @@ public class DevicesAPI: APIBase {
     /**
      List and search device templates
      - GET /devices/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or DEVICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1012,7 +1020,7 @@ public class DevicesAPI: APIBase {
     /**
      List and search devices
      - GET /devices
-     - Get a list of devices with optional filtering
+     - Get a list of devices with optional filtering. <br><br><b>Permissions Needed:</b> DEVICES_ADMIN or user
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1044,7 +1052,7 @@ public class DevicesAPI: APIBase {
   "content" : [ {
     "owner" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -1054,12 +1062,12 @@ public class DevicesAPI: APIBase {
     "device_type" : "device_type",
     "users" : [ {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }, {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     } ],
@@ -1081,7 +1089,7 @@ public class DevicesAPI: APIBase {
   }, {
     "owner" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -1091,12 +1099,12 @@ public class DevicesAPI: APIBase {
     "device_type" : "device_type",
     "users" : [ {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }, {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     } ],
@@ -1173,6 +1181,7 @@ public class DevicesAPI: APIBase {
     /**
      Update a device
      - PUT /devices/{id}
+     - <b>Permissions Needed:</b> CUSTOMERS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1182,7 +1191,7 @@ public class DevicesAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "owner" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -1192,12 +1201,12 @@ public class DevicesAPI: APIBase {
   "device_type" : "device_type",
   "users" : [ {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }, {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   } ],
@@ -1253,6 +1262,7 @@ public class DevicesAPI: APIBase {
     /**
      Update an device template
      - PUT /devices/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

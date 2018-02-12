@@ -26,6 +26,7 @@ public class AuthPermissionsAPI: APIBase {
     /**
      Create a new permission
      - POST /auth/permissions
+     - <b>Permissions Needed:</b> PERMISSIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -75,6 +76,7 @@ public class AuthPermissionsAPI: APIBase {
     /**
      Delete a permission
      - DELETE /auth/permissions/{permission}
+     - <b>Permissions Needed:</b> PERMISSIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -121,6 +123,7 @@ public class AuthPermissionsAPI: APIBase {
     /**
      Get a single permission
      - GET /auth/permissions/{permission}
+     - <b>Permissions Needed:</b> PERMISSIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -175,6 +178,7 @@ public class AuthPermissionsAPI: APIBase {
     /**
      List and search permissions
      - GET /auth/permissions
+     - <b>Permissions Needed:</b> PERMISSIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -265,6 +269,7 @@ public class AuthPermissionsAPI: APIBase {
     /**
      Update a permission
      - PUT /auth/permissions/{permission}
+     - <b>Permissions Needed:</b> PERMISSIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

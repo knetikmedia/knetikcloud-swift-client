@@ -26,7 +26,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     /**
      Create a rule
      - POST /bre/rules
-     - Rules define which actions to run when a given event verifies the specified condition. Full list of predicates and other type of expressions can be found at GET /bre/expressions/
+     - Rules define which actions to run when a given event verifies the specified condition. Full list of predicates and other type of expressions can be found at GET /bre/expressions/. <br><br><b>Permissions Needed:</b> BRE_RULE_ENGINE_RULES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -125,7 +125,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     /**
      Delete a rule
      - DELETE /bre/rules/{id}
-     - May fail if there are existing rules against it. Cannot delete core rules
+     - May fail if there are existing rules against it. Cannot delete core rules. <br><br><b>Permissions Needed:</b> BRE_RULE_ENGINE_RULES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -169,6 +169,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     /**
      Returns a string representation of the provided expression
      - POST /bre/rules/expression-as-string
+     - <b>Permissions Needed:</b> BRE_RULE_ENGINE_RULES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -209,6 +210,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     /**
      Get a single rule
      - GET /bre/rules/{id}
+     - <b>Permissions Needed:</b> BRE_RULE_ENGINE_RULES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -318,6 +320,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     /**
      List rules
      - GET /bre/rules
+     - <b>Permissions Needed:</b> BRE_RULE_ENGINE_RULES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -518,7 +521,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     /**
      Enable or disable a rule
      - PUT /bre/rules/{id}/enabled
-     - This is helpful for turning off systems rules which cannot be deleted or modified otherwise
+     - This is helpful for turning off systems rules which cannot be deleted or modified otherwise. <br><br><b>Permissions Needed:</b> BRE_RULE_ENGINE_RULES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -561,7 +564,7 @@ public class BRERuleEngineRulesAPI: APIBase {
     /**
      Update a rule
      - PUT /bre/rules/{id}
-     - Cannot update system rules
+     - Cannot update system rules. <br><br><b>Permissions Needed:</b> BRE_RULE_ENGINE_RULES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

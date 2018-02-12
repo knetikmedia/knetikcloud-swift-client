@@ -26,7 +26,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Create a challenge
      - POST /challenges
-     - Challenges do not run on their own.  They must be added to a campaign before events will spawn.
+     - Challenges do not run on their own.  They must be added to a campaign before events will spawn. <br><br><b>Permissions Needed:</b> CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -41,37 +41,37 @@ public class CampaignsChallengesAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "short_description" : "short_description",
@@ -133,6 +133,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Create a challenge activity
      - POST /challenges/{challengeId}/activities
+     - <b>Permissions Needed:</b> CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -146,37 +147,37 @@ public class CampaignsChallengesAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "settings" : [ {
@@ -192,9 +193,21 @@ public class CampaignsChallengesAPI: APIBase {
   } ],
   "challenge_id" : 6,
   "activity_id" : 0,
+  "core_settings" : {
+    "host_status_control" : false,
+    "boot_in_play" : false,
+    "leave_in_play" : false,
+    "join_in_play" : false,
+    "max_players" : 1,
+    "results_trust" : "none",
+    "custom_launch_address_allowed" : false,
+    "host_option" : "admin_only",
+    "custom_launch_address" : "custom_launch_address",
+    "min_players" : 5
+  },
   "entitlement" : {
-    "item_id" : 6,
-    "price" : 1.46581298050294517310021547018550336360931396484375,
+    "item_id" : 5,
+    "price" : 5.63737665663332876420099637471139430999755859375,
     "name" : "name",
     "sku" : "sku",
     "currency_code" : "currency_code"
@@ -204,7 +217,7 @@ public class CampaignsChallengesAPI: APIBase {
       "type" : "type"
     }
   },
-  "id" : 1
+  "id" : 5
 }}]
      
      - parameter challengeId: (path) The challenge id 
@@ -242,7 +255,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Create a challenge activity template
      - POST /challenge-activities/templates
-     - Challenge Activity Templates define a type of challenge activity and the properties they have
+     - Challenge Activity Templates define a type of challenge activity and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -382,7 +395,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Create a challenge template
      - POST /challenges/templates
-     - Challenge Templates define a type of challenge and the properties they have
+     - Challenge Templates define a type of challenge and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -522,6 +535,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Delete a challenge
      - DELETE /challenges/{id}
+     - <b>Permissions Needed:</b> CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -566,7 +580,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Delete a challenge activity
      - DELETE /challenges/{challengeId}/activities/{id}
-     - A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+     - A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. <br><br><b>Permissions Needed:</b> CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -613,7 +627,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Delete a challenge activity template
      - DELETE /challenge-activities/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -660,6 +674,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Delete a challenge event
      - DELETE /challenges/events/{id}
+     - <b>Permissions Needed:</b> CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -704,7 +719,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Delete a challenge template
      - DELETE /challenges/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -751,6 +766,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Retrieve a challenge
      - GET /challenges/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -765,37 +781,37 @@ public class CampaignsChallengesAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "short_description" : "short_description",
@@ -862,6 +878,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      List and search challenge activities
      - GET /challenges/{challengeId}/activities
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -946,7 +963,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Get a single challenge activity
      - GET /challenges/{challengeId}/activities/{id}
-     - A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+     - A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -960,37 +977,37 @@ public class CampaignsChallengesAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "settings" : [ {
@@ -1006,9 +1023,21 @@ public class CampaignsChallengesAPI: APIBase {
   } ],
   "challenge_id" : 6,
   "activity_id" : 0,
+  "core_settings" : {
+    "host_status_control" : false,
+    "boot_in_play" : false,
+    "leave_in_play" : false,
+    "join_in_play" : false,
+    "max_players" : 1,
+    "results_trust" : "none",
+    "custom_launch_address_allowed" : false,
+    "host_option" : "admin_only",
+    "custom_launch_address" : "custom_launch_address",
+    "min_players" : 5
+  },
   "entitlement" : {
-    "item_id" : 6,
-    "price" : 1.46581298050294517310021547018550336360931396484375,
+    "item_id" : 5,
+    "price" : 5.63737665663332876420099637471139430999755859375,
     "name" : "name",
     "sku" : "sku",
     "currency_code" : "currency_code"
@@ -1018,7 +1047,7 @@ public class CampaignsChallengesAPI: APIBase {
       "type" : "type"
     }
   },
-  "id" : 1
+  "id" : 5
 }}]
      
      - parameter id: (path) The challenge_activity id 
@@ -1059,6 +1088,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Get a single challenge activity template
      - GET /challenge-activities/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1204,6 +1234,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      List and search challenge activity templates
      - GET /challenge-activities/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1475,6 +1506,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Retrieve a single challenge event details
      - GET /challenges/events/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1531,6 +1563,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Retrieve a list of challenge events
      - GET /challenges/events
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1624,6 +1657,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Get a single challenge template
      - GET /challenges/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1769,6 +1803,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      List and search challenge templates
      - GET /challenges/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -2045,6 +2080,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Retrieve a list of challenges
      - GET /challenges
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -2081,37 +2117,37 @@ public class CampaignsChallengesAPI: APIBase {
       "unique_key" : "unique_key",
       "currency_rewards" : [ {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       }, {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       } ],
       "name" : "name",
-      "created_date" : 5,
-      "id" : 3,
+      "created_date" : 7,
+      "id" : 4,
       "long_description" : "long_description",
-      "max_placing" : 1,
-      "updated_date" : 1,
+      "max_placing" : 6,
+      "updated_date" : 7,
       "item_rewards" : [ {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       }, {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       } ]
     },
     "short_description" : "short_description",
@@ -2145,37 +2181,37 @@ public class CampaignsChallengesAPI: APIBase {
       "unique_key" : "unique_key",
       "currency_rewards" : [ {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       }, {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       } ],
       "name" : "name",
-      "created_date" : 5,
-      "id" : 3,
+      "created_date" : 7,
+      "id" : 4,
       "long_description" : "long_description",
-      "max_placing" : 1,
-      "updated_date" : 1,
+      "max_placing" : 6,
+      "updated_date" : 7,
       "item_rewards" : [ {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       }, {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       } ]
     },
     "short_description" : "short_description",
@@ -2253,7 +2289,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Update a challenge
      - PUT /challenges/{id}
-     - If the challenge is a copy, changes will propagate to all the related challenges
+     - If the challenge is a copy, changes will propagate to all the related challenges. <br><br><b>Permissions Needed:</b> CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -2268,37 +2304,37 @@ public class CampaignsChallengesAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "short_description" : "short_description",
@@ -2363,7 +2399,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Update a challenge activity
      - PUT /challenges/{challengeId}/activities/{id}
-     - A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+     - A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. <br><br><b>Permissions Needed:</b> CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -2377,37 +2413,37 @@ public class CampaignsChallengesAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "settings" : [ {
@@ -2423,9 +2459,21 @@ public class CampaignsChallengesAPI: APIBase {
   } ],
   "challenge_id" : 6,
   "activity_id" : 0,
+  "core_settings" : {
+    "host_status_control" : false,
+    "boot_in_play" : false,
+    "leave_in_play" : false,
+    "join_in_play" : false,
+    "max_players" : 1,
+    "results_trust" : "none",
+    "custom_launch_address_allowed" : false,
+    "host_option" : "admin_only",
+    "custom_launch_address" : "custom_launch_address",
+    "min_players" : 5
+  },
   "entitlement" : {
-    "item_id" : 6,
-    "price" : 1.46581298050294517310021547018550336360931396484375,
+    "item_id" : 5,
+    "price" : 5.63737665663332876420099637471139430999755859375,
     "name" : "name",
     "sku" : "sku",
     "currency_code" : "currency_code"
@@ -2435,7 +2483,7 @@ public class CampaignsChallengesAPI: APIBase {
       "type" : "type"
     }
   },
-  "id" : 1
+  "id" : 5
 }}]
      
      - parameter id: (path) The challenge_activity id 
@@ -2476,6 +2524,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Update an challenge activity template
      - PUT /challenge-activities/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -2618,6 +2667,7 @@ public class CampaignsChallengesAPI: APIBase {
     /**
      Update a challenge template
      - PUT /challenges/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

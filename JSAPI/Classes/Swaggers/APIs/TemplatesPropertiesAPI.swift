@@ -26,6 +26,7 @@ public class TemplatesPropertiesAPI: APIBase {
     /**
      Get details for a template property type
      - GET /templates/properties/{type}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -105,6 +106,7 @@ public class TemplatesPropertiesAPI: APIBase {
     /**
      List template property types
      - GET /templates/properties
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

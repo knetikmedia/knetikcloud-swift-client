@@ -26,6 +26,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Creates a subscription item and associated plans
      - POST /subscriptions
+     - <b>Permissions Needed:</b> SUBSCRIPTIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -161,7 +162,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Create a subscription template
      - POST /subscriptions/templates
-     - Subscription Templates define a type of subscription and the properties they have.
+     - Subscription Templates define a type of subscription and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -402,7 +403,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Delete a subscription plan
      - DELETE /subscriptions/{id}/plans/{planId}
-     - Must not be locked or a migration target
+     - Must not be locked or a migration target. <br><br><b>Permissions Needed:</b> SUBSCRIPTIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -449,6 +450,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Delete a subscription template
      - DELETE /subscriptions/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -495,6 +497,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Retrieve a single subscription item and associated plans
      - GET /subscriptions/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -634,7 +637,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Get a single subscription template
      - GET /subscriptions/templates/{id}
-     - Subscription Templates define a type of subscription and the properties they have.
+     - Subscription Templates define a type of subscription and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -880,6 +883,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      List and search subscription templates
      - GET /subscriptions/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or SUBSCRIPTIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1353,6 +1357,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      List available subscription items and associated plans
      - GET /subscriptions
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1615,6 +1620,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Processes subscriptions and charge dues
      - POST /subscriptions/process
+     - <b>Permissions Needed:</b> SUBSCRIPTIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1656,7 +1662,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Updates a subscription item and associated plans
      - PUT /subscriptions/{id}
-     - Will not remove plans left out
+     - Will not remove plans left out. <br><br><b>Permissions Needed:</b> SUBSCRIPTIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1699,6 +1705,7 @@ public class StoreSubscriptionsAPI: APIBase {
     /**
      Update a subscription template
      - PUT /subscriptions/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

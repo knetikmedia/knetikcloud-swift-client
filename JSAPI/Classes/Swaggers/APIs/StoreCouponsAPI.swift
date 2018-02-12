@@ -27,7 +27,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Create a coupon item
      - POST /store/coupons
-     - SKUs have to be unique in the entire store.
+     - SKUs have to be unique in the entire store. <br><br><b>Permissions Needed:</b> COUPONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -69,7 +69,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Create a coupon template
      - POST /store/coupons/templates
-     - Coupon Templates define a type of coupon and the properties they have.
+     - Coupon Templates define a type of coupon and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -224,6 +224,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Delete a coupon item
      - DELETE /store/coupons/{id}
+     - <b>Permissions Needed:</b> COUPONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -268,6 +269,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Delete a coupon template
      - DELETE /store/coupons/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -314,6 +316,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Get a single coupon item
      - GET /store/coupons/{id}
+     - <b>Permissions Needed:</b> COUPONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -358,6 +361,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Get a coupon by sku
      - GET /store/coupons/skus/{sku}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -402,7 +406,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Get a single coupon template
      - GET /store/coupons/templates/{id}
-     - Coupon Templates define a type of coupon and the properties they have.
+     - Coupon Templates define a type of coupon and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN or COUPONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -563,6 +567,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      List and search coupon templates
      - GET /store/coupons/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or COUPONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -866,6 +871,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Update a coupon item
      - PUT /store/coupons/{id}
+     - <b>Permissions Needed:</b> COUPONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -910,6 +916,7 @@ public class StoreCouponsAPI: APIBase {
     /**
      Update a coupon template
      - PUT /store/coupons/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

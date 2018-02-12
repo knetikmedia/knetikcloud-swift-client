@@ -26,6 +26,7 @@ public class StoreSalesAPI: APIBase {
     /**
      Create a sale
      - POST /store/sales
+     - <b>Permissions Needed:</b> SALES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -79,6 +80,7 @@ public class StoreSalesAPI: APIBase {
     /**
      Delete a sale
      - DELETE /store/sales/{id}
+     - <b>Permissions Needed:</b> SALES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -122,6 +124,7 @@ public class StoreSalesAPI: APIBase {
     /**
      Get a single sale
      - GET /store/sales/{id}
+     - <b>Permissions Needed:</b> SALES_USER or SALES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -181,6 +184,7 @@ public class StoreSalesAPI: APIBase {
     /**
      List and search sales
      - GET /store/sales
+     - <b>Permissions Needed:</b> SALES_USER or SALES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -281,6 +285,7 @@ public class StoreSalesAPI: APIBase {
     /**
      Update a sale
      - PUT /store/sales/{id}
+     - <b>Permissions Needed:</b> SALES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

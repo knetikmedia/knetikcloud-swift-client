@@ -26,6 +26,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Create a level schema
      - POST /leveling
+     - <b>Permissions Needed:</b> LEVELING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -94,6 +95,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Delete a level
      - DELETE /leveling/{name}
+     - <b>Permissions Needed:</b> LEVELING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -137,6 +139,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Retrieve a level
      - GET /leveling/{name}
+     - <b>Permissions Needed:</b> LEVELING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -208,6 +211,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Get the list of triggers that can be used to trigger a leveling progress update
      - GET /leveling/triggers
+     - <b>Permissions Needed:</b> LEVELING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -288,7 +292,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      List and search levels
      - GET /leveling
-     - Get a list of levels schemas with optional filtering
+     - Get a list of levels schemas with optional filtering. <br><br><b>Permissions Needed:</b> LEVELING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -421,6 +425,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Get a user's progress for a given level schema
      - GET /users/{userId}/leveling/{name}
+     - <b>Permissions Needed:</b> LEVELING_ADMIN or self
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -480,7 +485,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Get a user's progress for all level schemas
      - GET /users/{userId}/leveling
-     - Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here.
+     - Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here. <br><br><b>Permissions Needed:</b> LEVELING_ADMIN or self
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -578,7 +583,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Update or create a leveling progress record for a user
      - POST /users/{userId}/leveling/{name}/progress
-     - If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>.
+     - If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>. <br><br><b>Permissions Needed:</b> LEVELING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -624,7 +629,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Set leveling progress for a user
      - PUT /users/{userId}/leveling/{name}/progress
-     - If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>.
+     - If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>. <br><br><b>Permissions Needed:</b> LEVELING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -669,6 +674,7 @@ public class GamificationLevelingAPI: APIBase {
     /**
      Update a level
      - PUT /leveling/{name}
+     - <b>Permissions Needed:</b> LEVELING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

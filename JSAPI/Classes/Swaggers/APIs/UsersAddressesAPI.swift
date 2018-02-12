@@ -27,6 +27,7 @@ public class UsersAddressesAPI: APIBase {
     /**
      Create a new address
      - POST /users/{userId}/addresses
+     - <b>Permissions Needed:</b> USERS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -84,6 +85,7 @@ public class UsersAddressesAPI: APIBase {
     /**
      Delete an address
      - DELETE /users/{userId}/addresses/{id}
+     - <b>Permissions Needed:</b> USERS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -130,6 +132,7 @@ public class UsersAddressesAPI: APIBase {
     /**
      Get a single address
      - GET /users/{userId}/addresses/{id}
+     - <b>Permissions Needed:</b> USERS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -193,6 +196,7 @@ public class UsersAddressesAPI: APIBase {
     /**
      List and search addresses
      - GET /users/{userId}/addresses
+     - <b>Permissions Needed:</b> USERS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -298,6 +302,7 @@ public class UsersAddressesAPI: APIBase {
     /**
      Update an address
      - PUT /users/{userId}/addresses/{id}
+     - <b>Permissions Needed:</b> USERS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

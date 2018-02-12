@@ -9,7 +9,7 @@ import Foundation
 
 
 public class Config: JSONEncodable {
-    /** The description of the config.  Max 140 characters */
+    /** The description of the config.  Max 255 characters */
     public var description: String?
     /** The name of the config */
     public var name: String?

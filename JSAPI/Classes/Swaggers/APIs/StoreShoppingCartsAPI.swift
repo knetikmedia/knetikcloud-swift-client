@@ -27,6 +27,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Adds a custom discount to the cart
      - POST /carts/{id}/custom-discounts
+     - <b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -69,6 +70,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Adds a discount coupon to the cart
      - POST /carts/{id}/discounts
+     - <b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -111,7 +113,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Add an item to the cart
      - POST /carts/{id}/items
-     - Currently, carts cannot contain virtual and real currency items at the same time. Furthermore, the API only support a single virtual item at the moment
+     - Currently, carts cannot contain virtual and real currency items at the same time. Furthermore, the API only support a single virtual item at the moment. <br><br><b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -154,7 +156,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Create a cart
      - POST /carts
-     - You don't have to have a user to create a cart but the API requires authentication to checkout
+     - You don't have to have a user to create a cart but the API requires authentication to checkout. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -202,6 +204,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Returns the cart with the given GUID
      - GET /carts/{id}
+     - <b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -410,6 +413,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Get a list of carts
      - GET /carts
+     - <b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -503,6 +507,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Returns whether a cart requires shipping
      - GET /carts/{id}/shippable
+     - <b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -550,7 +555,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Get the list of available shipping countries per vendor
      - GET /carts/{id}/countries
-     - Since a cart can have multiple vendors with different shipping options, the countries are broken down by vendors. Please see notes about the response object as the fields are variable.
+     - Since a cart can have multiple vendors with different shipping options, the countries are broken down by vendors. Please see notes about the response object as the fields are variable. <br><br><b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -619,6 +624,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Removes a discount coupon from the cart
      - DELETE /carts/{id}/discounts/{code}
+     - <b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -665,7 +671,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Sets the currency to use for the cart
      - PUT /carts/{id}/currency
-     - May be disallowed by site settings.
+     - May be disallowed by site settings. <br><br><b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -708,6 +714,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Sets the owner of a cart if none is set already
      - PUT /carts/{id}/owner
+     - <b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -750,7 +757,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Changes the quantity of an item already in the cart
      - PUT /carts/{id}/items
-     - A quantity of zero will remove the item from the cart altogether.
+     - A quantity of zero will remove the item from the cart altogether. <br><br><b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -793,6 +800,7 @@ public class StoreShoppingCartsAPI: APIBase {
     /**
      Modifies or sets the order shipping address
      - PUT /carts/{id}/shipping-address
+     - <b>Permissions Needed:</b> SHOPPING_CARTS_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

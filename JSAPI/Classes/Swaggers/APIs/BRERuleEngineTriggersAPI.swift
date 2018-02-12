@@ -26,7 +26,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
     /**
      Create a trigger
      - POST /bre/triggers
-     - Customer added triggers will not be fired automatically or have rules associated with them by default. Custom rules must be added to get use from the trigger and it must then be fired from the outside. See the Bre Event services
+     - Customer added triggers will not be fired automatically or have rules associated with them by default. Custom rules must be added to get use from the trigger and it must then be fired from the outside. See the Bre Event services. <br><br><b>Permissions Needed:</b> BRE_RULE_ENGINE_TRIGGERS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -85,7 +85,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
     /**
      Delete a trigger
      - DELETE /bre/triggers/{eventName}
-     - May fail if there are existing rules against it. Cannot delete core triggers
+     - May fail if there are existing rules against it. Cannot delete core triggers. <br><br><b>Permissions Needed:</b> BRE_RULE_ENGINE_TRIGGERS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -129,6 +129,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
     /**
      Get a single trigger
      - GET /bre/triggers/{eventName}
+     - <b>Permissions Needed:</b> BRE_RULE_ENGINE_TRIGGERS_USER
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -225,6 +226,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
     /**
      List triggers
      - GET /bre/triggers
+     - <b>Permissions Needed:</b> BRE_RULE_ENGINE_TRIGGERS_USER
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -343,7 +345,7 @@ public class BRERuleEngineTriggersAPI: APIBase {
     /**
      Update a trigger
      - PUT /bre/triggers/{eventName}
-     - May fail if new parameters mismatch requirements of existing rules. Cannot update core triggers
+     - May fail if new parameters mismatch requirements of existing rules. Cannot update core triggers. <br><br><b>Permissions Needed:</b> BRE_RULE_ENGINE_TRIGGERS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

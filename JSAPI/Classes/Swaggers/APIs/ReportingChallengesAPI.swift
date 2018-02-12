@@ -29,7 +29,7 @@ public class ReportingChallengesAPI: APIBase {
     /**
      Retrieve a challenge event leaderboard details
      - GET /reporting/events/leaderboard
-     - Lists all leaderboard entries with additional user details
+     - Lists all leaderboard entries with additional user details. <br><br><b>Permissions Needed:</b> REPORTING_CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -120,7 +120,7 @@ public class ReportingChallengesAPI: APIBase {
     /**
      Retrieve a challenge event participant details
      - GET /reporting/events/participants
-     - Lists all user submitted scores sorted by value, including those that do not apear in the leaderboard due to value or aggregation
+     - Lists all user submitted scores sorted by value, including those that do not apear in the leaderboard due to value or aggregation. <br><br><b>Permissions Needed:</b> REPORTING_CHALLENGES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

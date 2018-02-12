@@ -26,6 +26,7 @@ public class UsersRelationshipsAPI: APIBase {
     /**
      Create a user relationship
      - POST /users/relationships
+     - <b>Permissions Needed:</b> RELATIONSHIPS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -35,7 +36,7 @@ public class UsersRelationshipsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "parent" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -43,7 +44,7 @@ public class UsersRelationshipsAPI: APIBase {
   "id" : 0,
   "child" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }
@@ -81,6 +82,7 @@ public class UsersRelationshipsAPI: APIBase {
     /**
      Delete a user relationship
      - DELETE /users/relationships/{id}
+     - <b>Permissions Needed:</b> RELATIONSHIPS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -124,6 +126,7 @@ public class UsersRelationshipsAPI: APIBase {
     /**
      Get a user relationship
      - GET /users/relationships/{id}
+     - <b>Permissions Needed:</b> RELATIONSHIPS_USER or RELATIONSHIPS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -133,7 +136,7 @@ public class UsersRelationshipsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "parent" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -141,7 +144,7 @@ public class UsersRelationshipsAPI: APIBase {
   "id" : 0,
   "child" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }
@@ -185,6 +188,7 @@ public class UsersRelationshipsAPI: APIBase {
     /**
      Get a list of user relationships
      - GET /users/relationships
+     - <b>Permissions Needed:</b> RELATIONSHIPS_USER or RELATIONSHIPS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -216,7 +220,7 @@ public class UsersRelationshipsAPI: APIBase {
   "content" : [ {
     "parent" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -224,14 +228,14 @@ public class UsersRelationshipsAPI: APIBase {
     "id" : 0,
     "child" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }
   }, {
     "parent" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -239,7 +243,7 @@ public class UsersRelationshipsAPI: APIBase {
     "id" : 0,
     "child" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }
@@ -289,6 +293,7 @@ public class UsersRelationshipsAPI: APIBase {
     /**
      Update a user relationship
      - PUT /users/relationships/{id}
+     - <b>Permissions Needed:</b> RELATIONSHIPS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -298,7 +303,7 @@ public class UsersRelationshipsAPI: APIBase {
      - examples: [{contentType=application/json, example={
   "parent" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -306,7 +311,7 @@ public class UsersRelationshipsAPI: APIBase {
   "id" : 0,
   "child" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }

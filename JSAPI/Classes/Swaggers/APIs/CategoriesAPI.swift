@@ -26,6 +26,7 @@ public class CategoriesAPI: APIBase {
     /**
      Create a new category
      - POST /categories
+     - <b>Permissions Needed:</b> CATEGORIES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -76,7 +77,7 @@ public class CategoriesAPI: APIBase {
     /**
      Create a category template
      - POST /categories/templates
-     - Templates define a type of category and the properties they have
+     - Templates define a type of category and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -216,6 +217,7 @@ public class CategoriesAPI: APIBase {
     /**
      Delete an existing category
      - DELETE /categories/{id}
+     - <b>Permissions Needed:</b> CATEGORIES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -260,7 +262,7 @@ public class CategoriesAPI: APIBase {
     /**
      Delete a category template
      - DELETE /categories/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -311,6 +313,7 @@ public class CategoriesAPI: APIBase {
     /**
      List and search categories with optional filters
      - GET /categories
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -408,6 +411,7 @@ public class CategoriesAPI: APIBase {
     /**
      Get a single category
      - GET /categories/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -462,6 +466,7 @@ public class CategoriesAPI: APIBase {
     /**
      Get a single category template
      - GET /categories/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or CATEGORIES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -607,6 +612,7 @@ public class CategoriesAPI: APIBase {
     /**
      List and search category templates
      - GET /categories/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or CATEGORIES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -879,6 +885,7 @@ public class CategoriesAPI: APIBase {
     /**
      List all trivia tags in the system
      - GET /tags
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -951,6 +958,7 @@ public class CategoriesAPI: APIBase {
     /**
      Update an existing category
      - PUT /categories/{id}
+     - <b>Permissions Needed:</b> CATEGORIES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1004,6 +1012,7 @@ public class CategoriesAPI: APIBase {
     /**
      Update a category template
      - PUT /categories/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

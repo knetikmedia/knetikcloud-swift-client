@@ -26,7 +26,7 @@ public class InvoicesAPI: APIBase {
     /**
      Create an invoice
      - POST /invoices
-     - Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor.
+     - Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor. <br><br><b>Permissions Needed:</b> INVOICES_USER or INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -110,7 +110,7 @@ public class InvoicesAPI: APIBase {
   } ],
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -192,7 +192,7 @@ public class InvoicesAPI: APIBase {
   } ],
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -230,6 +230,7 @@ public class InvoicesAPI: APIBase {
     /**
      Lists available fulfillment statuses
      - GET /invoices/fulfillment-statuses
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -271,6 +272,7 @@ public class InvoicesAPI: APIBase {
     /**
      Retrieve an invoice
      - GET /invoices/{id}
+     - <b>Permissions Needed:</b> INVOICES_USER and owner, or INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -354,7 +356,7 @@ public class InvoicesAPI: APIBase {
   } ],
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   },
@@ -399,6 +401,7 @@ public class InvoicesAPI: APIBase {
     /**
      List invoice logs
      - GET /invoices/{id}/logs
+     - <b>Permissions Needed:</b> INVOICES_USER and owner, or INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -485,7 +488,7 @@ public class InvoicesAPI: APIBase {
      - parameter filterSku: (query) Filters invoices by item sku (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
-     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     public class func getInvoices(filterUser filterUser: Int32? = nil, filterEmail: String? = nil, filterFulfillmentStatus: String? = nil, filterPaymentStatus: String? = nil, filterItemName: String? = nil, filterExternalRef: String? = nil, filterCreatedDate: String? = nil, filterVendorIds: String? = nil, filterCurrency: String? = nil, filterShippingStateName: String? = nil, filterShippingCountryName: String? = nil, filterShipping: String? = nil, filterVendorName: String? = nil, filterSku: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceInvoiceResource?, error: ErrorType?) -> Void)) {
@@ -498,7 +501,7 @@ public class InvoicesAPI: APIBase {
     /**
      Retrieve invoices
      - GET /invoices
-     - Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user's invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices.
+     - Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user's invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices. <br><br><b>Permissions Needed:</b> INVOICES_USER and owner, or INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -604,7 +607,7 @@ public class InvoicesAPI: APIBase {
     } ],
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -686,7 +689,7 @@ public class InvoicesAPI: APIBase {
     } ],
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     },
@@ -711,7 +714,7 @@ public class InvoicesAPI: APIBase {
      - parameter filterSku: (query) Filters invoices by item sku (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
-     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
 
      - returns: RequestBuilder<PageResourceInvoiceResource> 
      */
@@ -763,6 +766,7 @@ public class InvoicesAPI: APIBase {
     /**
      Lists available payment statuses
      - GET /invoices/payment-statuses
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -805,6 +809,7 @@ public class InvoicesAPI: APIBase {
     /**
      Pay an invoice using a saved payment method
      - POST /invoices/{id}/payments
+     - <b>Permissions Needed:</b> INVOICES_USER and owner, or INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -849,7 +854,7 @@ public class InvoicesAPI: APIBase {
     /**
      Set the fulfillment status of a bundled invoice item
      - PUT /invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status
-     - This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+     - This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. <br><br><b>Permissions Needed:</b> INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -896,6 +901,7 @@ public class InvoicesAPI: APIBase {
     /**
      Set the external reference of an invoice
      - PUT /invoices/{id}/external-ref
+     - <b>Permissions Needed:</b> INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -939,7 +945,7 @@ public class InvoicesAPI: APIBase {
     /**
      Set the fulfillment status of an invoice item
      - PUT /invoices/{id}/items/{sku}/fulfillment-status
-     - This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+     - This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. <br><br><b>Permissions Needed:</b> INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -984,6 +990,7 @@ public class InvoicesAPI: APIBase {
     /**
      Set the order notes of an invoice
      - PUT /invoices/{id}/order-notes
+     - <b>Permissions Needed:</b> INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1026,7 +1033,7 @@ public class InvoicesAPI: APIBase {
     /**
      Set the payment status of an invoice
      - PUT /invoices/{id}/payment-status
-     - This may trigger fulfillment if setting the status to 'paid'. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which.
+     - This may trigger fulfillment if setting the status to 'paid'. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which. <br><br><b>Permissions Needed:</b> INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1069,6 +1076,7 @@ public class InvoicesAPI: APIBase {
     /**
      Set or update billing info
      - PUT /invoices/{id}/billing-address
+     - <b>Permissions Needed:</b> INVOICES_USER and owner, or INVOICES_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

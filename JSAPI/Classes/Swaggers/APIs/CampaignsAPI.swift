@@ -27,6 +27,7 @@ public class CampaignsAPI: APIBase {
     /**
      Add a challenge to a campaign
      - POST /campaigns/{id}/challenges
+     - <b>Permissions Needed:</b> CAMPAIGNS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -68,6 +69,7 @@ public class CampaignsAPI: APIBase {
     /**
      Create a campaign
      - POST /campaigns
+     - <b>Permissions Needed:</b> CAMPAIGNS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -81,37 +83,37 @@ public class CampaignsAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "short_description" : "short_description",
@@ -164,7 +166,7 @@ public class CampaignsAPI: APIBase {
     /**
      Create a campaign template
      - POST /campaigns/templates
-     - Campaign Templates define a type of campaign and the properties they have
+     - Campaign Templates define a type of campaign and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -304,6 +306,7 @@ public class CampaignsAPI: APIBase {
     /**
      Delete a campaign
      - DELETE /campaigns/{id}
+     - <b>Permissions Needed:</b> CAMPAIGNS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -348,7 +351,7 @@ public class CampaignsAPI: APIBase {
     /**
      Delete a campaign template
      - DELETE /campaigns/templates/{id}
-     - If cascade = 'detach', it will force delete the template even if it's attached to other objects
+     - If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -395,6 +398,7 @@ public class CampaignsAPI: APIBase {
     /**
      Returns a single campaign
      - GET /campaigns/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -408,37 +412,37 @@ public class CampaignsAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "short_description" : "short_description",
@@ -500,6 +504,7 @@ public class CampaignsAPI: APIBase {
     /**
      List the challenges associated with a campaign
      - GET /campaigns/{id}/challenges
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -536,37 +541,37 @@ public class CampaignsAPI: APIBase {
       "unique_key" : "unique_key",
       "currency_rewards" : [ {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       }, {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       } ],
       "name" : "name",
-      "created_date" : 5,
-      "id" : 3,
+      "created_date" : 7,
+      "id" : 4,
       "long_description" : "long_description",
-      "max_placing" : 1,
-      "updated_date" : 1,
+      "max_placing" : 6,
+      "updated_date" : 7,
       "item_rewards" : [ {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       }, {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       } ]
     },
     "short_description" : "short_description",
@@ -600,37 +605,37 @@ public class CampaignsAPI: APIBase {
       "unique_key" : "unique_key",
       "currency_rewards" : [ {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       }, {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       } ],
       "name" : "name",
-      "created_date" : 5,
-      "id" : 3,
+      "created_date" : 7,
+      "id" : 4,
       "long_description" : "long_description",
-      "max_placing" : 1,
-      "updated_date" : 1,
+      "max_placing" : 6,
+      "updated_date" : 7,
       "item_rewards" : [ {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       }, {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       } ]
     },
     "short_description" : "short_description",
@@ -707,6 +712,7 @@ public class CampaignsAPI: APIBase {
     /**
      Get a single campaign template
      - GET /campaigns/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or CAMPAIGNS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -852,6 +858,7 @@ public class CampaignsAPI: APIBase {
     /**
      List and search campaign templates
      - GET /campaigns/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN or CAMPAIGNS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1126,6 +1133,7 @@ public class CampaignsAPI: APIBase {
     /**
      List and search campaigns
      - GET /campaigns
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1161,37 +1169,37 @@ public class CampaignsAPI: APIBase {
       "unique_key" : "unique_key",
       "currency_rewards" : [ {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       }, {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       } ],
       "name" : "name",
-      "created_date" : 5,
-      "id" : 3,
+      "created_date" : 7,
+      "id" : 4,
       "long_description" : "long_description",
-      "max_placing" : 1,
-      "updated_date" : 1,
+      "max_placing" : 6,
+      "updated_date" : 7,
       "item_rewards" : [ {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       }, {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       } ]
     },
     "short_description" : "short_description",
@@ -1217,37 +1225,37 @@ public class CampaignsAPI: APIBase {
       "unique_key" : "unique_key",
       "currency_rewards" : [ {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       }, {
         "currency_name" : "currency_name",
-        "max_rank" : 2,
-        "min_rank" : 7,
+        "max_rank" : 9,
+        "min_rank" : 3,
         "percent" : false,
-        "value" : 9.301444243932576,
+        "value" : 2.027123023002322,
         "currency_code" : "currency_code"
       } ],
       "name" : "name",
-      "created_date" : 5,
-      "id" : 3,
+      "created_date" : 7,
+      "id" : 4,
       "long_description" : "long_description",
-      "max_placing" : 1,
-      "updated_date" : 1,
+      "max_placing" : 6,
+      "updated_date" : 7,
       "item_rewards" : [ {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       }, {
         "quantity" : 1,
-        "item_id" : 2,
-        "max_rank" : 4,
+        "item_id" : 7,
+        "max_rank" : 1,
         "item_name" : "item_name",
-        "min_rank" : 7
+        "min_rank" : 1
       } ]
     },
     "short_description" : "short_description",
@@ -1314,6 +1322,7 @@ public class CampaignsAPI: APIBase {
     /**
      Remove a challenge from a campaign
      - DELETE /campaigns/{campaignId}/challenges/{id}
+     - <b>Permissions Needed:</b> CAMPAIGNS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1360,6 +1369,7 @@ public class CampaignsAPI: APIBase {
     /**
      Update a campaign
      - PUT /campaigns/{id}
+     - <b>Permissions Needed:</b> CAMPAIGNS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1373,37 +1383,37 @@ public class CampaignsAPI: APIBase {
     "unique_key" : "unique_key",
     "currency_rewards" : [ {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     }, {
       "currency_name" : "currency_name",
-      "max_rank" : 2,
-      "min_rank" : 7,
+      "max_rank" : 9,
+      "min_rank" : 3,
       "percent" : false,
-      "value" : 9.301444243932576,
+      "value" : 2.027123023002322,
       "currency_code" : "currency_code"
     } ],
     "name" : "name",
-    "created_date" : 5,
-    "id" : 3,
+    "created_date" : 7,
+    "id" : 4,
     "long_description" : "long_description",
-    "max_placing" : 1,
-    "updated_date" : 1,
+    "max_placing" : 6,
+    "updated_date" : 7,
     "item_rewards" : [ {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     }, {
       "quantity" : 1,
-      "item_id" : 2,
-      "max_rank" : 4,
+      "item_id" : 7,
+      "max_rank" : 1,
       "item_name" : "item_name",
-      "min_rank" : 7
+      "min_rank" : 1
     } ]
   },
   "short_description" : "short_description",
@@ -1459,6 +1469,7 @@ public class CampaignsAPI: APIBase {
     /**
      Update an campaign template
      - PUT /campaigns/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

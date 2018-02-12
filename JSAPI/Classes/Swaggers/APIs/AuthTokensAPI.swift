@@ -27,6 +27,7 @@ public class AuthTokensAPI: APIBase {
     /**
      Delete tokens by username, client id, or both
      - DELETE /auth/tokens
+     - <b>Permissions Needed:</b> TOKENS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -74,6 +75,7 @@ public class AuthTokensAPI: APIBase {
     /**
      Get a single token by username and client id
      - GET /auth/tokens/{username}/{clientId}
+     - <b>Permissions Needed:</b> TOKENS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -128,7 +130,7 @@ public class AuthTokensAPI: APIBase {
     /**
      List usernames and client ids
      - GET /auth/tokens
-     - Token value not shown
+     - Token value not shown. <br><br><b>Permissions Needed:</b> TOKENS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

@@ -26,6 +26,7 @@ public class ConfigsAPI: APIBase {
     /**
      Create a new config
      - POST /configs
+     - <b>Permissions Needed:</b> TOPICS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -71,6 +72,7 @@ public class ConfigsAPI: APIBase {
     /**
      Delete an existing config
      - DELETE /configs/{name}
+     - <b>Permissions Needed:</b> CONFIGS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -114,7 +116,7 @@ public class ConfigsAPI: APIBase {
     /**
      Get a single config
      - GET /configs/{name}
-     - Only configs that are public readable will be shown without admin access
+     - Only configs that are public readable will be shown without admin access. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -154,7 +156,7 @@ public class ConfigsAPI: APIBase {
      - parameter filterSearch: (query) Filter for configs whose name contains the given string (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned (optional, default to 1)
-     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     public class func getConfigs(filterSearch filterSearch: String? = nil, size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceConfig?, error: ErrorType?) -> Void)) {
@@ -167,6 +169,7 @@ public class ConfigsAPI: APIBase {
     /**
      List and search configs
      - GET /configs
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -212,7 +215,7 @@ public class ConfigsAPI: APIBase {
      - parameter filterSearch: (query) Filter for configs whose name contains the given string (optional)
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned (optional, default to 1)
-     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
 
      - returns: RequestBuilder<PageResourceConfig> 
      */
@@ -253,6 +256,7 @@ public class ConfigsAPI: APIBase {
     /**
      Update an existing config
      - PUT /configs/{name}
+     - <b>Permissions Needed:</b> CONFIGS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

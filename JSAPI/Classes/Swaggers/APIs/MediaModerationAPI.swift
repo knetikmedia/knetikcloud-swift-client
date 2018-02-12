@@ -26,6 +26,7 @@ public class MediaModerationAPI: APIBase {
     /**
      Add a flag
      - POST /moderation/flags
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -41,7 +42,7 @@ public class MediaModerationAPI: APIBase {
   "updated_date" : 1,
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }
@@ -81,6 +82,7 @@ public class MediaModerationAPI: APIBase {
     /**
      Delete a flag
      - DELETE /moderation/flags
+     - <b>Permissions Needed:</b> MODERATION_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -133,6 +135,7 @@ public class MediaModerationAPI: APIBase {
     /**
      Returns a page of flags
      - GET /moderation/flags
+     - <b>Permissions Needed:</b> MODERATION_ADMIN or owner
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -170,7 +173,7 @@ public class MediaModerationAPI: APIBase {
     "updated_date" : 1,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }
@@ -183,7 +186,7 @@ public class MediaModerationAPI: APIBase {
     "updated_date" : 1,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }
@@ -236,6 +239,7 @@ public class MediaModerationAPI: APIBase {
     /**
      Get a flag report
      - GET /moderation/reports/{id}
+     - <b>Permissions Needed:</b> MODERATION_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -293,7 +297,7 @@ public class MediaModerationAPI: APIBase {
     /**
      Returns a page of flag reports
      - GET /moderation/reports
-     - Context can be either a free-form string or a pre-defined context name
+     - Context can be either a free-form string or a pre-defined context name. <br><br><b>Permissions Needed:</b> MODERATION_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -390,7 +394,7 @@ public class MediaModerationAPI: APIBase {
     /**
      Update a flag report
      - PUT /moderation/reports/{id}
-     - Lets you set the resolution of a report. Resolution types is {banned,ignore} in case of 'banned' you will need to pass the reason.
+     - Lets you set the resolution of a report. Resolution types is {banned,ignore} in case of 'banned' you will need to pass the reason. <br><br><b>Permissions Needed:</b> MODERATION_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

@@ -26,6 +26,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      Create a vendor
      - POST /vendors
+     - <b>Permissions Needed:</b> VENDORS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -87,7 +88,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      Create a vendor template
      - POST /vendors/templates
-     - Vendor Templates define a type of vendor and the properties they have.
+     - Vendor Templates define a type of vendor and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -242,6 +243,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      Delete a vendor
      - DELETE /vendors/{id}
+     - <b>Permissions Needed:</b> VENDORS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -286,6 +288,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      Delete a vendor template
      - DELETE /vendors/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -332,6 +335,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      Get a single vendor
      - GET /vendors/{id}
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -397,7 +401,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      Get a single vendor template
      - GET /vendors/templates/{id}
-     - Vendor Templates define a type of vendor and the properties they have.
+     - Vendor Templates define a type of vendor and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -545,7 +549,7 @@ public class StoreVendorsAPI: APIBase {
      
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
-     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     public class func getVendorTemplates(size size: Int32? = nil, page: Int32? = nil, order: String? = nil, completion: ((data: PageResourceItemTemplateResource?, error: ErrorType?) -> Void)) {
@@ -558,6 +562,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      List and search vendor templates
      - GET /vendors/templates
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -820,7 +825,7 @@ public class StoreVendorsAPI: APIBase {
      
      - parameter size: (query) The number of objects returned per page (optional, default to 25)
      - parameter page: (query) The number of the page returned, starting with 1 (optional, default to 1)
-     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+     - parameter order: (query) A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
 
      - returns: RequestBuilder<PageResourceItemTemplateResource> 
      */
@@ -862,6 +867,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      List and search vendors
      - GET /vendors
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -980,6 +986,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      Update a vendor
      - PUT /vendors/{id}
+     - <b>Permissions Needed:</b> VENDORS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -1044,6 +1051,7 @@ public class StoreVendorsAPI: APIBase {
     /**
      Update a vendor template
      - PUT /vendors/templates/{id}
+     - <b>Permissions Needed:</b> TEMPLATE_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

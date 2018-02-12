@@ -30,7 +30,7 @@ public class GamificationLeaderboardsAPI: APIBase {
     /**
      Retrieves leaderboard details and paginated entries
      - GET /leaderboards/{contextType}/{contextId}
-     - The context type identifies the type of entity (i.e., 'activity') being tracked on the leaderboard. The context ID is the unique ID of the actual entity tracked by the leaderboard. Sorting is based on the fields of LeaderboardEntryResource rather than the returned LeaderboardResource.
+     - The context type identifies the type of entity (i.e., 'activity') being tracked on the leaderboard. The context ID is the unique ID of the actual entity tracked by the leaderboard. Sorting is based on the fields of LeaderboardEntryResource rather than the returned LeaderboardResource. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -44,7 +44,7 @@ public class GamificationLeaderboardsAPI: APIBase {
     "updated_date" : 1,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }
@@ -54,7 +54,7 @@ public class GamificationLeaderboardsAPI: APIBase {
     "updated_date" : 1,
     "user" : {
       "avatar_url" : "avatar_url",
-      "id" : 1,
+      "id" : 9,
       "display_name" : "display_name",
       "username" : "username"
     }
@@ -110,7 +110,7 @@ public class GamificationLeaderboardsAPI: APIBase {
     /**
      Retrieves a specific user entry with rank
      - GET /leaderboards/{contextType}/{contextId}/users/{id}/rank
-     - The context type identifies the type of entity (i.e., 'activity') being tracked on the leaderboard. The context ID is the unique ID of the actual entity tracked by the leaderboard
+     - The context type identifies the type of entity (i.e., 'activity') being tracked on the leaderboard. The context ID is the unique ID of the actual entity tracked by the leaderboard. <br><br><b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -123,7 +123,7 @@ public class GamificationLeaderboardsAPI: APIBase {
   "updated_date" : 1,
   "user" : {
     "avatar_url" : "avatar_url",
-    "id" : 1,
+    "id" : 9,
     "display_name" : "display_name",
     "username" : "username"
   }
@@ -168,6 +168,7 @@ public class GamificationLeaderboardsAPI: APIBase {
     /**
      Get a list of available leaderboard strategy names
      - GET /leaderboards/strategies
+     - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
