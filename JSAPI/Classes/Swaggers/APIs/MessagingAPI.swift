@@ -115,7 +115,7 @@ public class MessagingAPI: APIBase {
     /**
      Delete an existing message template
      - DELETE /messaging/templates/{id}
-     - <b>Permissions Needed:</b> ARTICLES_ADMIN
+     - <b>Permissions Needed:</b> MESSAGING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -159,7 +159,7 @@ public class MessagingAPI: APIBase {
     /**
      Get a single message template
      - GET /messaging/templates/{id}
-     - <b>Permissions Needed:</b> ARTICLES_ADMIN
+     - <b>Permissions Needed:</b> MESSAGING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -214,7 +214,7 @@ public class MessagingAPI: APIBase {
     /**
      List and search message templates
      - GET /messaging/templates
-     - Get a list of message templates with optional filtering. <br><br><b>Permissions Needed:</b> ARTICLES_ADMIN
+     - Get a list of message templates with optional filtering. <br><br><b>Permissions Needed:</b> MESSAGING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -294,8 +294,8 @@ public class MessagingAPI: APIBase {
      - parameter messageResource: (body) The message to be sent (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func sendMessage1(messageResource messageResource: MessageResource? = nil, completion: ((error: ErrorType?) -> Void)) {
-        sendMessage1WithRequestBuilder(messageResource: messageResource).execute { (response, error) -> Void in
+    public class func sendMessage(messageResource messageResource: MessageResource? = nil, completion: ((error: ErrorType?) -> Void)) {
+        sendMessageWithRequestBuilder(messageResource: messageResource).execute { (response, error) -> Void in
             completion(error: error);
         }
     }
@@ -316,7 +316,7 @@ public class MessagingAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func sendMessage1WithRequestBuilder(messageResource messageResource: MessageResource? = nil) -> RequestBuilder<Void> {
+    public class func sendMessageWithRequestBuilder(messageResource messageResource: MessageResource? = nil) -> RequestBuilder<Void> {
         let path = "/messaging/message"
         let URLString = JSAPIAPI.basePath + path
         let parameters = messageResource?.encodeToJSON() as? [String:AnyObject]
@@ -625,7 +625,7 @@ public class MessagingAPI: APIBase {
     /**
      Update an existing message template
      - PUT /messaging/templates/{id}
-     - <b>Permissions Needed:</b> ARTICLES_ADMIN
+     - <b>Permissions Needed:</b> MESSAGING_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

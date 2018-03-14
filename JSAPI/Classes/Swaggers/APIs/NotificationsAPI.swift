@@ -26,6 +26,7 @@ public class NotificationsAPI: APIBase {
     /**
      Create a notification type
      - POST /notifications/types
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -75,6 +76,7 @@ public class NotificationsAPI: APIBase {
     /**
      Delete a notification type
      - DELETE /notifications/types/{id}
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -118,6 +120,7 @@ public class NotificationsAPI: APIBase {
     /**
      Get a single notification type
      - GET /notifications/types/{id}
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -173,7 +176,7 @@ public class NotificationsAPI: APIBase {
     /**
      List and search notification types
      - GET /notifications/types
-     - Get a list of notification type with optional filtering
+     - Get a list of notification type with optional filtering. <br><br><b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -266,6 +269,7 @@ public class NotificationsAPI: APIBase {
     /**
      View a user's notification settings for a type
      - GET /users/{userId}/notifications/types/{typeId}
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -319,6 +323,7 @@ public class NotificationsAPI: APIBase {
     /**
      View a user's notification settings
      - GET /users/{userId}/notifications/types
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -415,6 +420,7 @@ public class NotificationsAPI: APIBase {
     /**
      Get notifications
      - GET /users/{id}/notifications
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -512,6 +518,7 @@ public class NotificationsAPI: APIBase {
     /**
      Send a notification
      - POST /notifications
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -551,7 +558,7 @@ public class NotificationsAPI: APIBase {
      - parameter notification: (body) status (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func setUserNotificationStatus(userId userId: String, notificationId: String, notification: ValueWrapperstring? = nil, completion: ((error: ErrorType?) -> Void)) {
+    public class func setUserNotificationStatus(userId userId: String, notificationId: String, notification: UserNotificationStatusWrapper? = nil, completion: ((error: ErrorType?) -> Void)) {
         setUserNotificationStatusWithRequestBuilder(userId: userId, notificationId: notificationId, notification: notification).execute { (response, error) -> Void in
             completion(error: error);
         }
@@ -561,6 +568,7 @@ public class NotificationsAPI: APIBase {
     /**
      Set notification status
      - PUT /users/{userId}/notifications/{notificationId}/status
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -574,7 +582,7 @@ public class NotificationsAPI: APIBase {
 
      - returns: RequestBuilder<Void> 
      */
-    public class func setUserNotificationStatusWithRequestBuilder(userId userId: String, notificationId: String, notification: ValueWrapperstring? = nil) -> RequestBuilder<Void> {
+    public class func setUserNotificationStatusWithRequestBuilder(userId userId: String, notificationId: String, notification: UserNotificationStatusWrapper? = nil) -> RequestBuilder<Void> {
         var path = "/users/{userId}/notifications/{notificationId}/status"
         path = path.stringByReplacingOccurrencesOfString("{user_id}", withString: "\(userId)", options: .LiteralSearch, range: nil)
         path = path.stringByReplacingOccurrencesOfString("{notification_id}", withString: "\(notificationId)", options: .LiteralSearch, range: nil)
@@ -606,7 +614,7 @@ public class NotificationsAPI: APIBase {
     /**
      Enable or disable direct notifications for a user
      - PUT /users/{userId}/notifications/types/{typeId}/silenced
-     - Allows enabling or disabling messages for a given notification type when sent direct to the user. Notifications can still be retrieved by endpoint. For notifications broadcased to a topic, see the topic service to disable messages for the user there.
+     - Allows enabling or disabling messages for a given notification type when sent direct to the user. Notifications can still be retrieved by endpoint. For notifications broadcased to a topic, see the topic service to disable messages for the user there. <br><br><b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant
@@ -651,6 +659,7 @@ public class NotificationsAPI: APIBase {
     /**
      Update a notificationType
      - PUT /notifications/types/{id}
+     - <b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
      - OAuth:
        - type: oauth2
        - name: oauth2_client_credentials_grant

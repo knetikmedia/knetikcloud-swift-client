@@ -258,7 +258,7 @@ public class UsersAPI: APIBase {
 
     /**
      Get a list of direct messages with this user
-     - GET /users/users/{recipientId}/messages
+     - GET /users/{recipientId}/messages
      - <b>Permissions Needed:</b> ANY
      - OAuth:
        - type: oauth2
@@ -321,7 +321,7 @@ public class UsersAPI: APIBase {
      - returns: RequestBuilder<PageResourceChatMessageResource> 
      */
     public class func getDirectMessages1WithRequestBuilder(recipientId recipientId: Int32, size: Int32? = nil, page: Int32? = nil) -> RequestBuilder<PageResourceChatMessageResource> {
-        var path = "/users/users/{recipientId}/messages"
+        var path = "/users/{recipientId}/messages"
         path = path.stringByReplacingOccurrencesOfString("{recipient_id}", withString: "\(recipientId)", options: .LiteralSearch, range: nil)
         let URLString = JSAPIAPI.basePath + path
 

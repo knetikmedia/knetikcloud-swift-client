@@ -328,13 +328,19 @@ public class LogsAPI: APIBase {
        - name: oauth2_password_grant
      - examples: [{contentType=application/json, example={
   "end_date" : 0,
+  "retryable" : true,
+  "headers" : "headers",
   "error_msg" : "error_msg",
+  "method" : "method",
   "http_status_code" : 6,
+  "url" : "url",
+  "rule_id" : "rule_id",
+  "event_id" : "event_id",
   "payload" : "{}",
   "response" : "response",
+  "success" : true,
   "retry_count" : 1,
   "id" : "id",
-  "url" : "url",
   "start_date" : 5
 }}]
      
@@ -411,23 +417,35 @@ public class LogsAPI: APIBase {
   "number_of_elements" : 2,
   "content" : [ {
     "end_date" : 0,
+    "retryable" : true,
+    "headers" : "headers",
     "error_msg" : "error_msg",
+    "method" : "method",
     "http_status_code" : 6,
+    "url" : "url",
+    "rule_id" : "rule_id",
+    "event_id" : "event_id",
     "payload" : "{}",
     "response" : "response",
+    "success" : true,
     "retry_count" : 1,
     "id" : "id",
-    "url" : "url",
     "start_date" : 5
   }, {
     "end_date" : 0,
+    "retryable" : true,
+    "headers" : "headers",
     "error_msg" : "error_msg",
+    "method" : "method",
     "http_status_code" : 6,
+    "url" : "url",
+    "rule_id" : "rule_id",
+    "event_id" : "event_id",
     "payload" : "{}",
     "response" : "response",
+    "success" : true,
     "retry_count" : 1,
     "id" : "id",
-    "url" : "url",
     "start_date" : 5
   } ],
   "first" : true

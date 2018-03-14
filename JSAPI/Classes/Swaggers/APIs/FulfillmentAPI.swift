@@ -239,7 +239,7 @@ public class FulfillmentAPI: APIBase {
     /**
      Update a fulfillment type
      
-     - parameter id: (path) The id 
+     - parameter id: (path) The fulfillment id 
      - parameter fulfillmentType: (body) The fulfillment type (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -261,7 +261,7 @@ public class FulfillmentAPI: APIBase {
        - type: oauth2
        - name: oauth2_password_grant
      
-     - parameter id: (path) The id 
+     - parameter id: (path) The fulfillment id 
      - parameter fulfillmentType: (body) The fulfillment type (optional)
 
      - returns: RequestBuilder<Void> 
